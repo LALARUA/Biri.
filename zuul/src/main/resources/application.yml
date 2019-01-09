@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 8769
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    login-register:
+      path: /Biri/loginAndRegister/**
+      serviceId: login-register
+  ignored-services: "*"
