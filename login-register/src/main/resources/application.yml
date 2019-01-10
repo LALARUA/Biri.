@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: login-register
+  redis:
+    host: 192.168.42.209
+    port: 6379
+  session:
+    store-type: redis
 eureka:
   instance:
     prefer-ip-address: true #注册服务时使用服务的ip地址

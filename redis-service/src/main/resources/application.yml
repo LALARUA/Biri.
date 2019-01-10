@@ -1,0 +1,19 @@
+server:
+  port: 6379
+spring:
+  application:
+    name: redis-service
+  redis:
+    host: 192.168.42.209
+    port: 6379
+  session:
+    store-type: redis
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务时使用服务的ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+#feign:
+#  httpclient:
+#    enabled: true
