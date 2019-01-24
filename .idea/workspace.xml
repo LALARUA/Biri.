@@ -2,42 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fae497a-6b1b-49fd-b5d1-9f3f84a6d2cc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_1_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/commonBean/bean1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/CookieUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/templates/sf.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis-service/src/main/resources/templates/sf.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_4_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_1_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_1_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_3_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_5.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/dl-icon.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/plugins.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/revoulation.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/loginPage.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/ajax-mail.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/bootstrap.bundle.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/main.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/plugins.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.actions.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.carousel.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.kenburn.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.migration.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.navigation.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.parallax.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.slideanims.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.video.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/jquery.themepunch.revolution.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/jquery.themepunch.tools.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/modernizr-2.8.3.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/templates/login.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/eureka-server-1/pom.xml" afterPath="$PROJECT_DIR$/eureka-server-1/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" afterPath="$PROJECT_DIR$/common/pom.xml" />
       <change beforePath="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" afterPath="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/pom.xml" afterPath="$PROJECT_DIR$/login-register/pom.xml" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/test/t1.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/test/ts2.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/login-register/src/main/resources/application.yml" />
+      <change beforePath="$PROJECT_DIR$/login-register/src/main/resources/templates/sf.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" afterPath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" />
+      <change beforePath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" afterPath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" />
+      <change beforePath="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" />
       <change beforePath="$PROJECT_DIR$/zuul/pom.xml" afterPath="$PROJECT_DIR$/zuul/pom.xml" />
       <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java" />
+      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
       <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka-server-1/target/" />
@@ -54,74 +85,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ZuulApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccessFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1208#1209#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="con1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginRegisterApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnableRedisHttpSession.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/config/annotation/web/http/EnableRedisHttpSession.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="198">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisFlushMode.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/RedisFlushMode.class">
+      <file leaf-file-name="ShiroConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="1430">
+              <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -130,8 +108,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zuul/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="924">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,28 +118,71 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="484">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login-register/pom.xml">
+      <file leaf-file-name="ShiroRealm.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="249">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1547783375400" expanded="true" signature="914:922" ph="&lt;~&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticateController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka-server-1/pom.xml">
+      <file leaf-file-name="ZuulApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+            <state relative-caret-position="176">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisServiceApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -172,10 +193,24 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>wa</find>
+      <find>wapp</find>
+      <find>.coming-soon-area</find>
+      <find>\bhost:.</find>
+      <find>\bhost:.*</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>host:192.168.1.102</replace>
+      <replace>host: 10.8.162.219</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -198,28 +233,40 @@
         <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/test/t1.java" />
         <option value="$PROJECT_DIR$/login-register/src/test/java/cn/zx/biri/loginregister/LoginRegisterApplicationTests.java" />
         <option value="$PROJECT_DIR$/eureka-server-1/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" />
         <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/test/t1.java" />
         <option value="$PROJECT_DIR$/login-register/src/main/resources/templates/sf.html" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/CrosConfig.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/GateWayCorsConfig.java" />
         <option value="$PROJECT_DIR$/redis-service/src/main/resources/templates/sf.html" />
         <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/commonBean/utils/CookieUtils.java" />
-        <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/CookieUtils.java" />
         <option value="$PROJECT_DIR$/redis-service/pom.xml" />
-        <option value="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/login-register/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/zuul/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" />
-        <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
-        <option value="$PROJECT_DIR$/zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/login-register/pom.xml" />
+        <option value="$PROJECT_DIR$/login-register/src/main/resources/templates/coming-soon.html" />
+        <option value="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" />
+        <option value="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/shiroConfiguration.java" />
+        <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" />
+        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/login-register/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html" />
         <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" />
+        <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/resources/templetes/login.html" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java" />
       </list>
     </option>
   </component>
@@ -299,16 +346,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eureka-server-1" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redis-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
@@ -369,6 +419,42 @@
               <item name="zx" type="462c0819:PsiDirectoryNode" />
               <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="Component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
@@ -382,13 +468,26 @@
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -409,7 +508,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jquerytz" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -417,7 +516,16 @@
       <recent name="cn.zx.biri.common" />
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.zx.biri.zuul.controller" />
+      <recent name="cn.zx.biri.zuul.Component" />
+      <recent name="cn.zx.biri.zuul.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitRep\Biri\login-register\src\main\resources\static\assets\img" />
+      <recent name="E:\gitRep\Biri\login-register\src\main\resources\static\assets\img\logo" />
+      <recent name="E:\gitRep\Biri\login-register\src\main\resources\static" />
+      <recent name="E:\gitRep\Biri\login-register\src\main\resources\templates" />
       <recent name="E:\gitRep\Biri\redis-service\src\main\resources" />
     </key>
   </component>
@@ -439,12 +547,31 @@
     </option>
     <option name="contentProportion" value="0.28677735" />
   </component>
-  <component name="RunManager" selected="Spring Boot.RedisServiceApplication">
+  <component name="RunManager" selected="Application.ShiroRealm">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="ShiroRealm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.zx.biri.zuul.Component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.zuul.Component.ShiroRealm" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="zuul" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -550,13 +677,19 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaServer1Application" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.LoginRegisterApplication" />
       <item index="3" class="java.lang.String" itemvalue="Spring Boot.RedisServiceApplication" />
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.CommonApplication" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ShiroRealm" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.ShiroRealm" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -578,46 +711,52 @@
       <workItem from="1547032528007" duration="7940000" />
       <workItem from="1547080665097" duration="19000" />
       <workItem from="1547102519475" duration="10394000" />
+      <workItem from="1547119403650" duration="14337000" />
+      <workItem from="1547166536569" duration="43000" />
+      <workItem from="1547172045422" duration="1881000" />
+      <workItem from="1547386573943" duration="5078000" />
+      <workItem from="1547427629929" duration="135000" />
+      <workItem from="1547772589495" duration="12036000" />
+      <workItem from="1548298087131" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39698000" />
+    <option name="totallyTimeSpent" value="73252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="-9" width="1855" height="1098" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22400858" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44051448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34025827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295901" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -630,358 +769,167 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/test/t1.java" />
-    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-starter/1.3.2/mybatis-spring-boot-starter-1.3.2.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar!/com/zaxxer/hikari/HikariDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE.jar!/org/springframework/boot/autoconfigure/condition/ConditionalOnProperty.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE.jar!/org/springframework/boot/autoconfigure/AutoConfigurationSorter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-492">
-          <caret line="81" column="25" lean-forward="false" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/test/t1.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="65" column="9" lean-forward="false" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/test/java/cn/zx/biri/loginregister/LoginRegisterApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/test/ts2.java" />
-    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/java/common/common/CommonApplication.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="105" column="49" lean-forward="false" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/test/t1.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/templates/sf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/CrosConfig.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/filter/CorsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/http/HttpServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="86" column="16" lean-forward="false" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/ServletRequestWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/http/HttpServletRequestWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <marker date="1543930636450" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1543930636450" expanded="false" signature="142:358" ph="..." />
-            <marker date="1543930636450" expanded="false" signature="525:536" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="551:557" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="614:625" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="671:677" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="710:721" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="772:778" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="812:823" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="873:879" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="923:934" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="991:997" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1039:1050" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1103:1109" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1165:1176" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1230:1236" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1285:1296" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1350:1356" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1398:1409" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1465:1471" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1526:1537" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1598:1604" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1635:1646" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1695:1701" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1734:1745" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1796:1802" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1841:1852" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="1909:1915" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="1951:1962" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2016:2022" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2058:2069" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2123:2129" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2164:2175" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2228:2234" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2280:2291" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2347:2353" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2394:2405" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2461:2467" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2510:2521" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2582:2588" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2623:2634" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2687:2693" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2734:2745" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2798:2804" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2840:2851" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="2905:2911" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="2962:2973" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="3029:3035" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="3072:3083" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="3133:3139" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="3176:3187" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="3242:3248" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="3296:3307" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="3372:3378" ph=" }" />
-            <marker date="1543930636450" expanded="true" signature="3432:3518" ph="{...}" />
-            <marker date="1543930636450" expanded="false" signature="3568:3579" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="3646:3652" ph=" }" />
-            <marker date="1543930636450" expanded="true" signature="3658:3676" ph="/**...*/" />
-            <marker date="1543930636450" expanded="false" signature="3741:3752" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="3819:3825" ph=" }" />
-            <marker date="1543930636450" expanded="true" signature="3926:4002" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="4084:4156" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="4207:4262" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="4340:4404" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="4480:4547" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="4672:4758" ph="{...}" />
-            <marker date="1543930636450" expanded="false" signature="4799:4810" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="4864:4870" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="4921:4932" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="4988:4994" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="5037:5048" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="5108:5114" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/org/apache/catalina/filters/CorsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <marker date="1543930636450" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1543930636450" expanded="false" signature="151:952" ph="..." />
-            <marker date="1543930636450" expanded="true" signature="2306:2324" ph="/**...*/" />
-            <marker date="1543930636450" expanded="true" signature="4552:4559" ph="{}" />
-            <marker date="1543930636450" expanded="true" signature="4712:5823" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="5872:6408" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="6480:6592" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="6750:7671" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="7832:10443" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="10596:10704" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="10824:11638" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="11734:13330" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="13453:14823" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="14909:15676" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="15764:18465" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="18544:19361" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="19415:19825" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="19878:19969" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="20202:22183" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="22239:22751" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="22811:23285" ph="{...}" />
-            <marker date="1543930636450" expanded="false" signature="23326:23337" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23366:23372" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="23423:23434" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23461:23467" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="23511:23522" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23554:23560" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="23598:23609" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23637:23643" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="23694:23705" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23732:23738" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="23793:23804" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23835:23841" ph=" }" />
-            <marker date="1543930636450" expanded="false" signature="23896:23907" ph=" { " />
-            <marker date="1543930636450" expanded="false" signature="23938:23944" ph=" }" />
-            <marker date="1543930636450" expanded="true" signature="24040:24136" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="24180:24326" ph="{...}" />
-            <marker date="1543930636450" expanded="true" signature="24309:24320" ph="{}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/resources/templates/sf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.3.RELEASE/spring-core-5.1.3.RELEASE.jar!/org/springframework/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="363" column="25" lean-forward="false" selection-start-line="363" selection-start-column="25" selection-end-line="363" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/GateWayCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="18" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/LoggerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="285" column="25" lean-forward="false" selection-start-line="285" selection-start-column="25" selection-end-line="285" selection-end-column="25" />
-          <folding>
-            <marker date="1524708972431" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1524708972431" expanded="false" signature="133:643" ph="..." />
-            <marker date="1524708972431" expanded="true" signature="2666:2673" ph="{}" />
-            <marker date="1524708972431" expanded="false" signature="2698:2709" ph=" { " />
-            <marker date="1524708972431" expanded="false" signature="2734:2740" ph=" }" />
-            <marker date="1524708972431" expanded="true" signature="2796:2905" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="2992:3246" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="3285:5045" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="5094:5557" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="5602:5712" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="5753:6535" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="6637:6849" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="6923:7548" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="7600:8014" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="8074:8405" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="8458:9424" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="9486:10283" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="10373:10421" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="10502:10971" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="11012:11172" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="11242:11477" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="11527:11642" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="11695:12305" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="12404:12477" ph="{...}" />
-            <marker date="1524708972431" expanded="true" signature="12532:13386" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/commonBean/bean1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/CommonApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/CookieUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.1.RELEASE/spring-boot-2.1.1.RELEASE.jar!/org/springframework/boot/context/properties/ConfigurationProperties.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="139" column="16" lean-forward="false" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/RedisFlushMode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/config/annotation/web/http/EnableRedisHttpSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.3.RELEASE/spring-context-5.1.3.RELEASE-sources.jar!/org/springframework/stereotype/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/logo-white.png" />
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/biri.png" />
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/logo.svg" />
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/airi.png" />
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/revoulation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="1291" column="27" lean-forward="false" selection-start-line="1291" selection-start-column="27" selection-end-line="1291" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="502" column="15" lean-forward="false" selection-start-line="502" selection-start-column="15" selection-end-line="502" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/dl-icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/plugins.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382536">
+          <caret line="17388" column="25" lean-forward="false" selection-start-line="17388" selection-start-column="25" selection-end-line="17388" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1374">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/component.java" />
     <entry file="file://$PROJECT_DIR$/redis-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -992,24 +940,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="132">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="245" column="26" lean-forward="false" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/redis-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="308">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.1.RELEASE/spring-boot-2.1.1.RELEASE.jar!/org/springframework/boot/context/properties/ConfigurationProperties.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/realm/CachingRealm.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="206">
+          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1022,23 +992,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="139" column="16" lean-forward="false" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java">
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/realm/AuthenticatingRealm.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="103" column="61" lean-forward="false" selection-start-line="103" selection-start-column="61" selection-end-line="103" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1.jar!/com/netflix/zuul/ZuulFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -1048,93 +1059,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zuul/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="924">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server-1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/RedisFlushMode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/config/annotation/web/http/EnableRedisHttpSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="154">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="550">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
+            <marker date="1547783375400" expanded="true" signature="914:922" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>

@@ -18,13 +18,13 @@ import java.util.UUID;
  */
 @Controller
 public class con1 {
-    @GetMapping("/get")
-    public String get(HttpSession httpSession,HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse){
+    @ResponseBody
+    @GetMapping("get")
+    public String get(String name){
 
-        System.out.println("redis SessionId="+httpSession.getId());
-        System.out.println("name="+httpSession.getAttribute("name"));
+        System.out.println("name="+name);
 
-        return "Sf";
+        return "name="+name;
 
     }
 }

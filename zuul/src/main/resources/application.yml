@@ -2,7 +2,7 @@ spring:
   application:
     name: zuul
   redis:
-    host: 192.168.42.209
+    host: 10.8.162.219
     port: 6379
   session:
     store-type: redis

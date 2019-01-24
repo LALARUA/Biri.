@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/icon.png">
+
+    <!-- Title -->
+    <title>登录</title>
+
+    <!-- ************************* CSS Files ************************* -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- dl Icon CSS -->
+    <link rel="stylesheet" href="assets/css/dl-icon.css">
+
+    <!-- All Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+
+    <!-- Revoulation Slider CSS  -->
+    <link rel="stylesheet" href="assets/css/revoulation.css">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- modernizr JS
+    ============================================ -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+    <div class="ai-preloader active">
+        <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+            <div class="ai-child ai-bounce1"></div>
+            <div class="ai-child ai-bounce2"></div>
+            <div class="ai-child ai-bounce3"></div>
+        </div>
+    </div>
+  
+    <!-- Main Wrapper Start -->
+    <div class="wrapper">
+        <div class="coming-soon-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="comming-soon pt--25">
+                            <figure class="mb--100">
+                                <a style="font-size: 50px" href="index.html">
+                                  biri.
+                                </a>
+                            </figure>
+                            <h4 class="color--white text-uppercase lts-32 lts-md-5">Do as one wishes</h4>
+                            <h1 class="color--red-dark heading-bigger font-bold mb--40">Coming Soon</h1>
+                            <!--<div class="countdown-timer mb&#45;&#45;60">-->
+                                <!--<div class="countdown" data-countdown="2020/05/01">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="tab-content" style="height: 300px">-->
+
+
+                                <!--&lt;!&ndash;<form id="registerForm" action="#" class="tab-pane fade newsletter-form newsletter-form&#45;&#45;4">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<input type="email" name="email" id="newsletter_email" class="newsletter-form__input" placeholder="Email" required>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<input type="password" name="password" id="newsletter_password" class="newsletter-form__input" placeholder="Password" required>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<input type="password" name="password" id="sure_newsletter_password" class="newsletter-form__input" placeholder="Password" required>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<button type="submit" class="newsletter-form__submit">注册</button>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</form>&ndash;&gt;-->
+                            <!--</div>-->
+
+
+
+
+                            <p>
+                                <a   style="font-size:22px;border:0;cursor:pointer" data-toggle="collapse" href="#login" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    sign in
+                                </a>
+                                <a style="font-size:22px;border:0;cursor:pointer" data-toggle="collapse"  href="#register" aria-expanded="false" aria-controls="collapseExample">
+                                   sign up
+                                </a>
+                            </p>
+                            <div class="collapse" id="register">
+                                    <form id="registerForm" action="#" class="newsletter-form newsletter-form--4">
+                                        <input type="email" name="email" id="newsletter_email" class="newsletter-form__input" placeholder="Email" required>
+                                        <input type="password" name="password" id="newsletter_password" class="newsletter-form__input" placeholder="Password" required>
+                                        <input type="password" name="password" id="sure_newsletter_password" class="newsletter-form__input" placeholder="Password" required>
+                                        <button type="submit" class="newsletter-form__submit">注册</button>
+                                    </form>
+                            </div>
+                            <div class="collapse" id="login">
+                                <form id="loginForm" method="post" action="authenticate" class="newsletter-form newsletter-form--4">
+                                    <input type="email" name="email" id="email" class="newsletter-form__input" placeholder="Email" required>
+                                    <input type="password" name="password" id="password" class="newsletter-form__input" placeholder="Password" required>
+                                    <input type="password" name="password" id="surePassword" class="newsletter-form__input" placeholder="Password" required>
+                                    <button type="submit" class="newsletter-form__submit">登录</button>
+                                </form>
+                            </div>
+
+
+                            <a href="#loginForm" data-toggle="tab">登录</a>  <a href="#registerForm" data-toggle="tab">注册</a>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- Main Wrapper End -->
+
+
+    <!-- ************************* JS Files ************************* -->
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery.min.js"></script>
+
+    <!--<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>-->
+    <!--<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!-- Bootstrap and Popper Bundle JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- All Plugins Js -->
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- Ajax Mail Js -->
+    <script src="assets/js/ajax-mail.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script src="assets/js/revoulation/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/revoulation/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="assets/js/revoulation/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/js/revoulation/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- REVOLUTION ACTIVE JS FILES -->
+    <script src="assets/js/revoulation.js"></script>
+    
+</body>
+
+</html>

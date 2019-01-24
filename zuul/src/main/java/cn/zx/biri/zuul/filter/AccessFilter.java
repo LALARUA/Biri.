@@ -3,6 +3,8 @@ package cn.zx.biri.zuul.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
@@ -17,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Component
 public class AccessFilter extends ZuulFilter{
+    private static int index = 0;
     private static Logger logger = LoggerFactory.getLogger(AccessFilter.class);
     @Override
     public boolean shouldFilter() {
@@ -25,11 +28,11 @@ public class AccessFilter extends ZuulFilter{
 
     @Override
     public Object run() throws ZuulException {
+        Subject currentUser = SecurityUtils.getSubject();
+        System.out.println(currentUser.isAuthenticated());
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
-        String sessionId = request.getSession().getId();
-        System.out.println("zuul SessionId="+sessionId);
-
+        System.out.println("进入zuul"+(++index));
         return null;
     }
 
