@@ -27,6 +27,11 @@ public class AuthenticateController {
     }
 
     @ResponseBody
+    @GetMapping("test")
+    public String test(){
+        return "test hello world";
+    }
+    @ResponseBody
     @PostMapping("authenticate")
     public String authenticate(String username, String password, HttpServletRequest httpServletRequest){
 

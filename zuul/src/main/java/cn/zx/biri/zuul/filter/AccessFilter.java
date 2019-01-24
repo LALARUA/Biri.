@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Date Created in 15:19 2019/1/10 0010
  */
 @Component
+
 public class AccessFilter extends ZuulFilter{
     private static int index = 0;
     private static Logger logger = LoggerFactory.getLogger(AccessFilter.class);
@@ -35,7 +36,6 @@ public class AccessFilter extends ZuulFilter{
         System.out.println("进入zuul"+(++index));
         return null;
     }
-
     @Override
     public String filterType() {
         return FilterConstants.PRE_TYPE;

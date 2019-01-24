@@ -2,74 +2,215 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fae497a-6b1b-49fd-b5d1-9f3f84a6d2cc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/dl-icon.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/plugins.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/revoulation.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/loginPage.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/ajax-mail.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/bootstrap.bundle.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/plugins.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.actions.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.carousel.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.kenburn.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.migration.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.navigation.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.parallax.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.slideanims.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.video.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/jquery.themepunch.revolution.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/jquery.themepunch.tools.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/modernizr-2.8.3.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/templates/login.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_annotations_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_annotations_3_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_8.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_8.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_18.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_18.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_18.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_18.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_18.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_18.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_zuul_zuul_core_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_zuul_zuul_core_1_3_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_10_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_10_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_10_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_10_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_31_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_31_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_31_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_31_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_31_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_31_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_31_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_31_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_31_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_31_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_31_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_31_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_13.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_13.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_13.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_60.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_60.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_1_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_1_0_RC2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_1_0_RC2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_1_0_RC2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_1_0_RC2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_hystrix_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_hystrix_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_zuul_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_zuul_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_1_0_RC2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_1_0_RC2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_zuul_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_zuul_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_1_0_RC3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_1_0_RC3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_1_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_1_2_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_core_2_1_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_core_2_1_2_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_data_redis_2_1_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_data_redis_2_1_2_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_3_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_2_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" afterPath="$PROJECT_DIR$/common/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" afterPath="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/login-register/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/resources/templates/sf.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" afterPath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" />
-      <change beforePath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" afterPath="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" />
       <change beforePath="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" />
       <change beforePath="$PROJECT_DIR$/zuul/pom.xml" afterPath="$PROJECT_DIR$/zuul/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java" />
+      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java" />
+      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java" />
       <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
       <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
+      <change beforePath="$PROJECT_DIR$/zuul/src/test/java/cn/zx/biri/zuul/ZuulApplicationTests.java" afterPath="$PROJECT_DIR$/zuul/src/test/java/cn/zx/biri/zuul/ZuulApplicationTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka-server-1/target/" />
     <ignored path="$PROJECT_DIR$/zuul/target/" />
@@ -85,84 +226,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LoginRegisterApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1430">
-              <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroRealm.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1547783375400" expanded="true" signature="914:922" ph="&lt;~&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticateController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ZuulApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="286">
+              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="32" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -171,18 +239,100 @@
       <file leaf-file-name="AccessFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="529">
+              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <folding>
+                <element signature="e#1255#1256#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShiroConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="78" column="37" lean-forward="true" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZuulApplicationTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul/src/test/java/cn/zx/biri/zuul/ZuulApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisServiceApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eureka-server-1/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="638">
+              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+              <folding>
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EurekaServer1Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
               <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginRegisterApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mvnw.cmd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eureka-server-1/mvnw.cmd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -193,23 +343,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wa</find>
-      <find>wapp</find>
-      <find>.coming-soon-area</find>
-      <find>\bhost:.</find>
-      <find>\bhost:.*</find>
+      <find>\bhost: .*</find>
+      <find>RedisProperties</find>
     </findStrings>
     <replaceStrings>
-      <replace>host:192.168.1.102</replace>
-      <replace>host: 10.8.162.219</replace>
+      <replace>host: 192.168.31.67</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -239,32 +384,24 @@
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/GateWayCorsConfig.java" />
         <option value="$PROJECT_DIR$/redis-service/src/main/resources/templates/sf.html" />
         <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/commonBean/utils/CookieUtils.java" />
+        <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/CookieUtils.java" />
         <option value="$PROJECT_DIR$/redis-service/pom.xml" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" />
-        <option value="$PROJECT_DIR$/login-register/pom.xml" />
-        <option value="$PROJECT_DIR$/login-register/src/main/resources/templates/coming-soon.html" />
-        <option value="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/shiroConfiguration.java" />
-        <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/redis-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/login-register/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" />
         <option value="$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java" />
+        <option value="$PROJECT_DIR$/login-register/pom.xml" />
+        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/templetes/login.html" />
+        <option value="$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/zuul/src/test/java/cn/zx/biri/zuul/ZuulApplicationTests.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java" />
       </list>
@@ -325,8 +462,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="106" />
-    <option name="y" value="390" />
+    <option name="x" value="1076" />
+    <option name="y" value="164" />
     <option name="width" value="981" />
     <option name="height" value="1084" />
   </component>
@@ -346,8 +483,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -357,8 +494,51 @@
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka-server-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eureka-server-1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="login-register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="login-register" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="login-register" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="login-register" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="login-register" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="loginregister" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="login-register" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="loginregister" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
@@ -388,36 +568,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -426,9 +576,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="Component" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -438,9 +585,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -450,9 +594,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -462,9 +603,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -479,16 +617,29 @@
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,14 +652,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="SearchEverywhereHistoryKey" value="Autoconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.AutoConfigurationSorter.AutoConfigurationClass&#10;datasourceconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration" />
+    <property name="SearchEverywhereHistoryKey" value="RedisTem&#9;PSI&#9;JAVA://org.springframework.data.redis.core.RedisTemplate&#10;RedisManager&#9;PSI&#9;JAVA://org.springframework.data.redis.cache.RedisCacheManager&#10;WeakRe&#9;PSI&#9;JAVA://java.lang.ref.WeakReference&#10;ThreadLocal&#9;PSI&#9;JAVA://java.lang.ThreadLocal&#10;Autoconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.AutoConfigurationSorter.AutoConfigurationClass&#10;datasourceconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jquerytz" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -516,18 +667,186 @@
       <recent name="cn.zx.biri.common" />
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.zx.biri.zuul.controller" />
-      <recent name="cn.zx.biri.zuul.Component" />
-      <recent name="cn.zx.biri.zuul.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\gitRep\Biri\login-register\src\main\resources\static\assets\img" />
-      <recent name="E:\gitRep\Biri\login-register\src\main\resources\static\assets\img\logo" />
-      <recent name="E:\gitRep\Biri\login-register\src\main\resources\static" />
-      <recent name="E:\gitRep\Biri\login-register\src\main\resources\templates" />
       <recent name="E:\gitRep\Biri\redis-service\src\main\resources" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/common/pom.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/application.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/redis-service/src/main/resources/application.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/pom.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/resources/application.yml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/uiDesigner.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/dl-icon.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/font-awesome.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/plugins.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/revoulation.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/dl-icon.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/fonts/lg.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/favicon.ico</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/loginPage.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/ajax-mail.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/bootstrap.bundle.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/plugins.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.actions.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.carousel.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.kenburn.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.migration.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.navigation.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.parallax.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.slideanims.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/extensions/revolution.extension.video.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/jquery.themepunch.revolution.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/revoulation/jquery.themepunch.tools.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/jquery.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/modernizr-2.8.3.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/zuul/src/main/resources/templates/login.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login-register/src/main/resources/templates/sf.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -547,31 +866,12 @@
     </option>
     <option name="contentProportion" value="0.28677735" />
   </component>
-  <component name="RunManager" selected="Application.ShiroRealm">
+  <component name="RunManager" selected="JUnit.ZuulApplicationTests.contextLoads">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-    </configuration>
-    <configuration name="ShiroRealm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.zx.biri.zuul.Component.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.zuul.Component.ShiroRealm" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="zuul" />
-      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -586,6 +886,56 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="ZuulApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.zx.biri.zuul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="zuul" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.zx.biri.zuul" />
+      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.zuul.ZuulApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ZuulApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.zx.biri.zuul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="zuul" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.zx.biri.zuul" />
+      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.zuul.ZuulApplicationTests" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -677,17 +1027,19 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaServer1Application" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.LoginRegisterApplication" />
       <item index="3" class="java.lang.String" itemvalue="Spring Boot.RedisServiceApplication" />
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.CommonApplication" />
-      <item index="5" class="java.lang.String" itemvalue="Application.ShiroRealm" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ZuulApplicationTests.contextLoads" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.ZuulApplicationTests.test1" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.ShiroRealm" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ZuulApplicationTests.contextLoads" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ZuulApplicationTests.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -711,54 +1063,62 @@
       <workItem from="1547032528007" duration="7940000" />
       <workItem from="1547080665097" duration="19000" />
       <workItem from="1547102519475" duration="10394000" />
-      <workItem from="1547119403650" duration="14337000" />
-      <workItem from="1547166536569" duration="43000" />
-      <workItem from="1547172045422" duration="1881000" />
-      <workItem from="1547386573943" duration="5078000" />
-      <workItem from="1547427629929" duration="135000" />
-      <workItem from="1547772589495" duration="12036000" />
-      <workItem from="1548298087131" duration="44000" />
+      <workItem from="1548041253124" duration="8092000" />
+      <workItem from="1548127444577" duration="4279000" />
+      <workItem from="1548294713752" duration="10327000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ZuulApplicationTests_contextLoads - 2019.01.21 at 17h 50m 16s.xml">
+      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZuulApplicationTests_contextLoads - 2019.01.21 at 17h 53m 02s.xml">
+      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZuulApplicationTests_test1 - 2019.01.21 at 17h 52m 38s.xml">
+      <configuration name="ZuulApplicationTests.test1" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73252000" />
+    <option name="totallyTimeSpent" value="62396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="-9" width="1855" height="1098" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25158983" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37334374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44051448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34025827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295901" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20866455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -769,33 +1129,110 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/filter/CorsFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/http/HttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="86" column="16" lean-forward="false" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/ServletRequestWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/javax/servlet/http/HttpServletRequestWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.13/tomcat-embed-core-9.0.13.jar!/org/apache/catalina/filters/CorsFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis-service/src/main/resources/templates/sf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.3.RELEASE/spring-core-5.1.3.RELEASE.jar!/org/springframework/util/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="363" column="25" lean-forward="false" selection-start-line="363" selection-start-column="25" selection-end-line="363" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/GateWayCorsConfig.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/LoggerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="285" column="25" lean-forward="false" selection-start-line="285" selection-start-column="25" selection-end-line="285" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/commonBean/bean1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/CommonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/CookieUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,110 +1243,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.class" />
+    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="139" column="16" lean-forward="false" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
+        <state relative-caret-position="308">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/RedisFlushMode.class">
+    <entry file="file://$PROJECT_DIR$/login-register/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="286">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/config/annotation/web/http/EnableRedisHttpSession.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/RedisFlushMode.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/session/spring-session-data-redis/2.1.2.RELEASE/spring-session-data-redis-2.1.2.RELEASE.jar!/org/springframework/session/data/redis/config/annotation/web/http/EnableRedisHttpSession.class" />
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="528">
+          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server-1/pom.xml">
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/con1.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.3.RELEASE/spring-context-5.1.3.RELEASE-sources.jar!/org/springframework/stereotype/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/logo-white.png" />
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/biri.png" />
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/logo.svg" />
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/logo/airi.png" />
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/revoulation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="1291" column="27" lean-forward="false" selection-start-line="1291" selection-start-column="27" selection-end-line="1291" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="502" column="15" lean-forward="false" selection-start-line="502" selection-start-column="15" selection-end-line="502" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/img/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/dl-icon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/vendor/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/plugins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/static/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382536">
-          <caret line="17388" column="25" lean-forward="false" selection-start-line="17388" selection-start-column="25" selection-end-line="17388" selection-end-column="25" />
+        <state relative-caret-position="198">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -917,70 +1278,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1374">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/component.java" />
-    <entry file="file://$PROJECT_DIR$/redis-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="396">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/controller/con1.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="3146">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Objects.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ref/Reference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="245" column="26" lean-forward="false" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
+        <state relative-caret-position="5808">
+          <caret line="301" column="4" lean-forward="false" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
+          <folding>
+            <element signature="e#10912#10913#0" expanded="false" />
+            <element signature="e#10948#10949#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/resources/application.yml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ref/WeakReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ThreadLocal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <caret line="209" column="63" lean-forward="false" selection-start-line="209" selection-start-column="63" selection-end-line="209" selection-end-column="63" />
+          <folding>
+            <element signature="e#5646#5676#1" expanded="false" />
+            <element signature="e#7765#7766#0" expanded="false" />
+            <element signature="e#7802#7803#0" expanded="false" />
+            <element signature="e#13015#13045#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/MavenRepository/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/subject/Subject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/realm/CachingRealm.class">
+    <entry file="jar://E:/MavenRepository/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/session/mgt/DefaultSessionManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state relative-caret-position="132">
+          <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+          <folding>
+            <marker date="1548298255496" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1548298255496" expanded="false" signature="152:613" ph="..." />
+            <marker date="1548298255496" expanded="true" signature="1073:1080" ph="{}" />
+            <marker date="1548298255496" expanded="true" signature="1135:1226" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="1265:1276" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="1299:1305" ph=" }" />
+            <marker date="1548298255496" expanded="false" signature="1352:1363" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="1390:1396" ph=" }" />
+            <marker date="1548298255496" expanded="false" signature="1462:1473" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="1510:1516" ph=" }" />
+            <marker date="1548298255496" expanded="false" signature="1562:1573" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="1607:1613" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="1687:1754" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="1815:1910" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="1961:2180" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="2244:2462" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="2529:2600" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="2645:2833" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="2878:3122" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="3173:3271" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="3322:3475" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="3526:3624" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="3670:3681" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="3713:3719" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="3813:4416" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="4480:4491" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="4524:4530" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="4639:4701" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="4745:4756" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="4788:4794" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="4850:5010" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java">
+    <entry file="jar://E:/MavenRepository/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/session/mgt/AbstractValidatingSessionManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="132">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <marker date="1548298255496" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1548298255496" expanded="false" signature="152:610" ph="..." />
+            <marker date="1548298255496" expanded="true" signature="1172:1179" ph="{}" />
+            <marker date="1548298255496" expanded="false" signature="1237:1248" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="1294:1300" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="1398:1489" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="1592:1669" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="1740:1751" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="1790:1796" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="1852:2106" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="2185:2260" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="2308:2319" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="2357:2363" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="2453:2717" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="2906:3010" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="3204:3523" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="3613:3839" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="3889:3900" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="3923:3929" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="3980:3987" ph="{}" />
+            <marker date="1548298255496" expanded="true" signature="4079:4470" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="4550:5123" ph="{...}" />
+            <marker date="1548298255496" expanded="false" signature="5171:5182" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="5210:5216" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="5294:5833" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="5893:6425" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="6478:6485" ph="{}" />
+            <marker date="1548298255496" expanded="true" signature="6546:7333" ph="{...}" />
+            <marker date="1548298255496" expanded="true" signature="7388:7395" ph="{}" />
+            <marker date="1548298255496" expanded="false" signature="7422:7433" ph=" { " />
+            <marker date="1548298255496" expanded="false" signature="7465:7471" ph=" }" />
+            <marker date="1548298255496" expanded="true" signature="7508:8867" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,142 +1433,407 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.class">
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/realm/AuthenticatingRealm.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/templates/loginPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="103" column="61" lean-forward="false" selection-start-line="103" selection-start-column="61" selection-end-line="103" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/RedisService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1.jar!/com/netflix/zuul/ZuulFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis-service/src/main/java/cn/zx/biri/redisservice/RedisServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="55" />
+        <state relative-caret-position="533">
+          <caret line="53" column="55" lean-forward="false" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/controller/AuthenticateController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="533">
+          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#745#746#0" expanded="false" />
+            <element signature="e#786#787#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/Component/ShiroRealm.java">
+    <entry file="jar://E:/MavenRepository/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE.jar!/org/springframework/boot/autoconfigure/data/redis/RedisProperties.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="550">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <marker date="1546657551814" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1546657551814" expanded="false" signature="173:291" ph="..." />
+            <marker date="1546657551814" expanded="true" signature="293:348" ph="@{...}" />
+            <marker date="1546657551814" expanded="true" signature="868:875" ph="{}" />
+            <marker date="1546657551814" expanded="true" signature="905:916" ph=" { " />
+            <marker date="1546657551814" expanded="true" signature="937:943" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="986:997" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1022:1028" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1056:1067" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1083:1089" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1125:1136" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1151:1157" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1186:1197" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1214:1220" ph=" }" />
+            <marker date="1546657551814" expanded="true" signature="1258:1269" ph=" { " />
+            <marker date="1546657551814" expanded="true" signature="1286:1292" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1325:1336" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1357:1363" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1409:1420" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1445:1451" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1477:1488" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1505:1511" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1546:1557" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1574:1580" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1608:1619" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1635:1641" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1678:1689" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1704:1710" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1756:1767" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1790:1796" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1830:1841" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1861:1867" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="1918:1929" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="1950:1956" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2020:2031" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2056:2062" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2111:2122" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2142:2148" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2209:2220" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2243:2249" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2294:2305" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2323:2329" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2378:2389" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2409:2415" ph=" }" />
+            <marker date="1546657551814" expanded="true" signature="2449:3021" ph="{...}" />
+            <marker date="1546657551814" expanded="true" signature="2588:2599" ph="{}" />
+            <marker date="1546657551814" expanded="false" signature="2645:2660" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2688:2698" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2764:2779" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2818:2828" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2875:2890" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="2907:2917" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="2973:2988" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3005:3015" ph=" }" />
+            <marker date="1546657551814" expanded="true" signature="3053:3326" ph="{...}" />
+            <marker date="1546657551814" expanded="true" signature="3122:3133" ph="{}" />
+            <marker date="1546657551814" expanded="false" signature="3180:3195" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3212:3222" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="3278:3293" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3310:3320" ph=" }" />
+            <marker date="1546657551814" expanded="true" signature="3361:3822" ph="{...}" />
+            <marker date="1546657551814" expanded="true" signature="3457:3468" ph="{}" />
+            <marker date="1546657551814" expanded="false" signature="3503:3518" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3537:3547" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="3593:3608" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3629:3639" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="3679:3694" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3712:3722" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="3772:3787" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="3806:3816" ph=" }" />
+            <marker date="1546657551814" expanded="true" signature="3856:4361" ph="{...}" />
+            <marker date="1546657551814" expanded="true" signature="3958:3969" ph="{}" />
+            <marker date="1546657551814" expanded="false" signature="4009:4024" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4042:4052" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4102:4117" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4136:4146" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4188:4203" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4228:4238" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4297:4312" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4345:4355" ph=" }" />
+            <marker date="1546657551814" expanded="true" signature="4392:5300" ph="{...}" />
+            <marker date="1546657551814" expanded="true" signature="4577:4588" ph="{}" />
+            <marker date="1546657551814" expanded="false" signature="4621:4636" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4656:4666" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4711:4726" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4749:4759" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4792:4807" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4827:4837" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4882:4897" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="4920:4930" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="4965:4980" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="5002:5012" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="5061:5076" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="5103:5113" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="5151:5166" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="5186:5196" ph=" }" />
+            <marker date="1546657551814" expanded="false" signature="5246:5261" ph=" { " />
+            <marker date="1546657551814" expanded="false" signature="5284:5294" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/MavenRepository/org/springframework/data/spring-data-redis/2.1.3.RELEASE/spring-data-redis-2.1.3.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4620">
+          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="26" />
+          <folding>
+            <marker date="1546657502328" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1546657502328" expanded="false" signature="159:2086" ph="..." />
+            <marker date="1546657502328" expanded="true" signature="3285:3292" ph="{}" />
+            <marker date="1546657502328" expanded="true" signature="3331:4671" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="4736:4747" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="4802:4808" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="4900:4969" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="5079:6508" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="6563:7104" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="7175:7251" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="7369:8819" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="7803:8699" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="8887:8962" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="9077:9961" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="9129:9953" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="10041:10112" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="10264:10369" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="10461:10924" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="10987:10998" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="11027:11033" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="11112:11368" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="11477:11511" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="11635:11665" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="11706:11717" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="11746:11752" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="11815:11826" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="11867:11873" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="11921:11932" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="11968:11974" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="12052:12123" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="12191:12202" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12232:12238" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="12307:12318" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12354:12360" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="12425:12436" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12468:12474" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="12524:12535" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12561:12567" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="12634:12645" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12679:12685" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="12737:12748" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12776:12782" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="12836:12847" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="12877:12883" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="12960:13019" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="13075:13086" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="13118:13124" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="13205:13268" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="13326:13337" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="13366:13372" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="13452:13509" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="13578:13589" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="13626:13632" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="13672:13861" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="13903:13914" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="13958:13964" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="14008:14153" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="14204:14465" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="14510:14608" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="14842:16138" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="16229:16676" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="16793:17291" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="17324:17585" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="17652:17771" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="17810:17947" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="17982:18222" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="18083:18151" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="18267:18546" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="18459:18522" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="18581:18824" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="18682:18753" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="18869:19151" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19061:19127" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19186:19354" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19283:19340" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19410:19637" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19565:19623" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19701:20110" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="19862:20096" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="20158:20496" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="20255:20482" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="20561:20879" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="20773:20865" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="20914:21076" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21008:21062" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21130:21435" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21224:21421" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21471:21767" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21583:21638" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21803:21972" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="21900:21958" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22018:22193" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22115:22179" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22220:22352" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22397:22635" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22532:22621" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22691:22929" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22842:22915" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="22963:23130" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23061:23116" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23162:23327" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23258:23313" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23423:23689" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23571:23675" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23715:23836" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23754:23822" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23864:23987" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="23903:23973" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24018:24201" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24099:24187" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24245:24420" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24331:24406" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24448:24571" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24487:24557" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="24616:24627" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="24673:24679" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="24776:25129" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="24981:25044" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="25208:25282" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="25411:26179" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="26234:26568" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="26478:26554" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="26620:26750" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="26659:26742" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="26800:26811" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="26873:26879" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="26928:27055" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="26967:27047" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="27088:27210" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="27127:27202" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="27262:27273" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="27315:27321" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="27366:27505" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="27561:27572" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="27620:27626" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="27699:27764" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="27824:27835" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="27874:27880" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="27941:28088" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="28135:28278" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="28336:28347" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="28396:28402" ph=" }" />
+            <marker date="1546657502328" expanded="false" signature="28458:28469" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="28517:28523" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="28568:28707" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="28767:28778" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="28828:28834" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="28883:29030" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="29088:29099" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="29148:29154" ph=" }" />
+            <marker date="1546657502328" expanded="true" signature="29201:29344" ph="{...}" />
+            <marker date="1546657502328" expanded="true" signature="29424:29497" ph="{...}" />
+            <marker date="1546657502328" expanded="false" signature="29558:29569" ph=" { " />
+            <marker date="1546657502328" expanded="false" signature="29600:29606" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/MavenRepository/org/springframework/data/spring-data-redis/2.1.3.RELEASE/spring-data-redis-2.1.3.RELEASE.jar!/org/springframework/data/redis/cache/RedisCacheManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="97" lean-forward="true" selection-start-line="31" selection-start-column="69" selection-end-line="32" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="41" column="25" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="41" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/LoginRegisterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server-1/src/main/java/cn/zx/biri/eurekaserver1/EurekaServer1Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="32" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/test/java/cn/zx/biri/zuul/ZuulApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="78" column="37" lean-forward="true" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1547783375400" expanded="true" signature="914:922" ph="&lt;~&gt;" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1172,7 +1878,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android API 27 Platform</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1189,6 +1895,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -3,6 +3,7 @@ package cn.zx.biri.zuul.config;
 
 import cn.zx.biri.zuul.Component.ShiroRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.session.mgt.DefaultSessionManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
@@ -11,9 +12,13 @@ import org.apache.shiro.web.filter.authc.LogoutFilter;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+
+import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.servlet.Filter;
 import java.util.LinkedHashMap;
@@ -33,9 +38,9 @@ public class ShiroConfiguration {
     }
 
     //配置CacheManager，缓存管理器
-    @Bean(name = "ehCacheManager")
+    @Bean(name = "cacheManager")
     @DependsOn("lifecycleBeanPostProcessor")
-    public EhCacheManager ehCacheManager() {
+    public CacheManager cacheManager() {
         return new EhCacheManager();
     }
 
@@ -43,11 +48,12 @@ public class ShiroConfiguration {
     @Bean(name = "securityManager")
     public DefaultWebSecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setCacheManager(cacheManager());
         securityManager.setRealm(shiroRealm());
-        securityManager.setCacheManager(ehCacheManager());
-        DefaultSessionManager defaultSessionManager = new DefaultSessionManager();
-        defaultSessionManager.setDeleteInvalidSessions(false);
-        securityManager.setSessionManager(defaultSessionManager);
+
+//        DefaultSessionManager defaultSessionManager = new DefaultSessionManager();
+//        defaultSessionManager.setDeleteInvalidSessions(false);
+//        securityManager.setSessionManager(defaultSessionManager);
         return securityManager;
     }
 
@@ -84,6 +90,7 @@ public class ShiroConfiguration {
         // /**拦截所有资源
 ////      filterChainDefinitionManager.put("/login.html", "anon");
         filterChainDefinitionManager.put("/authenticate","anon");
+        filterChainDefinitionManager.put("/test", "authc");
         filterChainDefinitionManager.put("/Biri/loginAndRegister/**", "authc");
 //        filterChainDefinitionManager.put("/cart/**","authc");
 //        filterChainDefinitionManager.put("/book/bookDetail/**","authc");

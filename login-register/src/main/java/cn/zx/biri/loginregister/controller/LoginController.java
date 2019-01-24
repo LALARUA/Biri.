@@ -23,9 +23,9 @@ public class LoginController {
     @ResponseBody
     @GetMapping("loginPage")
     public String loginPage(){
-
         return "hello world";
     }
+
 
     @ResponseBody
     @PostMapping("authenticate")

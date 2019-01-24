@@ -4,7 +4,7 @@ spring:
   application:
     name: login-register
   redis:
-    host: 10.8.162.219
+    host: 192.168.31.67
     port: 6379
   session:
     store-type: redis
