@@ -24,6 +24,7 @@ public class con1 {
 
         System.out.println("name="+name);
 
+        int i = 0/0;
         return "name="+name;
 
     }

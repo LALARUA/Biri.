@@ -28,9 +28,15 @@ public class LoginController {
 
 
     @ResponseBody
-    @PostMapping("authenticate")
+    @GetMapping("authenticate")
     public String authenticate(String username, String password, HttpServletRequest httpServletRequest){
-        redisService.get("zhongxiang");
+
+        try {
+            redisService.get("zhongxiang");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return "ss";
     }
 }

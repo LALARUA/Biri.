@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="book-service" />
         <module name="common" />
         <module name="eureka-server-1" />
         <module name="login-register" />
@@ -14,6 +15,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book-service" target="1.8" />
       <module name="common" target="1.8" />
       <module name="eureka-server-1" target="1.8" />
       <module name="login-register" target="1.8" />

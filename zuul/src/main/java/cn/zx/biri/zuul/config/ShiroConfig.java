@@ -1,13 +1,20 @@
 package cn.zx.biri.zuul.config;
 
 
-import cn.zx.biri.zuul.Component.ShiroRealm;
+
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.mgt.DefaultSessionManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.web.filter.authc.LogoutFilter;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
@@ -21,12 +28,50 @@ import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.servlet.Filter;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 @Configuration
-public class ShiroConfiguration {
+public class ShiroConfig {
+    public static void main(String[] args) {
+        String hashAlgorithmName = "MD5";
+        Object credentials = "123456";
+        Object salt = ByteSource.Util.bytes("zhongxiang");
+        Object result = new SimpleHash(hashAlgorithmName, credentials, salt);
+        System.out.println(result);
+    }
+    class ShiroRealm extends AuthorizingRealm {
+
+        @Override
+        protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+            Object primaryPrincipal = principalCollection.getPrimaryPrincipal();
+            String email = String.valueOf(primaryPrincipal);
+            Set<String> roles = new HashSet<String>();
+            roles.add("user");
+            SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo(roles);
+            return simpleAuthorizationInfo;
+        }
+
+
+        @Override
+        protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+            UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
+//        String email = token.getUsername();
+//        Object username = email;
+//        Object password = "123456";
+//        ByteSource salt = ByteSource.Util.bytes(email);
+//        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, salt, getName());
+//        return info;
+            String username = token.getUsername();
+            ByteSource salt = ByteSource.Util.bytes(username);
+            String password = "770c3f892bc1dc0d815ab4e18115481e";
+            return new SimpleAuthenticationInfo(username,password,salt,getName());
+        }
+
+    }
     /*
     配置LifecycleBeanPostProcessor，这是个DestructionAwareBeanPostProcessor的子类，
     负责org.apache.shiro.util.Initializable类型bean的生命周期的，初始化和销毁。
@@ -82,7 +127,7 @@ public class ShiroConfiguration {
         Map<String, String> filterChainDefinitionManager = new LinkedHashMap<String, String>();
 
         shiroFilterFactoryBean.setSuccessUrl("/homepage");
-        shiroFilterFactoryBean.setLoginUrl("/");
+        shiroFilterFactoryBean.setLoginUrl("/loginPage");
         shiroFilterFactoryBean.setUnauthorizedUrl("/error/405.html");
 
         //.anon可以被匿名访问
@@ -126,3 +171,4 @@ public class ShiroConfiguration {
         return realm;
     }
 }
+

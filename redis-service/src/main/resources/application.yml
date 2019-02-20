@@ -1,10 +1,10 @@
 server:
-  port: 6379
+  port: 6380
 spring:
   application:
     name: redis-service
   redis:
-    host: 192.168.31.67
+    host: localhost
     port: 6379
   session:
     store-type: redis
