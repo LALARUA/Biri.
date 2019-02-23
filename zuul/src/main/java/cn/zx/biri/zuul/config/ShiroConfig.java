@@ -136,7 +136,7 @@ public class ShiroConfig {
 ////      filterChainDefinitionManager.put("/login.html", "anon");
         filterChainDefinitionManager.put("/authenticate","anon");
         filterChainDefinitionManager.put("/test", "authc");
-        filterChainDefinitionManager.put("/Biri/loginAndRegister/**", "authc");
+//        filterChainDefinitionManager.put("/Biri/loginAndRegister/**", "authc");
 //        filterChainDefinitionManager.put("/cart/**","authc");
 //        filterChainDefinitionManager.put("/book/bookDetail/**","authc");
 //        filterChainDefinitionManager.put("/admin/**","roles[admin]");

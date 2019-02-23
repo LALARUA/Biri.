@@ -2,7 +2,9 @@ package cn.zx.biri.common.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @Author: xiangXX
@@ -12,7 +14,7 @@ import java.util.List;
 public class CookieUtils {
     public static Cookie getCookieByName(HttpServletRequest httpServletRequest,String name){
         Cookie[] cookies = httpServletRequest.getCookies();
-        if (cookies==null)
+        if (Objects.isNull(cookies))
             return null;
         else {
             for (Cookie cookie : cookies) {
@@ -30,5 +32,13 @@ public class CookieUtils {
                 System.out.println(cookie.getName()+" : "+cookie.getValue() );
             }
         }
+    }
+
+    public static Cookie addCookie(HttpServletResponse httpServletResponse,String cookieName,String cookieValue){
+        Cookie cookie = new Cookie(cookieName,cookieValue);
+        cookie.setPath("/");
+        cookie.setMaxAge(60*2);
+        httpServletResponse.addCookie(cookie);
+        return cookie;
     }
 }

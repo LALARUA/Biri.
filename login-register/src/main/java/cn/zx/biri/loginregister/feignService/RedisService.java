@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 @FeignClient(value = "redis-service")
 public interface RedisService {
 
-    @GetMapping("/get")
+    @GetMapping("get")
     public String get(@RequestParam(value = "name") String name);
 
 

@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="assets/img/icon.png">
 
     <!-- Title -->
-    <title>Biri-读你所想 登录</title>
+    <title>Airi-读你所想 登录</title>
 
     <!-- ************************* CSS Files ************************* -->
 
@@ -70,7 +70,13 @@
                             <form style="margin-top: 100px" action="/authenticate" method="post" class="newsletter-form newsletter-form--4">
                                 <input type="" name="username" id="email" class="newsletter-form__input" placeholder="邮箱" required>
                                 <input type="" name="password" id="password" class="newsletter-form__input" placeholder="密码" required>
-                                <button type="submit" class="newsletter-form__submit">Subscribe</button>
+                                <div style="margin-top: 5px" class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" class="rem login" name="remember" value="rem">
+                                        <span class="rem login" th:text="记住我"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="newsletter-form__submit">Airi.</button>
                             </form>
 
 

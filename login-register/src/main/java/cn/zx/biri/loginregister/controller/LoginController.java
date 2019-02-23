@@ -27,6 +27,7 @@ public class LoginController {
     }
 
 
+
     @ResponseBody
     @GetMapping("authenticate")
     public String authenticate(String username, String password, HttpServletRequest httpServletRequest){

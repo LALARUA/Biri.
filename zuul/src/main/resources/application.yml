@@ -2,7 +2,7 @@ spring:
   application:
     name: zuul
   redis:
-    host: localhost
+    host: 47.106.215.35
     port: 6379
   session:
     store-type: redis
@@ -22,7 +22,11 @@ zuul:
 
 
     redis-service:
-          path: /Biri/redisSevice/**
-          serviceId: redis-service
+      path: /Biri/redisService/**
+      serviceId: redis-service
+
+    rabbitmq-service:
+      path: /Biri/rabbitmqService/**
+      serviceId: rabbitmq-service
   ignored-services: "*"
   sensitive-headers: "*"
