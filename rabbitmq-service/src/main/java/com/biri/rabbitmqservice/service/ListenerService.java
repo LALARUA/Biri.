@@ -13,6 +13,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 /**
  * @Author: xiangXX
  * @Description:
@@ -43,6 +45,34 @@ public class ListenerService {
         else if (username.matches(Regex.PHONE.toString())){
 
         }
+    }
+    @RabbitListener(queues = "airi.CAPTCHA")
+    public void getCAPTCHA(String message){
+        String[] split = message.split("#");
+        String username = split[0];
+        String CAPTCHA = split[1];
+        String emailRegex = Regex.EMAIL.toString();
+        String phoneRegex = Regex.PHONE.toString();
+        if (username.matches(emailRegex)) {
+            String text = myProperties.getGetCAPTCHAMessage()+CAPTCHA;
+            sendMail(username,text);
+            return;
+        }
+
+
+        //手机
+        else if (username.matches(phoneRegex)){
+
+        }
+    }
+
+    public void sendMail(String to,String text){
+        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+        simpleMailMessage.setSubject("");
+        simpleMailMessage.setText(text);
+        simpleMailMessage.setTo(to);
+        simpleMailMessage.setFrom("745402208@qq.com");
+        javaMailSender.send(simpleMailMessage);
     }
 
 

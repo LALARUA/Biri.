@@ -11,6 +11,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class MyProperties {
     private String directExchangeName;
     private String registerMessage;
+    private String getCAPTCHAMessage;
+
+    public String getGetCAPTCHAMessage() {
+        return getCAPTCHAMessage;
+    }
+
+    public void setGetCAPTCHAMessage(String getCAPTCHAMessage) {
+        this.getCAPTCHAMessage = getCAPTCHAMessage;
+    }
 
     public String getRegisterMessage() {
         return registerMessage;

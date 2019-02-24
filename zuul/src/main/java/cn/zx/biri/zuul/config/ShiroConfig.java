@@ -39,12 +39,11 @@ public class ShiroConfig {
     public static void main(String[] args) {
         String hashAlgorithmName = "MD5";
         Object credentials = "123456";
-        Object salt = ByteSource.Util.bytes("zhongxiang");
+        Object salt = ByteSource.Util.bytes("745402208@qq.com");
         Object result = new SimpleHash(hashAlgorithmName, credentials, salt);
         System.out.println(result);
     }
     class ShiroRealm extends AuthorizingRealm {
-
         @Override
         protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
             Object primaryPrincipal = principalCollection.getPrimaryPrincipal();
@@ -67,7 +66,7 @@ public class ShiroConfig {
 //        return info;
             String username = token.getUsername();
             ByteSource salt = ByteSource.Util.bytes(username);
-            String password = "770c3f892bc1dc0d815ab4e18115481e";
+            String password = "0f674036a1df182eb4ad6420079a7ad2";
             return new SimpleAuthenticationInfo(username,password,salt,getName());
         }
 
