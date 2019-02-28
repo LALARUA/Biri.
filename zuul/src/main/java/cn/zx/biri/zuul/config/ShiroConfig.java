@@ -126,15 +126,21 @@ public class ShiroConfig {
         Map<String, String> filterChainDefinitionManager = new LinkedHashMap<String, String>();
 
         shiroFilterFactoryBean.setSuccessUrl("/homepage");
-        shiroFilterFactoryBean.setLoginUrl("/loginPage");
+        shiroFilterFactoryBean.setLoginUrl("/Biri/login");
         shiroFilterFactoryBean.setUnauthorizedUrl("/error/405.html");
 
         //.anon可以被匿名访问
         //.authc必须认证(即登陆)
         // /**拦截所有资源
-////      filterChainDefinitionManager.put("/login.html", "anon");
-        filterChainDefinitionManager.put("/authenticate","anon");
-        filterChainDefinitionManager.put("/test", "authc");
+
+        filterChainDefinitionManager.put("/loginAndRegister/**","anon");
+        filterChainDefinitionManager.put("/Biri/login","anon");
+        filterChainDefinitionManager.put("/Biri/index","anon");
+        filterChainDefinitionManager.put("/assets/**","anon");
+        filterChainDefinitionManager.put("/**","authc");
+
+//        filterChainDefinitionManager.put("/test", "authc");
+//        filterChainDefinitionManager.put("/loginAndRegister/**", "authc");
 //        filterChainDefinitionManager.put("/Biri/loginAndRegister/**", "authc");
 //        filterChainDefinitionManager.put("/cart/**","authc");
 //        filterChainDefinitionManager.put("/book/bookDetail/**","authc");

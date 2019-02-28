@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: web-service
+  redis:
+    host: 47.106.215.35
+    port: 6379
+  session:
+    store-type: redis
+  rabbitmq:
+    host: 47.106.215.35
+    username: guest
+    password: guest
+    port: 5672
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务时使用服务的ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -1,10 +1,11 @@
 package com.biri.rabbitmqservice.service;
 
-import cn.zx.biri.common.commonBean.Regex;
+import cn.zx.biri.common.commonBean.RegEx;
 import com.biri.rabbitmqservice.config.MyProperties;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 
 
@@ -12,8 +13,6 @@ import org.springframework.mail.javamail.JavaMailSender;
 
 
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 /**
  * @Author: xiangXX
@@ -33,46 +32,55 @@ public class ListenerService {
     public void registerNewUser(String username){
 
         //邮箱
-        if (username.matches(Regex.EMAIL.toString())) {
-            SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-            simpleMailMessage.setSubject("");
-            simpleMailMessage.setText(username + myProperties.getRegisterMessage());
-            simpleMailMessage.setTo(username);
-            simpleMailMessage.setFrom("745402208@qq.com");
-            javaMailSender.send(simpleMailMessage);
-        }
-        //手机
-        else if (username.matches(Regex.PHONE.toString())){
+        try {
+            if (username.matches(RegEx.EMAIL.toString())) {
+                SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+                simpleMailMessage.setSubject("");
+                simpleMailMessage.setText(username + myProperties.getRegisterMessage());
+                simpleMailMessage.setTo(username);
+                simpleMailMessage.setFrom("745402208@qq.com");
+                javaMailSender.send(simpleMailMessage);
+            }
+            //手机
+            else if (username.matches(RegEx.PHONE.toString())){
 
+            }
+        } catch (MailException e) {
+            e.printStackTrace();
         }
     }
     @RabbitListener(queues = "airi.CAPTCHA")
     public void getCAPTCHA(String message){
-        String[] split = message.split("#");
-        String username = split[0];
-        String CAPTCHA = split[1];
-        String emailRegex = Regex.EMAIL.toString();
-        String phoneRegex = Regex.PHONE.toString();
-        if (username.matches(emailRegex)) {
-            String text = myProperties.getGetCAPTCHAMessage()+CAPTCHA;
-            sendMail(username,text);
-            return;
-        }
+        try {
+            String[] split = message.split("#");
+            String username = split[0];
+            String CAPTCHA = split[1];
+            String emailRegex = RegEx.EMAIL.toString();
+            String phoneRegex = RegEx.PHONE.toString();
+            if (username.matches(emailRegex)) {
+                String text = myProperties.getGetCAPTCHAMessage()+CAPTCHA;
+                sendMail(username,text);
+                return;
+            }
 
 
-        //手机
-        else if (username.matches(phoneRegex)){
+            //手机
+            else if (username.matches(phoneRegex)){
 
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    public void sendMail(String to,String text){
-        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-        simpleMailMessage.setSubject("");
-        simpleMailMessage.setText(text);
-        simpleMailMessage.setTo(to);
-        simpleMailMessage.setFrom("745402208@qq.com");
-        javaMailSender.send(simpleMailMessage);
+    public void sendMail(String to,String text) throws Exception{
+            SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+            simpleMailMessage.setSubject("");
+            simpleMailMessage.setText(text);
+            simpleMailMessage.setTo(to);
+            simpleMailMessage.setFrom("745402208@qq.com");
+            javaMailSender.send(simpleMailMessage);
+
     }
 
 

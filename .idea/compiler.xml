@@ -12,6 +12,7 @@
         <module name="login-register" />
         <module name="rabbitmq-service" />
         <module name="redis-service" />
+        <module name="user-service" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
@@ -22,6 +23,8 @@
       <module name="login-register" target="1.8" />
       <module name="rabbitmq-service" target="1.8" />
       <module name="redis-service" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="web-service" target="1.8" />
       <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -83,7 +83,9 @@
                                         <!--<input id="rem" type="checkbox"  name="rem" value="1">-->
                                         <!--<label for="rem" style="color: black" th:text="记住我"></label>-->
                                     <span id="isHaveCount" style="margin-left: 10px;font-size: 15px;color: black">没有账号?</span><a id="change" flag="1" style="font-size: 15px" href="#">注册</a>
+                                    <a href="#" style="float:right" id="forgetPassword">忘记密码?</a>
                                 </div>
+
 
                                 <div>
                                     <div align="center">
@@ -117,8 +119,10 @@
             $(document).on('click', '#change', function () {
                 $("#errorMessage").text("")
                 var flag = $(this).attr("flag");
+                var text = $(this).text();
+
                 //flag=1 说明此时是登录界面状态  需要切换为注册界面
-                if (flag==1){
+                if (text=='注册'){
                     $(".register").show();
                     $("#isHaveCount").text("已有账号?");
                     $(this).text("登录");
@@ -126,13 +130,19 @@
                     $(this).attr("flag",0);
                 }
                 //flag=0 说明此时是注册界面状态  需要切换为登录界面
-                else if (flag==0){
+                else if (text=='登录'){
+
                     $(".register").hide();
                     $("#isHaveCount").text("没有账号?");
                     $(this).text("注册");
                     $("#loginOrRegister").text("登录")
                     $(this).attr("flag",1);
                 }
+            })
+            $(document).on('click', '#forgetPassword', function () {
+                $(".register").show();
+                $("#loginOrRegister").text("提交")
+                $(this).attr("flag",3);
             })
             $(document).on('mouseenter', '#getCAPTCHA', function () {
                 $(this).css("color","#804e0f")
@@ -151,20 +161,24 @@
                     $("#errorMessage").text("请输入正确的邮箱");
                     return false
                 }
+                var flag = $("#change").attr("flag");
 
-
+                $("#getCAPTCHA").text("发送中...")
+                $("#getCAPTCHA").attr("disabled", true)
+                $("#getCAPTCHA").css("color", "white")
                 $.ajax({
-                    url: 'getCAPTCHA',
+                    url: '/Biri/loginAndRegister/getCAPTCHA',
                     type: 'get', //
                     async: true,    //或false,是否异步
                     data: {
                         username: username,
-
+                        flag:flag,
                     },
                     timeout: 5000,    //超时时间
                     dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
                     success: function (data) {
-                        if (data['flag']==0){
+                        var errorMessage = data['errorMessage'];
+                        if (errorMessage==null){
                             $("#CAPTCHAFromServer").val(data['CAPTCHA'])
                             var time = 60;
                             var timer = setInterval(function () {
@@ -179,8 +193,8 @@
                                 }
                             }, 1000);
                         }
-                        else if (data['flag']==1){
-                            $("#errorMessage").text(data['errorMessage'])
+                        else {
+                            $("#errorMessage").text(errorMessage)
                             var time = 5;
                             var timer = setInterval(function () {
                                 time--;
@@ -266,9 +280,9 @@
                     timeout: 5000,    //超时时间
                     dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
                     success: function (data) {
-                        var flag = data['flag'];
-                        if (flag==1){
-                            $("#errorMessage").text(data['errorMessage'])
+                        var errorMessage = data['errorMessage'];
+                        if (errorMessage!=null){
+                            $("#errorMessage").text(errorMessage)
                         }
                         else {
                             window.location.href = data['url']

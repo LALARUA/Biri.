@@ -8,25 +8,50 @@ spring:
     store-type: redis
 server:
   port: 8769
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+
 zuul:
 #  ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken
   routes:
     login-register:
-      path: /Biri/loginAndRegister/**
+      path: /loginAndRegister/**
       serviceId: login-register
 
-
     redis-service:
-      path: /Biri/redisService/**
+      path: /redisService/**
       serviceId: redis-service
 
     rabbitmq-service:
-      path: /Biri/rabbitmqService/**
+      path: /rabbitmqService/**
       serviceId: rabbitmq-service
+
+
+    web-service:
+      path: /Biri/**
+      serviceId: web-service
   ignored-services: "*"
-  sensitive-headers: "*"
+  sensitive-headers:
+  host:
+    connect-timeout-millis: 200000
+    socket-timeout-millis: 200000
+feign:
+  httpclient:
+    connection-timeout: 100000
+  hystrix:
+    enabled: true
+ribbon:
+  ReadTimeout: 100000
+  ConnectTimeout: 100000
+
+
+
+
+
+
+
+
