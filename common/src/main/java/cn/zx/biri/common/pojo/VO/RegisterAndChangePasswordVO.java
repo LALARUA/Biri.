@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
  */
 public class RegisterAndChangePasswordVO extends LoginVO {
 
-    @NotNull(message = "验证码不能为空")
+//    @NotNull(message = "验证码不能为空")
     private String CAPTCHA;
 
     private Integer flag;

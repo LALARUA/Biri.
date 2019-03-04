@@ -18,6 +18,9 @@ import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.session.Session;
+import org.springframework.session.SessionRepository;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,6 +43,7 @@ import java.util.Random;
  * @Description:
  * @Date Created in 20:52 2019/1/10 0010
  */
+
 @RestController
 public class AuthenticateController {
     @Autowired
@@ -51,6 +55,9 @@ public class AuthenticateController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    SessionRepository sessionRepository;
+
     private static org.slf4j.Logger logger = LoggerFactory.getLogger(AuthenticateController.class);
 
 
@@ -59,6 +66,7 @@ public class AuthenticateController {
         System.out.println("ss");
         return "hello world";
     }
+
 
 
 
@@ -103,7 +111,7 @@ public class AuthenticateController {
 
 
     @PostMapping("register")
-    public Map register(@Valid RegisterAndChangePasswordVO registerVO, BindingResult bindingResult){
+    public Map register(@Valid RegisterAndChangePasswordVO registerVO, BindingResult bindingResult,HttpServletRequest httpServletRequest){
         Map map = new HashMap();
         if(bindingResult.hasErrors()){
             map.put("errorMessage",bindingResult.getFieldError().getDefaultMessage());
@@ -111,7 +119,29 @@ public class AuthenticateController {
         }
 
         try {
+            User user = userService.selectUserByUsername(registerVO.getUsername());
+//            User user = null;
+            if (user!=null){
+                map.put("errorMessage","此用户已被注册");
+                return map;
+            }
+//            HttpSession session1 = httpServletRequest.getSession();
+//            session1.setAttribute("uu","oo");
             userService.insertUser(registerVO);
+             authenticateService.authenticate(registerVO.getUsername(),registerVO.getPassword());
+            HttpSession session = httpServletRequest.getSession();
+
+            Session byId = sessionRepository.findById(session.getId());
+            Object user1 = byId.getAttribute("user");
+
+            System.out.println(user1);
+            String email = user.getEmail();
+            SavedRequest savedRequest = WebUtils.getSavedRequest(httpServletRequest);
+            if (Objects.isNull(savedRequest))
+                map.put("url","home");
+            else
+                map.put("url",savedRequest.getRequestUrl());
+
         } catch (Exception e) {
             map.put("errorMessage","注册失败");
         }
@@ -145,8 +175,8 @@ public class AuthenticateController {
             map.put("errorMessage","请输入正确的邮箱");
         }
         try {
-//            User user = userService.selectUserByUsername(username);
-            User user = null;
+            User user = userService.selectUserByUsername(username);
+//            User user = null;
             if (user!=null&&flag==0){
                 map.put("errorMessage","此用户已被注册");
                 return map;
@@ -159,15 +189,18 @@ public class AuthenticateController {
             Integer CAPTCHA = new Random().nextInt(9000) + 1000;
             String message = username+"#"+CAPTCHA;
             map.put("CAPTCHA",CAPTCHA);
-//            rabbitmqService.sendMessageToQueueDirect("getCAPTCHA",message);
+            rabbitmqService.sendMessageToQueueDirect("getCAPTCHA",message);
             return map;
         } catch (Exception e) {
+            e.printStackTrace();
             map.put("errorMessage","获取验证码失败");
             map.put("CAPTCHA","");
 
             return map;
         }
     }
+
+
 
 
 

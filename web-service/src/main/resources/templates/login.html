@@ -67,7 +67,7 @@
                     <div class="col-12">
                         <div class="comming-soon pt--25">
                             <figure class="mb--100">
-                                <a href="index">
+                                <a href="home">
                                     <img src="/assets/img/airi.png" alt="log">
                                 </a>
                             </figure>
@@ -173,7 +173,7 @@
                         username: username,
                         flag:flag,
                     },
-                    timeout: 5000,    //超时时间
+                    timeout: 50000,    //超时时间
                     dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
                     success: function (data) {
                         var errorMessage = data['errorMessage'];
@@ -207,9 +207,22 @@
                                 }
                             }, 1000);
                         }
-
-
                     },
+                    error:function (data) {
+                        $("#errorMessage").text("获取验证码失败")
+                        var time = 5;
+                        var timer = setInterval(function () {
+                            time--;
+                            $("#getCAPTCHA").text("请等待" + time + "秒")
+                            $("#getCAPTCHA").attr("disabled", true)
+                            if (time == 0) {
+                                time = 60;
+                                clearInterval(timer);
+                                $("#getCAPTCHA").text("获取验证码");
+                                $("#getCAPTCHA").attr("disabled", false);
+                            }
+                        }, 1000);
+                    }
                 })
                 return false
 
@@ -283,10 +296,11 @@
                     type: 'post', //
                     async: true,    //或false,是否异步
                     data: {
+
                         username:username,
                         password:password,
                     },
-                    timeout: 5000,    //超时时间
+                    timeout: 50000,    //超时时间
                     dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
                     success: function (data) {
                         $("#loginOrRegister").attr("disabled",false);

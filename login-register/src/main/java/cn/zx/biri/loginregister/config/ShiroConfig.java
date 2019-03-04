@@ -1,6 +1,10 @@
 package cn.zx.biri.loginregister.config;
 
 
+import cn.zx.biri.common.pojo.Entry.User;
+import cn.zx.biri.loginregister.feignService.UserService;
+;
+import cn.zx.biri.loginregister.service.AuthenticateService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -16,6 +20,7 @@ import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.web.filter.authc.LogoutFilter;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,13 +38,15 @@ import java.util.Set;
 public class ShiroConfig {
     public static void main(String[] args) {
         String hashAlgorithmName = "MD5";
-        Object credentials = "zx123456";
-        Object salt = ByteSource.Util.bytes("745402208@qq.com");
+        Object credentials = "";
+        Object salt = ByteSource.Util.bytes("");
         Object result = new SimpleHash(hashAlgorithmName, credentials, salt);
         System.out.println(result);
     }
    class ShiroRealm extends AuthorizingRealm {
-        @Override
+       @Autowired
+       UserService userService;
+       @Override
         protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
             Object primaryPrincipal = principalCollection.getPrimaryPrincipal();
             String email = String.valueOf(primaryPrincipal);
@@ -48,25 +55,18 @@ public class ShiroConfig {
             SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo(roles);
             return simpleAuthorizationInfo;
         }
-
        @Override
        protected org.apache.shiro.authc.AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
            UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
-//        String email = token.getUsername();
-//        Object username = email;
-//        Object password = "123456";
-//        ByteSource salt = ByteSource.Util.bytes(email);
-//        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, salt, getName());
-//        return info;
            String username = token.getUsername();
+           User user = userService.selectUserByUsername(username);
+           if (user==null)
+               throw new UnknownAccountException();
+           String password = user.getPassword();
            ByteSource salt = ByteSource.Util.bytes(username);
-           String password = "bafc1adeb88edd287831daa052d16520";
+//           String password = "bafc1adeb88edd287831daa052d16520";
            return new SimpleAuthenticationInfo(username,password,salt,getName());
        }
-
-
-
-
     }
     /*
     配置LifecycleBeanPostProcessor，这是个DestructionAwareBeanPostProcessor的子类，

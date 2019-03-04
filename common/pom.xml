@@ -20,6 +20,11 @@
 	</properties>
 
 	<dependencies>
+		<!--<dependency>-->
+			<!--<groupId>com.netflix.feign</groupId>-->
+			<!--<artifactId>feign-httpclient</artifactId>-->
+			<!--<version>8.18.0</version>-->
+		<!--</dependency>-->
 
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
@@ -27,6 +32,10 @@
 			<version>1.3.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 		<!--shiro-ehcache-->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>

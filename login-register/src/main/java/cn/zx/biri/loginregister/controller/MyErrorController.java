@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Description:
  * @Date Created in 10:22 2019/2/28 0028
  */
-@Controller
+
 public class MyErrorController implements ErrorController {
 
     @RequestMapping("/error")

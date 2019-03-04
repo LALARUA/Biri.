@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-service/rabbitmq-service.iml" filepath="$PROJECT_DIR$/rabbitmq-service/rabbitmq-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis-service/redis-service.iml" filepath="$PROJECT_DIR$/redis-service/redis-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-service/web-service.iml" filepath="$PROJECT_DIR$/web-service/web-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>

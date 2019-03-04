@@ -1,10 +1,12 @@
 package cn.zx.biri.loginregister.service.serviceImpl;
 
 import cn.zx.biri.common.utils.CookieUtils;
+import cn.zx.biri.loginregister.feignService.RabbitmqService;
 import cn.zx.biri.loginregister.service.AuthenticateService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -19,6 +21,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Service
 public class AuthenticateServiceImpl implements AuthenticateService {
+    @Autowired
+    RabbitmqService rabbitmqService;
+
+    @Override
+    public void registerNewUser(String email, String password) {
+        rabbitmqService.sendMessageToQueueDirect("registerNewUser",email);
+    }
+
+    @Override
+    public void te() {
+        System.out.println("hello world");
+    }
 
     @Override
     public void authenticate(String username, String password) throws Exception {
@@ -32,6 +46,8 @@ public class AuthenticateServiceImpl implements AuthenticateService {
         HttpServletResponse currentHttpServletResponse = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();;
         CookieUtils.addCookie(currentHttpServletResponse,"user",value);
     }
+
+
 
 
 }

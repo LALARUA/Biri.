@@ -52,8 +52,6 @@ public class AccessFilter extends ZuulFilter{
     }
     @Override
     public Object run() throws ZuulException {
-        Subject currentUser = SecurityUtils.getSubject();
-
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
         StringBuffer requestURL = request.getRequestURL();
@@ -62,26 +60,18 @@ public class AccessFilter extends ZuulFilter{
             return null;
         }
         HttpSession session = request.getSession();
-        Cookie[] cookies = request.getCookies();
-        String id1 = session.getId();
-        String id = base64Encode(id1);
-
+//        Cookie[] cookies = request.getCookies();
+        String sessionId = session.getId();
+        String base64EncodeSessionId = base64Encode(sessionId);
         String cookie = request.getHeader("Cookie");
-
         if (Objects.isNull(cookie)){
-            cookie = "SESSION="+id;
+            cookie = "SESSION="+base64EncodeSessionId;
         }
         else {
-            String newCookie = "SESSION="+id;
+            String newCookie = "SESSION="+base64EncodeSessionId;
            cookie = cookie.replaceAll("\\bSESSION=.{48}",newCookie);
-
         }
-
         currentContext.addZuulRequestHeader("Cookie", cookie);
-
-
-
-
 //        currentContext.addZuulRequestHeader("Cookie","SESSION=" + base64Encode(session.getId()));
 
 //        currentContext.setSendZuulResponse(true);

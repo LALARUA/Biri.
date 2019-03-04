@@ -7,5 +7,7 @@ package cn.zx.biri.loginregister.service;
  */
 public interface AuthenticateService {
     void authenticate(String username, String password) throws Exception;
+    void registerNewUser(String email,String password);
+    void te();
 
 }

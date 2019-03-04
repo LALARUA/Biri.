@@ -30,6 +30,9 @@ zuul:
       path: /rabbitmqService/**
       serviceId: rabbitmq-service
 
+    user-service:
+      path: /userService/**
+      serviceId: user-service
 
     web-service:
       path: /Biri/**

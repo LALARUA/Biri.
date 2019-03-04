@@ -1,5 +1,6 @@
 package cn.zx.biri.loginregister;
 
+import cn.zx.biri.loginregister.controller.AuthenticateController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +13,8 @@ public class LoginRegisterApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		AuthenticateController authenticateController = new AuthenticateController();
+		return;
 
 	}
 
