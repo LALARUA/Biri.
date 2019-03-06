@@ -1,7 +1,10 @@
 package cn.zx.biri.loginregister.service.serviceImpl;
 
+import cn.zx.biri.common.pojo.VO.LoginVO;
+import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
 import cn.zx.biri.common.utils.CookieUtils;
 import cn.zx.biri.loginregister.feignService.RabbitmqService;
+import cn.zx.biri.loginregister.feignService.UserService;
 import cn.zx.biri.loginregister.service.AuthenticateService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -11,7 +14,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -24,9 +30,14 @@ public class AuthenticateServiceImpl implements AuthenticateService {
     @Autowired
     RabbitmqService rabbitmqService;
 
+    @Autowired
+    UserService userService;
+
     @Override
-    public void registerNewUser(String email, String password) {
-        rabbitmqService.sendMessageToQueueDirect("registerNewUser",email);
+    public void registerNewUser(RegisterAndChangePasswordVO registerVO) throws Exception {
+        userService.insertUser(registerVO);
+        rabbitmqService.sendMessageToQueueDirect("registerNewUser",registerVO.getUsername());
+        authenticate(registerVO);
     }
 
     @Override
@@ -35,16 +46,23 @@ public class AuthenticateServiceImpl implements AuthenticateService {
     }
 
     @Override
-    public void authenticate(String username, String password) throws Exception {
+    public void authenticate(LoginVO loginVO) throws Exception {
         Subject current = SecurityUtils.getSubject();
         System.out.println(current.isAuthenticated());
+        String username = loginVO.getUsername();
+        String password = loginVO.getPassword();
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         current.login(token);
 
         //记住密码
         String value = username+"#"+password;
-        HttpServletResponse currentHttpServletResponse = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();;
+        HttpServletResponse currentHttpServletResponse = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        HttpServletRequest currentHttpServletRequest = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         CookieUtils.addCookie(currentHttpServletResponse,"user",value);
+
+        //将认证后的用户放入session
+        HttpSession httpSession = currentHttpServletRequest.getSession();
+        httpSession.setAttribute("user",userService.selectUserByUsername(username));
     }
 
 

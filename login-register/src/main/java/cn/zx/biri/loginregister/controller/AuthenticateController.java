@@ -83,25 +83,19 @@ public class AuthenticateController {
             map.put("errorMessage",bindingResult.getFieldError().getDefaultMessage());
             return map;
         }
-
-        String username = loginVO.getUsername();
-        String password = loginVO.getPassword();
         try {
-            authenticateService.authenticate(username,password);
+            authenticateService.authenticate(loginVO);
             SavedRequest savedRequest = WebUtils.getSavedRequest(httpServletRequest);
             if (Objects.isNull(savedRequest))
                 map.put("url","home");
             else
                 map.put("url",savedRequest.getRequestUrl());
-
         } catch (IncorrectCredentialsException e) {
             map.put("errorMessage","密码错误");
             logger.info("密码错误");
-
         } catch (UnknownAccountException e){
             map.put("errorMessage","该用户不存在");
             logger.info("该用户不存在");
-
         } catch (Exception e){
             map.put("errorMessage","登录失败,请稍后再试");
             logger.info("登录失败");
@@ -117,25 +111,14 @@ public class AuthenticateController {
             map.put("errorMessage",bindingResult.getFieldError().getDefaultMessage());
             return map;
         }
-
         try {
             User user = userService.selectUserByUsername(registerVO.getUsername());
-//            User user = null;
             if (user!=null){
                 map.put("errorMessage","此用户已被注册");
                 return map;
             }
-//            HttpSession session1 = httpServletRequest.getSession();
-//            session1.setAttribute("uu","oo");
-            userService.insertUser(registerVO);
-             authenticateService.authenticate(registerVO.getUsername(),registerVO.getPassword());
-            HttpSession session = httpServletRequest.getSession();
-
-            Session byId = sessionRepository.findById(session.getId());
-            Object user1 = byId.getAttribute("user");
-
-            System.out.println(user1);
-            String email = user.getEmail();
+            authenticateService.registerNewUser(registerVO);
+//          Session byId = sessionRepository.findById(session.getId());
             SavedRequest savedRequest = WebUtils.getSavedRequest(httpServletRequest);
             if (Objects.isNull(savedRequest))
                 map.put("url","home");
@@ -143,12 +126,12 @@ public class AuthenticateController {
                 map.put("url",savedRequest.getRequestUrl());
 
         } catch (Exception e) {
+            e.printStackTrace();
             map.put("errorMessage","注册失败");
         }
 
         return map;
     }
-
     @PostMapping("changePassword")
     public Map changePassword(@Valid RegisterAndChangePasswordVO changePasswordVO, BindingResult bindingResult){
         Map map = new HashMap();
@@ -156,7 +139,6 @@ public class AuthenticateController {
             map.put("errorMessage",bindingResult.getFieldError().getDefaultMessage());
             return map;
         }
-
         try {
             userService.updateUser(changePasswordVO);
         } catch (Exception e) {
@@ -165,12 +147,9 @@ public class AuthenticateController {
         return map;
 
     }
-
-
     @GetMapping("getCAPTCHA")
     public Map getCAPTCHA(String username,Integer flag){
         Map map = new HashMap<>();
-
         if (!username.matches(RegEx.EMAIL.toString())){
             map.put("errorMessage","请输入正确的邮箱");
         }
@@ -185,7 +164,6 @@ public class AuthenticateController {
                 map.put("errorMessage","此用户还未注册");
                 return map;
             }
-
             Integer CAPTCHA = new Random().nextInt(9000) + 1000;
             String message = username+"#"+CAPTCHA;
             map.put("CAPTCHA",CAPTCHA);
@@ -194,8 +172,6 @@ public class AuthenticateController {
         } catch (Exception e) {
             e.printStackTrace();
             map.put("errorMessage","获取验证码失败");
-            map.put("CAPTCHA","");
-
             return map;
         }
     }

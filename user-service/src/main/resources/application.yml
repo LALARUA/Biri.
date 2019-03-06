@@ -13,8 +13,8 @@ spring:
     username: guest
     password: guest
     port: 5672
-    #数据库配置
 
+    #数据库配置
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
@@ -22,6 +22,8 @@ spring:
       url: jdbc:mysql://47.106.215.35:3306/Airi?useUnicode=true&characterEncoding=utf-8
 mybatis:
     mapper-locations: classpath:/mapperXML/*.xml
+    configuration:
+      cache-enabled: true
 eureka:
   instance:
     prefer-ip-address: true #注册服务时使用服务的ip地址

@@ -44,12 +44,11 @@ public class UserServiceImpl implements UserService {
         user.setPassword(String.valueOf(result));
         user.setNickname(user.getEmail());
         userMapper.insertSelective(user);
-        HttpServletRequest httpServletRequest = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();;
-        HttpSession session = httpServletRequest.getSession();
-        String id = session.getId();
-        System.out.println(session.getAttribute("uu"));
-
-        session.setAttribute("user",user);
+//        HttpServletRequest httpServletRequest = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();;
+//        HttpSession session = httpServletRequest.getSession();
+//        String id = session.getId();
+//        System.out.println(session.getAttribute("uu"));
+//        session.setAttribute("user",user);
     }
 
 

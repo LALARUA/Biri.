@@ -36,6 +36,7 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+
 		<!--shiro-ehcache-->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>

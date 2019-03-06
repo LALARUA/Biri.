@@ -64,7 +64,7 @@ public class ShiroConfig {
                throw new UnknownAccountException();
            String password = user.getPassword();
            ByteSource salt = ByteSource.Util.bytes(username);
-//           String password = "bafc1adeb88edd287831daa052d16520";
+//         String password = "bafc1adeb88edd287831daa052d16520";
            return new SimpleAuthenticationInfo(username,password,salt,getName());
        }
     }

@@ -154,6 +154,19 @@
             $(document).on('click', '#username', function () {
                 $("#errorMessage").text("")
             })
+
+            function ti(time,e,v) {
+                var timer = setInterval(function () {
+                    time--;
+                    $("#getCAPTCHA").text("请等待" + time + "秒")
+                    $("#getCAPTCHA").attr("disabled", true)
+                    if (time == 0) {
+                        clearInterval(timer);
+                        $(e).text(v);
+                        $(e).attr("disabled", false);
+                    }
+                }, 1000);
+            }
             $(document).on('click', '#getCAPTCHA', function () {
                 var username = $("#username").val();
                 if (!emailRegex.test(username)){
@@ -179,49 +192,16 @@
                         var errorMessage = data['errorMessage'];
                         if (errorMessage==null){
                             $("#CAPTCHAFromServer").val(data['CAPTCHA'])
-                            var time = 60;
-                            var timer = setInterval(function () {
-                                time--;
-                                $("#getCAPTCHA").text("请等待" + time + "秒")
-                                $("#getCAPTCHA").attr("disabled", true)
-                                if (time == 0) {
-                                    time = 60;
-                                    clearInterval(timer);
-                                    $("#getCAPTCHA").text("获取验证码");
-                                    $("#getCAPTCHA").attr("disabled", false);
-                                }
-                            }, 1000);
+                            ti(60,"#getCAPTCHA","获取验证码")
                         }
                         else {
                             $("#errorMessage").text(errorMessage)
-                            var time = 5;
-                            var timer = setInterval(function () {
-                                time--;
-                                $("#getCAPTCHA").text("请等待" + time + "秒")
-                                $("#getCAPTCHA").attr("disabled", true)
-                                if (time == 0) {
-                                    time = 60;
-                                    clearInterval(timer);
-                                    $("#getCAPTCHA").text("获取验证码");
-                                    $("#getCAPTCHA").attr("disabled", false);
-                                }
-                            }, 1000);
+                            ti(5,"#getCAPTCHA","获取验证码")
                         }
                     },
                     error:function (data) {
                         $("#errorMessage").text("获取验证码失败")
-                        var time = 5;
-                        var timer = setInterval(function () {
-                            time--;
-                            $("#getCAPTCHA").text("请等待" + time + "秒")
-                            $("#getCAPTCHA").attr("disabled", true)
-                            if (time == 0) {
-                                time = 60;
-                                clearInterval(timer);
-                                $("#getCAPTCHA").text("获取验证码");
-                                $("#getCAPTCHA").attr("disabled", false);
-                            }
-                        }, 1000);
+                        ti(5,"#getCAPTCHA","获取验证码")
                     }
                 })
                 return false

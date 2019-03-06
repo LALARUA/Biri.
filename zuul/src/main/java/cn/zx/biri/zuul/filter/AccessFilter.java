@@ -64,12 +64,11 @@ public class AccessFilter extends ZuulFilter{
         String sessionId = session.getId();
         String base64EncodeSessionId = base64Encode(sessionId);
         String cookie = request.getHeader("Cookie");
-        if (Objects.isNull(cookie)){
+        if (Objects.isNull(cookie))
             cookie = "SESSION="+base64EncodeSessionId;
-        }
         else {
             String newCookie = "SESSION="+base64EncodeSessionId;
-           cookie = cookie.replaceAll("\\bSESSION=.{48}",newCookie);
+            cookie = cookie.replaceAll("\\bSESSION=.{48}",newCookie);
         }
         currentContext.addZuulRequestHeader("Cookie", cookie);
 //        currentContext.addZuulRequestHeader("Cookie","SESSION=" + base64Encode(session.getId()));
