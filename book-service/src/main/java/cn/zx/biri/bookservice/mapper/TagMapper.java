@@ -1,8 +1,8 @@
 package cn.zx.biri.bookservice.mapper;
 
 
-import cn.zx.biri.common.pojo.Entry.Tag;
-import cn.zx.biri.common.pojo.Entry.TagExample;
+import cn.zx.biri.common.pojo.entry.Tag;
+import cn.zx.biri.common.pojo.example.TagExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

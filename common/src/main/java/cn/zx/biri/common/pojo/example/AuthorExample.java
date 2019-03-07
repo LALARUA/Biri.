@@ -1,4 +1,4 @@
-package cn.zx.biri.common.pojo.Entry;
+package cn.zx.biri.common.pojo.example;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,21 +1,16 @@
 package cn.zx.biri.userservice.service.serviceImpl;
 
-import cn.zx.biri.common.pojo.Entry.User;
-import cn.zx.biri.common.pojo.Entry.UserExample;
-import cn.zx.biri.common.pojo.VO.LoginVO;
-import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.example.UserExample;
+import cn.zx.biri.common.pojo.vo.LoginVO;
+import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import cn.zx.biri.userservice.mapper.UserMapper;
 import cn.zx.biri.userservice.service.UserService;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**

@@ -1,7 +1,7 @@
 package cn.zx.biri.bookservice.mapper;
 
-import cn.zx.biri.common.pojo.Entry.Author;
-import cn.zx.biri.common.pojo.Entry.AuthorExample;
+import cn.zx.biri.common.pojo.entry.Author;
+import cn.zx.biri.common.pojo.example.AuthorExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,8 +1,8 @@
 package cn.zx.biri.loginregister.feignService;
 
-import cn.zx.biri.common.pojo.Entry.User;
-import cn.zx.biri.common.pojo.VO.LoginVO;
-import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.vo.LoginVO;
+import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

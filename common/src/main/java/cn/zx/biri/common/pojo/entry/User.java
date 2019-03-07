@@ -1,4 +1,4 @@
-package cn.zx.biri.common.pojo.Entry;
+package cn.zx.biri.common.pojo.entry;
 
 import java.io.Serializable;
 

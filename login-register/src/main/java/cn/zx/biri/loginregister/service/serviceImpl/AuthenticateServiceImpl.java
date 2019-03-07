@@ -1,7 +1,7 @@
 package cn.zx.biri.loginregister.service.serviceImpl;
 
-import cn.zx.biri.common.pojo.VO.LoginVO;
-import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
+import cn.zx.biri.common.pojo.vo.LoginVO;
+import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import cn.zx.biri.common.utils.CookieUtils;
 import cn.zx.biri.loginregister.feignService.RabbitmqService;
 import cn.zx.biri.loginregister.feignService.UserService;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;

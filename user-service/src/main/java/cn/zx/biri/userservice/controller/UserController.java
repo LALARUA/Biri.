@@ -1,19 +1,11 @@
 package cn.zx.biri.userservice.controller;
 
 
-import cn.zx.biri.common.pojo.Entry.User;
-import cn.zx.biri.common.pojo.VO.LoginVO;
-import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
-import cn.zx.biri.common.utils.CookieUtils;
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import cn.zx.biri.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * @Author: xiangXX

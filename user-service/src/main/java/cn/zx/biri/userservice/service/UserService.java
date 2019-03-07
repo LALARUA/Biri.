@@ -1,13 +1,8 @@
 package cn.zx.biri.userservice.service;
 
-import cn.zx.biri.common.pojo.Entry.User;
-import cn.zx.biri.common.pojo.VO.LoginVO;
-import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.vo.LoginVO;
+import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 
 /**
  * @Author: xiangXX

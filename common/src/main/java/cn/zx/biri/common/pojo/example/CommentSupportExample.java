@@ -1,16 +1,16 @@
-package cn.zx.biri.common.pojo.Entry;
+package cn.zx.biri.common.pojo.example;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookwithtagExample {
+public class CommentSupportExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BookwithtagExample() {
+    public CommentSupportExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,123 +164,123 @@ public class BookwithtagExample {
             return (Criteria) this;
         }
 
-        public Criteria andBookidIsNull() {
-            addCriterion("bookId is null");
+        public Criteria andUserIdIsNull() {
+            addCriterion("userId is null");
             return (Criteria) this;
         }
 
-        public Criteria andBookidIsNotNull() {
-            addCriterion("bookId is not null");
+        public Criteria andUserIdIsNotNull() {
+            addCriterion("userId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBookidEqualTo(Integer value) {
-            addCriterion("bookId =", value, "bookid");
+        public Criteria andUserIdEqualTo(Integer value) {
+            addCriterion("userId =", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidNotEqualTo(Integer value) {
-            addCriterion("bookId <>", value, "bookid");
+        public Criteria andUserIdNotEqualTo(Integer value) {
+            addCriterion("userId <>", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidGreaterThan(Integer value) {
-            addCriterion("bookId >", value, "bookid");
+        public Criteria andUserIdGreaterThan(Integer value) {
+            addCriterion("userId >", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("bookId >=", value, "bookid");
+        public Criteria andUserIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("userId >=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidLessThan(Integer value) {
-            addCriterion("bookId <", value, "bookid");
+        public Criteria andUserIdLessThan(Integer value) {
+            addCriterion("userId <", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidLessThanOrEqualTo(Integer value) {
-            addCriterion("bookId <=", value, "bookid");
+        public Criteria andUserIdLessThanOrEqualTo(Integer value) {
+            addCriterion("userId <=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidIn(List<Integer> values) {
-            addCriterion("bookId in", values, "bookid");
+        public Criteria andUserIdIn(List<Integer> values) {
+            addCriterion("userId in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidNotIn(List<Integer> values) {
-            addCriterion("bookId not in", values, "bookid");
+        public Criteria andUserIdNotIn(List<Integer> values) {
+            addCriterion("userId not in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidBetween(Integer value1, Integer value2) {
-            addCriterion("bookId between", value1, value2, "bookid");
+        public Criteria andUserIdBetween(Integer value1, Integer value2) {
+            addCriterion("userId between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andBookidNotBetween(Integer value1, Integer value2) {
-            addCriterion("bookId not between", value1, value2, "bookid");
+        public Criteria andUserIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("userId not between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidIsNull() {
-            addCriterion("tagId is null");
+        public Criteria andCommentIdIsNull() {
+            addCriterion("commentId is null");
             return (Criteria) this;
         }
 
-        public Criteria andTagidIsNotNull() {
-            addCriterion("tagId is not null");
+        public Criteria andCommentIdIsNotNull() {
+            addCriterion("commentId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTagidEqualTo(Integer value) {
-            addCriterion("tagId =", value, "tagid");
+        public Criteria andCommentIdEqualTo(Integer value) {
+            addCriterion("commentId =", value, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidNotEqualTo(Integer value) {
-            addCriterion("tagId <>", value, "tagid");
+        public Criteria andCommentIdNotEqualTo(Integer value) {
+            addCriterion("commentId <>", value, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidGreaterThan(Integer value) {
-            addCriterion("tagId >", value, "tagid");
+        public Criteria andCommentIdGreaterThan(Integer value) {
+            addCriterion("commentId >", value, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("tagId >=", value, "tagid");
+        public Criteria andCommentIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("commentId >=", value, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidLessThan(Integer value) {
-            addCriterion("tagId <", value, "tagid");
+        public Criteria andCommentIdLessThan(Integer value) {
+            addCriterion("commentId <", value, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidLessThanOrEqualTo(Integer value) {
-            addCriterion("tagId <=", value, "tagid");
+        public Criteria andCommentIdLessThanOrEqualTo(Integer value) {
+            addCriterion("commentId <=", value, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidIn(List<Integer> values) {
-            addCriterion("tagId in", values, "tagid");
+        public Criteria andCommentIdIn(List<Integer> values) {
+            addCriterion("commentId in", values, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidNotIn(List<Integer> values) {
-            addCriterion("tagId not in", values, "tagid");
+        public Criteria andCommentIdNotIn(List<Integer> values) {
+            addCriterion("commentId not in", values, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidBetween(Integer value1, Integer value2) {
-            addCriterion("tagId between", value1, value2, "tagid");
+        public Criteria andCommentIdBetween(Integer value1, Integer value2) {
+            addCriterion("commentId between", value1, value2, "commentId");
             return (Criteria) this;
         }
 
-        public Criteria andTagidNotBetween(Integer value1, Integer value2) {
-            addCriterion("tagId not between", value1, value2, "tagid");
+        public Criteria andCommentIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("commentId not between", value1, value2, "commentId");
             return (Criteria) this;
         }
     }

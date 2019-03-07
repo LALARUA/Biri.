@@ -1,4 +1,4 @@
-package cn.zx.biri.common.pojo.Entry;
+package cn.zx.biri.common.pojo.entry;
 
 public class Bookwithtag {
     private Integer id;

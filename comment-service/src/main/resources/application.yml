@@ -1,8 +1,8 @@
 server:
-  port: 8004
+  port: 8005
 spring:
   application:
-    name: book-service
+    name: comment-service
   redis:
     host: 47.106.215.35
     port: 6379

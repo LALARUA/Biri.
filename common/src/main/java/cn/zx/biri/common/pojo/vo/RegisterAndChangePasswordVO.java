@@ -1,6 +1,4 @@
-package cn.zx.biri.common.pojo.VO;
-
-import javax.validation.constraints.NotNull;
+package cn.zx.biri.common.pojo.vo;
 
 /**
  * @Author: xiangXX

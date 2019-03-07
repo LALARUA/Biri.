@@ -1,8 +1,8 @@
 package cn.zx.biri.userservice.mapper;
 
 
-import cn.zx.biri.common.pojo.Entry.User;
-import cn.zx.biri.common.pojo.Entry.UserExample;
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.example.UserExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

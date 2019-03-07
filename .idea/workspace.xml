@@ -2,39 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fae497a-6b1b-49fd-b5d1-9f3f84a6d2cc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/bookController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/TagMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookwithtagMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/TagMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Author.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/AuthorExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Book.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookWithBLOBs.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Bookwithtag.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookwithtagExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Tag.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/TagExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/CommentMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/CommentSupportMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplyMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplySupportMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/CommentService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/ReplyService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/application.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentSupportMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplyMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplySupportMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Comment.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/CommentSupport.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Reply.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/ReplySupport.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/CommentExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/CommentSupportExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/ReplyExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/ReplySupportExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookComment.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookDetail.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookListDisplay.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhanced.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhancedList.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/TagMapper.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/TagMapper.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" afterPath="$PROJECT_DIR$/common/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookwithtagMapper.xml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookwithtagMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/TagMapper.xml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/TagMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Author.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Author.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/AuthorExample.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/AuthorExample.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Book.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookExample.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookWithBLOBs.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookWithBLOBs.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Bookwithtag.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Bookwithtag.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookwithtagExample.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookwithtagExample.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Tag.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Tag.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/TagExample.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/TagExample.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/User.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/User.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/UserExample.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/UserExample.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/VO/LoginVO.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/LoginVO.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/VO/RegisterAndChangePasswordVO.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/RegisterAndChangePasswordVO.java" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/ShiroConfig.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/ShiroConfig.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/SpringMVCConfig.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/SpringMVCConfig.java" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java" />
+      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/UserService.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/UserService.java" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/AuthenticateService.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/AuthenticateService.java" />
       <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-service/pom.xml" afterPath="$PROJECT_DIR$/rabbitmq-service/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/controller/UserController.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/controller/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/mapper/UserMapper.java" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/UserService.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/UserService.java" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/serviceImpl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/serviceImpl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/mapperXML/UserMapper.xml" afterPath="$PROJECT_DIR$/user-service/src/main/resources/mapperXML/UserMapper.xml" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka-server-1/target/" />
     <ignored path="$PROJECT_DIR$/zuul/target/" />
@@ -45,6 +74,7 @@
     <ignored path="$PROJECT_DIR$/web-service/target/" />
     <ignored path="$PROJECT_DIR$/user-service/target/" />
     <ignored path="$PROJECT_DIR$/book-service/target/" />
+    <ignored path="$PROJECT_DIR$/comment-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,148 +98,155 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="TagMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/TagMapper.java">
+      <file leaf-file-name="CommentMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+              <folding>
+                <marker date="1551941039413" expanded="true" signature="1407:1997" ph="SELECT `comm... " />
+                <marker date="1551941039413" expanded="true" signature="4905:5008" ph="select from comment" />
+                <marker date="1551941039413" expanded="true" signature="5094:5151" ph="delete from comment... " />
+                <marker date="1551941039413" expanded="true" signature="5262:5281" ph="delete from comment... " />
+                <marker date="1551941039413" expanded="true" signature="5466:5682" ph="insert into comment... " />
+                <marker date="1551941039413" expanded="true" signature="6766:6794" ph="select count... comment" />
+                <marker date="1551941039413" expanded="true" signature="7674:7929" ph="update comment... " />
+                <marker date="1551941039413" expanded="true" signature="8145:8574" ph="update comment... " />
+                <marker date="1551941039413" expanded="true" signature="8679:8902" ph="update comment... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/CommentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyEnhanced.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhanced.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reply.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Reply.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/ReplyService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentServiceApplicationTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/test/java/cn/zx/biri/commentservice/CommentServiceApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplyMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentServiceApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/CommentServiceApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookwithtagMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-305">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="42" />
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthorMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml">
+      <file leaf-file-name="CommentSupportMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentSupportMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="88">
+              <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
               <folding>
-                <marker date="1551842815273" expanded="true" signature="4033:4182" ph="select , fro... " />
-                <marker date="1551842815273" expanded="true" signature="4268:4324" ph="delete from author... " />
-                <marker date="1551842815273" expanded="true" signature="4432:4450" ph="delete from author... " />
-                <marker date="1551842815273" expanded="true" signature="4634:4791" ph="insert into author... " />
-                <marker date="1551842815273" expanded="true" signature="5653:5680" ph="select count... author" />
-                <marker date="1551842815273" expanded="true" signature="6380:6548" ph="update author... " />
-                <marker date="1551842815273" expanded="true" signature="6719:6821" ph="update author... " />
-                <marker date="1551842815273" expanded="true" signature="7036:7304" ph="update author... " />
-                <marker date="1551842815273" expanded="true" signature="7417:7567" ph="update author... " />
-                <marker date="1551842815273" expanded="true" signature="7671:7762" ph="update author... " />
+                <marker date="1551924701830" expanded="true" signature="3416:3526" ph="select from commentSupport" />
+                <marker date="1551924701830" expanded="true" signature="3612:3676" ph="delete from commentSupport... " />
+                <marker date="1551924701830" expanded="true" signature="3794:3820" ph="delete from commentSupport... " />
+                <marker date="1551924701830" expanded="true" signature="4012:4171" ph="insert into commentSupport... " />
+                <marker date="1551924701830" expanded="true" signature="5010:5045" ph="select count... commentSupport" />
+                <marker date="1551924701830" expanded="true" signature="5737:5907" ph="update commentSupport... " />
+                <marker date="1551924701830" expanded="true" signature="6130:6399" ph="update commentSupport... " />
+                <marker date="1551924701830" expanded="true" signature="6511:6663" ph="update commentSupport... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml">
+      <file leaf-file-name="ReplyMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplyMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="109" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="109" />
+            <state relative-caret-position="330">
+              <caret line="69" column="77" lean-forward="false" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
               <folding>
-                <marker date="1551842815123" expanded="true" signature="4805:4952" ph="select , fro... " />
-                <marker date="1551842815123" expanded="true" signature="5038:5092" ph="delete from book... " />
-                <marker date="1551842815123" expanded="true" signature="5198:5214" ph="delete from book... " />
-                <marker date="1551842815123" expanded="true" signature="5405:5973" ph="insert into book... " />
-                <marker date="1551842815123" expanded="true" signature="8281:8306" ph="select count... book" />
-                <marker date="1551842815123" expanded="true" signature="10061:10738" ph="update book... " />
-                <marker date="1551842815123" expanded="true" signature="10909:11474" ph="update book... " />
-                <marker date="1551842815123" expanded="true" signature="11696:12879" ph="update book... " />
-                <marker date="1551842815123" expanded="true" signature="12999:13588" ph="update book... " />
-                <marker date="1551842815123" expanded="true" signature="13690:14181" ph="update book... " />
+                <marker date="1551950192277" expanded="true" signature="2811:3431" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="2811:3561" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="2811:3562" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="2811:3649" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="3003:3075" ph="SELECT COUNT... replySupport" />
+                <marker date="1551950192277" expanded="true" signature="3096:3193" ph="SELECT COUNT... replySupport" />
+                <marker date="1551950192277" expanded="true" signature="3096:3209" ph="SELECT COUNT... replySupport" />
+                <marker date="1551950192277" expanded="true" signature="3242:3297" ph="SELECT nickn... user" />
+                <marker date="1551950192277" expanded="true" signature="3322:3375" ph="SELECT nickn... user" />
+                <marker date="1551950192277" expanded="true" signature="3565:3648" ph="select count... reply" />
+                <marker date="1551950192277" expanded="true" signature="3770:4440" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="3770:4467" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="3770:4471" ph="SELECT reply... reply" />
+                <marker date="1551950192277" expanded="true" signature="3984:4056" ph="SELECT COUNT... replySupport" />
+                <marker date="1551950192277" expanded="true" signature="4081:4194" ph="SELECT COUNT... replySupport" />
+                <marker date="1551950192277" expanded="true" signature="4231:4286" ph="SELECT nickn... user" />
+                <marker date="1551950192277" expanded="true" signature="4315:4368" ph="SELECT nickn... user" />
+                <marker date="1551950192277" expanded="true" signature="7393:7494" ph="select from reply" />
+                <marker date="1551950192277" expanded="true" signature="7580:7635" ph="delete from reply... " />
+                <marker date="1551950192277" expanded="true" signature="7744:7761" ph="delete from reply... " />
+                <marker date="1551950192277" expanded="true" signature="7944:8234" ph="insert into reply... " />
+                <marker date="1551950192277" expanded="true" signature="9506:9532" ph="select count... reply" />
+                <marker date="1551950192277" expanded="true" signature="10553:10882" ph="update reply... " />
+                <marker date="1551950192277" expanded="true" signature="11096:11652" ph="update reply... " />
+                <marker date="1551950192277" expanded="true" signature="11755:12045" ph="update reply... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookwithtagMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookwithtagMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3498">
-              <caret line="174" column="91" lean-forward="false" selection-start-line="174" selection-start-column="91" selection-end-line="174" selection-end-column="91" />
-              <folding>
-                <marker date="1551842814858" expanded="true" signature="3391:3498" ph="select from bookWithTag" />
-                <marker date="1551842814858" expanded="true" signature="3584:3645" ph="delete from bookWithTag... " />
-                <marker date="1551842814858" expanded="true" signature="3760:3783" ph="delete from bookWithTag... " />
-                <marker date="1551842814858" expanded="true" signature="3974:4122" ph="insert into bookWithTag... " />
-                <marker date="1551842814858" expanded="true" signature="4979:5011" ph="select count... bookWithTag" />
-                <marker date="1551842814858" expanded="true" signature="5688:5847" ph="update bookWithTag... " />
-                <marker date="1551842814858" expanded="true" signature="6069:6323" ph="update bookWithTag... " />
-                <marker date="1551842814858" expanded="true" signature="6434:6575" ph="update bookWithTag... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TagMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/TagMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-              <folding>
-                <marker date="1551842815307" expanded="true" signature="3434:3533" ph="select from tag" />
-                <marker date="1551842815307" expanded="true" signature="3619:3672" ph="delete from tag... " />
-                <marker date="1551842815307" expanded="true" signature="3777:3792" ph="delete from tag... " />
-                <marker date="1551842815307" expanded="true" signature="3973:4151" ph="insert into tag... " />
-                <marker date="1551842815307" expanded="true" signature="5126:5150" ph="select count... tag" />
-                <marker date="1551842815307" expanded="true" signature="5926:6129" ph="update tag... " />
-                <marker date="1551842815307" expanded="true" signature="6341:6680" ph="update tag... " />
-                <marker date="1551842815307" expanded="true" signature="6781:6959" ph="update tag... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -228,39 +265,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wa</find>
-      <find>wapp</find>
-      <find>.coming-soon-area</find>
-      <find>\bhost:.</find>
-      <find>\bhost:.*</find>
-      <find>myba</find>
-      <find>host: 192.168.42.209</find>
-      <find>newsletter-form_</find>
-      <find>填写</find>
-      <find>loginOrRegister</find>
-      <find>/assets</find>
-      <find>loginA</find>
-      <find>theia-sticky-sidebar.min.js.map</find>
-      <find>assets</find>
-      <find>AuthenticationInfo</find>
-      <find>username</find>
-      <find>doCreateBean</find>
-      <find>cn.zx.crawlingdangdang.po.Author</find>
-      <find>cn.zx.biri.common.pojo.Entry.BookWithBLOBs</find>
-      <find>cn.zx.crawlingdangdang.po.Bookwithtag</find>
+      <find>publishdate</find>
+      <find>incl</find>
+      <find>cn.zx.biri.common.pojo.entry.BookWithBLOBs</find>
+      <find>BookWithBLOBsExample</find>
+      <find>fatherid</find>
+      <find>Integer</find>
+      <find>commentid</find>
+      <find>fromuserid</find>
+      <find>touserid</find>
+      <find>commenId</find>
+      <find>getcommentId</find>
+      <find>setcommentId</find>
+      <find>getfromUserId</find>
+      <find>cn.zx.generator</find>
+      <find>cn.zx.generator.po.Commentsupport</find>
+      <find>cn.zx.generator.po.Reply</find>
+      <find>cn.zx.generator.po.Replysupport</find>
+      <find>cn.zx.generator.po.Comment</find>
+      <find>BookCommentExample</find>
+      <find>cn.zx.biri.common.pojo.entry.CommentSupportExample</find>
+      <find>cn.zx.biri.common.pojo.entry.ReplyExample</find>
+      <find>Example</find>
+      <find>cn.zx.biri.common.pojo.entry.ReplysupportExample</find>
+      <find>userid</find>
+      <find>cn.zx.biri.common.pojo.response.BookCommentExample</find>
+      <find>cn.zx.generator.po.commentSupport</find>
+      <find>cn.zx.generator.mapper.replyMapper</find>
+      <find>cn.zx.generator.po.reply</find>
+      <find>cn.zx.generator.po.replySupport</find>
+      <find>cn.zx.generator.po.comment</find>
     </findStrings>
     <replaceStrings>
-      <replace>host:192.168.1.102</replace>
-      <replace>host: 10.8.162.219</replace>
-      <replace>host: 192.168.42.209</replace>
-      <replace>host: 47.106.215.35</replace>
-      <replace>assets</replace>
-      <replace>/assets</replace>
-      <replace>cn.zx.biri.common.pojo.Entry</replace>
-      <replace>nickname</replace>
-      <replace />
       <replace>cn.zx.biri.common.pojo.Entry.Author</replace>
-      <replace>cn.zx.biri.common.pojo.Entry.BookWithBLOBs</replace>
+      <replace>cn.zx.biri.common.pojo.Entry.Book</replace>
+      <replace>cn.zx.biri.bookservice.mapper.BookMapper</replace>
+      <replace>imagePath</replace>
+      <replace>authorId</replace>
+      <replace>publishDate</replace>
+      <replace>fatherId</replace>
+      <replace>cn.zx.biri.common.pojo.entry.Bookwithtag</replace>
+      <replace>commenId</replace>
+      <replace>fromUserId</replace>
+      <replace>toUserId</replace>
+      <replace>commentId</replace>
+      <replace>getCommentId</replace>
+      <replace>setCOmmentId</replace>
+      <replace>setCommentId</replace>
+      <replace>getFromUserId</replace>
+      <replace>cn.zx.</replace>
+      <replace>cn.zx.biri.common.pojo.entry.CommentSupport</replace>
+      <replace>cn.zx.biri.common.pojo.entry.Reply</replace>
+      <replace>cn.zx.biri.common.pojo.response.BookComment</replace>
+      <replace>cn.zx.biri.common.pojo.entry.Replysupport</replace>
+      <replace>cn.zx.biri.common.pojo.example.CommentsupportExample</replace>
+      <replace>cn.zx.biri.common.pojo.example.ReplyExample</replace>
+      <replace>cn.zx.biri.common.pojo.example.ReplysupportExample</replace>
+      <replace>userId</replace>
+      <replace>cn.zx.biri.common.pojo.example.BookExample</replace>
+      <replace>cn.zx.biri.common.pojo.entry.commentSupport</replace>
+      <replace>cn.zx.biri.common.pojo.entry.reply</replace>
+      <replace>cn.zx.biri.common.pojo.entry.replySupport</replace>
+      <replace>cn.zx.biri.common.pojo.entry.comment</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -280,57 +346,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/userHome.html" />
-        <option value="$PROJECT_DIR$/login-register/pom.xml" />
-        <option value="$PROJECT_DIR$/user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/UserServiceApplication.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/controller/userController.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/UserExample.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/web-service/pom.xml" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/MyErrorController.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/FeignIntercepter.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/FeignInterceptor.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/ff.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/feignService/UserService.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/commonbar.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/login-register/src/test/java/cn/zx/biri/loginregister/LoginRegisterApplicationTests.java" />
-        <option value="$PROJECT_DIR$/user-service/src/test/java/cn/zx/biri/userservice/UserServiceApplicationTests.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/VO/RegisterAndChangePasswordVO.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/UserService.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/resources/mapperXML/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/User.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/filter/AccessFilter.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/SpringMVCConfig.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/serviceImpl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/AuthenticateService.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java" />
-        <option value="$PROJECT_DIR$/rabbitmq-service/src/main/java/com/biri/rabbitmqservice/service/serviceImpl/sendMessageToQueueServiceImpl.java" />
-        <option value="$PROJECT_DIR$/user-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/book-service/pom.xml" />
-        <option value="$PROJECT_DIR$/rabbitmq-service/pom.xml" />
-        <option value="$PROJECT_DIR$/book-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/bookController.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookWithBLOBs.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/TagMapper.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" />
-        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookListDisplay.java" />
         <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookwithtagMapper.xml" />
-        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/TagMapper.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Tag.java" />
+        <option value="$PROJECT_DIR$/book-service/src/test/java/cn/zx/biri/bookservice/BookServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookDetail.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/CommentServiceApplication.java" />
+        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/WebServiceApplication.java" />
+        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/loginAndRegisterController.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/AuthorExample.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/CommentsupportExample.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Reply.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Commentsupport.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/CommentSupport.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookComments.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentsupportMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplysupportMapper.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/CommentExample.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Comment.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/ReplyExample.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/CommentMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/CommentsupportMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplysupportMapper.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/commentSupport.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/commentSupportExample.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/replyMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/commentSupportMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/replySupportMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/commentSupportMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/replyMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/replySupportMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/commentMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/commentMapper.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhanced.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookComment.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentMapper.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhancedList.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplyMapper.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/test/java/cn/zx/biri/commentservice/CommentServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplyMapper.xml" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/ReplyService.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/CommentService.java" />
       </list>
     </option>
   </component>
@@ -361,10 +427,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="106" />
-    <option name="y" value="390" />
-    <option name="width" value="981" />
-    <option name="height" value="1084" />
+    <option name="x" value="75" />
+    <option name="width" value="934" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -382,107 +447,103 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="zx" type="462c0819:PsiDirectoryNode" />
               <item name="biri" type="462c0819:PsiDirectoryNode" />
-              <item name="bookservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="zx" type="462c0819:PsiDirectoryNode" />
               <item name="biri" type="462c0819:PsiDirectoryNode" />
-              <item name="bookservice" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="commentservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="zx" type="462c0819:PsiDirectoryNode" />
               <item name="biri" type="462c0819:PsiDirectoryNode" />
-              <item name="bookservice" type="462c0819:PsiDirectoryNode" />
+              <item name="commentservice" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="commentservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -490,6 +551,57 @@
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comment-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="commentservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -571,92 +683,57 @@
               <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="Entry" type="462c0819:PsiDirectoryNode" />
+              <item name="entry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -664,7 +741,7 @@
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -673,18 +750,181 @@
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="zx" type="462c0819:PsiDirectoryNode" />
               <item name="biri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -697,7 +937,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/gitRep/Biri/common/src/main/java/cn/zx/biri/common/pojo/VO/RegisterAndChangePasswordVO.java&#10;SqlSessionFactoryBuilder &#9;PSI&#9;JAVA://org.apache.ibatis.session.SqlSessionFactoryBuilder&#10;ThreadPoolExecutor&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor&#10;BeanDefinitionReaderUtils&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.BeanDefinitionReaderUtils&#10;BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;DefaultListableBeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.DefaultListableBeanFactory&#10;MapperP&#9;FILE&#9;jar://E:/MavenRepository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class&#10;DefaultCookieSerializer&#9;PSI&#9;JAVA://org.springframework.session.web.http.DefaultCookieSerializer&#10;SessionRepository&#9;null&#9;null&#10;MailSenderAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration&#10;Autoconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.AutoConfigurationSorter.AutoConfigurationClass&#10;datasourceconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration" />
+    <property name="SearchEverywhereHistoryKey" value="List&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/java/util/List.class&#10;Integer&#9;PSI&#9;JAVA://java.lang.Integer&#10;linkedli&#9;PSI&#9;JAVA://java.util.LinkedList&#10;LinkedList&#9;PSI&#9;JAVA://net.bytebuddy.dynamic.scaffold.MethodGraph.Linked&#10;SqlSessionFactoryBuilder &#9;PSI&#9;JAVA://org.apache.ibatis.session.SqlSessionFactoryBuilder&#10;ThreadPoolExecutor&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor&#10;BeanDefinitionReaderUtils&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.BeanDefinitionReaderUtils&#10;BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;DefaultListableBeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.DefaultListableBeanFactory&#10;MapperP&#9;FILE&#9;jar://E:/MavenRepository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class&#10;DefaultCookieSerializer&#9;PSI&#9;JAVA://org.springframework.session.web.http.DefaultCookieSerializer&#10;SessionRepository&#9;null&#9;null&#10;MailSenderAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration&#10;Autoconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.AutoConfigurationSorter.AutoConfigurationClass&#10;datasourceconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
@@ -708,19 +948,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.zx.biri.zuul.service" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cn.zx.biri.userservice" />
       <recent name="cn.zx.biri.webservice" />
       <recent name="cn.zx.biri.zuul" />
       <recent name="cn.zx.biri.common" />
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\gitRep\Biri\book-service\src\main\resources\mapperXML" />
-      <recent name="E:\gitRep\Biri\common\src\main\java\cn\zx\biri\common\pojo\Entry" />
-      <recent name="E:\gitRep\Biri\book-service\src\main\java\cn\zx\biri\bookservice\mapper" />
-      <recent name="E:\gitRep\Biri\user-service\src\main\resources\mapperXML" />
-      <recent name="E:\gitRep\Biri\web-service\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.zx.biri.userservice.mapper" />
@@ -729,8 +965,12 @@
       <recent name="cn.zx.biri.zuul.Component" />
       <recent name="cn.zx.biri.zuul.config" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="cn.zx.biri.zuul.service" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitRep\Biri\comment-service\src\main\resources\mapperXML" />
+      <recent name="E:\gitRep\Biri\comment-service\src\main\java\cn\zx\biri\commentservice\mapper" />
+      <recent name="E:\gitRep\Biri\common\src\main\java\cn\zx\biri\common\pojo\example" />
+      <recent name="E:\gitRep\Biri\common\src\main\java\cn\zx\biri\common\pojo\entry" />
+      <recent name="E:\gitRep\Biri\book-service\src\main\resources\mapperXML" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -751,7 +991,7 @@
     </option>
     <option name="contentProportion" value="0.28105325" />
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceApplicationTests.contextLoads">
+  <component name="RunManager" selected="JUnit.CommentServiceApplicationTests.contextLoads">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -771,6 +1011,56 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="BookServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.zx.biri.bookservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="book-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.zx.biri.bookservice" />
+      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.bookservice.BookServiceApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="CommentServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.zx.biri.commentservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="comment-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.zx.biri.commentservice" />
+      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.commentservice.CommentServiceApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="LoginRegisterApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -797,31 +1087,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.zx.biri.userservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="user-service" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.zx.biri.userservice" />
-      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.userservice.UserServiceApplicationTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="UserServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -834,31 +1099,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cn.zx.biri.userservice" />
       <option name="MAIN_CLASS_NAME" value="cn.zx.biri.userservice.UserServiceApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ZuulApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.zx.biri.zuul.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="zuul" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.zx.biri.zuul" />
-      <option name="MAIN_CLASS_NAME" value="cn.zx.biri.zuul.ZuulApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -903,6 +1143,12 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.zx.biri.bookservice.BookServiceApplication" />
       <module name="book-service" />
+      <envs />
+    </configuration>
+    <configuration name="CommentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.zx.biri.commentservice.CommentServiceApplication" />
+      <module name="comment-service" />
       <envs />
     </configuration>
     <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -991,7 +1237,7 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="13">
+    <list size="14">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaServer1Application" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.LoginRegisterApplication" />
@@ -999,20 +1245,21 @@
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.CommonApplication" />
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.RabbitmqServiceApplication" />
       <item index="6" class="java.lang.String" itemvalue="Spring Boot.WebServiceApplication" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.ZuulApplicationTests.contextLoads" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.UserServiceApplicationTests.contextLoads" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.UserServiceApplicationTests" />
+      <item index="7" class="java.lang.String" itemvalue="Spring Boot.BookServiceApplication" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.CommentServiceApplication" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.UserServiceApplicationTests.contextLoads" />
       <item index="10" class="java.lang.String" itemvalue="Spring Boot.UserServiceApplication" />
       <item index="11" class="java.lang.String" itemvalue="JUnit.LoginRegisterApplicationTests.contextLoads" />
-      <item index="12" class="java.lang.String" itemvalue="Spring Boot.BookServiceApplication" />
+      <item index="12" class="java.lang.String" itemvalue="JUnit.BookServiceApplicationTests.contextLoads" />
+      <item index="13" class="java.lang.String" itemvalue="JUnit.CommentServiceApplicationTests.contextLoads" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.UserServiceApplication" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceApplicationTests.contextLoads" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LoginRegisterApplicationTests.contextLoads" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceApplicationTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ZuulApplicationTests.contextLoads" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CommentServiceApplicationTests.contextLoads" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BookServiceApplicationTests.contextLoads" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.UserServiceApplication" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceApplicationTests.contextLoads" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LoginRegisterApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -1076,7 +1323,8 @@
       <workItem from="1551695655083" duration="2732000" />
       <workItem from="1551745983116" duration="62000" />
       <workItem from="1551774260490" duration="621000" />
-      <workItem from="1551838652817" duration="4073000" />
+      <workItem from="1551838652817" duration="28832000" />
+      <workItem from="1551918260638" duration="24356000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1548298249001</created>
@@ -1120,43 +1368,50 @@
       <option name="project" value="LOCAL" />
       <updated>1551660092939</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="-">
+      <created>1551842906600</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551842906600</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceApplicationTests - 2019.02.28 at 20h 47m 24s.xml">
-      <configuration name="UserServiceApplicationTests" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 14h 17m 30s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceApplicationTests_contextLoads - 2019.02.28 at 17h 48m 41s.xml">
-      <configuration name="UserServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 14h 17m 41s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceApplicationTests_contextLoads - 2019.02.28 at 17h 54m 01s.xml">
-      <configuration name="UserServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 14h 19m 24s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceApplicationTests_contextLoads - 2019.03.01 at 15h 28m 22s.xml">
-      <configuration name="UserServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 14h 27m 40s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceApplicationTests_contextLoads - 2019.03.01 at 16h 19m 51s.xml">
-      <configuration name="UserServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 14h 41m 34s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZuulApplicationTests_contextLoads - 2019.02.27 at 20h 55m 09s.xml">
-      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 14h 50m 13s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZuulApplicationTests_contextLoads - 2019.02.27 at 22h 28m 21s.xml">
-      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 17h 09m 17s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZuulApplicationTests_contextLoads - 2019.02.27 at 22h 29m 34s.xml">
-      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 17h 11m 52s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZuulApplicationTests_contextLoads - 2019.02.27 at 22h 44m 19s.xml">
-      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 17h 12m 44s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZuulApplicationTests_contextLoads - 2019.02.27 at 22h 51m 42s.xml">
-      <configuration name="ZuulApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="CommentServiceApplicationTests_contextLoads - 2019.03.07 at 17h 13m 44s.xml">
+      <configuration name="CommentServiceApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331484000" />
+    <option name="totallyTimeSpent" value="380599000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1180,29 +1435,29 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31049973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19078243" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11146838" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2811159" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33547696" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46945336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.060085837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29646266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36608648" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295901" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1250,7 +1505,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/test/java/cn/zx/biri/userservice/UserServiceApplicationTests.java</url>
-          <line>25</line>
+          <line>23</line>
           <properties />
           <option name="timeStamp" value="189" />
         </line-breakpoint>
@@ -1262,12 +1517,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/serviceImpl/UserServiceImpl.java</url>
-          <line>49</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="216" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/comment-service/src/test/java/cn/zx/biri/commentservice/CommentServiceApplicationTests.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/comment-service/src/test/java/cn/zx/biri/commentservice/CommentServiceApplicationTests.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/CommentService.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="229" />
+      <option name="time" value="237" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -1283,226 +1556,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/SpringMVCConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/FeignInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-service/src/main/java/com/biri/rabbitmqservice/controller/SendMessageToQueueController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/subject/support/DelegatingSubject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="178" column="16" lean-forward="false" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/VO/LoginVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/VO/RegisterAndChangePasswordVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/service/serviceImpl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="67" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-service/src/main/java/com/biri/rabbitmqservice/service/ListenerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="118" column="13" lean-forward="false" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-service/src/main/java/com/biri/rabbitmqservice/RabbitmqServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/BookController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/CommonApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/AuthenticateService.java">
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/MyErrorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-service/src/main/java/com/biri/rabbitmqservice/service/serviceImpl/sendMessageToQueueServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="50" lean-forward="false" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/mapperXML/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="104" column="11" lean-forward="false" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
-          <folding>
-            <marker date="1551500768847" expanded="true" signature="3797:3897" ph="select from user" />
-            <marker date="1551500768847" expanded="true" signature="3983:4037" ph="delete from user... " />
-            <marker date="1551500768847" expanded="true" signature="4143:4159" ph="delete from user... " />
-            <marker date="1551500768847" expanded="true" signature="4341:4700" ph="insert into user... " />
-            <marker date="1551500768847" expanded="true" signature="6360:6385" ph="select count... user" />
-            <marker date="1551500768847" expanded="true" signature="7661:8101" ph="update user... " />
-            <marker date="1551500768847" expanded="true" signature="8314:9083" ph="update user... " />
-            <marker date="1551500768847" expanded="true" signature="9185:9565" ph="update user... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1515,133 +1580,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/cn/zx/biri/userservice/UserServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/WebServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/bookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookwithtagExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/AuthorExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/TagExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Tag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/Bookwithtag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/Entry/BookWithBLOBs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="15" column="98" lean-forward="false" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/TagMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="215">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/loginAndRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="136" column="63" lean-forward="false" selection-start-line="136" selection-start-column="63" selection-end-line="136" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="184" column="27" lean-forward="false" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/AuthorExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="116" column="44" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="160" column="17" lean-forward="false" selection-start-line="160" selection-start-column="17" selection-end-line="160" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1551873400579" expanded="true" signature="4037:4186" ph="select , fro... " />
+            <marker date="1551873400579" expanded="true" signature="4272:4328" ph="delete from author... " />
+            <marker date="1551873400579" expanded="true" signature="4438:4456" ph="delete from author... " />
+            <marker date="1551873400579" expanded="true" signature="4640:4797" ph="insert into author... " />
+            <marker date="1551873400579" expanded="true" signature="5661:5688" ph="select count... author" />
+            <marker date="1551873400579" expanded="true" signature="6388:6556" ph="update author... " />
+            <marker date="1551873400579" expanded="true" signature="6727:6829" ph="update author... " />
+            <marker date="1551873400579" expanded="true" signature="7044:7312" ph="update author... " />
+            <marker date="1551873400579" expanded="true" signature="7425:7575" ph="update author... " />
+            <marker date="1551873400579" expanded="true" signature="7679:7770" ph="update author... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/AuthorExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookwithtagExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="168" column="34" lean-forward="true" selection-start-line="168" selection-start-column="34" selection-end-line="168" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1551873400954" expanded="true" signature="2472:2866" ph="SELECT book.... book" />
+            <marker date="1551873400954" expanded="true" signature="2776:2866" ph="SELECT book.... book" />
+            <marker date="1551873400954" expanded="true" signature="6571:6718" ph="select , fro... " />
+            <marker date="1551873400954" expanded="true" signature="6804:6858" ph="delete from book... " />
+            <marker date="1551873400954" expanded="true" signature="6966:6982" ph="delete from book... " />
+            <marker date="1551873400954" expanded="true" signature="7173:7770" ph="insert into book... " />
+            <marker date="1551873400954" expanded="true" signature="10176:10201" ph="select count... book" />
+            <marker date="1551873400954" expanded="true" signature="12056:12780" ph="update book... " />
+            <marker date="1551873400954" expanded="true" signature="12951:13563" ph="update book... " />
+            <marker date="1551873400954" expanded="true" signature="13785:15054" ph="update book... " />
+            <marker date="1551873400954" expanded="true" signature="15174:15803" ph="update book... " />
+            <marker date="1551873400954" expanded="true" signature="15905:16436" ph="update book... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="132">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/ReplySupport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1649,90 +1745,330 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/CommentSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="220">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/CommentExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/ReplySupportExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/ReplyExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/CommentSupportExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/TagExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/UserExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplySupportMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding>
+            <marker date="1551924701947" expanded="true" signature="3402:3510" ph="select from replySupport" />
+            <marker date="1551924701947" expanded="true" signature="3596:3658" ph="delete from replySupport... " />
+            <marker date="1551924701947" expanded="true" signature="3774:3798" ph="delete from replySupport... " />
+            <marker date="1551924701947" expanded="true" signature="3988:4141" ph="insert into replySupport... " />
+            <marker date="1551924701947" expanded="true" signature="4966:4999" ph="select count... replySupport" />
+            <marker date="1551924701947" expanded="true" signature="5683:5847" ph="update replySupport... " />
+            <marker date="1551924701947" expanded="true" signature="6068:6329" ph="update replySupport... " />
+            <marker date="1551924701947" expanded="true" signature="6439:6585" ph="update replySupport... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/CommentSupportMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookListDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookComment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="42" />
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.5.RELEASE/spring-beans-5.1.5.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplySupportMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
-            <marker date="1551842815273" expanded="true" signature="4033:4182" ph="select , fro... " />
-            <marker date="1551842815273" expanded="true" signature="4268:4324" ph="delete from author... " />
-            <marker date="1551842815273" expanded="true" signature="4432:4450" ph="delete from author... " />
-            <marker date="1551842815273" expanded="true" signature="4634:4791" ph="insert into author... " />
-            <marker date="1551842815273" expanded="true" signature="5653:5680" ph="select count... author" />
-            <marker date="1551842815273" expanded="true" signature="6380:6548" ph="update author... " />
-            <marker date="1551842815273" expanded="true" signature="6719:6821" ph="update author... " />
-            <marker date="1551842815273" expanded="true" signature="7036:7304" ph="update author... " />
-            <marker date="1551842815273" expanded="true" signature="7417:7567" ph="update author... " />
-            <marker date="1551842815273" expanded="true" signature="7671:7762" ph="update author... " />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhancedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="109" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="109" />
+        <state relative-caret-position="330">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding>
-            <marker date="1551842815123" expanded="true" signature="4805:4952" ph="select , fro... " />
-            <marker date="1551842815123" expanded="true" signature="5038:5092" ph="delete from book... " />
-            <marker date="1551842815123" expanded="true" signature="5198:5214" ph="delete from book... " />
-            <marker date="1551842815123" expanded="true" signature="5405:5973" ph="insert into book... " />
-            <marker date="1551842815123" expanded="true" signature="8281:8306" ph="select count... book" />
-            <marker date="1551842815123" expanded="true" signature="10061:10738" ph="update book... " />
-            <marker date="1551842815123" expanded="true" signature="10909:11474" ph="update book... " />
-            <marker date="1551842815123" expanded="true" signature="11696:12879" ph="update book... " />
-            <marker date="1551842815123" expanded="true" signature="12999:13588" ph="update book... " />
-            <marker date="1551842815123" expanded="true" signature="13690:14181" ph="update book... " />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookwithtagMapper.xml">
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/CommentServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3498">
-          <caret line="174" column="91" lean-forward="false" selection-start-line="174" selection-start-column="91" selection-end-line="174" selection-end-column="91" />
+        <state relative-caret-position="308">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentSupportMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
           <folding>
-            <marker date="1551842814858" expanded="true" signature="3391:3498" ph="select from bookWithTag" />
-            <marker date="1551842814858" expanded="true" signature="3584:3645" ph="delete from bookWithTag... " />
-            <marker date="1551842814858" expanded="true" signature="3760:3783" ph="delete from bookWithTag... " />
-            <marker date="1551842814858" expanded="true" signature="3974:4122" ph="insert into bookWithTag... " />
-            <marker date="1551842814858" expanded="true" signature="4979:5011" ph="select count... bookWithTag" />
-            <marker date="1551842814858" expanded="true" signature="5688:5847" ph="update bookWithTag... " />
-            <marker date="1551842814858" expanded="true" signature="6069:6323" ph="update bookWithTag... " />
-            <marker date="1551842814858" expanded="true" signature="6434:6575" ph="update bookWithTag... " />
+            <marker date="1551924701830" expanded="true" signature="3416:3526" ph="select from commentSupport" />
+            <marker date="1551924701830" expanded="true" signature="3612:3676" ph="delete from commentSupport... " />
+            <marker date="1551924701830" expanded="true" signature="3794:3820" ph="delete from commentSupport... " />
+            <marker date="1551924701830" expanded="true" signature="4012:4171" ph="insert into commentSupport... " />
+            <marker date="1551924701830" expanded="true" signature="5010:5045" ph="select count... commentSupport" />
+            <marker date="1551924701830" expanded="true" signature="5737:5907" ph="update commentSupport... " />
+            <marker date="1551924701830" expanded="true" signature="6130:6399" ph="update commentSupport... " />
+            <marker date="1551924701830" expanded="true" signature="6511:6663" ph="update commentSupport... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/TagMapper.xml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/ReplyEnhanced.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="198">
+          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Reply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/mapper/ReplyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="53" />
           <folding>
-            <marker date="1551842815307" expanded="true" signature="3434:3533" ph="select from tag" />
-            <marker date="1551842815307" expanded="true" signature="3619:3672" ph="delete from tag... " />
-            <marker date="1551842815307" expanded="true" signature="3777:3792" ph="delete from tag... " />
-            <marker date="1551842815307" expanded="true" signature="3973:4151" ph="insert into tag... " />
-            <marker date="1551842815307" expanded="true" signature="5126:5150" ph="select count... tag" />
-            <marker date="1551842815307" expanded="true" signature="5926:6129" ph="update tag... " />
-            <marker date="1551842815307" expanded="true" signature="6341:6680" ph="update tag... " />
-            <marker date="1551842815307" expanded="true" signature="6781:6959" ph="update tag... " />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/test/java/cn/zx/biri/commentservice/CommentServiceApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/ReplyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="69" column="77" lean-forward="false" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+          <folding>
+            <marker date="1551950192277" expanded="true" signature="2811:3431" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="2811:3561" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="2811:3562" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="2811:3649" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="3003:3075" ph="SELECT COUNT... replySupport" />
+            <marker date="1551950192277" expanded="true" signature="3096:3193" ph="SELECT COUNT... replySupport" />
+            <marker date="1551950192277" expanded="true" signature="3096:3209" ph="SELECT COUNT... replySupport" />
+            <marker date="1551950192277" expanded="true" signature="3242:3297" ph="SELECT nickn... user" />
+            <marker date="1551950192277" expanded="true" signature="3322:3375" ph="SELECT nickn... user" />
+            <marker date="1551950192277" expanded="true" signature="3565:3648" ph="select count... reply" />
+            <marker date="1551950192277" expanded="true" signature="3770:4440" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="3770:4467" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="3770:4471" ph="SELECT reply... reply" />
+            <marker date="1551950192277" expanded="true" signature="3984:4056" ph="SELECT COUNT... replySupport" />
+            <marker date="1551950192277" expanded="true" signature="4081:4194" ph="SELECT COUNT... replySupport" />
+            <marker date="1551950192277" expanded="true" signature="4231:4286" ph="SELECT nickn... user" />
+            <marker date="1551950192277" expanded="true" signature="4315:4368" ph="SELECT nickn... user" />
+            <marker date="1551950192277" expanded="true" signature="7393:7494" ph="select from reply" />
+            <marker date="1551950192277" expanded="true" signature="7580:7635" ph="delete from reply... " />
+            <marker date="1551950192277" expanded="true" signature="7744:7761" ph="delete from reply... " />
+            <marker date="1551950192277" expanded="true" signature="7944:8234" ph="insert into reply... " />
+            <marker date="1551950192277" expanded="true" signature="9506:9532" ph="select count... reply" />
+            <marker date="1551950192277" expanded="true" signature="10553:10882" ph="update reply... " />
+            <marker date="1551950192277" expanded="true" signature="11096:11652" ph="update reply... " />
+            <marker date="1551950192277" expanded="true" signature="11755:12045" ph="update reply... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/ReplyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/mapperXML/CommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <marker date="1551941039413" expanded="true" signature="1407:1997" ph="SELECT `comm... " />
+            <marker date="1551941039413" expanded="true" signature="4905:5008" ph="select from comment" />
+            <marker date="1551941039413" expanded="true" signature="5094:5151" ph="delete from comment... " />
+            <marker date="1551941039413" expanded="true" signature="5262:5281" ph="delete from comment... " />
+            <marker date="1551941039413" expanded="true" signature="5466:5682" ph="insert into comment... " />
+            <marker date="1551941039413" expanded="true" signature="6766:6794" ph="select count... comment" />
+            <marker date="1551941039413" expanded="true" signature="7674:7929" ph="update comment... " />
+            <marker date="1551941039413" expanded="true" signature="8145:8574" ph="update comment... " />
+            <marker date="1551941039413" expanded="true" signature="8679:8902" ph="update comment... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/cn/zx/biri/commentservice/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="33" column="67" lean-forward="true" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1789,12 +2125,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>common</last-edited>
+          <last-edited>comment-service</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

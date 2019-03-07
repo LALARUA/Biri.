@@ -1,4 +1,4 @@
-package cn.zx.biri.common.pojo.Entry;
+package cn.zx.biri.common.pojo.entry;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class Book {
 
     private String title;
 
-    private String imagepath;
+    private String imagePath;
 
     private String publisher;
 
@@ -21,9 +21,11 @@ public class Book {
 
     private Integer stock;
 
-    private Integer authorid;
+    private Integer authorId;
 
-    private String publishdate;
+    private String publishDate;
+
+    private Double score;
 
     public Integer getId() {
         return id;
@@ -41,12 +43,12 @@ public class Book {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getImagepath() {
-        return imagepath;
+    public String getimagePath() {
+        return imagePath;
     }
 
-    public void setImagepath(String imagepath) {
-        this.imagepath = imagepath == null ? null : imagepath.trim();
+    public void setimagePath(String imagePath) {
+        this.imagePath = imagePath == null ? null : imagePath.trim();
     }
 
     public String getPublisher() {
@@ -97,19 +99,27 @@ public class Book {
         this.stock = stock;
     }
 
-    public Integer getAuthorid() {
-        return authorid;
+    public Integer getauthorId() {
+        return authorId;
     }
 
-    public void setAuthorid(Integer authorid) {
-        this.authorid = authorid;
+    public void setauthorId(Integer authorId) {
+        this.authorId = authorId;
     }
 
-    public String getPublishdate() {
-        return publishdate;
+    public String getpublishDate() {
+        return publishDate;
     }
 
-    public void setPublishdate(String publishdate) {
-        this.publishdate = publishdate == null ? null : publishdate.trim();
+    public void setpublishDate(String publishDate) {
+        this.publishDate = publishDate == null ? null : publishDate.trim();
+    }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
     }
 }

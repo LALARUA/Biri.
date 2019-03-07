@@ -1,6 +1,4 @@
-package cn.zx.biri.common.pojo.VO;
-
-import cn.zx.biri.common.commonBean.RegEx;
+package cn.zx.biri.common.pojo.vo;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;

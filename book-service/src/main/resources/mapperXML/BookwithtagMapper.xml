@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.zx.biri.bookservice.mapper.BookwithtagMapper">
-  <resultMap id="BaseResultMap" type="cn.zx.biri.common.pojo.Entry.BookWithBLOBs">
+  <resultMap id="BaseResultMap" type="cn.zx.biri.common.pojo.entry.Bookwithtag">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="bookId" jdbcType="INTEGER" property="bookid" />
     <result column="tagId" jdbcType="INTEGER" property="tagid" />
@@ -67,7 +67,7 @@
   <sql id="Base_Column_List">
     id, bookId, tagId
   </sql>
-  <select id="selectByExample" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBsExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="cn.zx.biri.common.pojo.example.BookwithtagExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -91,19 +91,19 @@
     delete from bookWithTag
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBsExample">
+  <delete id="deleteByExample" parameterType="cn.zx.biri.common.pojo.example.BookwithtagExample">
     delete from bookWithTag
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBs">
+  <insert id="insert" parameterType="cn.zx.biri.common.pojo.entry.Bookwithtag">
     insert into bookWithTag (id, bookId, tagId
       )
     values (#{id,jdbcType=INTEGER}, #{bookid,jdbcType=INTEGER}, #{tagid,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBs">
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="cn.zx.biri.common.pojo.entry.Bookwithtag">
     insert into bookWithTag
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -128,7 +128,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBsExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="cn.zx.biri.common.pojo.example.BookwithtagExample" resultType="java.lang.Long">
     select count(*) from bookWithTag
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -160,7 +160,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBs">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.zx.biri.common.pojo.entry.Bookwithtag">
     update bookWithTag
     <set>
       <if test="bookid != null">
@@ -172,7 +172,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.zx.biri.common.pojo.Entry.BookWithBLOBs">
+  <update id="updateByPrimaryKey" parameterType="cn.zx.biri.common.pojo.entry.Bookwithtag">
     update bookWithTag
     set bookId = #{bookid,jdbcType=INTEGER},
       tagId = #{tagid,jdbcType=INTEGER}

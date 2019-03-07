@@ -2,36 +2,26 @@ package cn.zx.biri.loginregister.controller;
 
 
 import cn.zx.biri.common.commonBean.RegEx;
-import cn.zx.biri.common.pojo.Entry.User;
-import cn.zx.biri.common.pojo.VO.LoginVO;
-import cn.zx.biri.common.pojo.VO.RegisterAndChangePasswordVO;
-import cn.zx.biri.common.utils.CookieUtils;
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.vo.LoginVO;
+import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import cn.zx.biri.loginregister.feignService.RabbitmqService;
 import cn.zx.biri.loginregister.feignService.UserService;
 import cn.zx.biri.loginregister.service.AuthenticateService;
 
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;

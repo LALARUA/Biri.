@@ -1,4 +1,4 @@
-package cn.zx.biri.common.pojo.Entry;
+package cn.zx.biri.common.pojo.entry;
 
 public class Tag {
     private Integer id;
@@ -7,7 +7,7 @@ public class Tag {
 
     private Integer status;
 
-    private Integer fatherid;
+    private Integer fatherId;
 
     public Integer getId() {
         return id;
@@ -33,11 +33,11 @@ public class Tag {
         this.status = status;
     }
 
-    public Integer getFatherid() {
-        return fatherid;
+    public Integer getfatherId() {
+        return fatherId;
     }
 
-    public void setFatherid(Integer fatherid) {
-        this.fatherid = fatherid;
+    public void setfatherId(Integer fatherId) {
+        this.fatherId = fatherId;
     }
 }

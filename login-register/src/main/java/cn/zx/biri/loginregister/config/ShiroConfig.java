@@ -1,10 +1,9 @@
 package cn.zx.biri.loginregister.config;
 
 
-import cn.zx.biri.common.pojo.Entry.User;
+import cn.zx.biri.common.pojo.entry.User;
 import cn.zx.biri.loginregister.feignService.UserService;
 ;
-import cn.zx.biri.loginregister.service.AuthenticateService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;

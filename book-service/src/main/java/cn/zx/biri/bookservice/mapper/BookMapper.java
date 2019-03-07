@@ -1,19 +1,26 @@
 package cn.zx.biri.bookservice.mapper;
 
 
-import cn.zx.biri.common.pojo.Entry.Book;
-import cn.zx.biri.common.pojo.Entry.BookExample;
-import cn.zx.biri.common.pojo.Entry.BookWithBLOBs;
+import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.example.BookExample;
+import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
+import cn.zx.biri.common.pojo.response.BookComment;
+import cn.zx.biri.common.pojo.response.BookListDisplay;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BookMapper {
+
+
     long countByExample(BookExample example);
 
     int deleteByExample(BookExample example);
 
     int deleteByPrimaryKey(Integer id);
+
+    List<BookListDisplay> selectBookListDisplayByBookId(Integer bookId);
 
     int insert(BookWithBLOBs record);
 
