@@ -133,20 +133,13 @@ public class ShiroConfig {
         //.authc必须认证(即登陆)
         // /**拦截所有资源
 
-        filterChainDefinitionManager.put("/loginAndRegister/**","anon");
-        filterChainDefinitionManager.put("/Biri/login","anon");
-        filterChainDefinitionManager.put("/Biri/home","anon");
-        filterChainDefinitionManager.put("/assets/**","anon");
-        filterChainDefinitionManager.put("/static/assets/**","anon");
-        filterChainDefinitionManager.put("/**","authc");
+//        filterChainDefinitionManager.put("/loginAndRegister/**","anon");
+//        filterChainDefinitionManager.put("/Biri/login","anon");
+//        filterChainDefinitionManager.put("/Biri/home","anon");
+//        filterChainDefinitionManager.put("/assets/**","anon");
+//        filterChainDefinitionManager.put("/static/assets/**","anon");
+//        filterChainDefinitionManager.put("/**","authc");
 
-//        filterChainDefinitionManager.put("/test", "authc");
-//        filterChainDefinitionManager.put("/loginAndRegister/**", "authc");
-//        filterChainDefinitionManager.put("/Biri/loginAndRegister/**", "authc");
-//        filterChainDefinitionManager.put("/cart/**","authc");
-//        filterChainDefinitionManager.put("/book/bookDetail/**","authc");
-//        filterChainDefinitionManager.put("/admin/**","roles[admin]");
-//        filterChainDefinitionManager.put("/signout", "logout");
 
 //        filterChainDefinitionManager.put("/","roles[user]");
 

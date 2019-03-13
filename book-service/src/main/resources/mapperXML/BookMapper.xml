@@ -11,7 +11,6 @@
     <result column="putaway" jdbcType="DATE" property="putaway" />
     <result column="sales" jdbcType="INTEGER" property="sales" />
     <result column="stock" jdbcType="INTEGER" property="stock" />
-    <result column="authorId" jdbcType="INTEGER" property="authorId" />
     <result column="publishDate" jdbcType="VARCHAR" property="publishDate" />
     <result column="score" jdbcType="DOUBLE" property="score" />
   </resultMap>
@@ -19,17 +18,17 @@
     <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
     <result column="catalog" jdbcType="LONGVARCHAR" property="catalog" />
   </resultMap>
-  <resultMap id="BookListDisplay" type="cn.zx.biri.common.pojo.response.BookListDisplay">
-    <id column="bookId" jdbcType="INTEGER" property="id" />
+  <resultMap id="BookListDisplay" type="cn.zx.biri.common.pojo.response.BookEnhanced">
+    <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="imagePath" jdbcType="VARCHAR" property="imagePath" />
     <result column="publisher" jdbcType="VARCHAR" property="publisher" />
     <result column="price" jdbcType="DOUBLE" property="price" />
      <result column="score" jdbcType="DOUBLE" property="score" />
-    <association property="author" javaType="cn.zx.biri.common.pojo.entry.Author">
+    <collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">
       <id column="authorId" jdbcType="INTEGER" property="id" />
       <result column="authorName" jdbcType="VARCHAR" property="name" />
-    </association>
+    </collection>
     <collection property="tags" ofType="cn.zx.biri.common.pojo.entry.Tag">
       <id column="tagId" jdbcType="INTEGER" property="id" />
       <result column="tagName" jdbcType="VARCHAR" property="name" />
@@ -37,20 +36,45 @@
     </collection>
   </resultMap>
 
-  <sql id="selectBookListDisplaySql">
-SELECT
-book.id AS bookId,
-book.title AS title,
-book.imagePath AS imagePath,
-book.publisher AS publisher,
-book.price AS price,
-authorId AS authorId,
-author.`name` AS authorName,
-book.score AS score,
-tag.id AS tagId,
-tag.`name` AS tagName,
-tag.fatherId AS tagfatherId
-from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag.bookId = book.id AND bookWithTag.tagId = tag.id
+  <resultMap extends="ResultMapWithBLOBs" id="BookDetail" type="cn.zx.biri.common.pojo.response.BookDetail">
+    <collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">
+      <id column="authorId" jdbcType="INTEGER" property="id" />
+      <result column="authorName" jdbcType="VARCHAR" property="name" />
+      <result column="authorIntroduction" jdbcType="LONGVARCHAR" property="introduction" />
+    </collection>
+    <collection property="tags" ofType="cn.zx.biri.common.pojo.entry.Tag">
+      <id column="tagId" jdbcType="INTEGER" property="id" />
+      <result column="tagName" jdbcType="VARCHAR" property="name" />
+      <result column="tagatherId" jdbcType="INTEGER" property="fatherId" />
+    </collection>
+  </resultMap>
+  <sql id="selectBookListDisplayFieldSql">
+      SELECT
+      book.id AS id,
+      book.title AS title,
+      book.imagePath AS imagePath,
+      book.publisher AS publisher,
+      book.price AS price,
+      author.id AS authorId,
+      author.`name` AS authorName,
+      book.score AS score,
+      tag.id AS tagId,
+      tag.`name` AS tagName,
+      tag.fatherId AS tagFatherId
+  </sql>
+
+
+  <sql id="selectBookDetailSql">
+    <include refid="selectBookListDisplayFieldSql"/>
+    ,
+    author.introduction AS authorIntroduction,
+    book.summary AS summary,
+    book.catalog AS catalog,
+    book.putaway AS putaway,
+    book.publishDate AS publishDate,
+    book.sales AS sales,
+    book.stock AS  stock,
+    book.isbn AS isbn
   </sql>
 
   <sql id="Example_Where_Clause">
@@ -112,15 +136,62 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, title, imagePath, publisher, price, isbn, putaway, sales, stock, authorId, publishDate,
+    id, title, imagePath, publisher, price, isbn, putaway, sales, stock, publishDate,
     score
   </sql>
   <sql id="Blob_Column_List">
     summary, catalog
   </sql>
-  <select id="selectBookListDisplayByBookId" parameterType="java.lang.Integer" resultMap="BookListDisplay">
-    <include refid="selectBookListDisplaySql"/>
-    AND book.id=#{bookId}
+
+    <sql id="selectBookListFromSql">
+        from book INNER JOIN bookWithAuthor ON book.id = bookWithAuthor.bookId
+    INNER JOIN author ON bookWithAuthor.authorId = author.id INNER JOIN bookWithTag ON
+    bookWithTag.bookId = book.id INNER JOIN tag ON bookWithTag.tagId = tag.id
+      </sql>
+  <sql id="selectBookListWhereSql">
+        <where>
+            <if test="authorId != null">
+                OR author.id = #{authorId}
+            </if>
+            <if test="authorName != null">
+                OR author.name LIKE #{authorName}
+            </if>
+            <if test="tagId != null">
+                OR tag.id = #{tagId}
+            </if>
+            <if test="tagName != null">
+                OR tag.name LIKE #{tagName}
+            </if>
+            <if test="title != null">
+                OR title LIKE #{title}
+            </if>
+            <if test="isbn != null">
+                OR isbn = #{isbn}
+            </if>
+        </where>
+    </sql>
+    
+  <select id="selectBookList" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultMap="BookListDisplay">
+    <include refid="selectBookListDisplayFieldSql"/>
+    <include refid="selectBookListFromSql"/>
+    WHERE book.id IN (SELECT b.id FROM (SELECT book.id AS id
+    <include refid="selectBookListFromSql"/>
+    <include refid="selectBookListWhereSql"/>
+    GROUP BY id limit #{start},12) AS b
+    )
+
+  </select>
+    <select id="selectBookCountByCondition" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        <include refid="selectBookListFromSql"/>
+      <include refid="selectBookListWhereSql"/>
+    </select>
+
+
+  <select id="selectBookDetail" parameterType="java.lang.Integer" resultMap="BookDetail">
+    <include refid="selectBookDetailSql"/>
+    from book,author,tag,bookWithTag,bookWithAuthor WHERE book.id = bookWithAuthor.bookId and
+    bookWithAuthor.authorId =  author.id AND bookWithTag.bookId = book.id AND bookWithTag.tagId = tag.id AND book.id=#{bookId}
   </select>
   <select id="selectByExampleWithBLOBs" parameterType="cn.zx.biri.common.pojo.example.BookExample" resultMap="ResultMapWithBLOBs">
     select
@@ -173,13 +244,13 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
   <insert id="insert" parameterType="cn.zx.biri.common.pojo.entry.BookWithBLOBs">
     insert into book (id, title, imagePath,
       publisher, price, isbn, 
-      putaway, sales, stock, 
-      authorId, publishDate, score,
+      putaway, sales, stock
+    , publishDate, score,
       summary, catalog)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{imagePath,jdbcType=VARCHAR},
       #{publisher,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{isbn,jdbcType=BIGINT}, 
       #{putaway,jdbcType=DATE}, #{sales,jdbcType=INTEGER}, #{stock,jdbcType=INTEGER}, 
-      #{authorId,jdbcType=INTEGER}, #{publishDate,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE},
+       #{publishDate,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE},
       #{summary,jdbcType=LONGVARCHAR}, #{catalog,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.BookWithBLOBs">
@@ -212,9 +283,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       <if test="stock != null">
         stock,
       </if>
-      <if test="authorId != null">
-        authorId,
-      </if>
+
       <if test="publishDate != null">
         publishDate,
       </if>
@@ -256,9 +325,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       <if test="stock != null">
         #{stock,jdbcType=INTEGER},
       </if>
-      <if test="authorId != null">
-        #{authorId,jdbcType=INTEGER},
-      </if>
+
       <if test="publishDate != null">
         #{publishDate,jdbcType=VARCHAR},
       </if>
@@ -309,9 +376,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       <if test="record.stock != null">
         stock = #{record.stock,jdbcType=INTEGER},
       </if>
-      <if test="record.authorId != null">
-        authorId = #{record.authorId,jdbcType=INTEGER},
-      </if>
+
       <if test="record.publishDate != null">
         publishDate = #{record.publishDate,jdbcType=VARCHAR},
       </if>
@@ -340,7 +405,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       putaway = #{record.putaway,jdbcType=DATE},
       sales = #{record.sales,jdbcType=INTEGER},
       stock = #{record.stock,jdbcType=INTEGER},
-      authorId = #{record.authorId,jdbcType=INTEGER},
+
       publishDate = #{record.publishDate,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=DOUBLE},
       summary = #{record.summary,jdbcType=LONGVARCHAR},
@@ -360,7 +425,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       putaway = #{record.putaway,jdbcType=DATE},
       sales = #{record.sales,jdbcType=INTEGER},
       stock = #{record.stock,jdbcType=INTEGER},
-      authorId = #{record.authorId,jdbcType=INTEGER},
+
       publishDate = #{record.publishDate,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=DOUBLE}
     <if test="_parameter != null">
@@ -394,9 +459,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       <if test="stock != null">
         stock = #{stock,jdbcType=INTEGER},
       </if>
-      <if test="authorId != null">
-        authorId = #{authorId,jdbcType=INTEGER},
-      </if>
+
       <if test="publishDate != null">
         publishDate = #{publishDate,jdbcType=VARCHAR},
       </if>
@@ -422,7 +485,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       putaway = #{putaway,jdbcType=DATE},
       sales = #{sales,jdbcType=INTEGER},
       stock = #{stock,jdbcType=INTEGER},
-      authorId = #{authorId,jdbcType=INTEGER},
+
       publishDate = #{publishDate,jdbcType=VARCHAR},
       score = #{score,jdbcType=DOUBLE},
       summary = #{summary,jdbcType=LONGVARCHAR},
@@ -439,7 +502,7 @@ from book,author,tag,bookWithTag WHERE book.authorId = author.id AND bookWithTag
       putaway = #{putaway,jdbcType=DATE},
       sales = #{sales,jdbcType=INTEGER},
       stock = #{stock,jdbcType=INTEGER},
-      authorId = #{authorId,jdbcType=INTEGER},
+
       publishDate = #{publishDate,jdbcType=VARCHAR},
       score = #{score,jdbcType=DOUBLE}
     where id = #{id,jdbcType=INTEGER}

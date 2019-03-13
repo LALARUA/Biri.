@@ -34,9 +34,19 @@ zuul:
       path: /userService/**
       serviceId: user-service
 
+    book-service:
+      path: /bookService/**
+      serviceId: book-service
+
+    comment-service:
+      path: /commentService/**
+      serviceId: comment-service
+
     web-service:
       path: /Biri/**
       serviceId: web-service
+
+
   ignored-services: "*"
   sensitive-headers:
   host:

@@ -21,8 +21,6 @@ public class Book {
 
     private Integer stock;
 
-    private Integer authorId;
-
     private String publishDate;
 
     private Double score;
@@ -99,13 +97,7 @@ public class Book {
         this.stock = stock;
     }
 
-    public Integer getauthorId() {
-        return authorId;
-    }
 
-    public void setauthorId(Integer authorId) {
-        this.authorId = authorId;
-    }
 
     public String getpublishDate() {
         return publishDate;

@@ -2,6 +2,7 @@ package cn.zx.biri.common.pojo.response;
 
 import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
 import cn.zx.biri.common.pojo.entry.Tag;
 
 import java.util.List;
@@ -11,16 +12,16 @@ import java.util.List;
  * @Description:
  * @Date Created in 13:27 2019/3/6 0006
  */
-public class BookListDisplay extends Book {
-    private Author author;
+public class BookEnhanced extends BookWithBLOBs {
+    private List<Author> authors;
     private List<Tag> tags;
 
-    public Author getAuthor() {
-        return author;
+    public List<Author> getAuthors() {
+        return authors;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
     }
 
     public List<Tag> getTags() {

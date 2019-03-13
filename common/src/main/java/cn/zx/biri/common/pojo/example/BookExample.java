@@ -702,66 +702,6 @@ public class BookExample {
             return (Criteria) this;
         }
 
-        public Criteria andauthorIdIsNull() {
-            addCriterion("authorId is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdIsNotNull() {
-            addCriterion("authorId is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdEqualTo(Integer value) {
-            addCriterion("authorId =", value, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdNotEqualTo(Integer value) {
-            addCriterion("authorId <>", value, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdGreaterThan(Integer value) {
-            addCriterion("authorId >", value, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("authorId >=", value, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdLessThan(Integer value) {
-            addCriterion("authorId <", value, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdLessThanOrEqualTo(Integer value) {
-            addCriterion("authorId <=", value, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdIn(List<Integer> values) {
-            addCriterion("authorId in", values, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdNotIn(List<Integer> values) {
-            addCriterion("authorId not in", values, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdBetween(Integer value1, Integer value2) {
-            addCriterion("authorId between", value1, value2, "authorId");
-            return (Criteria) this;
-        }
-
-        public Criteria andauthorIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("authorId not between", value1, value2, "authorId");
-            return (Criteria) this;
-        }
-
         public Criteria andpublishDateIsNull() {
             addCriterion("publishDate is null");
             return (Criteria) this;

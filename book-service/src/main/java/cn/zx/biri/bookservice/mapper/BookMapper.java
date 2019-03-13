@@ -4,15 +4,14 @@ package cn.zx.biri.bookservice.mapper;
 import cn.zx.biri.common.pojo.entry.Book;
 import cn.zx.biri.common.pojo.example.BookExample;
 import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
-import cn.zx.biri.common.pojo.response.BookComment;
-import cn.zx.biri.common.pojo.response.BookListDisplay;
+import cn.zx.biri.common.pojo.response.BookDetail;
+import cn.zx.biri.common.pojo.response.BookEnhanced;
+import cn.zx.biri.common.pojo.vo.SelectBook;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import java.util.Map;
 
 public interface BookMapper {
-
 
     long countByExample(BookExample example);
 
@@ -20,7 +19,11 @@ public interface BookMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    List<BookListDisplay> selectBookListDisplayByBookId(Integer bookId);
+    BookDetail selectBookDetail(Integer bookId);
+
+    List<BookEnhanced> selectBookList(SelectBook condition);
+
+    Integer selectBookCountByCondition(SelectBook condition);
 
     int insert(BookWithBLOBs record);
 
