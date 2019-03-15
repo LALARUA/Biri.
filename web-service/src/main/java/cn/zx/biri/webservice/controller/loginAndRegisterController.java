@@ -7,6 +7,7 @@ import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,7 @@ import java.util.Objects;
  * @Description:
  * @Date Created in 14:06 2019/2/27 0027
  */
+
 
 @Controller
 public class loginAndRegisterController {

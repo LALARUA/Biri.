@@ -48,7 +48,6 @@ public class BookServiceImpl implements BookService{
         Integer pageNow = condition.getPageNow();
         condition.setStart((pageNow-1)*pageSize);
         List<BookEnhanced> bookList = bookMapper.selectBookList(condition);
-
         return bookList;
     }
 
@@ -60,14 +59,11 @@ public class BookServiceImpl implements BookService{
         bookDetail.setCommentPageNum((Integer) map.get("pageNum"));
         List<Map> bookCommentsMap = (List) map.get("bookComments");
         ObjectMapper objectMapper = new ObjectMapper();
-
         List<BookComment> bookComments = new ArrayList<>(bookCommentsMap.size());
         for (Map bookComment : bookCommentsMap) {
             bookComments.add(objectMapper.convertValue(bookComment, BookComment.class));
         }
-
         bookDetail.setComments(bookComments);
-
         return bookDetail;
     }
 

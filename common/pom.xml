@@ -20,12 +20,24 @@
 	</properties>
 
 	<dependencies>
-		<!--<dependency>-->
-			<!--<groupId>com.netflix.feign</groupId>-->
-			<!--<artifactId>feign-httpclient</artifactId>-->
-			<!--<version>8.18.0</version>-->
-		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.netflix.feign/feign-httpclient -->
+		<dependency>
+			<groupId>com.netflix.feign</groupId>
+			<artifactId>feign-httpclient</artifactId>
+			<exclusions>
+				<exclusion>
+						<groupId>com.netflix.feign</groupId>
+						<artifactId>feign-core</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>8.18.0</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.6</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-core</artifactId>
