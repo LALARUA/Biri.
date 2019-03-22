@@ -60,6 +60,8 @@ public class CommentServiceImpl implements CommentService {
         map.put("currentUserId",currentUserId);
         map.put("start",(pageNow-1)*pageSize);
         List<BookComment> bookComments = commentMapper.selectBookComments(map);
+        if (bookComments.size()==0)
+            return null;
         Map<Integer,BookComment> idAndCommentMap = new HashMap<>();
         List<Integer> commentIdList = new ArrayList<>(bookComments.size());
         for (BookComment bookComment : bookComments) {

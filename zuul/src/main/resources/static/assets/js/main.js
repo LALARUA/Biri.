@@ -870,13 +870,13 @@
 	/**********************
 	*Initialization 
 	***********************/
-
-	$(window).on('load', function(){
+    //
+    $(window).on('load', function(){
 		instaFeedCarousel();
 		$('.ai-preloader').removeClass("active");
 		productMasonryActivation();
 		blogMasonryActivation();
-	});
+    });
 
 	$(document).ready(function(){
 		galleryWithThumb();

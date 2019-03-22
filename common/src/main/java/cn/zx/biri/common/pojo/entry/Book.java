@@ -1,5 +1,6 @@
 package cn.zx.biri.common.pojo.entry;
 
+import java.io.Serializable;
 import java.util.Date;
 
 public class Book {
@@ -15,7 +16,7 @@ public class Book {
 
     private Long isbn;
 
-    private Date putaway;
+    private String putaway;
 
     private Integer sales;
 
@@ -73,11 +74,11 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public Date getPutaway() {
+    public String getPutaway() {
         return putaway;
     }
 
-    public void setPutaway(Date putaway) {
+    public void setPutaway(String putaway) {
         this.putaway = putaway;
     }
 
@@ -99,11 +100,11 @@ public class Book {
 
 
 
-    public String getpublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
 
-    public void setpublishDate(String publishDate) {
+    public void setPublishDate(String publishDate) {
         this.publishDate = publishDate == null ? null : publishDate.trim();
     }
 

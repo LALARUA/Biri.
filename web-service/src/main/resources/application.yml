@@ -17,3 +17,6 @@ eureka:
 feign:
   httpclient:
     enabled: true
+ribbon:
+  ReadTimeout: 100000
+  ConnectTimeout: 100000

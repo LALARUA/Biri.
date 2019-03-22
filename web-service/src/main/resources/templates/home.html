@@ -54,7 +54,10 @@
 
     <!-- Main Wrapper Start -->
     <div class="wrapper enable-header-transparent">
-        <div th:replace="~{commonbar::topbar}"></div>
+        <header th:fragment="topbar" class="header header-transparent header-fullwidth header-style-1">
+            <div th:replace="~{commonbar::topbar}"></div>
+        </header>
+
         <div th:replace="~{commonbar::mobiletopbar}"></div>
         <!-- Mobile Header area Start -->
 

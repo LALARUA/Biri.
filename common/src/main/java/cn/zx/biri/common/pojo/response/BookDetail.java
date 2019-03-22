@@ -1,6 +1,7 @@
 package cn.zx.biri.common.pojo.response;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author: xiangXX
@@ -10,6 +11,15 @@ import java.util.List;
 public class BookDetail extends BookEnhanced {
     private Integer commentPageNum;
 
+    private List<String> catalogs;
+
+    public List<String> getCatalogs() {
+        return catalogs;
+    }
+
+    public void setCatalogs(List<String> catalogs) {
+        this.catalogs = catalogs;
+    }
 
     private List<BookComment> comments;
 

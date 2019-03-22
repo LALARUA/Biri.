@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @Description:
  * @Date Created in 16:34 2019/2/22 0022
  */
-@ConfigurationProperties(prefix = "rabbitmqservice")
+@ConfigurationProperties(prefix = "myProperties")
 public class MyProperties {
     private String directExchangeName;
     private String registerMessage;

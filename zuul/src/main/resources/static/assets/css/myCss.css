@@ -1,0 +1,28 @@
+.loding {
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*height: 100%;*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*z-index: 99999999;*/
+    /*background: white;*/
+    /*display: block;*/
+}
+.loding-child {
+    width: 20px;
+    height: 20px;
+    background-color: #cf987e;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: ai-bouncedelay 1.4s ease-in-out 0s infinite both;
+    -moz-animation: ai-bouncedelay 1.4s ease-in-out 0s infinite both;
+    -ms-animation: ai-bouncedelay 1.4s ease-in-out 0s infinite both;
+    -o-animation: ai-bouncedelay 1.4s ease-in-out 0s infinite both;
+    animation: ai-bouncedelay 1.4s ease-in-out 0s infinite both; }
+.loding-bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+.loding-bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }

@@ -8,7 +8,7 @@
     <result column="publisher" jdbcType="VARCHAR" property="publisher" />
     <result column="price" jdbcType="DOUBLE" property="price" />
     <result column="isbn" jdbcType="BIGINT" property="isbn" />
-    <result column="putaway" jdbcType="DATE" property="putaway" />
+    <result column="putaway" jdbcType="VARCHAR" property="putaway" />
     <result column="sales" jdbcType="INTEGER" property="sales" />
     <result column="stock" jdbcType="INTEGER" property="stock" />
     <result column="publishDate" jdbcType="VARCHAR" property="publishDate" />
@@ -25,6 +25,12 @@
     <result column="publisher" jdbcType="VARCHAR" property="publisher" />
     <result column="price" jdbcType="DOUBLE" property="price" />
      <result column="score" jdbcType="DOUBLE" property="score" />
+
+    <collection property="imagePaths" ofType="cn.zx.biri.common.pojo.entry.BookWithImagePath">
+      <id column="imagePathId" jdbcType="INTEGER" property="id" />
+      <result column="imagePath" jdbcType="VARCHAR" property="bookImagePath" />
+      <result column="imagePathStatus" jdbcType="VARCHAR" property="status" />
+    </collection>
     <collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">
       <id column="authorId" jdbcType="INTEGER" property="id" />
       <result column="authorName" jdbcType="VARCHAR" property="name" />
@@ -37,6 +43,12 @@
   </resultMap>
 
   <resultMap extends="ResultMapWithBLOBs" id="BookDetail" type="cn.zx.biri.common.pojo.response.BookDetail">
+    <collection property="imagePaths" ofType="cn.zx.biri.common.pojo.entry.BookWithImagePath">
+    <id column="imagePathId" jdbcType="INTEGER" property="id" />
+    <result column="imagePath" jdbcType="VARCHAR" property="bookImagePath" />
+    <result column="imagePathStatus" jdbcType="VARCHAR" property="status" />
+  </collection>
+
     <collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">
       <id column="authorId" jdbcType="INTEGER" property="id" />
       <result column="authorName" jdbcType="VARCHAR" property="name" />
@@ -45,14 +57,13 @@
     <collection property="tags" ofType="cn.zx.biri.common.pojo.entry.Tag">
       <id column="tagId" jdbcType="INTEGER" property="id" />
       <result column="tagName" jdbcType="VARCHAR" property="name" />
-      <result column="tagatherId" jdbcType="INTEGER" property="fatherId" />
+      <result column="tagfatherId" jdbcType="INTEGER" property="fatherId" />
     </collection>
   </resultMap>
   <sql id="selectBookListDisplayFieldSql">
       SELECT
       book.id AS id,
       book.title AS title,
-      book.imagePath AS imagePath,
       book.publisher AS publisher,
       book.price AS price,
       author.id AS authorId,
@@ -60,7 +71,10 @@
       book.score AS score,
       tag.id AS tagId,
       tag.`name` AS tagName,
-      tag.fatherId AS tagFatherId
+      tag.fatherId AS tagFatherId,
+      bookWithImagePath.id AS imagePathId,
+      bookWithImagePath.bookImagePath AS imagePath,
+      bookWithImagePath.status AS imagePathStatus
   </sql>
 
 
@@ -146,7 +160,7 @@
     <sql id="selectBookListFromSql">
         from book INNER JOIN bookWithAuthor ON book.id = bookWithAuthor.bookId
     INNER JOIN author ON bookWithAuthor.authorId = author.id INNER JOIN bookWithTag ON
-    bookWithTag.bookId = book.id INNER JOIN tag ON bookWithTag.tagId = tag.id
+    bookWithTag.bookId = book.id INNER JOIN tag ON bookWithTag.tagId = tag.id INNER JOIN bookWithImagePath ON book.id = bookWithImagePath.bookId
       </sql>
   <sql id="selectBookListWhereSql">
         <where>
@@ -168,6 +182,9 @@
             <if test="isbn != null">
                 OR isbn = #{isbn}
             </if>
+            <if test="publisher != null">
+                OR publisher = #{publisher}
+            </if>
         </where>
     </sql>
     
@@ -182,16 +199,17 @@
 
   </select>
     <select id="selectBookCountByCondition" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultType="java.lang.Integer">
-        SELECT COUNT(*)
+        SELECT COUNT(*) FROM ( SELECT book.id
         <include refid="selectBookListFromSql"/>
       <include refid="selectBookListWhereSql"/>
+      GROUP BY book.id) AS result;
     </select>
 
 
   <select id="selectBookDetail" parameterType="java.lang.Integer" resultMap="BookDetail">
     <include refid="selectBookDetailSql"/>
-    from book,author,tag,bookWithTag,bookWithAuthor WHERE book.id = bookWithAuthor.bookId and
-    bookWithAuthor.authorId =  author.id AND bookWithTag.bookId = book.id AND bookWithTag.tagId = tag.id AND book.id=#{bookId}
+    from book,author,tag,bookWithTag,bookWithAuthor,bookWithImagePath WHERE book.id = bookWithAuthor.bookId and
+    bookWithAuthor.authorId =  author.id AND bookWithTag.bookId = book.id AND bookWithImagePath.bookId = book.id AND bookWithTag.tagId = tag.id AND book.id=#{bookId}
   </select>
   <select id="selectByExampleWithBLOBs" parameterType="cn.zx.biri.common.pojo.example.BookExample" resultMap="ResultMapWithBLOBs">
     select

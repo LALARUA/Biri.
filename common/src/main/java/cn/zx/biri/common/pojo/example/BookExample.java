@@ -106,14 +106,14 @@ public class BookExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
+        protected void addCriterion(String condition, Date value, String property) {
             if (value == null) {
                 throw new RuntimeException("Value for " + property + " cannot be null");
             }
             addCriterion(condition, new java.sql.Date(value.getTime()), property);
         }
 
-        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
+        protected void addCriterion(String condition, List<Date> values, String property) {
             if (values == null || values.size() == 0) {
                 throw new RuntimeException("Value list for " + property + " cannot be null or empty");
             }
@@ -125,7 +125,7 @@ public class BookExample {
             addCriterion(condition, dateList, property);
         }
 
-        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
+        protected void addCriterion(String condition, Date value1, Date value2, String property) {
             if (value1 == null || value2 == null) {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
@@ -532,53 +532,53 @@ public class BookExample {
             return (Criteria) this;
         }
 
-        public Criteria andPutawayEqualTo(Date value) {
-            addCriterionForJDBCDate("putaway =", value, "putaway");
+        public Criteria andPutawayEqualTo(String value) {
+            addCriterion("putaway =", value, "putaway");
             return (Criteria) this;
         }
 
         public Criteria andPutawayNotEqualTo(Date value) {
-            addCriterionForJDBCDate("putaway <>", value, "putaway");
+            addCriterion("putaway <>", value, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayGreaterThan(Date value) {
-            addCriterionForJDBCDate("putaway >", value, "putaway");
+        public Criteria andPutawayGreaterThan(String value) {
+            addCriterion("putaway >", value, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("putaway >=", value, "putaway");
+        public Criteria andPutawayGreaterThanOrEqualTo(String value) {
+            addCriterion("putaway >=", value, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayLessThan(Date value) {
-            addCriterionForJDBCDate("putaway <", value, "putaway");
+        public Criteria andPutawayLessThan(String value) {
+            addCriterion("putaway <", value, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("putaway <=", value, "putaway");
+        public Criteria andPutawayLessThanOrEqualTo(String value) {
+            addCriterion("putaway <=", value, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayIn(List<Date> values) {
-            addCriterionForJDBCDate("putaway in", values, "putaway");
+        public Criteria andPutawayIn(List<String> values) {
+            addCriterion("putaway in", values, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayNotIn(List<Date> values) {
-            addCriterionForJDBCDate("putaway not in", values, "putaway");
+        public Criteria andPutawayNotIn(List<String> values) {
+            addCriterion("putaway not in", values, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("putaway between", value1, value2, "putaway");
+        public Criteria andPutawayBetween(String value1, String value2) {
+            addCriterion("putaway between", value1, value2, "putaway");
             return (Criteria) this;
         }
 
-        public Criteria andPutawayNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("putaway not between", value1, value2, "putaway");
+        public Criteria andPutawayNotBetween(String value1, String value2) {
+            addCriterion("putaway not between", value1, value2, "putaway");
             return (Criteria) this;
         }
 

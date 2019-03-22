@@ -168,12 +168,31 @@
                 $("#getCAPTCHA").css("color", "white")
                 $.ajax({
                     url: '/Biri/loginAndRegister/getCAPTCHA',
-                    type: 'get', //
+                    type: 'post', //
                     async: true,    //或false,是否异步
-                    data: {
-                        username: username,
-                        flag:flag,
-                    },
+                    // data: {
+                    //     username: username,
+                    //     flag:flag,
+                    // },
+                    data: JSON.stringify(
+                        {
+
+                            "id": "5",
+                            "title": "223",
+
+                            "tags": [
+                                {
+                                    "id":5,
+                                    "name":"ss",
+                                },
+                                {
+                                    "id":6,
+                                    "name":"wr",
+                                }
+                                ]
+                    }
+                    ),
+                    contentType: "application/json; charset=utf-8",
                     timeout: 5000,    //超时时间
                     dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
                     success: function (data) {

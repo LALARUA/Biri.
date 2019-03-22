@@ -1,6 +1,9 @@
 package cn.zx.biri.common.pojo.vo;
 
 import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.utils.ReflectUtils;
+
+import java.lang.reflect.Field;
 
 /**
  * @Author: xiangXX
@@ -14,6 +17,11 @@ public class SelectBook extends Book {
     private String tagId;
     private Integer pageNow;
     private Integer start;
+
+    @Override
+    public String toString() {
+        return ReflectUtils.keyByFields(this);
+    }
 
     public Integer getStart() {
         return start;

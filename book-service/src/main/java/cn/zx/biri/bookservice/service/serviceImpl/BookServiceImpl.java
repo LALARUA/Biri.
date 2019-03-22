@@ -1,26 +1,27 @@
 package cn.zx.biri.bookservice.service.serviceImpl;
 
+import cn.zx.biri.bookservice.config.MyProperties;
 import cn.zx.biri.bookservice.feignService.CommentService;
 import cn.zx.biri.bookservice.mapper.BookMapper;
 import cn.zx.biri.bookservice.service.BookService;
+import cn.zx.biri.common.pojo.entry.Tag;
 import cn.zx.biri.common.pojo.response.BookComment;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Author: xiangXX
  * @Description:
  * @Date Created in 19:54 2019/3/7 0007
  */
+@EnableConfigurationProperties(MyProperties.class)
 @Service
 public class BookServiceImpl implements BookService{
     private final int pageSize = 12;
@@ -29,6 +30,8 @@ public class BookServiceImpl implements BookService{
     BookMapper bookMapper;
     @Autowired
     CommentService commentService;
+    @Autowired
+    MyProperties myProperties;
 
     @Override
     public Map selectBookList(SelectBook condition) {
@@ -37,9 +40,9 @@ public class BookServiceImpl implements BookService{
         if (bookCount==0)
             return null;
         Integer pageNum = (bookCount-1)/pageSize+1;
-        condition.setPageNow(1);
         map.put("pageNum",pageNum);
         map.put("bookList",selectBookListByPage(condition));
+        map.put("count",bookCount);
         return map;
     }
 
@@ -48,6 +51,8 @@ public class BookServiceImpl implements BookService{
         Integer pageNow = condition.getPageNow();
         condition.setStart((pageNow-1)*pageSize);
         List<BookEnhanced> bookList = bookMapper.selectBookList(condition);
+
+        condition.setStart(null);
         return bookList;
     }
 
@@ -55,15 +60,24 @@ public class BookServiceImpl implements BookService{
     @Override
     public BookDetail selectBookDetail(Integer bookId,Integer currentUserId) {
         BookDetail bookDetail = bookMapper.selectBookDetail(bookId);
+        if (bookDetail==null)
+            return null;
+
+        Map<Integer,Tag> tagMap = new HashMap<>();
+
+
+        String catalog = bookDetail.getCatalog();
+        String[] catalogs = catalog.split(" ");
+        bookDetail.setCatalogs(new ArrayList<String>(Arrays.asList(catalogs)));
         Map map = commentService.selectBookCommentsFirst(bookId, currentUserId);
         bookDetail.setCommentPageNum((Integer) map.get("pageNum"));
-        List<Map> bookCommentsMap = (List) map.get("bookComments");
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<BookComment> bookComments = new ArrayList<>(bookCommentsMap.size());
-        for (Map bookComment : bookCommentsMap) {
-            bookComments.add(objectMapper.convertValue(bookComment, BookComment.class));
-        }
-        bookDetail.setComments(bookComments);
+        List bookCommentsMap = (List) map.get("bookComments");
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        List<BookComment> bookComments = new ArrayList<>(bookCommentsMap.size());
+//        for (Map bookComment : bookCommentsMap) {
+//            bookComments.add(objectMapper.convertValue(bookComment, BookComment.class));
+//        }
+        bookDetail.setComments(bookCommentsMap);
         return bookDetail;
     }
 

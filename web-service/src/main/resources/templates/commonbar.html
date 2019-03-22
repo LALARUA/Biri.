@@ -6,8 +6,7 @@
 </head>
 <body>
 <div>
-    <header th:fragment="topbar" class="header header-transparent header-fullwidth header-style-1">
-        <div class="header-inner fixed-header">
+        <div th:fragment="topbar" class="header-inner fixed-header">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6">
@@ -474,12 +473,22 @@
                 </div>
             </div>
         </div>
-    </header>
+
+    <div th:fragment="searchForm" class="searchform__popup" id="searchForm">
+        <a href="#" class="btn-close"><i class="dl-icon-close"></i></a>
+        <div class="searchform__body">
+            <p>找点什么呢...</p>
+            <form action="/Biri/book/search" class="searchform">
+                <input type="text" name="keyword" id="search" class="searchform__input" placeholder="书名、作者、标签、ISBN号">
+                <button type="submit" class="searchform__submit"><i class="dl-icon-search10"></i></button>
+            </form>
+        </div>
+    </div>
     <header th:fragment="mobiletopbar" class="header-mobile">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-4">
-                    <a href="index.html" class="logo-box">
+                    <a href="/Biri/home" class="logo-box">
                         <figure class="logo--normal">
                             <img src="/assets/img/logo/logo.svg" alt="Logo">
                         </figure>

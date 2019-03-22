@@ -6,9 +6,9 @@ spring:
     port: 6379
   session:
     store-type: redis
+
 server:
   port: 8769
-
 eureka:
   client:
     service-url:

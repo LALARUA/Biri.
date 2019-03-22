@@ -138,7 +138,7 @@ public class ShiroConfig {
 //        filterChainDefinitionManager.put("/Biri/home","anon");
 //        filterChainDefinitionManager.put("/assets/**","anon");
 //        filterChainDefinitionManager.put("/static/assets/**","anon");
-//        filterChainDefinitionManager.put("/**","authc");
+        filterChainDefinitionManager.put("/book/collect","authc");
 
 
 //        filterChainDefinitionManager.put("/","roles[user]");
