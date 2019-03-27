@@ -11,6 +11,7 @@
         <module name="common" />
         <module name="eureka-server-1" />
         <module name="login-register" />
+        <module name="order-cart" />
         <module name="rabbitmq-service" />
         <module name="redis-service" />
         <module name="user-service" />
@@ -25,6 +26,7 @@
       <module name="common" target="1.8" />
       <module name="eureka-server-1" target="1.8" />
       <module name="login-register" target="1.8" />
+      <module name="order-cart" target="1.8" />
       <module name="rabbitmq-service" target="1.8" />
       <module name="redis-service" target="1.8" />
       <module name="user-service" target="1.8" />

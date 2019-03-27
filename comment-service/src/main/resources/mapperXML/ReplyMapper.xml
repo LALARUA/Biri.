@@ -7,7 +7,7 @@
     <result column="fromUserId" jdbcType="INTEGER" property="fromUserId" />
     <result column="toUserId" jdbcType="INTEGER" property="toUserId" />
     <result column="detail" jdbcType="VARCHAR" property="detail" />
-    <result column="datetime" jdbcType="TIMESTAMP" property="datetime" />
+    <result column="datetime" jdbcType="VARCHAR" property="datetime" />
   </resultMap>
   <resultMap id="repliesEnhanced" type="cn.zx.biri.common.pojo.response.ReplyEnhancedList">
     <result column="commentId" javaType="INTEGER" property="commentId"/>
@@ -17,7 +17,7 @@
       <result column="replyFromUserId" jdbcType="INTEGER" property="fromUserId"/>
       <result column="replyToUserId" jdbcType="INTEGER" property="toUserId"/>
       <result column="replyDetail" jdbcType="VARCHAR" property="detail"/>
-      <result column="replyDatetime" jdbcType="TIMESTAMP" property="datetime" />
+      <result column="replyDatetime" jdbcType="VARCHAR" property="datetime" />
       <result column="replyFromUserName" jdbcType="VARCHAR" property="fromUsername"/>
       <result column="replyToUserName" jdbcType="VARCHAR" property="toUsername"/>
       <result column="replySupports" jdbcType="INTEGER" property="supports"/>
@@ -30,7 +30,7 @@
       <result column="replyFromUserId" jdbcType="INTEGER" property="fromUserId"/>
       <result column="replyToUserId" jdbcType="INTEGER" property="toUserId"/>
       <result column="replyDetail" jdbcType="VARCHAR" property="detail"/>
-      <result column="replyDatetime" jdbcType="TIMESTAMP" property="datetime" />
+      <result column="replyDatetime" jdbcType="VARCHAR" property="datetime" />
       <result column="replyFromUserName" jdbcType="VARCHAR" property="fromUsername"/>
       <result column="replyToUserName" jdbcType="VARCHAR" property="toUsername"/>
       <result column="replySupports" jdbcType="INTEGER" property="supports"/>
@@ -52,7 +52,7 @@ FROM reply WHERE reply.commentId IN
     <foreach collection="commentIds" item="id" index="index" open="(" close=")" separator=",">
       #{id}
     </foreach>
-    AND 5>(select count(*) from reply AS b where reply.commentId=b.commentId and reply.id>b.id);
+    AND #{pageSize}>(select count(*) from reply AS b where reply.commentId=b.commentId and reply.id>b.id);
   </select>
 
   <select id="getReplyByCommentIdAndPageNow" resultMap="replyEnhanced" parameterType="java.util.Map">
@@ -165,7 +165,7 @@ FROM reply WHERE reply.commentId IN
       toUserId, detail, datetime
       )
     values (#{id,jdbcType=INTEGER}, #{commentId,jdbcType=INTEGER}, #{fromUserId,jdbcType=INTEGER}, 
-      #{toUserId,jdbcType=INTEGER}, #{detail,jdbcType=VARCHAR}, #{datetime,jdbcType=TIMESTAMP}
+      #{toUserId,jdbcType=INTEGER}, #{detail,jdbcType=VARCHAR}, #{datetime,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.Reply">
@@ -207,7 +207,7 @@ FROM reply WHERE reply.commentId IN
         #{detail,jdbcType=VARCHAR},
       </if>
       <if test="datetime != null">
-        #{datetime,jdbcType=TIMESTAMP},
+        #{datetime,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -236,7 +236,7 @@ FROM reply WHERE reply.commentId IN
         detail = #{record.detail,jdbcType=VARCHAR},
       </if>
       <if test="record.datetime != null">
-        datetime = #{record.datetime,jdbcType=TIMESTAMP},
+        datetime = #{record.datetime,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -250,7 +250,7 @@ FROM reply WHERE reply.commentId IN
       fromUserId = #{record.fromUserId,jdbcType=INTEGER},
       toUserId = #{record.toUserId,jdbcType=INTEGER},
       detail = #{record.detail,jdbcType=VARCHAR},
-      datetime = #{record.datetime,jdbcType=TIMESTAMP}
+      datetime = #{record.datetime,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -271,7 +271,7 @@ FROM reply WHERE reply.commentId IN
         detail = #{detail,jdbcType=VARCHAR},
       </if>
       <if test="datetime != null">
-        datetime = #{datetime,jdbcType=TIMESTAMP},
+        datetime = #{datetime,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -282,7 +282,7 @@ FROM reply WHERE reply.commentId IN
       fromUserId = #{fromUserId,jdbcType=INTEGER},
       toUserId = #{toUserId,jdbcType=INTEGER},
       detail = #{detail,jdbcType=VARCHAR},
-      datetime = #{datetime,jdbcType=TIMESTAMP}
+      datetime = #{datetime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -1,12 +1,16 @@
 package cn.zx.biri.commentservice.controller;
 
 import cn.zx.biri.commentservice.service.CommentService;
+import cn.zx.biri.common.pojo.entry.Comment;
 import cn.zx.biri.common.pojo.response.BookComment;
+import cn.zx.biri.common.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -26,8 +30,24 @@ public class CommentController {
         return commentService.selectBookCommentsFirst(bookId, currentUserId);
     }
 
-    @GetMapping("selectBookCommentsByPage")
-    List<BookComment> selectBookCommentsByPage(Integer bookId, Integer currentUserId, Integer pageNow) {
+    @GetMapping("comment")
+    public List<BookComment> selectBookCommentsByPage(Integer bookId, Integer currentUserId, Integer pageNow) {
         return commentService.selectBookCommentsByPage(bookId,currentUserId,pageNow);
+    }
+
+    @PostMapping("comment")
+    public String submitComment(@RequestBody Comment comment) throws Exception{
+
+        try {
+
+            String date = DateUtils.dateToString(new Date());
+            comment.setDate(date);
+//            commentService.submitComment(comment);
+        } catch (Exception e) {
+
+            return "提交错误";
+        }
+        return "评论成功";
+
     }
 }

@@ -68,8 +68,11 @@ public class BookController {
     public String bookDetail(@PathVariable("bookId") Integer bookId,Model model){
         BookDetail bookDetail = bookService.selectBookDetail(bookId, 4);
         model.addAttribute("bookDetail",bookDetail);
+        model.addAttribute("comments",bookDetail.getComments());
         return "bookDetail";
     }
+
+
 
 
 

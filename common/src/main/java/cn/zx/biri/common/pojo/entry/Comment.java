@@ -1,7 +1,5 @@
 package cn.zx.biri.common.pojo.entry;
 
-import java.util.Date;
-
 public class Comment {
     private Integer id;
 
@@ -11,7 +9,9 @@ public class Comment {
 
     private String detail;
 
-    private Date date;
+    private String date;
+
+    private Integer score;
 
     public Integer getId() {
         return id;
@@ -45,11 +45,19 @@ public class Comment {
         this.detail = detail == null ? null : detail.trim();
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.date = date == null ? null : date.trim();
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

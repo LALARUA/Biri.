@@ -46,6 +46,10 @@ zuul:
       path: /Biri/**
       serviceId: web-service
 
+    order-cart:
+      path: /orderCart/**
+      serviceId: order-cart
+
 
   ignored-services: "*"
   sensitive-headers:

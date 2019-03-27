@@ -15,6 +15,7 @@ import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
@@ -50,24 +52,9 @@ public class AuthenticateController {
 
     private static org.slf4j.Logger logger = LoggerFactory.getLogger(AuthenticateController.class);
 
-
-    @GetMapping("test")
-    public String test(){
-        System.out.println("ss");
-        return "hello world";
-    }
-
-
-
-
     @PostMapping("authenticate")
-    public Map authenticate(@Valid LoginVO loginVO, BindingResult bindingResult, HttpServletRequest httpServletRequest){
+    public Map authenticate(@Valid LoginVO loginVO, BindingResult bindingResult, HttpServletRequest httpServletRequest, HttpSession httpSession){
         Map map = new HashMap();
-
-//        HttpSession session = httpServletRequest.getSession();
-//        String id = session.getId();
-//        Cookie[] cookies = httpServletRequest.getCookies();
-//
 
         if(bindingResult.hasErrors()){
             map.put("errorMessage",bindingResult.getFieldError().getDefaultMessage());
@@ -77,7 +64,7 @@ public class AuthenticateController {
             authenticateService.authenticate(loginVO);
             SavedRequest savedRequest = WebUtils.getSavedRequest(httpServletRequest);
             if (Objects.isNull(savedRequest))
-                map.put("url","home");
+                map.put("url","/Biri/home");
             else
                 map.put("url",savedRequest.getRequestUrl());
         } catch (IncorrectCredentialsException e) {
@@ -119,7 +106,6 @@ public class AuthenticateController {
             e.printStackTrace();
             map.put("errorMessage","注册失败");
         }
-
         return map;
     }
     @PostMapping("changePassword")

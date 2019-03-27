@@ -1,5 +1,8 @@
 package cn.zx.biri.common.pojo.response;
 
+import cn.zx.biri.common.pojo.entry.Tag;
+
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -11,7 +14,28 @@ import java.util.Set;
 public class BookDetail extends BookEnhanced {
     private Integer commentPageNum;
 
+    private Integer commentCount;
+
+
+    private List<List<Tag>> tagLinks;
+
     private List<String> catalogs;
+
+    public Integer getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(Integer commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public List<List<Tag>> getTagLinks() {
+        return tagLinks;
+    }
+
+    public void setTagLinks(List<List<Tag>> tagLinks) {
+        this.tagLinks = tagLinks;
+    }
 
     public List<String> getCatalogs() {
         return catalogs;

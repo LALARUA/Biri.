@@ -13,7 +13,7 @@ public class Reply {
 
     private String detail;
 
-    private Date datetime;
+    private String datetime;
 
     public Integer getId() {
         return id;
@@ -55,11 +55,11 @@ public class Reply {
         this.detail = detail == null ? null : detail.trim();
     }
 
-    public Date getDatetime() {
+    public String getDatetime() {
         return datetime;
     }
 
-    public void setDatetime(Date datetime) {
+    public void setDatetime(String datetime) {
         this.datetime = datetime;
     }
 }

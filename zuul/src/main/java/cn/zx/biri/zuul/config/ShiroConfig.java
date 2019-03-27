@@ -43,34 +43,34 @@ public class ShiroConfig {
         Object result = new SimpleHash(hashAlgorithmName, credentials, salt);
         System.out.println(result);
     }
-    class ShiroRealm extends AuthorizingRealm {
-        @Override
-        protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-            Object primaryPrincipal = principalCollection.getPrimaryPrincipal();
-            String email = String.valueOf(primaryPrincipal);
-            Set<String> roles = new HashSet<String>();
-            roles.add("user");
-            SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo(roles);
-            return simpleAuthorizationInfo;
-        }
-
-
-        @Override
-        protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
-            UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
-//        String email = token.getUsername();
-//        Object username = email;
-//        Object password = "123456";
-//        ByteSource salt = ByteSource.Util.bytes(email);
-//        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, salt, getName());
-//        return info;
-            String username = token.getUsername();
-            ByteSource salt = ByteSource.Util.bytes(username);
-            String password = "0f674036a1df182eb4ad6420079a7ad2";
-            return new SimpleAuthenticationInfo(username,password,salt,getName());
-        }
-
-    }
+//    class ShiroRealm extends AuthorizingRealm {
+//        @Override
+//        protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+//            Object primaryPrincipal = principalCollection.getPrimaryPrincipal();
+//            String email = String.valueOf(primaryPrincipal);
+//            Set<String> roles = new HashSet<String>();
+//            roles.add("user");
+//            SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo(roles);
+//            return simpleAuthorizationInfo;
+//        }
+//
+//
+//        @Override
+//        protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+//            UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
+////        String email = token.getUsername();
+////        Object username = email;
+////        Object password = "123456";
+////        ByteSource salt = ByteSource.Util.bytes(email);
+////        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(username, password, salt, getName());
+////        return info;
+//            String username = token.getUsername();
+//            ByteSource salt = ByteSource.Util.bytes(username);
+//            String password = "0f674036a1df182eb4ad6420079a7ad2";
+//            return new SimpleAuthenticationInfo(username,password,salt,getName());
+//        }
+//
+//    }
     /*
     配置LifecycleBeanPostProcessor，这是个DestructionAwareBeanPostProcessor的子类，
     负责org.apache.shiro.util.Initializable类型bean的生命周期的，初始化和销毁。
@@ -93,7 +93,7 @@ public class ShiroConfig {
     public DefaultWebSecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setCacheManager(cacheManager());
-        securityManager.setRealm(shiroRealm());
+//        securityManager.setRealm(shiroRealm());
 
 //        DefaultSessionManager defaultSessionManager = new DefaultSessionManager();
 //        defaultSessionManager.setDeleteInvalidSessions(false);
@@ -138,8 +138,9 @@ public class ShiroConfig {
 //        filterChainDefinitionManager.put("/Biri/home","anon");
 //        filterChainDefinitionManager.put("/assets/**","anon");
 //        filterChainDefinitionManager.put("/static/assets/**","anon");
-        filterChainDefinitionManager.put("/book/collect","authc");
+        filterChainDefinitionManager.put("/Biri/user/**","authc");
 
+        filterChainDefinitionManager.put("/**","anon");
 
 //        filterChainDefinitionManager.put("/","roles[user]");
 
@@ -161,13 +162,13 @@ public class ShiroConfig {
 
     //ShiroRealm，这是个自定义的认证类，继承自AuthorizingRealm，
     //负责用户的认证和权限的处理
-    @Bean(name = "ShiroRealm")
-    @DependsOn("lifecycleBeanPostProcessor")
-    public ShiroRealm shiroRealm() {
-        ShiroRealm realm = new ShiroRealm();
-        realm.setCredentialsMatcher(hashedCredentialsMatcher());
+//    @Bean(name = "ShiroRealm")
+//    @DependsOn("lifecycleBeanPostProcessor")
+//    public ShiroRealm shiroRealm() {
+//        ShiroRealm realm = new ShiroRealm();
 //        realm.setCredentialsMatcher(hashedCredentialsMatcher());
-        return realm;
-    }
+////        realm.setCredentialsMatcher(hashedCredentialsMatcher());
+//        return realm;
+//    }
 }
 

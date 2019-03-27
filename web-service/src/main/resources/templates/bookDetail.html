@@ -30,7 +30,8 @@
     <!-- Revoulation Slider CSS  -->
     <link rel="stylesheet" href="/assets/css/revoulation.css">
 
-    <!-- style CSS -->
+    <!-- style CSS --><link rel="stylesheet" href="/assets/css/myCss.css">
+
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <!-- modernizr JS
@@ -40,7 +41,20 @@
     <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+        .myReplyCss {
+            border: 1px solid #282828;
+            display: inline-block;
+            font-size: 1.2rem;
+            padding: .6rem 1.8rem;
+            text-transform: uppercase;
+            right: 0;
+            top: 0; }
+        .myReplyCss:hover {
+            color: #fff; }
+    </style>
 </head>
+
 
 <body>
 
@@ -136,7 +150,7 @@
                                         <i class="dl-icon-star rated"></i>
                                         <i class="dl-icon-star rated"></i>
                                     </span>
-                                    <a th:text="(${bookDetail.comments==null} ? 0 : ${bookDetail.comments.size()})+'位读者评论'" flag ='1' id="scrollToReview" href="#" class="scrollToDescriptionAndReview review-link">(1 customer review)</a>
+                                    <a th:text="(${bookDetail.comments==null} ? 0 : ${bookDetail.commentCount})+'位读者评论'" flag ='1' id="scrollToReview" href="#" class="scrollToDescriptionAndReview review-link">(1 customer review)</a>
                                 </div>
                                 <div class="product-navigation">
                                     <a href="#" class="prev"><i class="dl-icon-left"></i></a>
@@ -194,10 +208,13 @@ display: -webkit-box;
                                         <span class="posted_in font-size-12">出版社:
                                             <a th:href="'/Biri/book/list?publisher='+${bookDetail.publisher}" th:text="${bookDetail.publisher}">Fashions</a>
                                         </span>
-                                        <span class="posted_in font-size-12">标签:
-                                            <a href="shop-sidebar.html">dress,</a>
-                                            <a href="shop-sidebar.html">fashions,</a>
-                                            <a href="shop-sidebar.html">women</a>
+                                        <span class="posted_in font-size-12"><span style="float: left">标签:</span>
+                                            <div style="float: left">
+                                                <div th:each="tags,tagsStat:${bookDetail.tagLinks}">
+                                                    <a  th:each="tag,tagStat:${tags}" th:href="'/Biri/book/list?tagId='+${tag.getId()}" th:tagId = "${tag.id}" th:text="${tagStat.count==tags.size()}? ${tag.name} : ${tag.name}+'->'" href="shop-sidebar.html">dress,</a>
+
+                                                </div>
+                                            </div>
                                         </span>
                                         <span class="posted_in font-size-12">销量:
                                             <span th:text="${bookDetail.sales}">Fashions</span>
@@ -210,31 +227,6 @@ display: -webkit-box;
                                         <span class="posted_in font-size-12">出版时间:
                                             <span th:text="${bookDetail.publishDate}">Fashions</span>
                                         </span>
-                                        <!--<span class="font-size-12">Share With</span>-->
-                                        <!-- Social Icons Start Here -->
-                                        <!--<ul class="social social-small">-->
-                                            <!--<li class="social__item">-->
-                                                <!--<a href="facebook.com" class="social__link">-->
-                                                    <!--<i class="fa fa-facebook"></i>-->
-                                                <!--</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="social__item">-->
-                                                <!--<a href="twitter.com" class="social__link">-->
-                                                    <!--<i class="fa fa-twitter"></i>-->
-                                                <!--</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="social__item">-->
-                                                <!--<a href="plus.google.com" class="social__link">-->
-                                                    <!--<i class="fa fa-google-plus"></i>-->
-                                                <!--</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="social__item">-->
-                                                <!--<a href="plus.google.com" class="social__link">-->
-                                                    <!--<i class="fa fa-pinterest-p"></i>-->
-                                                <!--</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                        <!-- Social Icons End Here -->
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +240,7 @@ display: -webkit-box;
                                         <span>介绍</span>
                                     </a>
                                     <a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="true">
-                                        <span th:text="'评论('+(${bookDetail.comments==null} ? 0 : ${bookDetail.comments.size()})+')'">Reviews(1)</span>
+                                        <span th:text="'评论('+(${bookDetail.comments==null} ? 0 : ${bookDetail.commentCount})+')'">Reviews(1)</span>
                                     </a>
                                 </div>
                                 <div class="tab-content product-data-tab__content" id="product-tabContent">
@@ -284,65 +276,98 @@ display: -webkit-box;
                                     </div>
                                     <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
                                         <div class="product-reviews">
-                                            <h3 class="review__title">1 review for Waxed-effect pleated skirt</h3>
-                                            <ul class="review__list">
-                                                <li class="review__item">
+                                            <h3 class="review__title" th:text="'一共有 '+${bookDetail.commentCount}+' 位读者评论了 《'+${bookDetail.title} +'》'">1 review for Waxed-effect pleated skirt</h3>
+                                            <ul  class="review__list">
+                                                <div th:fragment="loading" id="commentLoading" class="loading" style="display: none;margin-top: 100px;margin-bottom: 100px" >
+                                                    <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+                                                        <div class="loding-child loding-bounce1"></div>
+                                                        <div class="loding-child loding-bounce2"></div>
+                                                        <div class="loding-child loding-bounce3"></div>
+                                                    </div>
+                                                </div>
+                                                <div id="reviewList">
+
+
+                                                <li  th:fragment="bookComments" th:each="comment,commentStat:${comments}" class="review__item">
                                                     <div class="review__container">
                                                         <img src="/assets/img/others/comment-icon-2.png" alt="Review Avatar" class="review__avatar">
                                                         <div class="review__text">
                                                             <div class="product-rating float-right">
                                                                 <span>
-                                                                    <i class="dl-icon-star rated"></i>
-                                                                    <i class="dl-icon-star rated"></i>
-                                                                    <i class="dl-icon-star rated"></i>
-                                                                    <i class="dl-icon-star rated"></i>
-                                                                    <i class="dl-icon-star rated"></i>
+                                                                    <i th:each="start,startStat:${#numbers.sequence(1,comment.score)}" class="dl-icon-star rated"></i>
                                                                 </span>
                                                             </div>
                                                             <div class="review__meta">
-                                                                <strong class="review__author">John Snow </strong>
+                                                                <strong class="review__author" th:text="${comment.username}">John Snow </strong>
+
                                                                 <span class="review__dash">-</span>
-                                                                <span class="review__published-date">November 20, 2018</span>
+                                                                <span class="review__published-date" th:text="${comment.date}">November 20, 2018</span>
                                                             </div>
                                                             <div class="clearfix"></div>
-                                                            <p class="review__description">Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                                                            <p class="review__description" th:text="${comment.detail}">Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                                                            <a th:commentId = "${comment.id}" style="margin-left: 90%"  class="myReplyCss btn-style-1 myReply"  th:toUserId="${comment.userId}" flag="1">回复</a>
+                                                            <div  th:each="reply,repltStat:${comment.replyEnhancedList == null ? null:comment.replyEnhancedList.getReplyEnhanceds()}" style="margin-left: 30px;width: 700px">
+
+
+                                                                    <div class="review__meta">
+                                                                        <div style="float: left">
+                                                                            <strong class="review__author" th:text="${reply.fromUsername}+'->'">John Snow </strong>
+                                                                            <strong class="review__author" th:text="${reply.toUsername}+'--'">John Snow </strong>
+                                                                            <span class="review__published-date" th:text="${reply.datetime}">November 20, 2018</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p style="width: 600px;float: left;margin-left: 10px" class="review__description" th:text="${reply.detail}"></p>
+                                                                        <a th:toUserId="${reply.fromUserId}" th:commentId="${comment.id}" style="float: right" flag="1" class="btn-style-1 myReplyCss myReply">回复</a>
+                                                                    </div>
+
+
+                                                                <br>
+
+                                                            </div>
+                                                            <div  id="replyLoading" class="loading" style="float:left;display: none;" >
+                                                                <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+                                                                    <div class="loding-child loding-bounce1"></div>
+                                                                    <div class="loding-child loding-bounce2"></div>
+                                                                    <div class="loding-child loding-bounce3"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a  th:id="'loadMoreReply'+${comment.id}" th:commentId="${comment.id}" th:pageNum="${comment.replyEnhancedList == null?1:comment.replyEnhancedList.pageNum}" pageNow="1" th:if="${comment.replyEnhancedList!=null&&comment.replyEnhancedList.pageNum>1}" style="float: right" flag="1" class="loadMoreReply btn-style-1 myReplyCss">加载更多回复</a>
                                                         </div>
                                                     </div>
+
+
+
+
                                                 </li>
+                                                </div>
+
                                             </ul>
+                                            <nav class="pagination-wrap" th:if="${bookDetail.commentPageNum>1}">
+                                                <ul class="pagination">
+                                                    <li><a href="shop-sidebar.html" class="prev page-number"><i class="fa fa-angle-double-left"></i></a></li>
+                                                    <li  th:each="page,pageStat:${#numbers.sequence(1,bookDetail.commentPageNum>8?8:bookDetail.commentPageNum)}"><button th:class="${pageStat.count==1} ? 'current page-number pageBtn' : 'page-number pageBtn'" th:text="${pageStat.count}">1</button></li>
+                                                    <li><a href="shop-sidebar.html" class="next page-number"><i class="fa fa-angle-double-right"></i></a></li>
+                                                </ul>
+                                            </nav>
                                             <div class="review-form-wrapper">
-                                                <span class="reply-title"><strong>Add a review</strong></span>
-                                                <form action="#" class="form">
-                                                    <div class="form-notes mb--20">
-                                                        <p>Your email address will not be published. Required fields are marked <span class="required">*</span></p>
-                                                    </div>
+                                                <span class="reply-title"><strong>写下你对《[[${bookDetail.title}]]》 的看法吧</strong></span>
+                                                <div action="#" class="form">
                                                     <div class="form__group mb--30 mb-sm--20">
                                                         <div class="revew__rating">
                                                             <p class="stars selected">
-                                                                <a class="star-1 active" href="#">1</a>
-                                                                <a class="star-2" href="#">2</a>
-                                                                <a class="star-3" href="#">3</a>
-                                                                <a class="star-4" href="#">4</a>
-                                                                <a class="star-5" href="#">5</a>
+                                                                <a class="star star-1 active" href="#">1</a>
+                                                                <a class="star star-2" href="#">2</a>
+                                                                <a class="star star-3" href="#">3</a>
+                                                                <a class="star star-4" href="#">4</a>
+                                                                <a class="star star-5" href="#">5</a>
                                                             </p>
                                                         </div>
                                                     </div>
                                                     <div class="form__group mb--30 mb-sm--20">
                                                         <div class="form-row">
-                                                            <div class="col-sm-6 mb-sm--20">
-                                                                <label class="form__label" for="name">Name<span class="required">*</span></label>
-                                                                <input type="text" name="name" id="name" class="form__input">
-                                                            </div>  
-                                                            <div class="col-sm-6">
-                                                                <label class="form__label" for="email">email<span class="required">*</span></label>
-                                                                <input type="email" name="email" id="email" class="form__input">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form__group mb--30 mb-sm--20">
-                                                        <div class="form-row">
                                                             <div class="col-12">
-                                                                <label class="form__label" for="email">Your Review<span class="required">*</span></label>
+                                                                <label class="form__label">你的评论<span class="required">*</span></label>
                                                                 <textarea name="review" id="review" class="form__input form__input--textarea"></textarea>
                                                             </div>
                                                         </div>
@@ -350,11 +375,11 @@ display: -webkit-box;
                                                     <div class="form__group">
                                                         <div class="form-row">
                                                             <div class="col-12">
-                                                                <input type="submit" value="Submit" class="btn btn-style-1 btn-submit">
+                                                                <input id="submitReview" type="submit" score="1" value="提交" class="btn btn-style-1 btn-submit">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -571,7 +596,7 @@ display: -webkit-box;
                                         {"breakpoint":1200, "settings": {"slidesToShow": 3} },
                                         {"breakpoint":991, "settings": {"slidesToShow": 2} },
                                         {"breakpoint":450, "settings": {"slidesToShow": 1} }
-                                    ]'
+                                    ]'>
 
                                         <div class="airi-product">
                                             <div class="product-inner">
@@ -945,74 +970,7 @@ display: -webkit-box;
         <!-- Side Navigation End -->
 
         <!-- Mini Cart Start -->
-        <aside class="mini-cart" id="miniCart">
-            <div class="mini-cart-wrapper">
-                <a href="" class="btn-close"><i class="dl-icon-close"></i></a>
-                <div class="mini-cart-inner">
-                    <h5 class="mini-cart__heading mb--40 mb-lg--30">Shopping Cart</h5>
-                    <div class="mini-cart__content">
-                        <ul class="mini-cart__list">
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-17-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Chain print bermuda shorts  </a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-18-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Waxed-effect pleated skirt</a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-19-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Waxed-effect pleated skirt</a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-2-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Waxed-effect pleated skirt</a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="mini-cart__total">
-                            <span>Subtotal</span>
-                            <span class="ammount">$98.00</span>
-                        </div>
-                        <div class="mini-cart__buttons">
-                            <a href="cart.html" class="btn btn-fullwidth btn-style-1">View Cart</a>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-style-1">Checkout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        <div th:replace="~{commonbar::miniCart}"></div>
         <!-- Mini Cart End -->
 
         <!-- Global Overlay Start -->
@@ -1137,52 +1095,214 @@ display: -webkit-box;
 
 
     </div>
-    scrollToDescriptionAndReview
     <script th:inline="javascript">
         window.onload = function (ev){
-            var condition = [[${selectBook}]];
+            initCartTotal();
+            var replyIndex = 0
 
-            $(document).on('click', '.scrollToDescriptionAndReview', function () {
+            var bookId = [[${bookDetail.id}]];
+
+
+            $(document).on('click', '.myReply', function (){
+
                 var flag = $(this).attr("flag");
-                if (flag==1)
-                $("#nav-reviews-tab").click();
-                if (flag==0)
-                    $("#nav-description-tab").click();
-                window.scrollTo({
-                    top:650,
-                    behavior: "smooth",
+                var commentId = $(this).attr("commentId");
+
+                if (flag==1){
+                    var id = "replyToComment"+(++replyIndex);
+                    var submitReplyId = 'submitReply'+replyIndex;
+                    var toUserId = $(this).attr("toUserId");
+                   $(this).text("取消回复")
+                    var html = "<div id="+id+"><input  style='width: 80%' type='text' class='form__input'> <a toUserId="+toUserId+" commentId="+commentId+" replyDetailId="+id+" class='btn-style-1 myReplyCss submitReply replyToComment'>发布</a></div>"
+                    $(this).after(html);
+                   $(this).attr("flag",0);
+                   $(this).attr("replyInputId",id);
+                }
+                else {
+                    var id = $(this).attr("replyInputId");
+                    $(this).text("回复");
+                    $(this).attr("flag","1")
+                    $("#"+id).remove();
+                }
+
+            })
+            $(document).on('click', '.loadMoreReply', function (){
+                var commentId = $(this).attr("commentId");
+                var pageNow = parseInt($(this).attr("pageNow"))+1;
+                $("#replyLoading").css("display","");
+                var pageNum = $(this).attr("pageNum");
+                var current = $(this);
+                current.text("正在加载")
+                current.attr("disabled","true");
+                $.ajax({
+                    url: "/commentService/reply",
+                    type: 'get', //
+                    async: true,    //或false,是否异步
+                    data: {
+                      commentId:commentId,
+                      pageNow:pageNow,
+                        currentUserId:4,
+                    },
+                    timeout: 50000,    //超时时间
+                    dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+                        $("#replyLoading").css("display","none");
+                        for (var i = 0;i<data.length;i++){
+
+                            $("#replyLoading").before("   <div   style=\"margin-left: 30px;width: 700px\">\n" +
+                                "\n" +
+                                "\n" +
+                                "                                                                    <div class=\"review__meta\">\n" +
+                                "                                                                        <div style=\"float: left\">\n" +
+                                "                                                                            <strong class=\"review__author\">"+data[i].fromUsername+"-></strong>\n" +
+                                "                                                                            <strong class=\"review__author\">"+data[i].toUsername+"--</strong>\n" +
+                                "                                                                            <span class=\"review__published-date\">"+data[i].datetime+"</span>\n" +
+                                "                                                                        </div>\n" +
+                                "                                                                    </div>\n" +
+                                "                                                                    <div>\n" +
+                                "                                                                        <p style=\"width: 600px;float: left;margin-left: 10px\" class=\"review__description\">"+data[i].detail+"</p>\n" +
+                                "                                                                        <a toUserId="+data[i].fromUserId+" commentId="+data[i].commentId+" style='float:right' flag='1' class='btn-style-1 myReplyCss myReply'>回复</a>\n" +
+                                "                                                                    </div>\n" +
+                                "\n" +
+                                "\n" +
+                                "                                                                <br>\n" +
+                                "\n" +
+                                "                                                            </div>")
+
+                        }
+
+                        if (pageNum==pageNow)
+                            current.remove();
+                        else {
+                            current.removeAttr("disabled");
+                            current.text("加载更多回复")
+                        }
+
+
+                    },
+                    error: function (data) {
+
+
+
+                    }
                 })
 
 
             })
+
+            $(document).on('click', '.submitReply', function (){
+                var replyDetailId = $(this).attr("replyDetailId");
+                var commentId = $(this).attr("commentId");
+                var replyDetail = $("#"+replyDetailId+" input").val();
+                var toUserId = $(this).attr("toUserId");
+                var current = $(this);
+                current.attr("disabled","true");
+                current.text("提交中")
+                $.ajax({
+                    url: "/commentService/reply",
+                    type: 'post', //
+                    async: true,    //或false,是否异步
+                    data: JSON.stringify({
+                        commentId:commentId,
+                        toUserId:toUserId,
+                        detail:replyDetail,
+                        fromUserId:4,
+                    }),
+                    contentType:"application/json;charset=utf-8",
+                    timeout: 50000,    //超时时间
+                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+
+                        current.parent().parent().children("a").eq(0).click();
+
+                    },
+                    error: function (data) {
+
+
+                    }
+                })
+            })
+            $(document).on('click', '.star', function () {
+                var score = $(this).text();
+                $("#submitReview").attr("score",score);
+
+            })
+            $(document).on('click', '#submitReview', function () {
+
+                var detail = $("#review").val();
+                if (detail==""){
+                    alert("请输入评论");
+                    return false;
+                }
+                if (detail.size>100){
+                    alert("请输入少于一百字的评论");
+                    return false;
+                }
+
+
+
+                var score = $(this).attr("score");
+
+                var submitReview = $(this);
+                submitReview.val("提交中")
+                $(this).attr("disabled","true");
+                $.ajax({
+                    url: "/commentService/comment",
+                    type: 'post', //
+                    async: true,    //或false,是否异步
+                    data: JSON.stringify({
+                        score:score,
+                        detail:detail,
+                        bookId:bookId,
+                        userId:4
+                    }),
+                    contentType:"application/json;charset=utf-8",
+                    timeout: 50000,    //超时时间
+                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+                        submitReview.removeAttr("disabled");
+                        submitReview.val("提交")
+                        alert(data);
+
+                    },
+                    error: function (data) {
+                        submitReview.removeAttr("disabled");
+                        submitReview.val("提交")
+                        alert(data);
+
+                    }
+                })
+            })
             $(document).on('click', '.pageBtn', function () {
                 var current = $(this);
                 var pageNow = $(this).text();
-                condition.pageNow = pageNow;
-                var data = "";
-                for (var key in condition){
-                    if (condition[key]!=null){
-                        data+=(key+'='+condition[key]+'&');
-                    }
-                }
-                $(".loading").css("display","")
-                $("#bookList .row").remove()
+                var data = "bookId="+bookId+"&pageNow="+pageNow;
+                $("#commentLoading").css("display","");
+                $(".pageBtn").attr("disabled","true");
+                $(".pageBtn").attr("class","page-number pageBtn");
+                current.attr("class","current page-number pageBtn");
+                $(".review__item").remove()
                 window.scrollTo({
-                    top:380,
+                    top:700,
                     behavior: "smooth",
                 })
-                $(".pageBtn").attr("disabled","true");
-
-                var  url = "/Biri/book/listByPage?"+data;
-                $("#bookList").load(url,function () {
-                    $(".pageBtn").attr("disabled","false");
-                    $(".loading").css("display","none");
-                    $(".pageBtn").attr("class","page-number pageBtn");
-                    current.attr("class","current page-number pageBtn");
-                    $("#startCount").text((pageNow-1)*12+1);
-                    $("#endCount").text((pageNow)*12>[[${count}]]?[[${count}]] : (pageNow)*12)
+                var  url = "/Biri/comment?"+data;
+                $("#reviewList").load(url,function () {
+                    $(".pageBtn").removeAttr("disabled");
+                    $("#commentLoading").css("display","none");
                 })
 
+            })
+            $(document).on('click', '.scrollToDescriptionAndReview', function () {
+                var flag = $(this).attr("flag");
+                window.scrollTo({
+                    top:700,
+                    behavior: "smooth",
+                })
+                if (flag==1)
+                    $("#nav-reviews-tab").click();
+                if (flag==0)
+                    $("#nav-description-tab").click();
             })
 
         }
@@ -1224,7 +1344,7 @@ display: -webkit-box;
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
-    
+    <script src="/assets/js/myJS.js"></script>
 </body>
 
 </html>

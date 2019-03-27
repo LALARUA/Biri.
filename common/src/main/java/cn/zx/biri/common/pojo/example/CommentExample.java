@@ -1,7 +1,6 @@
 package cn.zx.biri.common.pojo.example;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CommentExample {
@@ -365,53 +364,123 @@ public class CommentExample {
             return (Criteria) this;
         }
 
-        public Criteria andDateEqualTo(Date value) {
+        public Criteria andDateEqualTo(String value) {
             addCriterion("date =", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateNotEqualTo(Date value) {
+        public Criteria andDateNotEqualTo(String value) {
             addCriterion("date <>", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateGreaterThan(Date value) {
+        public Criteria andDateGreaterThan(String value) {
             addCriterion("date >", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andDateGreaterThanOrEqualTo(String value) {
             addCriterion("date >=", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateLessThan(Date value) {
+        public Criteria andDateLessThan(String value) {
             addCriterion("date <", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateLessThanOrEqualTo(Date value) {
+        public Criteria andDateLessThanOrEqualTo(String value) {
             addCriterion("date <=", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateIn(List<Date> values) {
+        public Criteria andDateLike(String value) {
+            addCriterion("date like", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateNotLike(String value) {
+            addCriterion("date not like", value, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andDateIn(List<String> values) {
             addCriterion("date in", values, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateNotIn(List<Date> values) {
+        public Criteria andDateNotIn(List<String> values) {
             addCriterion("date not in", values, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateBetween(Date value1, Date value2) {
+        public Criteria andDateBetween(String value1, String value2) {
             addCriterion("date between", value1, value2, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateNotBetween(Date value1, Date value2) {
+        public Criteria andDateNotBetween(String value1, String value2) {
             addCriterion("date not between", value1, value2, "date");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIsNull() {
+            addCriterion("score is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIsNotNull() {
+            addCriterion("score is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreEqualTo(Integer value) {
+            addCriterion("score =", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotEqualTo(Integer value) {
+            addCriterion("score <>", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreGreaterThan(Integer value) {
+            addCriterion("score >", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreGreaterThanOrEqualTo(Integer value) {
+            addCriterion("score >=", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLessThan(Integer value) {
+            addCriterion("score <", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLessThanOrEqualTo(Integer value) {
+            addCriterion("score <=", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIn(List<Integer> values) {
+            addCriterion("score in", values, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotIn(List<Integer> values) {
+            addCriterion("score not in", values, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreBetween(Integer value1, Integer value2) {
+            addCriterion("score between", value1, value2, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotBetween(Integer value1, Integer value2) {
+            addCriterion("score not between", value1, value2, "score");
             return (Criteria) this;
         }
     }

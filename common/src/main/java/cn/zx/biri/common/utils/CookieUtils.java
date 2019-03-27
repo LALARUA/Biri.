@@ -24,7 +24,6 @@ public class CookieUtils {
         }
         return null;
     }
-
     public static void foreachCookieName(HttpServletRequest httpServletRequest){
         Cookie[] cookies = httpServletRequest.getCookies();
         if (cookies!=null){
@@ -33,11 +32,10 @@ public class CookieUtils {
             }
         }
     }
-
     public static Cookie addCookie(HttpServletResponse httpServletResponse,String cookieName,String cookieValue){
         Cookie cookie = new Cookie(cookieName,cookieValue);
         cookie.setPath("/");
-        cookie.setMaxAge(60*2);
+        cookie.setMaxAge(60*1);
         httpServletResponse.addCookie(cookie);
         return cookie;
 

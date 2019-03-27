@@ -3,7 +3,7 @@ package cn.zx.biri.common.pojo.entry;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Book {
+public class Book implements Serializable{
     private Integer id;
 
     private String title;

@@ -112,7 +112,7 @@
     <script>
         window.onload = function (ev){
             var emailRegex = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-            var passwordRegex =  /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/
+            var passwordRegex =  /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;
             $("#change").attr("disabled", true)
             $(".register").hide();
             $(document).on('click', '#change', function () {
@@ -284,15 +284,24 @@
                     timeout: 50000,    //超时时间
                     dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
                     success: function (data) {
-                        $("#loginOrRegister").attr("disabled",false);
+
                         $("#loginOrRegister").text(old)
                         var errorMessage = data['errorMessage'];
                         if (errorMessage!=null){
+                            $("#loginOrRegister").removeAttr("disabled");
                             $("#errorMessage").text(errorMessage)
                         }
                         else {
-
                             window.location.href = data['url']
+                        }
+                    },
+                    error:function (data) {
+
+                        $("#loginOrRegister").text(old)
+                        var errorMessage = data['errorMessage'];
+                        if (errorMessage!=null){
+                            $("#loginOrRegister").removeAttr("disabled");
+                            $("#errorMessage").text(errorMessage);
                         }
                     }
                 })
@@ -341,7 +350,7 @@
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
-    
+    <script src="/assets/js/myJS.js"></script>
 </body>
 
 </html>

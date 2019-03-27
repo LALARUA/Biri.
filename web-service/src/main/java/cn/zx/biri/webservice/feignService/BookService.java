@@ -28,5 +28,4 @@ public interface BookService {
     @GetMapping("bookDetail")
     BookDetail selectBookDetail(@RequestParam("bookId") Integer bookId, @RequestParam("currentUserId") Integer currentUserId);
 
-
 }

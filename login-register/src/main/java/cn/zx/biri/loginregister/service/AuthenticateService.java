@@ -11,6 +11,6 @@ import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 public interface AuthenticateService {
     void authenticate(LoginVO loginVO) throws Exception;
     void registerNewUser(RegisterAndChangePasswordVO registerVO) throws Exception;
-    void te();
+
 
 }

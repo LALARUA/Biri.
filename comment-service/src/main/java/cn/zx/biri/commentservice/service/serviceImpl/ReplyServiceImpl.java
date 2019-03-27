@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Service
 public class ReplyServiceImpl implements ReplyService {
-    private final int pageSize = 5;
+    private final int pageSize = 3;
 
     @Autowired
     ReplyMapper replyMapper;
@@ -32,6 +32,7 @@ public class ReplyServiceImpl implements ReplyService {
         Map map = new HashMap();
         map.put("commentIds",commentIds);
         map.put("currentUserId",currentUserId);
+        map.put("pageSize",3);
         List<ReplyEnhancedList> replyByCommentId = replyMapper.getRepliesByCommentId(map);
         for (ReplyEnhancedList replies : replyByCommentId) {
             ReplyExample replyExample = new ReplyExample();
@@ -51,6 +52,11 @@ public class ReplyServiceImpl implements ReplyService {
         map.put("start",(pageNow-1)*pageSize);
         map.put("pageSize",pageSize);
         return replyMapper.getReplyByCommentIdAndPageNow(map);
+    }
+
+    @Override
+    public void submitReply(Reply reply) throws Exception{
+        replyMapper.insertSelective(reply);
     }
 
 

@@ -2,6 +2,7 @@ package cn.zx.biri.commentservice.service.serviceImpl;
 
 import cn.zx.biri.commentservice.mapper.CommentMapper;
 import cn.zx.biri.commentservice.service.CommentService;
+import cn.zx.biri.common.pojo.entry.Comment;
 import cn.zx.biri.common.pojo.example.CommentExample;
 import cn.zx.biri.common.pojo.response.BookComment;
 import cn.zx.biri.common.pojo.response.ReplyEnhancedList;
@@ -20,7 +21,7 @@ import java.util.Map;
  */
 @Service
 public class CommentServiceImpl implements CommentService {
-    private final int pageSize = 8;
+    private final int pageSize = 1;
     @Autowired
     CommentMapper commentMapper;
 
@@ -41,6 +42,7 @@ public class CommentServiceImpl implements CommentService {
         commentExample.createCriteria().andBookIdEqualTo(bookId);
         long commentCount = commentMapper.countByExample(commentExample);
         int pageNum = (int) (commentCount-1)/pageSize+1;
+        map.put("commentCount",commentCount);
         map.put("pageNum",pageNum);
         map.put("bookComments",selectBookCommentsByPage(bookId,currentUserId,1));
         return map;
@@ -76,5 +78,10 @@ public class CommentServiceImpl implements CommentService {
             bookComment.setReplyEnhancedList(reply);
         }
         return bookComments;
+    }
+
+    @Override
+    public void submitComment(Comment comment) throws Exception {
+        commentMapper.insertSelective(comment);
     }
 }

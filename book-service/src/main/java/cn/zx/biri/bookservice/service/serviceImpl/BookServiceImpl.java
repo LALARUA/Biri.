@@ -4,12 +4,10 @@ import cn.zx.biri.bookservice.config.MyProperties;
 import cn.zx.biri.bookservice.feignService.CommentService;
 import cn.zx.biri.bookservice.mapper.BookMapper;
 import cn.zx.biri.bookservice.service.BookService;
-import cn.zx.biri.common.pojo.entry.Tag;
-import cn.zx.biri.common.pojo.response.BookComment;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import cn.zx.biri.common.utils.HandleBookTagUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
@@ -63,13 +61,12 @@ public class BookServiceImpl implements BookService{
         if (bookDetail==null)
             return null;
 
-        Map<Integer,Tag> tagMap = new HashMap<>();
-
-
+        Map map = commentService.selectBookCommentsFirst(bookId, currentUserId);
         String catalog = bookDetail.getCatalog();
         String[] catalogs = catalog.split(" ");
         bookDetail.setCatalogs(new ArrayList<String>(Arrays.asList(catalogs)));
-        Map map = commentService.selectBookCommentsFirst(bookId, currentUserId);
+        bookDetail.setTagLinks(HandleBookTagUtils.tagLink(bookDetail.getTags()));
+        bookDetail.setCommentCount((Integer) map.get("commentCount"));
         bookDetail.setCommentPageNum((Integer) map.get("pageNum"));
         List bookCommentsMap = (List) map.get("bookComments");
 //        ObjectMapper objectMapper = new ObjectMapper();
@@ -80,5 +77,6 @@ public class BookServiceImpl implements BookService{
         bookDetail.setComments(bookCommentsMap);
         return bookDetail;
     }
+
 
 }

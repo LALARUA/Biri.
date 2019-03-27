@@ -57,11 +57,16 @@
   
     <!-- Main Wrapper Start -->
     <div class="wrapper">
-
         <header class="header header-fullwidth header-style-1">
             <div th:replace="~{commonbar::topbar}"></div>
         </header>
+
         <div th:replace="~{commonbar::mobiletopbar}"></div>
+
+
+        <!-- Mobile Header area End -->
+
+        <!-- Breadcrumb area Start -->
 
         <div class="breadcrumb-area bg--white-6 pt--60 pb--70 pt-lg--40 pb-lg--50 pt-md--30 pb-md--40">
             <div class="container-fluid">
@@ -228,7 +233,7 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="product-widget product-widget--size">
-                                                     <h3 class="widget-title">Size</h3>
+                                                    <h3 class="widget-title">Size</h3>
                                                     <ul class="product-widget__list">
                                                         <li>
                                                             <a href="shop-sidebar.html">
@@ -264,13 +269,7 @@
                                 </div>
                             </div>
                             <div id="bookList" th:fragment="bookList" class="shop-products">
-                                <div class="loading" style="display: none;margin-top: 200px;margin-bottom: 200px" >
-                                    <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
-                                        <div class="loding-child loding-bounce1"></div>
-                                        <div class="loding-child loding-bounce2"></div>
-                                        <div class="loding-child loding-bounce3"></div>
-                                    </div>
-                                </div>
+                                <div th:replace="~{commonbar::loding}"></div>
                                 <div class="row grid-space-20 xxl-block-grid-4">
                                     <div th:each="book,bookStat : ${bookList}" class="col-lg-4 col-sm-6 mb--40 mb-md--30">
                                         <div class="airi-product">
@@ -356,13 +355,13 @@
                                         <form action="#" method="post">
                                             <div id="slider-range" class="price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
                                                 <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 16.6667%; width: 79.1667%;">
-                                                    
+
                                                 </div>
                                                 <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 16.6667%;">
-                                                    
+
                                                 </span>
                                                 <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 95.8333%;">
-                                                    
+
                                                 </span>
                                             </div>
                                             <div class="filter-price">
@@ -438,13 +437,13 @@
                                     </div>
                                 </div>
                                 <!-- Category Widget Start -->
-                                
+
                                 <!-- Promo Widget Start -->
                                 <div class="product-widget promo-widget">
                                     <div class="banner-box banner-type-3 banner-type-3-2 banner-hover-1">
                                         <div class="banner-inner">
                                             <div class="banner-image">
-                                                <img src="/assets/img/banner/ad-banner.jpg" alt="Banner">
+                                                <img src="//assets/img/banner/ad-banner.jpg" alt="Banner">
                                             </div>
                                             <div class="banner-info">
                                                 <h2 class="banner-title-11">New <br> <strong>Season</strong></h2>
@@ -535,27 +534,27 @@
                         <ul class="social social-small">
                             <li class="social__item">
                                 <a href="twitter.com" class="social__link">
-                                <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-twitter"></i>
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="plus.google.com" class="social__link">
-                                <i class="fa fa-google-plus"></i>
+                                    <i class="fa fa-google-plus"></i>
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="facebook.com" class="social__link">
-                                <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-facebook"></i>
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="youtube.com" class="social__link">
-                                <i class="fa fa-youtube"></i>
+                                    <i class="fa fa-youtube"></i>
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="instagram.com" class="social__link">
-                                <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-instagram"></i>
                                 </a>
                             </li>
                         </ul>
@@ -575,8 +574,8 @@
 
         <!-- Search from Start -->
         <div th:replace="~{commonbar::searchForm}"></div>
-        <!-- Search from End --> 
-        
+        <!-- Search from End -->
+
         <!-- Side Navigation Start -->
         <aside class="side-navigation" id="sideNav">
             <div class="side-navigation-wrapper">
@@ -659,74 +658,7 @@
         <!-- Side Navigation End -->
 
         <!-- Mini Cart Start -->
-        <aside class="mini-cart" id="miniCart">
-            <div class="mini-cart-wrapper">
-                <a href="" class="btn-close"><i class="dl-icon-close"></i></a>
-                <div class="mini-cart-inner">
-                    <h5 class="mini-cart__heading mb--40 mb-lg--30">Shopping Cart</h5>
-                    <div class="mini-cart__content">
-                        <ul class="mini-cart__list">
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-17-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Chain print bermuda shorts  </a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-18-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Waxed-effect pleated skirt</a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-19-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Waxed-effect pleated skirt</a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                            <li class="mini-cart__product">
-                                <a href="#" class="remove-from-cart remove">
-                                    <i class="dl-icon-close"></i>
-                                </a>
-                                <div class="mini-cart__product__image">
-                                    <img src="/assets/img/products/prod-2-1-70x91.jpg" alt="products">
-                                </div>
-                                <div class="mini-cart__product__content">
-                                    <a class="mini-cart__product__title" href="product-details.html">Waxed-effect pleated skirt</a>
-                                    <span class="mini-cart__product__quantity">1 x $49.00</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="mini-cart__total">
-                            <span>Subtotal</span>
-                            <span class="ammount">$98.00</span>
-                        </div>
-                        <div class="mini-cart__buttons">
-                            <a href="cart.html" class="btn btn-fullwidth btn-style-1">View Cart</a>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-style-1">Checkout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        <div th:replace="~{commonbar::miniCart}"></div>
         <!-- Mini Cart End -->
 
         <!-- Global Overlay Start -->
@@ -735,106 +667,106 @@
 
         <!-- Modal Start -->
         <div class="modal fade product-modal" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true"><i class="dl-icon-close"></i></span>
-                </button>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="product-image-carousel nav-vertical-center nav-style-1">
-                            <div class="product-image">
-                                <div class="product-image--holder">
-                                    <a href="product-details.html">
-                                        <img src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
-                                    </a>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="dl-icon-close"></i></span>
+                        </button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="product-image-carousel nav-vertical-center nav-style-1">
+                                    <div class="product-image">
+                                        <div class="product-image--holder">
+                                            <a href="product-details.html">
+                                                <img src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
+                                            </a>
+                                        </div>
+                                        <span class="product-badge sale">sale</span>
+                                    </div>
+                                    <div class="product-image">
+                                        <div class="product-image--holder">
+                                            <a href="product-details.html">
+                                                <img src="/assets/img/products/prod-10-1.jpg" alt="Product Image" class="primary-image">
+                                            </a>
+                                        </div>
+                                        <span class="product-badge new">new</span>
+                                    </div>
+                                    <div class="product-image">
+                                        <div class="product-image--holder">
+                                            <a href="product-details.html">
+                                                <img src="/assets/img/products/prod-11-1.jpg" alt="Product Image" class="primary-image">
+                                            </a>
+                                        </div>
+                                        <span class="product-badge hot">hot</span>
+                                    </div>
                                 </div>
-                                <span class="product-badge sale">sale</span>
                             </div>
-                            <div class="product-image">
-                                <div class="product-image--holder">
-                                    <a href="product-details.html">
-                                        <img src="/assets/img/products/prod-10-1.jpg" alt="Product Image" class="primary-image">
-                                    </a>
-                                </div>
-                                <span class="product-badge new">new</span>
-                            </div>
-                            <div class="product-image">
-                                <div class="product-image--holder">
-                                    <a href="product-details.html">
-                                        <img src="/assets/img/products/prod-11-1.jpg" alt="Product Image" class="primary-image">
-                                    </a>
-                                </div>
-                                <span class="product-badge hot">hot</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="modal-box product-summary">
-                            <div class="product-navigation mb--10">
-                                <a href="#" class="prev"><i class="dl-icon-left"></i></a>
-                                <a href="#" class="next"><i class="dl-icon-right"></i></a>
-                            </div>
-                            <h3 class="product-title mb--15">Waxed-effect pleated skirt</h3>
-                            <span class="product-price-wrapper mb--20">
+                            <div class="col-md-6">
+                                <div class="modal-box product-summary">
+                                    <div class="product-navigation mb--10">
+                                        <a href="#" class="prev"><i class="dl-icon-left"></i></a>
+                                        <a href="#" class="next"><i class="dl-icon-right"></i></a>
+                                    </div>
+                                    <h3 class="product-title mb--15">Waxed-effect pleated skirt</h3>
+                                    <span class="product-price-wrapper mb--20">
                                 <span class="money">$49.00</span>
                                 <span class="product-price-old">
                                     <span class="money">$60.00</span>
                                 </span>
                             </span>
-                            <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
-                            <div class="product-action d-flex flex-row align-items-center mb--30">
-                                <div class="quantity">
-                                    <input type="number" class="quantity-input" name="qty" id="qty" value="1" min="1">
+                                    <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                                    <div class="product-action d-flex flex-row align-items-center mb--30">
+                                        <div class="quantity">
+                                            <input type="number" class="quantity-input" name="qty" id="qty" value="1" min="1">
+                                        </div>
+                                        <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
+                                            Add To Cart
+                                        </button>
+                                        <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
+                                        <a href="compare.html"><i class="dl-icon-compare2"></i></a>
+                                    </div>
+                                    <div class="product-extra mb--30">
+                                        <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
+                                        <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
+                                    </div>
+                                    <div class="product-meta float-left">
+                                        <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
+                                        <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
+                                    </div>
+                                    <div class="product-share-box float-right">
+                                        <span class="font-size-12">Share With</span>
+                                        <!-- Social Icons Start Here -->
+                                        <ul class="social social-small">
+                                            <li class="social__item">
+                                                <a href="facebook.com" class="social__link">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="twitter.com" class="social__link">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="plus.google.com" class="social__link">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="plus.google.com" class="social__link">
+                                                    <i class="fa fa-pinterest-p"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- Social Icons End Here -->
+                                    </div>
                                 </div>
-                                <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
-                                    Add To Cart
-                                </button>
-                                <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
-                                <a href="compare.html"><i class="dl-icon-compare2"></i></a>
-                            </div>  
-                            <div class="product-extra mb--30">
-                                <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
-                                <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
-                            </div>
-                            <div class="product-meta float-left">
-                                <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
-                                <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
-                            </div>
-                            <div class="product-share-box float-right">
-                                <span class="font-size-12">Share With</span>
-                                <!-- Social Icons Start Here -->
-                                <ul class="social social-small">
-                                    <li class="social__item">
-                                        <a href="facebook.com" class="social__link">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
-                                        <a href="twitter.com" class="social__link">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
-                                        <a href="plus.google.com" class="social__link">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
-                                        <a href="plus.google.com" class="social__link">
-                                            <i class="fa fa-pinterest-p"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <!-- Social Icons End Here -->
                             </div>
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
         <!-- Modal End -->
 
@@ -843,6 +775,7 @@
     </div>
     <script th:inline="javascript">
         window.onload = function (ev){
+            initCartTotal();
             var condition = [[${selectBook}]];
 
             $(document).on('click', '.add_to_cart_btn', function () {
@@ -871,7 +804,7 @@
 
                 var  url = "/Biri/book/listByPage?"+data;
                $("#bookList").load(url,function () {
-                   $(".pageBtn").attr("disabled","false");
+                   $(".pageBtn").removeAttr("disabled")
                    $(".loading").css("display","none");
                    $("#startCount").text((pageNow-1)*12+1);
                    $("#endCount").text((pageNow)*12>[[${count}]]?[[${count}]] : (pageNow)*12)
@@ -918,7 +851,7 @@
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
-    
+    <script src="/assets/js/myJS.js"></script>
 </body>
 
 </html>

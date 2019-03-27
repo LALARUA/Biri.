@@ -1,8 +1,11 @@
 package cn.zx.biri.loginregister.service.serviceImpl;
 
+import cn.zx.biri.common.pojo.entry.User;
+import cn.zx.biri.common.pojo.response.BookInCart;
 import cn.zx.biri.common.pojo.vo.LoginVO;
 import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import cn.zx.biri.common.utils.CookieUtils;
+import cn.zx.biri.loginregister.feignService.OrderAndCartService;
 import cn.zx.biri.loginregister.feignService.RabbitmqService;
 import cn.zx.biri.loginregister.feignService.UserService;
 import cn.zx.biri.loginregister.service.AuthenticateService;
@@ -17,6 +20,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 /**
@@ -32,18 +38,15 @@ public class AuthenticateServiceImpl implements AuthenticateService {
     @Autowired
     UserService userService;
 
+    @Autowired
+    OrderAndCartService orderAndCartService;
+
     @Override
     public void registerNewUser(RegisterAndChangePasswordVO registerVO) throws Exception {
         userService.insertUser(registerVO);
         rabbitmqService.sendMessageToQueueDirect("registerNewUser",registerVO.getUsername());
         authenticate(registerVO);
     }
-
-    @Override
-    public void te() {
-        System.out.println("hello world");
-    }
-
     @Override
     public void authenticate(LoginVO loginVO) throws Exception {
         Subject current = SecurityUtils.getSubject();
@@ -61,7 +64,11 @@ public class AuthenticateServiceImpl implements AuthenticateService {
 
         //将认证后的用户放入session
         HttpSession httpSession = currentHttpServletRequest.getSession();
-        httpSession.setAttribute("user",userService.selectUserByUsername(username));
+        User user = userService.selectUserByUsername(username);
+        httpSession.setAttribute("user",user);
+        List<BookInCart> bookInCarts = orderAndCartService.bookInCarts(user.getId());
+        Map<Integer, BookInCart> collect = bookInCarts.stream().collect(Collectors.toMap(BookInCart::getCartId, (p) -> p));
+        httpSession.setAttribute("cart",collect);
     }
 
 

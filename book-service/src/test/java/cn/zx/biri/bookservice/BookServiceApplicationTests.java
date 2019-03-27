@@ -4,8 +4,12 @@ import cn.zx.biri.bookservice.mapper.BookMapper;
 import cn.zx.biri.bookservice.mapper.BookWithAuthorMapper;
 import cn.zx.biri.bookservice.mapper.BookWithImagePathMapper;
 import cn.zx.biri.bookservice.service.BookService;
+import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
 import cn.zx.biri.common.pojo.entry.BookWithImagePath;
 import cn.zx.biri.common.pojo.entry.Tag;
+import cn.zx.biri.common.pojo.example.BookExample;
+import cn.zx.biri.common.pojo.example.BookWithImagePathExample;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
@@ -35,59 +39,26 @@ public class BookServiceApplicationTests {
 	@Autowired
 	BookService bookService;
 
+
+
 	@Test
 	public void contextLoads() {
 
-		Tag tag1 = new Tag(2,3);
-		Tag tag2 = new Tag(4,2);
-		Tag tag3 = new Tag(5,1);
-		Tag tag4 = new Tag(1,4);
-		Tag tag5 = new Tag(3,0);
+		List<BookWithBLOBs> books = bookMapper.selectByExampleWithBLOBs(new BookExample());
+		for (BookWithBLOBs book  : books) {
+			BookWithImagePathExample bookWithImagePathExample = new BookWithImagePathExample();
+			bookWithImagePathExample.createCriteria().andBookIdEqualTo(book.getId());
+			List<BookWithImagePath> bookWithImagePaths = bookWithImagePathMapper.selectByExample(bookWithImagePathExample);
+			if(bookWithImagePaths.size()!=0){
+				String bookImagePath = bookWithImagePaths.get(0).getBookImagePath();
+				book.setimagePath(bookImagePath);
 
-		List<Tag> tags = new LinkedList<>();
-		tags.add(tag1);
-		tags.add(tag2);
-		tags.add(tag3);
-		tags.add(tag4);
-		tags.add(tag5);
-
-		Map<Integer,Tag> headMap = new HashMap<>();
-		Map<Integer,Tag> tailMap = new HashMap<>();
-		Deque<Tag> queue = new LinkedList();
-
-		for (Tag t : tags) {
-
-			if (queue.isEmpty()){
-				queue.addLast(t);
-				continue;
-			}
-			Tag tail = queue.peekLast();
-			if (t.getfatherId()==tail.getId()) {
-				queue.addLast(t);
-				continue;
-			}
-			Tag head = queue.peekFirst();
-			if (head.getfatherId()==t.getId()){
-				queue.addFirst(t);
-				continue;
+				BookExample bookExample = new BookExample();
+				bookExample.createCriteria().andIdEqualTo(book.getId());
+				bookMapper.updateByExampleSelective(book,bookExample);
 			}
 
-		}
-		while (true){
-			Tag head = queue.peekFirst();
-			Tag newHead = headMap.get(head.getfatherId());
-			if (newHead!=null){
-				queue.addFirst(newHead);
-			}
-			else break;
-		}
-		while (true){
-			Tag tail = queue.peekLast();
-			Tag newTail = tailMap.get(tail.getId());
-			if (newTail!=null){
-				queue.addLast(newTail);
-			}
-			else break;
+
 		}
 		return;
 //		File file = new File("E:\\gitRep\\BiriPic\\bookPic");

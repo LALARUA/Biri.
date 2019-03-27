@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/login-register" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-cart" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/redis-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service" charset="UTF-8" />

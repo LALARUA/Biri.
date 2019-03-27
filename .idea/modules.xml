@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server-1/eureka-server-1.iml" filepath="$PROJECT_DIR$/eureka-server-1/eureka-server-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/login-register/login-register.iml" filepath="$PROJECT_DIR$/login-register/login-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-cart/order-cart.iml" filepath="$PROJECT_DIR$/order-cart/order-cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-service/rabbitmq-service.iml" filepath="$PROJECT_DIR$/rabbitmq-service/rabbitmq-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis-service/redis-service.iml" filepath="$PROJECT_DIR$/redis-service/redis-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />

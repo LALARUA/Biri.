@@ -6,14 +6,16 @@
     <result column="userId" jdbcType="INTEGER" property="userId" />
     <result column="bookId" jdbcType="INTEGER" property="bookId" />
     <result column="detail" jdbcType="VARCHAR" property="detail" />
-    <result column="date" jdbcType="TIMESTAMP" property="date" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="score" jdbcType="INTEGER" property="score" />
   </resultMap>
   <resultMap id="BookComment" type="cn.zx.biri.common.pojo.response.BookComment">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="userId" jdbcType="INTEGER" property="userId" />
     <result column="detail" jdbcType="VARCHAR" property="detail" />
-    <result column="date" jdbcType="TIMESTAMP" property="date" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
     <result column="bookId" jdbcType="INTEGER" property="bookId" />
+    <result column="score" jdbcType="INTEGER" property="score" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="commentSupports" jdbcType="VARCHAR" property="supports" />
     <result column="isCurrentUserSupportComment" jdbcType="INTEGER" property="isCurrentUserSupport" />
@@ -27,11 +29,12 @@
     `comment`.detail AS detail,
     `comment`.date AS date,
     `comment`.bookId as bookId,
+    comment.score AS score,
     (SELECT COUNT(*) FROM commentSupport WHERE `comment`.id=commentSupport.commentId) AS commentSupports,
     (SELECT COUNT(*) FROM commentSupport WHERE commentSupport.commentId = `comment`.id AND commentSupport.userId = #{currentUserId}) AS isCurrentUserSupportComment
     FROM `comment`,`user`
     WHERE
-    `comment`.bookId = #{bookId}  AND `comment`.userId=`user`.id ORDER BY date limit #{start},8
+    `comment`.bookId = #{bookId}  AND `comment`.userId=`user`.id ORDER BY date limit #{start},1
   </select>
 
   <sql id="Example_Where_Clause">
@@ -126,10 +129,12 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.zx.biri.common.pojo.entry.Comment">
-    insert into comment (id, userId, bookId, 
-      detail, date)
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER}, 
-      #{detail,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP})
+     insert into comment (id, userId, bookId,
+      detail, date, score
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER},
+      #{detail,jdbcType=VARCHAR}, #{date,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.Comment">
     insert into comment
@@ -149,6 +154,9 @@
       <if test="date != null">
         date,
       </if>
+      <if test="score != null">
+        score,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -164,7 +172,10 @@
         #{detail,jdbcType=VARCHAR},
       </if>
       <if test="date != null">
-        #{date,jdbcType=TIMESTAMP},
+        #{date,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -190,7 +201,10 @@
         detail = #{record.detail,jdbcType=VARCHAR},
       </if>
       <if test="record.date != null">
-        date = #{record.date,jdbcType=TIMESTAMP},
+        date = #{record.date,jdbcType=VARCHAR},
+      </if>
+      <if test="record.score != null">
+        score = #{record.score,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -200,10 +214,11 @@
   <update id="updateByExample" parameterType="map">
     update comment
     set id = #{record.id,jdbcType=INTEGER},
-      userId = #{record.userId,jdbcType=INTEGER},
-      bookId = #{record.bookId,jdbcType=INTEGER},
-      detail = #{record.detail,jdbcType=VARCHAR},
-      date = #{record.date,jdbcType=TIMESTAMP}
+    userId = #{record.userId,jdbcType=INTEGER},
+    bookId = #{record.bookId,jdbcType=INTEGER},
+    detail = #{record.detail,jdbcType=VARCHAR},
+    date = #{record.date,jdbcType=VARCHAR},
+    score = #{record.score,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -221,7 +236,10 @@
         detail = #{detail,jdbcType=VARCHAR},
       </if>
       <if test="date != null">
-        date = #{date,jdbcType=TIMESTAMP},
+        date = #{date,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -231,7 +249,8 @@
     set userId = #{userId,jdbcType=INTEGER},
       bookId = #{bookId,jdbcType=INTEGER},
       detail = #{detail,jdbcType=VARCHAR},
-      date = #{date,jdbcType=TIMESTAMP}
+      date = #{date,jdbcType=VARCHAR},
+      score = #{score,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -2,7 +2,7 @@ package cn.zx.biri.common.pojo.entry;
 
 import java.io.Serializable;
 
-public class User{
+public class User implements Serializable{
     private Integer id;
 
     private String nickname;
