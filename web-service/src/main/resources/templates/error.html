@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/assets/img/icon.png">
 
     <!-- Title -->
-    <title>Airi - Clean, Minimal eCommerce Bootstrap 4 Template</title>
+    <title>好像出了点什么错误~</title>
 
     <!-- ************************* CSS Files ************************* -->
 
@@ -57,233 +57,22 @@
     <div class="wrapper">
         <!-- Header Area Start -->
         <header class="header header-fullwidth header-style-1">
-            <div th:replace="~{commonbar::topbar(activeUrl='cart')}"></div>
+            <div th:replace="~{commonbar::topbar}"></div>
         </header>
 
         <div th:replace="~{commonbar::mobiletopbar}"></div>
-        <!-- Header Area End -->
-
-        <!-- Mobile Header area Start -->
-
         <!-- Mobile Header area End -->
-
-        <!-- Breadcrumb area Start -->
-
-        <div class="breadcrumb-area bg--white-6 breadcrumb-bg-1 pt--60 pb--70 pt-lg--40 pb-lg--50 pt-md--30 pb-md--40">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h1 class="page-title">Cart</h1>
-                        <ul class="breadcrumb justify-content-center">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="current"><span>Cart</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Breadcrumb area End -->
 
         <!-- Main Content Wrapper Start -->
         <div id="content" class="main-content-wrapper">
             <div class="page-content-inner">
                 <div class="container">
-                    <div class="row pt--80 pb--80 pt-md--45 pt-sm--25 pb-md--60 pb-sm--40">
-                        <div class="col-lg-8 mb-md--30">
-                            <form class="cart-form" action="#">
-                                <div class="row no-gutters">
-                                    <div class="col-12">
-                                        <div class="table-content table-responsive">
-                                            <table class="table text-center">
-                                                <thead>
-                                                    <tr>
-                                                        <th>&nbsp;</th>
-                                                        <th>&nbsp;</th>
-                                                        <th class="text-left">书名</th>
-                                                        <th>价格</th>
-                                                        <th>数量</th>
-                                                        <th>总价</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr th:each="entry,entryStat:${session.cart}">
-                                                        <td class="product-remove text-left"><a href="#"><i class="dl-icon-close deleteBookInCart" th:cartId="${entry.value.cartId}"></i></a></td>
-                                                        <td class="product-thumbnail text-left">
-                                                            <img th:src="'/bookImg/'+${entry.value.getimagePath()}" alt="Product Thumnail">
-                                                        </td>
-                                                        <td class="product-name text-left wide-column">
-                                                            <h3>
-                                                                <a href="product-details.html" th:text="${entry.value.title}">Super skinny blazer</a>
-                                                            </h3>
-                                                        </td>
-                                                        <td class="product-price">
-                                                            <span class="product-price-wrapper">
-                                                                ￥<span class="money bookPrice"  th:text="${entry.value.price}">49.00</span>
-                                                            </span>
-                                                        </td>
-                                                        <td class="product-quantity">
-                                                            <div class="quantity" th:cartId="${entry.value.cartId}">
-                                                                <input type="number" class="quantity-input bookNum" name="qty" id="qty-1" th:value="${entry.value.bookNum}" value="1" min="1">
-                                                            </div>
-                                                        </td>
-                                                        <td class="product-total-price">
-                                                            <span class="product-price-wrapper">
-                                                                <span class="money"><strong>￥<span class="total" th:text="${entry.value.price*entry.value.bookNum}"></span></strong></span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>  
-                                    </div>
-                                </div>
-                                <div class="row no-gutters border-top pt--20 mt--20">
-                                    <div class="col-sm-6">
-                                        <div class="coupon">
-                                            <input type="text" id="coupon" name="coupon" class="cart-form__input" placeholder="Coupon Code">
-                                            <button type="submit" class="cart-form__btn">Apply Coupon</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 text-sm-right">
-                                        <button type="submit" class="cart-form__btn">Clear Cart</button>
-                                        <button type="submit" class="cart-form__btn">Update Cart</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="cart-collaterals">
-                                <div class="cart-totals">
-                                    <h5 class="mb--15">Cart totals</h5>
-                                    <div class="table-content table-responsive">
-                                        <table class="table order-table">
-                                            <tbody>
-                                                <tr>
-                                                    <th>总价</th>
-                                                    <td><span id="allTotal">196.00</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Shipping</th>
-                                                    <td>
-                                                        <span>Flat rate: $20.00</span>
-                                                        <div class="shipping-calculator-wrap">
-                                                            <a href="#shipping_calculator" class="expand-btn">Calculate Shipping</a>
-                                                            <form id="shipping_calculator" class="form shipping-calculator-form hide-in-default">
-                                                                <div class="form__group mb--10">
-                                                                    <select id="calc_shipping_country" name="calc_shipping_country" class="nice-select">
-                                                                        <option value="">Select a country…</option>
-                                                                        <option value="AF">Afghanistan</option>
-                                                                        <option value="AL">Albania</option>
-                                                                        <option value="DZ">Algeria</option>
-                                                                        <option value="AR">Argentina</option>
-                                                                        <option value="AM">Armenia</option>
-                                                                        <option value="AU">Australia</option>
-                                                                        <option value="AT">Austria</option>
-                                                                        <option value="AZ">Azerbaijan</option>
-                                                                        <option value="BH">Bahrain</option>
-                                                                        <option value="BD" selected="selected">Bangladesh</option>
-                                                                        <option value="BD">Brazil</option>
-                                                                        <option value="CN">China</option>
-                                                                        <option value="EG">Egypt</option>
-                                                                        <option value="FR">France</option>
-                                                                        <option value="DE">Germany</option>
-                                                                        <option value="HK">Hong Kong</option>
-                                                                        <option value="HU">Hungary</option>
-                                                                        <option value="IS">Iceland</option>
-                                                                        <option value="IN">India</option>
-                                                                        <option value="ID">Indonesia</option>
-                                                                        <option value="IR">Iran</option>
-                                                                        <option value="IQ">Iraq</option>
-                                                                        <option value="IE">Ireland</option>
-                                                                        <option value="IT">Italy</option>
-                                                                        <option value="JP">Japan</option>
-                                                                        <option value="KW">Kuwait</option>
-                                                                        <option value="MY">Malaysia</option>
-                                                                        <option value="MV">Maldives</option>
-                                                                        <option value="MX">Mexico</option>
-                                                                        <option value="MC">Monaco</option>
-                                                                        <option value="NP">Nepal</option>
-                                                                        <option value="RU">Russia</option>
-                                                                        <option value="KR">South Korea</option>
-                                                                        <option value="SS">South Sudan</option>
-                                                                        <option value="ES">Spain</option>
-                                                                        <option value="LK">Sri Lanka</option>
-                                                                        <option value="SD">Sudan</option>
-                                                                        <option value="SZ">Swaziland</option>
-                                                                        <option value="SE">Sweden</option>
-                                                                        <option value="CH">Switzerland</option>
-                                                                        <option value="TN">Tunisia</option>
-                                                                        <option value="TR">Turkey</option>
-                                                                        <option value="UA">Ukraine</option>
-                                                                        <option value="AE">United Arab Emirates</option>
-                                                                        <option value="GB">United Kingdom (UK)</option>
-                                                                        <option value="US">United States (US)</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form__group mb--10">
-                                                                    <select id="calc_shipping_district" name="calc_shipping_district" class="nice-select">
-                                                                        <option value="">Select a District…</option>
-                                                                        <option>BARISAL</option>
-                                                                        <option>BHOLA</option>
-                                                                        <option>BANDARBAN</option>
-                                                                        <option>BRAHMANBARIA</option>
-                                                                        <option>CHANDPUR</option>
-                                                                        <option>CHITTAGONG</option>
-                                                                        <option>COMILLA</option>
-                                                                        <option>COX'S BAZAR</option>
-                                                                        <option>DHAKA</option>
-                                                                        <option>FARIDPUR</option>
-                                                                        <option>FENI</option>
-                                                                        <option>GAZIPUR</option>
-                                                                        <option>GOPALGANJ</option>
-                                                                        <option>JAMALPUR</option>
-                                                                        <option>KHAGRACHHARI</option>
-                                                                        <option>KISHOREGONJ</option>
-                                                                        <option>LAKSHMIPU</option>
-                                                                        <option>RMADARIPUR</option>
-                                                                        <option>MUNSHIGANJ</option>
-                                                                        <option>MYMENSINGH</option>
-                                                                        <option>NARAYANGANJ</option>
-                                                                        <option>NARSINGDI</option>
-                                                                        <option>NETRAKONA</option>
-                                                                        <option>NOAKHALI</option>
-                                                                        <option>RANGAMATI </option>
-                                                                        <option>RAJBARI</option>
-                                                                        <option>SHARIATPUR</option>
-                                                                        <option>SHERPUR</option>
-                                                                        <option>TANGAIL</option>
-                                                                    </select>
-                                                                </div>
-
-                                                                <div class="form__group mb--10">
-                                                                    <input type="text" name="calc_shipping_city" id="calc_shipping_city" placeholder="Town / City">
-                                                                </div>
-
-                                                                <div class="form__group mb--10">
-                                                                    <input type="text" name="calc_shipping_zip" id="calc_shipping_zip" placeholder="Postcode / Zip">
-                                                                </div>
-
-                                                                <div class="form__group">
-                                                                    <input type="submit" value="Update Totals">
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </td>  
-                                                </tr>
-                                                <tr class="order-total">
-                                                    <th>应付</th>
-                                                    <td>
-                                                            <span><span id="shouldPay"></span></span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <a href="/Biri/checkout" class="btn btn-fullwidth btn-style-1">
-                                    前去结账
-                                </a>
+                    <div class="row justify-content-center ptb--100">
+                        <div class="col-lg-8 text-center">
+                            <div class="error-text">
+                                <img src="/assets/img/404-img.png" alt="404">
+                                <h2 class="error-heading mt--20" th:text="${errorMessage}">好像除了点什么错 ~</h2>
+                                <a href="/Biri/home" class="btn btn-color-gray btn-medium btn-bordered btn-style-1">回到主页</a>
                             </div>
                         </div>
                     </div>
@@ -301,7 +90,7 @@
                         <div class="footer-widget">
                             <div class="textwidget">
                                 <a href="index.html" class="footer-logo">
-                                    <img src="/assets/img/logo/logo.svg" alt="Logo">
+                                    <img src="/assets/img/logo.svg" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -395,7 +184,7 @@
                         <p class="copyright-text">&copy;2018 AIRI. Designed by HasTech</p>
                     </div>
                     <div class="col-md-4 text-md-right">
-                        <img src="/assets/img/others/payments-2.png" alt="Payment">
+                        <img src="/assets/img/payments-2.png" alt="Payment">
                     </div>
                 </div>
             </div>
@@ -433,7 +222,7 @@
                     <div class="widget pt--30 pr--20">
                         <div class="text-widget">
                             <p>
-                                <img src="/assets/img/others/payments.png" alt="payment">
+                                <img src="/assets/img/payments.png" alt="payment">
                             </p>
                             <p>Pellentesque mollis nec orci id tincidunt. Sed mollis risus eu nisi aliquet, sit amet fermentum justo dapibus.</p>
                         </div>
@@ -564,9 +353,9 @@
                                 </span>
                             </span>
                             <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
-                            <div class="product-action d-flex flex-row align-items-center mb--30">
+                            <div class="product-action d-flex flex-row align-items-center mb--30 mb-md--20">
                                 <div class="quantity">
-                                    <input type="number" class="quantity-input" name="qty" id="qty" value="1" min="1">
+                                    <input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">
                                 </div>
                                 <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
                                     Add To Cart
@@ -574,7 +363,7 @@
                                 <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
                                 <a href="compare.html"><i class="dl-icon-compare2"></i></a>
                             </div>  
-                            <div class="product-extra mb--30">
+                            <div class="product-extra mb--30 mb-md--20">
                                 <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
                                 <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
                             </div>
@@ -623,78 +412,6 @@
 
 
     </div>
-    <script th:inline="javascript">
-        window.onload = function (ev) {
-            initCartTotal();
-
-            var allTotal = 0;
-            var totals = $(".total");
-            for(var i = 0;i<totals.length;i++){
-                allTotal+= parseInt(totals.eq(i).text())
-            }
-            $("#allTotal").text(allTotal);
-
-            $(document).on('click', '.deleteBookInCart', function () {
-                var bookNum = $(this).parent().parent().parent().find(".bookNum").eq(0).val();
-                var bookPrice = $(this).parent().parent().parent().find(".bookPrice").eq(0).text();
-                var total = $("#allTotal").text();
-                total = total - (bookPrice*bookNum);
-                var cartId = $(this).attr("cartId");
-                $(this).parent().parent().parent().remove()
-                $("#allTotal").text(total)
-                $.ajax({
-                    url: "/orderCart/cart",
-                    type: 'delete', //
-                    async: true,    //或false,是否异步
-                    data: {
-                        cartId:cartId,
-                    },
-                    timeout: 50000,    //超时时间
-                    dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
-                    success: function (data) {
-
-                    },
-                })
-            })
-            $(document).on('click', '.qtybutton', function () {
-
-                var cartId = $(this).parent().attr("cartId");
-                var bookNum = parseInt($(this).parent().find(".bookNum").eq(0).val());
-                var total = $(this).parent().parent().parent().find(".total").eq(0);
-                var totals = $(".total");
-                var allTotalText = 0;
-
-                var price = $(this).parent().parent().parent().find(".bookPrice").eq(0).text();
-                var allTotal = $("#allTotal");
-                if ($(this).text() == '+'){
-                    total.text(parseInt(bookNum) * parseInt(price));
-                }
-                if ($(this).text() == '-'){
-                    total.text(parseInt(bookNum) * parseInt(price));
-
-                }
-                for (var i = 0;i<totals.length;i++){
-                    allTotalText+=parseInt(totals.eq(i).text())
-                }
-                allTotal.text(allTotalText);
-                $.ajax({
-                    url: "/orderCart/cart",
-                    type: 'put', //
-                    async: true,    //或false,是否异步
-                    data: {
-                        id:cartId,
-                        number:bookNum,
-                    },
-                    timeout: 50000,    //超时时间
-                    dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
-                    success: function (data) {
-
-                    },
-                })
-            })
-        }
-
-    </script>
     <!-- Main Wrapper End -->
 
 
@@ -717,7 +434,7 @@
 
     <!-- REVOLUTION JS FILES -->
     <script src="/assets/js/revoulation/jquery.themepunch.tools.min.js"></script>
-    <script src="/assets/js/revoulation/jquery.themepunch.revolution.min.js"></script>    
+    <script src="/assets/js/revoulation/jquery.themepunch.revolution.min.js"></script>
 
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
     <script src="/assets/js/revoulation/extensions/revolution.extension.actions.min.js"></script>
@@ -732,7 +449,7 @@
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
-    <script src="/assets/js/myJS.js"></script>
+    
 </body>
 
 </html>

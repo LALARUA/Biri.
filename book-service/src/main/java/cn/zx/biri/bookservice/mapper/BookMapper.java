@@ -1,17 +1,31 @@
 package cn.zx.biri.bookservice.mapper;
 
 
+import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.entry.Tag;
 import cn.zx.biri.common.pojo.example.BookExample;
 import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
 public interface BookMapper {
+
+    @Update("update book set keyword = #{keyword} where id = #{id}")
+    void setKeyWord(@Param("keyword")  String keyword,@Param("id")int id);
+
+    List<String> filterPublisher(List<Integer> bookIds);
+    List<Tag> filterTag(List<Integer> bookIds);
+    List<Author> filterAuthor(List<Integer> bookIds);
+
+    List<Integer> selectBookCount(SelectBook selectBook);
+
+    BookWithBLOBs getBookForUpdate(Integer bookId);
 
     long countByExample(BookExample example);
 

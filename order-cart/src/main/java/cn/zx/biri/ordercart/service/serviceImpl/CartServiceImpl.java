@@ -32,4 +32,9 @@ public class CartServiceImpl implements CartService{
     public void updateCart(Cart cart) throws Exception {
         cartMapper.updateByPrimaryKeySelective(cart);
     }
+
+    @Override
+    public void insertBookInCart(Cart cart) throws Exception {
+        cartMapper.insertSelective(cart);
+    }
 }

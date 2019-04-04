@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class Tag {
+import java.io.Serializable;
+
+public class Tag implements Serializable {
     private Integer id;
 
     private String name;

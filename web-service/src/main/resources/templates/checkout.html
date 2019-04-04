@@ -1,0 +1,801 @@
+﻿<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/icon.png">
+
+    <!-- Title -->
+    <title>Airi - Clean, Minimal eCommerce Bootstrap 4 Template</title>
+
+    <!-- ************************* CSS Files ************************* -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <!-- dl Icon CSS -->
+    <link rel="stylesheet" href="/assets/css/dl-icon.css">
+
+    <!-- All Plugins CSS -->
+    <link rel="stylesheet" href="/assets/css/plugins.css">
+
+    <!-- Revoulation Slider CSS  -->
+    <link rel="stylesheet" href="/assets/css/revoulation.css">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- modernizr JS
+    ============================================ -->
+    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+    <div class="ai-preloader active">
+        <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+            <div class="ai-child ai-bounce1"></div>
+            <div class="ai-child ai-bounce2"></div>
+            <div class="ai-child ai-bounce3"></div>
+        </div>
+    </div>
+  
+    <!-- Main Wrapper Start -->
+    <div class="wrapper">
+        <!-- Header Area Start -->
+        <header class="header header-fullwidth header-style-1">
+            <div th:replace="~{commonbar::topbar}"></div>
+        </header>
+
+        <!-- Header Area End -->
+
+        <!-- Mobile Header area Start -->
+        <div th:replace="~{commonbar::mobiletopbar}"></div>
+        <!-- Mobile Header area End -->
+
+        <!-- Breadcrumb area Start -->
+
+        <div class="breadcrumb-area bg--white-6 breadcrumb-bg-1 pt--60 pb--70 pt-lg--40 pb-lg--50 pt-md--30 pb-md--40">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="page-title">Cart</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="current"><span>Cart</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb area End -->
+
+        <!-- Main Content Wrapper Start -->
+        <div id="content" class="main-content-wrapper">
+            <div class="page-content-inner">
+                <div class="container">
+                    <div class="row pt--80 pt-md--60 pt-sm--40">
+                        <div class="col-12">
+                            <!-- User Action Start -->
+                            <div class="user-actions user-actions__coupon">
+                                <div class="message-box mb--30 mb-sm--20">
+                                    <p><i class="fa fa-exclamation-circle"></i> Have A Coupon? <a class="expand-btn" href="#coupon_info">Click Here To Enter Your Code.</a></p>
+                                </div>
+                                <div id="coupon_info" class="user-actions__form hide-in-default">
+                                    <form action="#" class="form">
+                                        <p>If you have a coupon code, please apply it below.</p>
+                                        <div class="form__group d-sm-flex">
+                                            <input type="text" name="coupon" id="coupon" class="form__input form__input--2 mr--20 mr-xs--0" placeholder="Coupon Code">
+                                            <button type="submit" class="btn btn-medium btn-style-1">Apply Coupon</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- User Action End -->
+                        </div>
+                    </div> 
+                    <div class="row pb--80 pb-md--60 pb-sm--40">
+                        <!-- Checkout Area Start -->  
+                        <div class="col-lg-6">
+                            <div class="checkout-title mt--10">
+                                <h2>订单信息</h2>
+                            </div>
+                            <div class="checkout-form">
+                                <form action="#" class="form form--checkout">
+                                    <div class="form-row mb--30">
+                                        <div class="form__group col-md-6 mb-sm--30">
+                                            <label for="billing_fname" class="form__label form__label--2">收货人  <span class="required">*</span></label>
+                                            <input type="text" name="billing_fname" id="billing_fname" class="form__input form__input--2">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row mb--30">
+                                        <div class="form__group col-12">
+                                            <label for="billing_province" class="form__label form__label--2">省份 <span class="required">*</span></label>
+                                            <select id="billing_province" name="billing_country" class="form__input form__input--2 nice-select">
+                                                <option value="" selected>选择省份…</option>
+                                                <option value="北京">北京</option>
+                                                <option value="天津">天津</option>
+                                                <option value="河北">河北</option>
+                                                <option value="山西">山西</option>
+                                                <option value="内蒙古">内蒙古</option>
+                                                <option value="辽宁">辽宁</option>
+                                                <option value="吉林">吉林</option>
+                                                <option value="黑龙江">黑龙江</option>
+                                                <option value="上海">上海</option>
+                                                <option value="江苏">江苏</option>
+                                                <option value="浙江省">浙江省</option>
+                                                <option value="安徽">安徽</option>
+                                                <option value="福建">福建</option>
+                                                <option value="江西">江西</option>
+                                                <option value="山东">山东</option>
+                                                <option value="河南">河南</option>
+                                                <option value="湖北">湖北</option>
+                                                <option value="湖南">湖南</option>
+                                                <option value="广东">广东</option>
+                                                <option value="广西">广西</option>
+                                                <option value="海南">海南</option>
+                                                <option value="重庆">重庆</option>
+                                                <option value="四川">四川</option>
+                                                <option value="贵州">贵州</option>
+                                                <option value="云南">云南</option>
+                                                <option value="西藏">西藏</option>
+                                                <option value="陕西">陕西</option>
+                                                <option value="甘肃省">甘肃省</option>
+                                                <option value="青海">青海</option>
+                                                <option value="宁夏">宁夏</option>
+                                                <option value="新疆">新疆</option>
+                                                <option value="台湾">台湾</option>
+                                                <option value="香港">香港</option>
+                                                <option value="澳门">澳门</option>
+                                         </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mb--30">
+                                        <div class="form__group col-12">
+                                            <label for="addressDetail" class="form__label form__label--2">详细地址 <span class="required">*</span></label>
+                                            <input type="text" id="addressDetail" name="billing_city" class="form__input form__input--2">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mb--30">
+                                        <div class="form__group col-12">
+                                            <label for="billing_phone" class="form__label form__label--2">联系电话 <span class="required">*</span></label>
+                                            <input  type="text" name="billing_phone" id="billing_phone" class="form__input form__input--2">
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-row">-->
+                                        <!--<div class="form__group col-12">-->
+                                            <!--<div class="custom-checkbox mb&#45;&#45;20">-->
+                                                <!--<input type="checkbox" name="shipdifferetads" id="shipdifferetads" class="form__checkbox">-->
+                                                <!---->
+                                                <!--<label for="shipdifferetads" class="form__label form__label&#45;&#45;2 shipping-label">Ship To A Different Address?</label>-->
+                                            <!--</div>-->
+                                            <!--<div class="ship-box-info hide-in-default mt&#45;&#45;30">-->
+                                                <!--<div class="form-row mb&#45;&#45;30">-->
+                                                    <!--<div class="form__group col-md-6 mb-sm&#45;&#45;30">-->
+                                                        <!--<label for="shipping_fname" class="form__label form__label&#45;&#45;2">收货人 <span class="required">*</span></label>-->
+                                                        <!--<input type="text" name="shipping_fname" id="shipping_fname" class="form__input form__input&#45;&#45;2">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="form-row mb&#45;&#45;30">-->
+                                                    <!--<div class="form__group col-12">-->
+                                                        <!--<label for="shipping_country" class="form__label form__label&#45;&#45;2">省份 <span class="required">*</span></label>-->
+                                                        <!--<select id="shipping_country" name="shipping_country" class="form__input form__input&#45;&#45;2 nice-select">-->
+                                                            <!--<option value="" selected>选择省份…</option>-->
+                                                            <!--<option value="北京">北京</option>-->
+                                                            <!--<option value="天津">天津</option>-->
+                                                            <!--<option value="河北">河北</option>-->
+                                                            <!--<option value="山西">山西</option>-->
+                                                            <!--<option value="内蒙古">内蒙古</option>-->
+                                                            <!--<option value="辽宁">辽宁</option>-->
+                                                            <!--<option value="吉林">吉林</option>-->
+                                                            <!--<option value="黑龙江">黑龙江</option>-->
+                                                            <!--<option value="上海">上海</option>-->
+                                                            <!--<option value="江苏">江苏</option>-->
+                                                            <!--<option value="浙江省">浙江省</option>-->
+                                                            <!--<option value="安徽">安徽</option>-->
+                                                            <!--<option value="福建">福建</option>-->
+                                                            <!--<option value="江西">江西</option>-->
+                                                            <!--<option value="山东">山东</option>-->
+                                                            <!--<option value="河南">河南</option>-->
+                                                            <!--<option value="湖北">湖北</option>-->
+                                                            <!--<option value="湖南">湖南</option>-->
+                                                            <!--<option value="广东">广东</option>-->
+                                                            <!--<option value="广西">广西</option>-->
+                                                            <!--<option value="海南">海南</option>-->
+                                                            <!--<option value="重庆">重庆</option>-->
+                                                            <!--<option value="四川">四川</option>-->
+                                                            <!--<option value="贵州">贵州</option>-->
+                                                            <!--<option value="云南">云南</option>-->
+                                                            <!--<option value="西藏">西藏</option>-->
+                                                            <!--<option value="陕西">陕西</option>-->
+                                                            <!--<option value="甘肃省">甘肃省</option>-->
+                                                            <!--<option value="青海">青海</option>-->
+                                                            <!--<option value="宁夏">宁夏</option>-->
+                                                            <!--<option value="新疆">新疆</option>-->
+                                                            <!--<option value="台湾">台湾</option>-->
+                                                            <!--<option value="香港">香港</option>-->
+                                                            <!--<option value="澳门">澳门</option>-->
+                                                        <!--</select>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="form-row mb&#45;&#45;30">-->
+                                                    <!--<div class="form__group col-12">-->
+                                                        <!--<label for="shipping_city" class="form__label form__label&#45;&#45;2">详细地址 <span class="required">*</span></label>-->
+                                                        <!--<input type="text" name="shipping_city" id="shipping_city" class="form__input form__input&#45;&#45;2">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="form-row mb&#45;&#45;30">-->
+                                                    <!--<div class="form__group col-12">-->
+                                                        <!--<label for="shipping_phone" class="form__label form__label&#45;&#45;2">联系方式 <span class="required">*</span></label>-->
+                                                        <!--<input type="text" name="shipping_phone" id="shipping_phone" class="form__input form__input&#45;&#45;2">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="form-row mb&#45;&#45;30">-->
+                                                    <!--<div class="form__group col-12">-->
+                                                        <!--<label for="shipping_email" class="form__label form__label&#45;&#45;2">邮箱地址  <span class="required">*</span></label>-->
+                                                        <!--<input type="email" name="shipping_email" id="shipping_email" class="form__input form__input&#45;&#45;2">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div> -->
+                                    <div class="form-row">
+                                        <div class="form__group col-12">
+                                            <label for="orderNotes" class="form__label form__label--2">备注</label>
+                                            <textarea class="form__input form__input--2 form__input--textarea" id="orderNotes" name="orderNotes" placeholder="额外对此订单的备注信息...
+                                            ."></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 offset-xl-1 col-lg-6 mt-md--40">
+                            <div class="order-details">
+                                <div class="checkout-title mt--10">
+                                    <h2>您的订单</h2>
+                                </div>
+                                <div class="table-content table-responsive mb--30">
+                                    <table class="table order-table order-table-2">
+                                        <thead>
+                                            <tr>
+                                                <th>商品</th>
+                                                <th class="text-right">总价</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="entry:${session.cart}">
+                                                <th><a th:href="'/Biri/book/detail/'+${entry.value.id}"><span th:text="${entry.value.title}">Aliquam lobortis est </span></a>
+                                                    <strong><span>&#10005;</span><span th:text="${entry.value.bookNum}">1</span></strong>
+                                                </th>
+                                                <td class="text-right total" th:text="${entry.value.price*entry.value.bookNum}"></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="cart-subtotal">
+                                                <th>总价</th>
+                                                <td class="text-right" id="allTotal"></td>
+                                            </tr>
+                                            <tr class="shipping">
+                                                <th>折扣</th>
+                                                <td class="text-right">
+                                                    <span>Flat Rate; $20.00</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-total">
+                                                <th>应付</th>
+                                                <td class="text-right"><span class="order-total-ammount" id="shouldPay"></span></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="checkout-payment">
+                                    <form action="#" class="payment-form">
+                                        <div class="payment-group mb--10">
+                                            <div class="payment-radio">
+                                                <input type="radio" value="bank" name="payment-method" id="bank" checked>
+                                                <label class="payment-label" for="cheque">Direct Bank Transfer</label>
+                                            </div>
+                                            <div class="payment-info" data-method="bank">
+                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                                            </div>
+                                        </div>
+                                        <div class="payment-group mb--10">
+                                            <div class="payment-radio">
+                                                <input type="radio" value="cheque" name="payment-method" id="cheque">
+                                                <label class="payment-label" for="cheque">
+                                                    cheque payments
+                                                </label>
+                                            </div>
+                                            <div class="payment-info cheque hide-in-default" data-method="cheque">
+                                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                            </div>
+                                        </div>
+                                        <div class="payment-group mb--10">
+                                            <div class="payment-radio">
+                                                <input type="radio" value="cash" name="payment-method" id="cash">
+                                                <label class="payment-label" for="cash">
+                                                    CASH ON DELIVERY
+                                                </label>
+                                            </div>
+                                            <div class="payment-info cash hide-in-default" data-method="cash">
+                                                <p>Pay with cash upon delivery.</p>
+                                            </div>
+                                        </div>
+                                        <div class="payment-group mt--20">
+                                            <p class="mb--15">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                                            <button type="button" id="submitForm" class="btn btn-fullwidth btn-style-1">提交订单</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Checkout Area End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Wrapper Start -->
+
+
+        <!-- Footer Start -->
+        <footer class="footer footer-3 bg--white border-top">
+            <div class="container">
+                <div class="row pt--40 pt-md--30 mb--40 mb-sm--30">
+                    <div class="col-12 text-md-center">
+                        <div class="footer-widget">
+                            <div class="textwidget">
+                                <a href="index.html" class="footer-logo">
+                                    <img src="/assets/img/logo/logo.svg" alt="Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb--15 mb-sm--20">
+                    <div class="col-xl-2 col-md-4 mb-lg--30">
+                        <div class="footer-widget">
+                            <h3 class="widget-title widget-title--2">Company</h3>
+                            <ul class="widget-menu widget-menu--2">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="">Our Services</a></li>
+                                <li><a href="">Affiliate Program</a></li>
+                                <li><a href="">Work for Airi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 mb-lg--30">
+                        <div class="footer-widget">
+                            <h3 class="widget-title widget-title--2">USEFUL LINKS</h3>
+                            <ul class="widget-menu widget-menu--2">
+                                <li><a href="shop-collections.html">The Collections</a></li>
+                                <li><a href="">Size Guide</a></li>
+                                <li><a href="">Return Policiy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 mb-lg--30">
+                        <div class="footer-widget">
+                            <h3 class="widget-title widget-title--2">SHOPPING</h3>
+                            <ul class="widget-menu widget-menu--2">
+                                <li><a href="shop-instagram.html">Look Book</a></li>
+                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                <li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
+                                <li><a href="shop-no-gutter.html">Man & Woman</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                        <div class="footer-widget">
+                            <h3 class="widget-title widget-title--2 widget-title--icon">Subscribe now and get 10% off new collection</h3>
+                            <form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="newsletter-form newsletter-form--3 mc-form" method="post" target="_blank">
+                                <input type="email" name="newsletter-email" id="newsletter-email" class="newsletter-form__input" placeholder="Enter Your Email Address..">
+                                <button type="submit" class="newsletter-form__submit">
+                                    <i class="dl-icon-right"></i>
+                                </button>
+                            </form>
+                            <!-- mailchimp-alerts Start -->
+                            <div class="mailchimp-alerts">
+                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                            </div>
+                            <!-- mailchimp-alerts end -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center pt--10 pb--30">
+                    <div class="col-md-4">
+                        <!-- Social Icons Start Here -->
+                        <ul class="social social-small">
+                            <li class="social__item">
+                                <a href="twitter.com" class="social__link">
+                                <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="plus.google.com" class="social__link">
+                                <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="facebook.com" class="social__link">
+                                <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="youtube.com" class="social__link">
+                                <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="instagram.com" class="social__link">
+                                <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Social Icons End Here -->
+                    </div>
+                    <div class="col-md-4 text-md-center">
+                        <p class="copyright-text">&copy;2018 AIRI. Designed by HasTech</p>
+                    </div>
+                    <div class="col-md-4 text-md-right">
+                        <img src="/assets/img/others/payments-2.png" alt="Payment">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+
+        <!-- Search from Start --> 
+        <div class="searchform__popup" id="searchForm">
+            <a href="#" class="btn-close"><i class="dl-icon-close"></i></a>
+            <div class="searchform__body">
+                <p>Start typing and press Enter to search</p>
+                <form class="searchform">
+                    <input type="text" name="search" id="search" class="searchform__input" placeholder="Search Entire Store...">
+                    <button type="submit" class="searchform__submit"><i class="dl-icon-search10"></i></button>
+                </form>
+            </div>
+        </div>
+        <!-- Search from End --> 
+        
+        <!-- Side Navigation Start -->
+        <aside class="side-navigation" id="sideNav">
+            <div class="side-navigation-wrapper">
+                <a href="" class="btn-close"><i class="dl-icon-close"></i></a>
+                <div class="side-navigation-inner">
+                    <div class="widget">
+                        <ul class="sidenav-menu">
+                            <li><a href="about-us.html">About Airi Shop</a></li>
+                            <li><a href="about-us.html">Help Center</a></li>
+                            <li><a href="shop-collections.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="shop-instagram.html">New Look</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget pt--30 pr--20">
+                        <div class="text-widget">
+                            <p>
+                                <img src="/assets/img/others/payments.png" alt="payment">
+                            </p>
+                            <p>Pellentesque mollis nec orci id tincidunt. Sed mollis risus eu nisi aliquet, sit amet fermentum justo dapibus.</p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="text-widget">
+                            <p>
+                                <a href="#">(+612) 2531 5600</a>
+                                <a href="mailto:info@la-studioweb.com">info@la-studioweb.com</a>
+                                PO Box 1622 Colins Street West
+                            </p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="text-widget google-map-link">
+                            <p>
+                                <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="text-widget">
+                            <!-- Social Icons Start Here -->
+                            <ul class="social social-small">
+                                <li class="social__item">
+                                    <a href="twitter.com" class="social__link">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="plus.google.com" class="social__link">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="facebook.com" class="social__link">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="youtube.com" class="social__link">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="instagram.com" class="social__link">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Social Icons End Here -->
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="text-widget">
+                            <p class="copyright-text">&copy; 2018 Airi All rights <a href="http://www.bootstrapmb.com/" title="bootstrapmb">Reserved</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Side Navigation End -->
+
+        <!-- Mini Cart Start -->
+        <div th:replace="~{commonbar::miniCart}"></div>
+        <!-- Mini Cart End -->
+
+        <!-- Global Overlay Start -->
+        <div class="ai-global-overlay"></div>
+        <!-- Global Overlay End -->
+
+        <!-- Modal Start -->
+        <div class="modal fade product-modal" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"><i class="dl-icon-close"></i></span>
+                </button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="airi-element-carousel product-image-carousel nav-vertical-center nav-style-1"
+                                data-slick-options='{
+                                    "slidesToShow": 1,
+                                    "slidesToScroll": 1,
+                                    "arrows": true,
+                                    "prevArrow": "dl-icon-left",
+                                    "nextArrow": "dl-icon-right"
+                                }'
+                        >
+                            <div class="product-image">
+                                <div class="product-image--holder">
+                                    <a href="product-details.html">
+                                        <img src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
+                                    </a>
+                                </div>
+                                <span class="product-badge sale">sale</span>
+                            </div>
+                            <div class="product-image">
+                                <div class="product-image--holder">
+                                    <a href="product-details.html">
+                                        <img src="/assets/img/products/prod-10-1.jpg" alt="Product Image" class="primary-image">
+                                    </a>
+                                </div>
+                                <span class="product-badge new">new</span>
+                            </div>
+                            <div class="product-image">
+                                <div class="product-image--holder">
+                                    <a href="product-details.html">
+                                        <img src="/assets/img/products/prod-11-1.jpg" alt="Product Image" class="primary-image">
+                                    </a>
+                                </div>
+                                <span class="product-badge hot">hot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="modal-box product-summary">
+                            <div class="product-navigation mb--10">
+                                <a href="#" class="prev"><i class="dl-icon-left"></i></a>
+                                <a href="#" class="next"><i class="dl-icon-right"></i></a>
+                            </div>
+                            <h3 class="product-title mb--15">Waxed-effect pleated skirt</h3>
+                            <span class="product-price-wrapper mb--20">
+                                <span class="money">$49.00</span>
+                                <span class="product-price-old">
+                                    <span class="money">$60.00</span>
+                                </span>
+                            </span>
+                            <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                            <div class="product-action d-flex flex-row align-items-center mb--30 mb-md--20">
+                                <div class="quantity">
+                                    <input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">
+                                </div>
+                                <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
+                                    Add To Cart
+                                </button>
+                                <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
+                                <a href="compare.html"><i class="dl-icon-compare2"></i></a>
+                            </div>  
+                            <div class="product-extra mb--30 mb-md--20">
+                                <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
+                                <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
+                            </div>
+                            <div class="product-summary-footer d-flex justify-content-between flex-sm-row flex-column flex-sm-row flex-column">
+                                <div class="product-meta">
+                                    <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
+                                    <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
+                                </div>
+                                <div class="product-share-box">
+                                    <span class="font-size-12">Share With</span>
+                                    <!-- Social Icons Start Here -->
+                                    <ul class="social social-small">
+                                        <li class="social__item">
+                                            <a href="facebook.com" class="social__link">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social__item">
+                                            <a href="twitter.com" class="social__link">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social__item">
+                                            <a href="plus.google.com" class="social__link">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social__item">
+                                            <a href="plus.google.com" class="social__link">
+                                                <i class="fa fa-pinterest-p"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- Social Icons End Here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal End -->
+
+
+
+    </div>
+    <script th:inline="javascript">
+        window.onload = function (ev) {
+            var phoneRegEx = /^1[3|4|5|8][0-9]\d{4,8}$/
+            initCartTotal();
+
+            var allTotal = 0;
+            var totals = $(".total");
+            for(var i = 0;i<totals.length;i++){
+                allTotal+= parseInt(totals.eq(i).text())
+            }
+            $("#allTotal").text(allTotal);
+
+            submitForm
+            $(document).on('click', '#submitForm', function () {
+                var username = $("#billing_fname").val();
+                var addressDetail = $("#addressDetail").val();
+                var phone = $("#billing_phone").val();
+                var province = $("#billing_province").val();
+                var remark = $("#orderNotes").val();
+                if (username==null||addressDetail==null||phone==null||province==null||province==""){
+                    alert("请填写完订单信息");
+                    return false;
+                }
+                if (!phoneRegEx.test(phone)){
+                    alert("请输入正确格式的手机号");
+                    return false;
+                }
+                var total = $("#allTotal").text();
+                addressDetail = province+"-"+addressDetail;
+                $.ajax({
+                    url: "/orderCart/order",
+                    type: 'post', //
+                    async: true,    //或false,是否异步
+                    data: JSON.stringify({
+                        username:username,
+                        addressDetail:addressDetail,
+                        phone:phone,
+                        remark:remark,
+                        total:total,
+
+                    }),
+                    contentType:"application/json;charset=utf-8",
+                    timeout: 50000,    //超时时间
+                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+
+                    },
+                })
+
+            })
+            // $(document).on('click', '.deleteBookInCart', function () {
+            //     var bookNum = $(this).parent().parent().parent().find(".bookNum").eq(0).val();
+            //     var bookPrice = $(this).parent().parent().parent().find(".bookPrice").eq(0).text();
+            //     var total = $("#allTotal").text();
+            //     total = total - (bookPrice*bookNum);
+            //     var cartId = $(this).attr("cartId");
+            //     $(this).parent().parent().parent().remove()
+            //     $("#allTotal").text(total)
+            //     $.ajax({
+            //         url: "/orderCart/cart",
+            //         type: 'delete', //
+            //         async: true,    //或false,是否异步
+            //         data: {
+            //             cartId:cartId,
+            //         },
+            //         timeout: 50000,    //超时时间
+            //         dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+            //         success: function (data) {
+            //
+            //         },
+            //     })
+            // })
+
+        }
+
+    </script>
+    <!-- Main Wrapper End -->
+
+
+    <!-- ************************* JS Files ************************* -->
+
+    <!-- jQuery JS -->
+    <script src="/assets/js/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap and Popper Bundle JS -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- All Plugins Js -->
+    <script src="/assets/js/plugins.js"></script>
+
+    <!-- Ajax Mail Js -->
+    <script src="/assets/js/ajax-mail.js"></script>
+
+    <!-- Main JS -->
+    <script src="/assets/js/main.js"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script src="/assets/js/revoulation/jquery.themepunch.tools.min.js"></script>
+    <script src="/assets/js/revoulation/jquery.themepunch.revolution.min.js"></script>    
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="/assets/js/revoulation/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/assets/js/revoulation/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- REVOLUTION ACTIVE JS FILES -->
+    <script src="/assets/js/revoulation.js"></script>
+    <script src="/assets/js/myJS.js"></script>
+</body>
+
+</html>

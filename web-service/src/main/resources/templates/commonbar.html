@@ -14,7 +14,7 @@
                         <nav class="main-navigation">
                             <ul class="mainmenu">
                                 <li class="mainmenu__item menu-item-has-children megamenu-holder">
-                                    <a href="index.html" class="mainmenu__link">
+                                    <a href="/Biri/home" class="mainmenu__link">
                                         <span class="mm-text">Home</span>
                                     </a>
                                     <ul class="megamenu four-column">
@@ -24,7 +24,7 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="index.html">
+                                                    <a href="/Biri/home">
                                                         <span class="mm-text">Demo 01</span>
                                                     </a>
                                                 </li>
@@ -245,18 +245,13 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="cart.html">
+                                                    <a href="/Biri/cart">
                                                         <span class="mm-text">购物车</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="checkout.html">
-                                                        <span class="mm-text">Check Out</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="wishlist.html">
-                                                        <span class="mm-text">Wishlist</span>
+                                                    <a href="/Biri/wishList">
+                                                        <span class="mm-text">收藏</span>
                                                     </a>
                                                 </li>
                                                 <li>
@@ -412,7 +407,7 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-4 text-lg-center">
                         <!-- Logo Start Here -->
-                        <a href="index.html" class="logo-box">
+                        <a href="/Biri/home" class="logo-box">
                             <figure class="logo--normal">
                                 <img src="/assets/img/logo/logo.svg" alt="Logo"/>
                             </figure>
@@ -438,13 +433,11 @@
                                         <a href="/Biri/user/home">个人中心</a>
                                     </li>
                                     <li>
-                                        <a href="cart.html">购物车</a>
+                                        <a href="/Biri/cart">购物车</a>
                                     </li>
+                                   
                                     <li>
-                                        <a href="checkout.html">Check Out</a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">Wishlist</a>
+                                        <a href="/Biri/wishList">收藏</a>
                                     </li>
                                     <li>
                                         <a href="order-tracking.html">Order tracking</a>
@@ -454,10 +447,10 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header-toolbar__item">
+                            <li th:if="${activeUrl!='cart'}" class="header-toolbar__item">
                                 <a href="#miniCart" class="mini-cart-btn toolbar-btn">
                                     <i class="dl-icon-cart4"></i>
-                                    <sup th:if="${session.cart!=null}" class="mini-cart-count" th:text="${session.cart.size()}"></sup>
+                                    <sup th:if="${session.cart!=null}" id="miniCartCount" class="mini-cart-count" th:text="${session.cart.size()}"></sup>
                                 </a>
                             </li>
                             <li class="header-toolbar__item">
@@ -478,7 +471,7 @@
         <a href="#" class="btn-close"><i class="dl-icon-close"></i></a>
         <div class="searchform__body">
             <p>找点什么呢...</p>
-            <form action="/Biri/book/search" class="searchform">
+            <form action="/Biri/book/list" class="searchform">
                 <input type="text" name="keyword" id="search" class="searchform__input" placeholder="书名、作者、标签、ISBN号">
                 <button type="submit" class="searchform__submit"><i class="dl-icon-search10"></i></button>
             </form>
@@ -505,13 +498,10 @@
                                     <a  href="/Biri/user/home">个人中心</a>
                                 </li>
                                 <li>
-                                    <a href="cart.html">购物车</a>
+                                    <a href="/Biri/cart">购物车</a>
                                 </li>
                                 <li>
-                                    <a href="checkout.html">Check Out</a>
-                                </li>
-                                <li>
-                                    <a href="wishlist.html">Wishlist</a>
+                                    <a href="/Biri/wishList">收藏</a>
                                 </li>
                                 <li>
                                     <a href="order-tracking.html">Order tracking</a>
@@ -524,7 +514,7 @@
                         <li  class="header-toolbar__item">
                             <a  href="#miniCart" class="mini-cart-btn toolbar-btn">
                                 <i id="miniCartBtn" class="dl-icon-cart4"></i>
-                                <sup th:if="${session.cart!=null}" class="mini-cart-count" th:text="${session.cart.size()}"></sup>
+                                <sup th:if="${session.cart!=null}" id="cartSize" class="mini-cart-count" th:text="${session.cart.size()}"></sup>
                             </a>
                         </li>
                         <li class="header-toolbar__item">
@@ -545,7 +535,7 @@
                         <button class="dl-trigger">Open Menu</button>
                         <ul class="dl-menu">
                             <li>
-                                <a href="index.html">
+                                <a href="/Biri/home">
                                     Home
                                 </a>
                                 <ul class="dl-submenu">
@@ -555,7 +545,7 @@
                                         </a>
                                         <ul class="dl-submenu">
                                             <li>
-                                                <a href="index.html">
+                                                <a href="/Biri/home">
                                                     Demo 01
                                                 </a>
                                             </li>
@@ -776,18 +766,13 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="cart.html">
+                                                <a href="/Biri/cart">
                                                     购物车
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="checkout.html">
-                                                    Check Out
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="wishlist.html">
-                                                    Wishlist
+                                                <a href="/Biri/wishList">
+                                                    收藏
                                                 </a>
                                             </li>
                                             <li>
@@ -971,7 +956,7 @@
                 </div>
                 <div class="mini-cart__buttons">
                     <a href="/Biri/cart" class="btn btn-fullwidth btn-style-1">购物车</a>
-                    <a href="checkout.html" class="btn btn-fullwidth btn-style-1">结账</a>
+                    <a href="/Biri/checkout" class="btn btn-fullwidth btn-style-1">结账</a>
                 </div>
             </div>
         </div>
@@ -984,6 +969,5 @@
         <div class="loding-child loding-bounce3"></div>
     </div>
 </div>
-
 </body>
 </html>

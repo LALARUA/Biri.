@@ -2,7 +2,7 @@ package cn.zx.biri.webservice.controller;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,18 +16,21 @@ import javax.servlet.http.HttpServletRequest;
 public class MyErrorController implements ErrorController {
 
     @RequestMapping("/error")
-    public String handleError(HttpServletRequest request){
+    public String handleError(HttpServletRequest request, Model model){
         //获取statusCode:401,404,500
         Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
         if(statusCode == 401){
-            return "error/401";
+
         }else if(statusCode == 404){
-            return "error/404";
+            model.addAttribute("errorMessage","这个页面丢了");
+
         }else if(statusCode == 403){
-            return "error/403";
+
         }else{
-            return "login";
+            model.addAttribute("errorMessage","好像出了点什么错~");
+
         }
+        return "error";
     }
 
     @Override

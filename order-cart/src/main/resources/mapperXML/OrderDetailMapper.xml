@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.zx.biri.OrderDetailcart.mapper.OrderDetailMapper">
+<mapper namespace="cn.zx.biri.ordercart.mapper.OrderDetailMapper">
   <resultMap id="BaseResultMap" type="cn.zx.biri.common.pojo.entry.OrderDetail">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="OrderDetailId" jdbcType="INTEGER" property="OrderDetailId" />
+    <result column="orderId" jdbcType="INTEGER" property="orderId" />
     <result column="bookId" jdbcType="INTEGER" property="bookId" />
     <result column="bookNum" jdbcType="INTEGER" property="bookNum" />
     <result column="summoney" jdbcType="DOUBLE" property="summoney" />
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, OrderDetailId, bookId, bookNum, summoney
+    id, orderId, bookId, bookNum, summoney
   </sql>
   <select id="selectByExample" parameterType="cn.zx.biri.common.pojo.example.OrderDetailExample" resultMap="BaseResultMap">
     select
@@ -75,44 +75,44 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from OrderDetail
+    from orderdetail
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="OrderDetailByClause != null">
-      OrderDetail by ${OrderDetailByClause}
+    <if test="orderByClause != null">
+      order by ${orderByClause}
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
-    from OrderDetail
+    from orderdetail
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from OrderDetail
+    delete from orderdetail
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="cn.zx.biri.common.pojo.example.OrderDetailExample">
-    delete from OrderDetail
+    delete from orderdetail
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="cn.zx.biri.common.pojo.entry.OrderDetail">
-    insert into OrderDetail (id, OrderDetailId, bookId, 
+    insert into orderdetail (id, orderId, bookId,
       bookNum, summoney)
-    values (#{id,jdbcType=INTEGER}, #{OrderDetailId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{orderId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER},
       #{bookNum,jdbcType=INTEGER}, #{summoney,jdbcType=DOUBLE})
   </insert>
   <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.OrderDetail">
-    insert into OrderDetail
+    insert into orderdetail
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
       </if>
-      <if test="OrderDetailId != null">
-        OrderDetailId,
+      <if test="orderId != null">
+        orderId,
       </if>
       <if test="bookId != null">
         bookId,
@@ -128,8 +128,8 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="OrderDetailId != null">
-        #{OrderDetailId,jdbcType=INTEGER},
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
       </if>
       <if test="bookId != null">
         #{bookId,jdbcType=INTEGER},
@@ -143,19 +143,19 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="cn.zx.biri.common.pojo.example.OrderDetailExample" resultType="java.lang.Long">
-    select count(*) from OrderDetail
+    select count(*) from orderdetail
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update OrderDetail
+    update orderdetail
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.OrderDetailId != null">
-        OrderDetailId = #{record.OrderDetailId,jdbcType=INTEGER},
+      <if test="record.orderId != null">
+        orderId = #{record.orderId,jdbcType=INTEGER},
       </if>
       <if test="record.bookId != null">
         bookId = #{record.bookId,jdbcType=INTEGER},
@@ -172,9 +172,9 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update OrderDetail
+    update orderdetail
     set id = #{record.id,jdbcType=INTEGER},
-      OrderDetailId = #{record.OrderDetailId,jdbcType=INTEGER},
+      orderId = #{record.orderId,jdbcType=INTEGER},
       bookId = #{record.bookId,jdbcType=INTEGER},
       bookNum = #{record.bookNum,jdbcType=INTEGER},
       summoney = #{record.summoney,jdbcType=DOUBLE}
@@ -183,10 +183,10 @@
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="cn.zx.biri.common.pojo.entry.OrderDetail">
-    update OrderDetail
+    update orderdetail
     <set>
-      <if test="OrderDetailId != null">
-        OrderDetailId = #{OrderDetailId,jdbcType=INTEGER},
+      <if test="orderId != null">
+        orderId = #{orderId,jdbcType=INTEGER},
       </if>
       <if test="bookId != null">
         bookId = #{bookId,jdbcType=INTEGER},
@@ -201,8 +201,8 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.zx.biri.common.pojo.entry.OrderDetail">
-    update OrderDetail
-    set OrderDetailId = #{OrderDetailId,jdbcType=INTEGER},
+    update orderdetail
+    set orderId = #{orderId,jdbcType=INTEGER},
       bookId = #{bookId,jdbcType=INTEGER},
       bookNum = #{bookNum,jdbcType=INTEGER},
       summoney = #{summoney,jdbcType=DOUBLE}

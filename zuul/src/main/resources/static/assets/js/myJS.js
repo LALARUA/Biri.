@@ -21,6 +21,7 @@ $(document).on('click', '.miniCartDeleteBook', function () {
    var cartId = $(this).attr("cartId");
    $(this).parent().remove()
     $("#miniCartTotal").text(total);
+    $("#miniCartCount").eq(0).text( parseInt($("#miniCartCount").text())-1)
 
     $.ajax({
         url: "/orderCart/cart",
@@ -36,19 +37,7 @@ $(document).on('click', '.miniCartDeleteBook', function () {
         },
     })
 })
-$(document).on('click', '.qtybutton', function () {
-    var total = $(this).parent().parent().parent().find(".total").eq(0);
-    var price = $(this).parent().parent().parent().find(".bookPrice").eq(0).text();
-    var allTotal = $("#allTotal");
-    if ($(this).text() == '+'){
-        total.text(parseInt(total.text()) + parseInt(price));
-        allTotal.text(parseInt(allTotal.text()) + parseInt(price))
-    }
-    if ($(this).text() == '-'){
-        total.text(parseInt(total.text()) - parseInt(price));
-        allTotal.text(parseInt(allTotal.text()) - parseInt(price))
-    }
-})
+
 
 
 

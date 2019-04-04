@@ -1,8 +1,11 @@
 package cn.zx.biri.bookservice.service;
 
+import cn.zx.biri.common.pojo.entry.Book;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
+import cn.zx.biri.common.pojo.response.BookInCart;
 import cn.zx.biri.common.pojo.vo.SelectBook;
+
 
 import java.util.List;
 import java.util.Map;
@@ -17,4 +20,6 @@ public interface BookService {
     Map selectBookList(SelectBook condition);
     List<BookEnhanced> selectBookListByPage(SelectBook condition);
     BookDetail selectBookDetail(Integer bookId,Integer currentUserId);
+    int reduceStock(Map<Integer,BookInCart> map);
+
 }

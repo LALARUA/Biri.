@@ -93,7 +93,7 @@
     </if>
   </select>
   <select id="selectBookInCart" parameterType="java.lang.Integer" resultMap="bookInCart">
-SELECT cart.id AS id,
+    SELECT  cart.id AS id,
 			book.id AS bookId,
 			book.title AS bookTitle,
 			book.imagePath AS bookImagePath,
@@ -124,7 +124,7 @@ SELECT cart.id AS id,
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER}, 
       #{number,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.Cart">
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="cn.zx.biri.common.pojo.entry.Cart">
     insert into cart
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

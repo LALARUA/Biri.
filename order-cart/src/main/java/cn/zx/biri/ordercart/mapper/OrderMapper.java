@@ -3,11 +3,16 @@ package cn.zx.biri.ordercart.mapper;
 
 import cn.zx.biri.common.pojo.entry.Order;
 import cn.zx.biri.common.pojo.example.OrderExample;
+import cn.zx.biri.common.pojo.response.UserOrder;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface OrderMapper {
+
+    List<UserOrder> getOrders(Map<String,Integer> map);
+
     long countByExample(OrderExample example);
 
     int deleteByExample(OrderExample example);

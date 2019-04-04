@@ -62,11 +62,18 @@ public class AuthenticateController {
         }
         try {
             authenticateService.authenticate(loginVO);
-            SavedRequest savedRequest = WebUtils.getSavedRequest(httpServletRequest);
-            if (Objects.isNull(savedRequest))
-                map.put("url","/Biri/home");
-            else
-                map.put("url",savedRequest.getRequestUrl());
+            String backUrl;
+            if ((backUrl=(String) httpSession.getAttribute("backUrl")) != null){
+                map.put("url",backUrl);
+                httpSession.removeAttribute("backUrl");
+            }else {
+                SavedRequest savedRequest = WebUtils.getSavedRequest(httpServletRequest);
+                if (Objects.isNull(savedRequest))
+                    map.put("url","/Biri/home");
+                else
+                    map.put("url",savedRequest.getRequestUrl());
+            }
+
         } catch (IncorrectCredentialsException e) {
             map.put("errorMessage","密码错误");
             logger.info("密码错误");
@@ -74,6 +81,7 @@ public class AuthenticateController {
             map.put("errorMessage","该用户不存在");
             logger.info("该用户不存在");
         } catch (Exception e){
+            e.printStackTrace();
             map.put("errorMessage","登录失败,请稍后再试");
             logger.info("登录失败");
         }

@@ -17,12 +17,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("authenticate")
-    public User authenticate(String username,String password){
-
-        return null;
-    }
-
     @GetMapping("updateUser")
     public void updateUser(@RequestBody RegisterAndChangePasswordVO registerAndChangePasswordVO){
         return;

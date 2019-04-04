@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/assets/img/icon.png">
 
     <!-- Title -->
-    <title>Airi - Clean, Minimal eCommerce Bootstrap 4 Template</title>
+    <title >Airi -图书列表</title>
 
     <!-- ************************* CSS Files ************************* -->
 
@@ -42,6 +42,35 @@
     <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        .filter{
+            height:250px;
+            overflow-x:hidden;
+            overflow-y:auto;
+        }
+        .filter{
+            scrollbar-face-color: gainsboro;/*移动滑块颜色*/
+            scrollbar-shadow-color: black;/*移动滑块边框颜色*/
+            scrollbar-track-color: #ccc;/*背景颜色*/
+            scrollbar-arrow-color: #ddd;/*箭头颜色*/
+        }
+        .filter::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #ccc;
+        }/* 滚动条的滑轨背景颜色 */
+        .filter::-webkit-scrollbar
+        {
+            width: 6px;
+            background-color: #ccc;
+        }
+
+        .filter::-webkit-scrollbar-thumb
+        {
+            background-color: gainsboro;
+        }
+    </style>
 </head>
 
 <body>
@@ -95,25 +124,52 @@
                                     <div class="row align-items-center">
                                         <div class="col-md-6 text-md-left text-center mb-sm--20">
                                             <div class="shop-toolbar__left">
-                                                <p class="product-pages"><p>展示&nbsp</p><p id="startCount">1</p><p>&nbsp到&nbsp</p><p id="endCount"> 12 </p><p>&nbsp条记录&nbsp&nbsp总共&nbsp</p><p th:text="${count}"></p><p>&nbsp条记录</p> </p>
+                                                <p class="product-pages"><p>展示&nbsp</p><p id="startCount">1</p><p>&nbsp到&nbsp</p><p id="endCount"> 12 </p><p>&nbsp条记录&nbsp&nbsp总共&nbsp</p><p id="pageCount" th:text="${count}"></p><p>&nbsp条记录</p>
+
+                                                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp查询条件 -
+                                                <p th:if="${condition.keyword!=null}" th:text="'关键字：'+${condition.keyword}"></p>
+                                                <p th:if="${condition.authorName!=null}" th:text="'作者：'+${condition.authorName}"></p>
+                                                <p th:if="${condition.tagName!=null}" th:text="'标签：'+${condition.tagName}"></p>
+                                                <p th:if="${condition.publisher!=null}" th:text="'出版社：'+${condition.publisher}"></p>
+                                                </p>
+                                                </p>
+
                                             </div>
+                                            <div class="shop-toolbar__left">
+                                                <p>筛选条件 -
+                                                <p><p>&nbsp&nbsp&nbsp&nbsp作者：</p><p id="filterAuthor">无</p><p><a style="display: none;"id="closeFilterAuthor" class="remove-from-cart remove">
+                                                <i class="dl-icon-close"></i>
+                                            </a></p>
+                                                <p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp出版社：</p><p id="filterPublisher">无</p><p><a style="display: none"  id="closeFilterPublisher" class="remove-from-cart remove">
+                                                <i class="dl-icon-close"></i>
+                                            </a></p>
+                                                <p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp标签：</p><p id="filterTag"></p>
+                                               </p>
+                                                </p>
+
+                                            </div>
+
+
                                         </div>
                                         <div class="col-md-6">
                                             <div class="shop-toolbar__right">
-                                                <a href="#" class="product-filter-btn shop-toolbar__btn">
-                                                    <span>筛选</span>
+                                                <button id="filterBtn" style="margin-right: 20px" type="button" class="btn btn-style-1 sidebar-btn">
+                                                    过滤
+                                                </button>
+                                                <a  dataTo="#filter" href="#" class="product-filter-btn shop-toolbar__btn">
+                                                    <span>筛选条件</span>
                                                     <i></i>
                                                 </a>
                                                 <div class="product-ordering">
-                                                    <a href="" class="product-ordering__btn shop-toolbar__btn">
+                                                    <a href="#" class="product-ordering__btn shop-toolbar__btn">
                                                         <span>排序方式</span>
                                                         <i></i>
                                                     </a>
                                                     <ul class="product-ordering__list">
-                                                        <li class="active"><a href="#">综合排序</a></li>
-                                                        <li><a href="#">销量排序</a></li>
-                                                        <li><a href="#">上架时间</a></li>
-                                                        <li><a href="#">评分排序</a></li>
+                                                        <li class="active orderBy"><a href="#">综合排序</a></li>
+                                                        <li class="orderBy" orderBy="sales"><a href="#">销量排序</a></li>
+                                                        <li class="orderBy" orderBy="publishDate"><a href="#">上架时间</a></li>
+                                                        <li class="orderBy" orderBy="score"><a href="#">评分排序</a></li>
                                                         <!--<li><a href="#">Sort by price: high to low</a></li>-->
                                                     </ul>
                                                 </div>
@@ -121,12 +177,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="advanced-product-filters">
+                                <div id="filter" th:if="${filter!=null}" class="advanced-product-filters">
                                     <div class="product-filter">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <div class="product-widget product-widget--price">
-                                                    <h3 class="widget-title">Price</h3>
+                                                <div  class="product-widget product-widget--price filter">
+                                                    <h3 class="widget-title">价格</h3>
                                                     <ul class="product-widget__list">
                                                         <li>
                                                             <a href="shop-sidebar.html">
@@ -171,93 +227,38 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="product-widget product-widget--brand">
-                                                    <h3 class="widget-title">Brands</h3>
+                                            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                            <div th:if="${filter!=null&&filter.authors!=null}" class="col-md-3">
+                                                <div class="product-widget product-widget--brand filter">
+                                                    <h3 class="widget-title">作者</h3>
                                                     <ul class="product-widget__list">
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>Airi</span>
+                                                        <li th:each="author:${filter.authors}">
+                                                            <a >
+                                                                <span th:authorId="${author.id}" class="filterAuthor" th:text="${author.name}">Airi</span>
                                                             </a>
                                                         </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>Mango</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>Valention</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>Zara</span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div th:if="${filter.publishers!=null}" class="col-md-3">
+                                                <div class="product-widget product-widget--brand filter">
+                                                    <h3 class="widget-title">出版社</h3>
+                                                    <ul class="product-widget__list">
+                                                        <li th:each="publisher:${filter.publishers}">
+                                                            <a  >
+                                                                <span class="filterPublisher" th:text="${publisher}">Airi</span>
                                                             </a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <div class="product-widget product-widget--color">
-                                                    <h3 class="widget-title">Color</h3>
-                                                    <ul class="product-widget__list product-color-swatch">
-                                                        <li>
-                                                            <a href="shop-sidebar.html" class="product-color-swatch-btn blue">
-                                                                <span class="product-color-swatch-label">Blue</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html" class="product-color-swatch-btn green">
-                                                                <span class="product-color-swatch-label">Green</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html" class="product-color-swatch-btn pink">
-                                                                <span class="product-color-swatch-label">Pink</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html" class="product-color-swatch-btn red">
-                                                                <span class="product-color-swatch-label">Red</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html" class="product-color-swatch-btn grey">
-                                                                <span class="product-color-swatch-label">Grey</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="product-widget product-widget--size">
-                                                    <h3 class="widget-title">Size</h3>
+                                                <div class="product-widget product-widget--size filter">
+                                                    <h3 class="widget-title">标签</h3>
                                                     <ul class="product-widget__list">
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>L</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>M</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>S</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>XL</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span>XXL</span>
+                                                        <li th:if="${condition.tagName==null||(condition.tagName!=null&&condition.tagName!=tag.name)}" class="filterTagLi" th:each="tag,tagStat:${filter.tags}">
+                                                            <a>
+                                                                <span th:index="${tagStat.index}" th:text="${tag.name}" th:tagId="${tag.id}" class="filterTag">L</span>
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -268,10 +269,25 @@
                                     </div>
                                 </div>
                             </div>
+                            <div  th:fragment="bookListAndPage" id="bookLIstAndPage">
+                                <h1 th:if="${bookList==null}">查询无结果</h1>
+                                <input hidden id="filterBookCount" th:value="${count}">
                             <div id="bookList" th:fragment="bookList" class="shop-products">
-                                <div th:replace="~{commonbar::loding}"></div>
+                                <div th:fragment="loading" class="loading" style="display: none;margin-top: 200px;margin-bottom: 200px" >
+                                    <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+                                        <div class="loding-child loding-bounce1"></div>
+                                        <div class="loding-child loding-bounce2"></div>
+                                        <div class="loding-child loding-bounce3"></div>
+                                    </div>
+                                </div>
                                 <div class="row grid-space-20 xxl-block-grid-4">
                                     <div th:each="book,bookStat : ${bookList}" class="col-lg-4 col-sm-6 mb--40 mb-md--30">
+                                        <input type="hidden" class="hotComment" th:value="${book.hotComment}">
+                                        <input type="hidden" class="summary" th:value="${book.summary}">
+                                        <input type="hidden" class="stock" th:value="${book.stock}">
+                                        <input type="hidden" class="authorId" th:value="${book.authors[0].id}">
+                                        <input type="hidden" class="authorName" th:value="${book.authors[0].name}">
+                                        <input type="hidden" class="bookImage" th:value="${book.imagePaths[0].bookImagePath}">
                                         <div class="airi-product">
                                             <div class="product-inner">
                                                 <figure class="product-image">
@@ -283,29 +299,29 @@
                                                     </div>
                                                     <div class="airi-product-action">
                                                         <div class="product-action">
-                                                            <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="快速浏览">
+                                                            <a th:bookId = "${book.id}" th:index="${bookStat.index}" class="quickview-btn action-btn " data-toggle="tooltip" data-placement="top" title="快速浏览">
                                                                 <span data-toggle="modal" data-target="#productModal">
                                                                     <i class="dl-icon-view"></i>
                                                                 </span>
                                                             </a>
-                                                            <a class="add_to_cart_btn action-btn" href="#" data-toggle="tooltip" data-placement="top" title="添加进购物车">
+                                                            <a class="add_to_cart_btn action-btn addBookToCart" th:imagePath="${book.imagePaths[0].bookImagePath}"  data-toggle="tooltip" th:stock="${book.stock}" th:bookName="${book.title}" th:bookId="${book.id}" th:price="${book.price}" th:bookImagePath="'/bookImg/'+ ${book.imagePaths[0].bookImagePath}" data-placement="top" title="添加进购物车">
                                                                 <i class="dl-icon-cart29"></i>
                                                             </a>
-                                                            <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="添加进愿望清单">
+                                                            <a class="add_wishlist action-btn add addBookToWishList" data-toggle="tooltip" th:bookId="${book.id}" data-placement="top" title="添加进愿望清单">
                                                                 <i class="dl-icon-heart4"></i>
                                                             </a>
-                                                            <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="寻找相似的书">
-                                                                <i class="dl-icon-compare"></i>
+                                                            <a class="add_compare action-btn findSwitchBook" th:bookId="${book.id}"   data-toggle="tooltip" data-placement="top" title="交换区寻找">
+                                                                <i class="dl-icon-compare2"></i>
                                                             </a>
                                                         </div>
                                                     </div>
                                                 </figure>
                                                 <div class="product-info text-center">
                                                     <h3 class="product-title">
-                                                        <a style="max-width: 15em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" th:title="${book.title}" th:href="'/Biri/book/detail/'+${book.id}" th:text="${book.title}">Limited edition v-neck t-shirt</a>
+                                                        <a style="max-width: 15em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" class="title" th:title="${book.title}" th:href="'/Biri/book/detail/'+${book.id}" th:text="${book.title}">Limited edition v-neck t-shirt</a>
                                                     </h3>
                                                     <span class="product-price-wrapper">
-                                                        <span class="money" th:text="${book.price}">$49.00</span>
+                                                        <span class="money price" th:text="${book.price}">$49.00</span>
                                                         <span class="product-price-old">
                                                             <span class="money">$60.00</span>
                                                         </span>
@@ -317,35 +333,25 @@
 
                                 </div>
                             </div>
-                            <nav class="pagination-wrap" th:if="${pageNum>1}">
+                            <nav id="page" class="pagination-wrap" th:if="${pageNum>1}">
                                 <ul class="pagination">
                                     <li><a href="shop-sidebar.html" class="prev page-number"><i class="fa fa-angle-double-left"></i></a></li>
                                     <li  th:each="page,pageStat:${#numbers.sequence(1,pageNum>8?8:pageNum)}"><button th:class="${pageStat.count==1} ? 'current page-number pageBtn' : 'page-number pageBtn'" th:text="${pageStat.count}">1</button></li>
                                     <li><a href="shop-sidebar.html" class="next page-number"><i class="fa fa-angle-double-right"></i></a></li>
                                 </ul>
                             </nav>
+                            </div>
                         </div>
                         <div class="col-lg-3 order-lg-1 mt--30 mt-md--40" id="primary-sidebar">
                             <div class="sidebar-widget">
                                 <!-- Category Widget Start -->
-                                <div class="product-widget categroy-widget mb--35 mb-md--30">
-                                    <h3 class="widget-title">Categories</h3>
-                                    <ul class="prouduct-categories product-widget__list">
-                                        <li><a href="">Accessories</a><span class="count">(0)</span></li>
-                                        <li><a href="">Brands</a><span class="count">(0)</span></li>
-                                        <li><a href="">Clothing</a><span class="count">(1)</span></li>
-                                        <li><a href="">Fashions</a><span class="count">(21)</span></li>
-                                        <li><a href="">Furniture</a><span class="count">(20)</span></li>
-                                        <li><a href="">Gifts</a><span class="count">(0)</span></li>
-                                        <li><a href="">Kids</a><span class="count">(0)</span></li>
-                                        <li><a href="">Men</a><span class="count">(0)</span></li>
-                                        <li><a href="">New in</a><span class="count">(0)</span></li>
-                                        <li><a href="">Outlet</a><span class="count">(0)</span></li>
-                                        <li><a href="">Shoes</a><span class="count">(0)</span></li>
-                                        <li><a href="">Wallets</a><span class="count">(0)</span></li>
-                                        <li><a href="">Women</a><span class="count">(0)</span></li>
+                                <nav class="main-navigation vertical-nav mb--50">
+                                    <ul class="mainmenu mainmenu--centered">
+                                        <li id="replace" class="mainmenu__item menu-item-has-children has-children">
+
+                                        </li>
                                     </ul>
-                                </div>
+                                </nav>
                                 <!-- Category Widget Start -->
 
                                 <!-- Price Filter Widget Start -->
@@ -381,77 +387,10 @@
                                 <!-- Price Filter Widget End -->
 
                                 <!-- Product Size Widget Start -->
-                                <div class="product-widget product-widget--size mb--25 mb-md--20">
-                                    <h3 class="widget-title">Size</h3>
-                                    <ul class="product-widget__list two-column-list">
-                                        <li><a href="shop-sidebar.html">L</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">S</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">XXl</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">M</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">XL</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">L</a><span class="count">(2)</span></li>
-                                    </ul>
-                                </div>
-                                <!-- Product Size Widget End -->
 
-                                <!-- Product Color Widget Start -->
-                                <div class="product-widget product-widget--Color mb--25 mb-md--20">
-                                    <h3 class="widget-title">Color</h3>
-                                    <ul class="product-widget__list two-column-list">
-                                        <li><a href="shop-sidebar.html">Blue</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Pink</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">White</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Green</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Red</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Black</a><span class="count">(2)</span></li>
-                                    </ul>
-                                </div>
-                                <!-- Product Color Widget End -->
-
-                                <!-- Product Brand Widget Start -->
-                                <div class="product-widget product-widget--brand mb--40 mb-md--30">
-                                    <h3 class="widget-title">Brands</h3>
-                                    <ul class="product-widget__list">
-                                        <li><a href="shop-sidebar.html">Airi</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Mango</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Valention</a><span class="count">(2)</span></li>
-                                        <li><a href="shop-sidebar.html">Zara</a><span class="count">(2)</span></li>
-                                    </ul>
-                                </div>
-                                <!-- Product Brand Widget End -->
-
-                                <!-- Category Widget Start -->
-                                <div class="product-widget tag-widget mb--35 mb-md--30">
-                                    <h3 class="widget-title">Categories</h3>
-                                    <div class="tagcloud">
-                                        <a href="shop-sidebar.html">chair</a>
-                                        <a href="shop-sidebar.html">deco</a>
-                                        <a href="shop-sidebar.html">dress</a>
-                                        <a href="shop-sidebar.html">fashion</a>
-                                        <a href="shop-sidebar.html">furniture</a>
-                                        <a href="shop-sidebar.html">light</a>
-                                        <a href="shop-sidebar.html">living</a>
-                                        <a href="shop-sidebar.html">sofa</a>
-                                        <a href="shop-sidebar.html">table</a>
-                                        <a href="shop-sidebar.html">women</a>
-                                    </div>
-                                </div>
                                 <!-- Category Widget Start -->
 
                                 <!-- Promo Widget Start -->
-                                <div class="product-widget promo-widget">
-                                    <div class="banner-box banner-type-3 banner-type-3-2 banner-hover-1">
-                                        <div class="banner-inner">
-                                            <div class="banner-image">
-                                                <img src="//assets/img/banner/ad-banner.jpg" alt="Banner">
-                                            </div>
-                                            <div class="banner-info">
-                                                <h2 class="banner-title-11">New <br> <strong>Season</strong></h2>
-                                            </div>
-                                            <a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Promo Widget End -->
                             </div>
                         </div>
@@ -514,9 +453,7 @@
                             <h3 class="widget-title widget-title--2 widget-title--icon">Subscribe now and get 10% off new collection</h3>
                             <form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="newsletter-form newsletter-form--3 mc-form" method="post" target="_blank">
                                 <input type="email" name="newsletter-email" id="newsletter-email" class="newsletter-form__input" placeholder="Enter Your Email Address..">
-                                <button type="submit" class="newsletter-form__submit">
-                                    <i class="dl-icon-right"></i>
-                                </button>
+
                             </form>
                             <!-- mailchimp-alerts Start -->
                             <div class="mailchimp-alerts">
@@ -675,91 +612,91 @@
                         </button>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="product-image-carousel nav-vertical-center nav-style-1">
+                                <div class="airi-element-carousel product-image-carousel nav-vertical-center nav-style-1"
+                                     data-slick-options='{
+                                    "slidesToShow": 1,
+                                    "slidesToScroll": 1,
+                                    "arrows": true,
+                                    "prevArrow": "dl-icon-left",
+                                    "nextArrow": "dl-icon-right"
+                                }'
+                                >
                                     <div class="product-image">
                                         <div class="product-image--holder">
                                             <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
+                                                <img id="modalImage" src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
                                             </a>
                                         </div>
                                         <span class="product-badge sale">sale</span>
-                                    </div>
-                                    <div class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-10-1.jpg" alt="Product Image" class="primary-image">
-                                            </a>
-                                        </div>
-                                        <span class="product-badge new">new</span>
-                                    </div>
-                                    <div class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-11-1.jpg" alt="Product Image" class="primary-image">
-                                            </a>
-                                        </div>
-                                        <span class="product-badge hot">hot</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="modal-box product-summary">
-                                    <div class="product-navigation mb--10">
-                                        <a href="#" class="prev"><i class="dl-icon-left"></i></a>
-                                        <a href="#" class="next"><i class="dl-icon-right"></i></a>
-                                    </div>
-                                    <h3 class="product-title mb--15">Waxed-effect pleated skirt</h3>
+                                    <!--<div class="product-navigation mb&#45;&#45;10">-->
+                                        <!--<a href="#" class="prev"><i class="dl-icon-left"></i></a>-->
+                                        <!--<a href="#" class="next"><i class="dl-icon-right"></i></a>-->
+                                    <!--</div>-->
+                                    <h3 class="product-title mb--15" id="modalTitle">Waxed-effect pleated skirt</h3>
                                     <span class="product-price-wrapper mb--20">
-                                <span class="money">$49.00</span>
-                                <span class="product-price-old">
-                                    <span class="money">$60.00</span>
-                                </span>
+                                ￥<span id="modalPrice" class="money">49.00</span>
+                                <!--<span class="product-price-old">-->
+                                    <!--<span class="money">$60.00</span>-->
+                                <!--</span>-->
                             </span>
-                                    <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
-                                    <div class="product-action d-flex flex-row align-items-center mb--30">
-                                        <div class="quantity">
-                                            <input type="number" class="quantity-input" name="qty" id="qty" value="1" min="1">
-                                        </div>
-                                        <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
-                                            Add To Cart
+                                    <p class="product-short-description mb--25 mb-md--20" style="
+                                overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 7;
+-webkit-box-orient: vertical;
+" id="modalSummary">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                                    <div class="product-action d-flex flex-row align-items-center mb--30 mb-md--20">
+                                        <!--<div class="quantity">-->
+                                            <!--<input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">-->
+                                        <!--</div>-->
+                                        <button id="modalAddToCart" type="button" class="addBookToCart btn btn-style-1 btn-semi-large add-to-cart">
+                                            添加进购物车
                                         </button>
-                                        <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
-                                        <a href="compare.html"><i class="dl-icon-compare2"></i></a>
+                                        <a id="modalAddToWishList" class="addBookToWishList" ><i class="dl-icon-heart2"></i></a>
+                                        <a id="modalSwitchBook" class="findSwitchBook" ><i class="dl-icon-compare2"></i></a>
                                     </div>
-                                    <div class="product-extra mb--30">
-                                        <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
-                                        <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
+                                    <div class="product-summary-footer d-flex justify-content-between flex-sm-row flex-column flex-sm-row flex-column">
+                                        <div class="product-meta">
+                                            <span class="sku_wrapper font-size-12">出版社: <span class="sku" id="modalPublisher">REF. LA-887</span></span>
+                                            <span class="posted_in font-size-12">作者: <a id="modalAuthor" href="#" rel="tag">Fashions</a></span>
+                                        </div>
+                                        <div class="product-share-box">
+                                            <span class="font-size-12">Share With</span>
+                                            <!-- Social Icons Start Here -->
+                                            <ul class="social social-small">
+                                                <li class="social__item">
+                                                    <a href="facebook.com" class="social__link">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a href="twitter.com" class="social__link">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a href="plus.google.com" class="social__link">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a href="plus.google.com" class="social__link">
+                                                        <i class="fa fa-pinterest-p"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Social Icons End Here -->
+                                        </div>
                                     </div>
-                                    <div class="product-meta float-left">
-                                        <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
-                                        <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
-                                    </div>
-                                    <div class="product-share-box float-right">
-                                        <span class="font-size-12">Share With</span>
-                                        <!-- Social Icons Start Here -->
-                                        <ul class="social social-small">
-                                            <li class="social__item">
-                                                <a href="facebook.com" class="social__link">
-                                                    <i class="fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="social__item">
-                                                <a href="twitter.com" class="social__link">
-                                                    <i class="fa fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="social__item">
-                                                <a href="plus.google.com" class="social__link">
-                                                    <i class="fa fa-google-plus"></i>
-                                                </a>
-                                            </li>
-                                            <li class="social__item">
-                                                <a href="plus.google.com" class="social__link">
-                                                    <i class="fa fa-pinterest-p"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!-- Social Icons End Here -->
+                                    <br>
+                                    <div id="ifModalHotComment">
+                                        <h5>热门评论：<br><span style="margin-left: 3em" id="modalHotComment">ssafaf</span></h5>
                                     </div>
                                 </div>
                             </div>
@@ -775,22 +712,267 @@
     </div>
     <script th:inline="javascript">
         window.onload = function (ev){
+            var tagHTML = [[${tagsHTML}]];
             initCartTotal();
             var condition = [[${selectBook}]];
 
-            $(document).on('click', '.add_to_cart_btn', function () {
+            $("#replace").replaceWith(tagHTML)
+            $(document).on('click', '.filterAuthor', function () {
+                var authorId = $(this).attr("authorId");
+                var authorName = $(this).text();
+                $("#filterAuthor").text(authorName);
+                $("#closeFilterAuthor").css("display","")
+                condition.authorId = authorId;
+            })
+            $(document).on('click', '#closeFilterAuthor', function () {
+                $("#filterAuthor").text("无")
+                $("#closeFilterAuthor").css("display","none")
+                condition.authorId = null;
+            })
+            $(document).on('click', '.filterPublisher', function () {
+                var publisher = $(this).text();
+                $("#filterPublisher").text(publisher);
+                $("#closeFilterPublisher").css("display","")
+                condition.publisher = publisher;
+            })
+            $(document).on('click', '#closeFilterPublisher', function () {
+                $("#filterPublisher").text("无")
+                $("#closeFilterPublisher").css("display","none")
+                condition.publisher = null;
+            })
+            $(document).on('click', '#closeFilterAuthor', function () {
+                $("#filterAuthor").text("无")
+                $("#closeFilterAuthor").css("display","none")
+                condition.authorId = null;
+            })
+            $(document).on('click', '.filterTag', function () {
+                $(this).attr("disabled",true)
+                var tagName = $(this).text();
+                var index = $(this).attr("index");
+                var tagId = $(this).attr("tagId")
+                $(".filterTagLi").eq(index).css("display","none")
+               $("#filterTag").after("<p class=\"filterTagDisplay\" tagId="+tagId+"><p>"+tagName+"</p><p><a index="+index+" class=\"closeFilterTag remove-from-cart remove\">\n" +
+                   "                                                <i class=\"dl-icon-close\"></i>\n" +
+                   "                                            </a></p>")
+            })
+            $(document).on('click', '.closeFilterTag', function () {
+                var index = $(this).attr("index");
+                $(".filterTagLi").eq(index).css("display","");
+                $(this).parent().prev().remove();
+                $(this).parent().prev().remove();
+                $(this).remove();
+
 
             })
+
+
+            $(document).on('click', '#filterBtn', function () {
+
+                var data = "";
+                for (var key in condition){
+                    if (condition[key]!=null){
+
+                        if (key=='tagIds'){
+                            data+=(key+'='+condition[key]);
+                            if ($(".filterTagDisplay").length>0) {
+                                for (var i = 0; i < $(".filterTagDisplay").length; i++) {
+                                    var tagId = $(".filterTagDisplay").eq(i).attr("tagId");
+                                    data += (',' + tagId)
+                                }
+                            }
+                            data+="&"
+                        }
+                        else
+                        data+=(key+'='+condition[key]+'&');
+                    }
+                }
+
+                var url = "/Biri/book/listByFilter?"+data;
+                $(".loading").css("display","");
+                $("#bookList .row").remove();
+                $("#page").css("display","none");
+                window.scrollTo({
+                    top:380,
+                    behavior: "smooth",
+                })
+                $("#bookLIstAndPage").load(url,function () {
+                    $(".pageBtn").removeAttr("disabled");
+                    $(".loading").css("display","none");
+                    $("#startCount").text(1);
+
+                    var pageCount = parseInt($("#filterBookCount").val());
+                    $("#endCount").text(pageCount>12 ? 12 : pageCount);
+                    $("#pageCount").text(pageCount)
+                })
+            })
+            $(document).on('click', '.orderBy', function () {
+                $(".orderBy").attr("class","orderBy");
+                $(this).attr("class","orderBy active");
+
+                var orderBy = $(this).attr("orderBy");
+                condition.orderBy=orderBy;
+                var data = "";
+                for (var key in condition){
+                    if (condition[key]!=null){
+
+                        if (key=='tagIds'){
+                            data+=(key+'='+condition[key]);
+                            if ($(".filterTagDisplay").length>0) {
+                                for (var i = 0; i < $(".filterTagDisplay").length; i++) {
+                                    var tagId = $(".filterTagDisplay").eq(i).attr("tagId");
+                                    data += (',' + tagId)
+                                }
+                            }
+                            data+="&"
+                        }
+                        else
+                            data+=(key+'='+condition[key]+'&');
+                    }
+                }
+                $(".loading").css("display","");
+                $("#bookList .row").remove();
+                window.scrollTo({
+                    top:380,
+                    behavior: "smooth",
+                })
+                var  url = "/Biri/book/listByPage?"+data;
+                $("#bookList").load(url,function () {
+                    $(".loading").css("display","none");
+
+                })
+            })
+
+            $(document).on('click', '.quickview-btn', function () {
+                var index = $(this).attr("index");
+                var bookId = $(this).attr("bookId");
+                var summary = $(".summary").eq(index).val();
+                var hotComment = $(".hotComment").eq(index).val();
+                var bookImage = $(".bookImage").eq(index).val();
+                var title = $(".title").eq(index).text();
+                var authorId = $(".authorId").eq(index).val();
+                var authorName = $(".authorName").eq(index).val();
+                var price = $(".price").eq(index).text();
+                var stock = $(".stock").eq(index).val();
+
+
+
+                if (hotComment==null||hotComment=="")
+                    $("#ifModalHotComment").css("display","none")
+                else {
+                    $("#ifModalHotComment").css("display","");
+                    $("#modalHotComment").text(hotComment)
+                }
+                $("#modalTitle").text(title);
+                $("#modalPrice").text(price);
+                $("#modalSummary").text(summary);
+                $("#modalImage").attr("src",'/bookImg/'+bookImage);
+
+                $("#modalAddToCart").attr("bookId",bookId);
+                $("#modalAddToCart").attr("stock",stock);
+                $("#modalAddToCart").attr("imagePath",bookImage);
+                $("#modalAddToCart").attr("bookName",title);
+                $("#modalAddToCart").attr("price",price);
+
+                $("#modalAddToWishList").attr("bookId",bookId);
+                $("#modalSwitchBook").attr("bookId",bookId);
+                $("#modalAuthor").text(authorName);
+                $("#modalAuthor").attr("href",'/Biri/book/list?authorName='+authorName+"&authorId="+authorId);
+            })
+            $(document).on('click', '.addBookToCart', function () {
+                var bookId = $(this).attr("bookId");
+                var price = $(this).attr("price");
+                var title = $(this).attr("bookName");
+                var imagePath = $(this).attr("imagePath");
+                return
+                var stock = $(this).attr("stock");
+                $.ajax({
+                    url: "/orderCart/cart",
+                    type: 'post', //
+                    async: true,    //或false,是否异步
+                    data: JSON.stringify({
+                        id:bookId,
+                        price:price,
+                        title:title,
+                        imagePath:imagePath,
+                        stock:stock,
+                        bookNum:1,
+                    }),
+                    contentType:"application/json;charset=utf-8",
+                    timeout: 50000,    //超时时间
+                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+                        if (data=='mustLogin'){
+                            window.location.href = '/Biri/login';
+                        }
+                        else if (data='success'){
+                            $("#miniCart .mini-cart__list").eq(0).append(" <li  class=\"mini-cart__product\">\n" +
+                                "                        <a  cartId="+data+" href=\"#\" class=\"miniCartDeleteBook remove-from-cart remove\">\n" +
+                                "                            <i class=\"dl-icon-close\"></i>\n" +
+                                "                        </a>\n" +
+                                "                        <div class=\"mini-cart__product__image\">\n" +
+                                "                            <img src=\"/bookImg/"+imagePath+"\" alt=\"products\">\n" +
+                                "                        </div>\n" +
+                                "                        <div class=\"mini-cart__product__content\">\n" +
+                                "                            <a class=\"mini-cart__product__title\" href=\"'/Biri/book/detail/'"+bookId+"\">"+title+" </a>\n" +
+                                "                            <span class=\"mini-cart__product__quantity\" ><span  class=\"miniCartBookNum\">1</span> x ￥<span class=\"miniCartBookPrice\">"+price+"</span></span>\n" +
+                                "                        </div>\n" +
+                                "                    </li>")
+                            $("#miniCartCount").eq(0).text( parseInt($("#miniCartCount").text())+1);
+                        }
+
+                    },
+                    error: function (data) {
+
+                    }
+                })
+
+            })
+            $(document).on('click', '.addBookToWishList', function () {
+                var bookId = $(this).attr("bookId");
+                $.ajax({
+                    url: "/orderCart/cart",
+                    type: 'post', //
+                    async: true,    //或false,是否异步
+                    data: JSON.stringify({
+                        bookId:bookId,
+                    }),
+                    contentType:"application/json;charset=utf-8",
+                    timeout: 50000,    //超时时间
+                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+
+                    },
+                    error: function (data) {
+
+                    }
+                })
+
+
+            })
+
+
             $(document).on('click', '.pageBtn', function () {
                 var current = $(this);
                var pageNow = $(this).text();
                condition.pageNow = pageNow;
                var data = "";
-               for (var key in condition){
-                   if (condition[key]!=null){
-                       data+=(key+'='+condition[key]+'&');
-                   }
-               }
+                for (var key in condition){
+                    if (condition[key]!=null){
+
+                        if (key=='tagIds'){
+                            data+=(key+'='+condition[key]);
+                            if ($(".filterTagDisplay").length>0) {
+                                for (var i = 0; i < $(".filterTagDisplay").length; i++) {
+                                    var tagId = $(".filterTagDisplay").eq(i).attr("tagId");
+                                    data += (',' + tagId)
+                                }
+                            }
+                            data+="&"
+                        }
+                        else
+                            data+=(key+'='+condition[key]+'&');
+                    }
+                }
                $(".loading").css("display","");
                 $(".pageBtn").attr("disabled","true");
                 $(".pageBtn").attr("class","page-number pageBtn");

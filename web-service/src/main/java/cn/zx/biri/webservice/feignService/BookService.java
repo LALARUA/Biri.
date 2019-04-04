@@ -1,5 +1,6 @@
 package cn.zx.biri.webservice.feignService;
 
+import cn.zx.biri.common.pojo.entry.Book;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
@@ -28,4 +29,7 @@ public interface BookService {
     @GetMapping("bookDetail")
     BookDetail selectBookDetail(@RequestParam("bookId") Integer bookId, @RequestParam("currentUserId") Integer currentUserId);
 
+
+    @GetMapping("allTags")
+    String tagsHTML();
 }

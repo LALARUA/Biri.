@@ -13424,7 +13424,7 @@ a, button, img, input, span, .main-navigation .mainmenu__item.menu-item-has-chil
         font-family: fontAwesome;
         color: #8a8a8a;
         line-height: 1; }
-      .main-navigation .mainmenu .sub-menu li:hover ul {
+      .main-navigation .mainmenu .sub-menu li:hover a {
         visibility: visible;
         opacity: 1;
         margin-left: 0; }

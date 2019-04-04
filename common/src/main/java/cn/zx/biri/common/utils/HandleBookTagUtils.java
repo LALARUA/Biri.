@@ -15,7 +15,6 @@ public class HandleBookTagUtils {
 
         List<Tag> sonTags = new ArrayList<>();
 
-
         public NewTag(Tag tag) {
             this.tag = tag;
         }
@@ -46,7 +45,7 @@ public class HandleBookTagUtils {
         this.tagLink = tagLink;
     }
 
-    public static List<List<Tag>> tagLink(List<Tag> tags){
+    public static Tag getHead(List<Tag> tags){
         Map<Integer,Tag> map = new HashMap<>();
         Tag head = null;
         for (Tag tag : tags) {
@@ -61,10 +60,13 @@ public class HandleBookTagUtils {
                 continue;
             father.getSonTags().add(map.get(t.getId()));
         }
+        return head;
+    }
+    public static List<List<Tag>> tagLink(List<Tag> tags){
+        Tag head = getHead(tags);
         HandleBookTagUtils handBookTagUtils = new HandleBookTagUtils();
         handBookTagUtils.createLink(head,new LinkedList());
         return handBookTagUtils.getTagLink();
-
     }
 
     public void createLink(Tag head,List list){
@@ -85,5 +87,34 @@ public class HandleBookTagUtils {
                 list.remove(i);
             }
         }
+    }
+
+    public static void getTagHTML(Tag head,StringBuilder stringBuilder){
+       out:if (((NewTag)head).getSonTags()!=null&&((NewTag)head).getSonTags().size()>0){
+           if (((NewTag)head).getTag().getfatherId()==0)
+               break out;
+
+            stringBuilder.append(" <li class=\"mainmenu__item menu-item-has-children has-children\">\n");
+           stringBuilder.append("<a href=\"/Biri/book/list?tagIds="+((NewTag) head).getTag().getId()+"&tagName="+((NewTag) head).getTag().getName()+"\" class=\"mainmenu__link\">\n");
+            stringBuilder.append("  <span class=\"mm-text\">"+((NewTag) head).getTag().getName()+"</span>\n");
+            stringBuilder.append(" </a>\n");
+            stringBuilder.append(" <ul class=\"sub-menu\">\n");
+        }
+        else {
+            stringBuilder.append(" <li>\n");
+            stringBuilder.append("<a href=\"/Biri/book/list?tagIds="+((NewTag) head).getTag().getId()+"&tagName="+((NewTag) head).getTag().getName()+"\" class=\"mainmenu__link\">\n");
+            stringBuilder.append("  <span class=\"mm-text\">"+((NewTag) head).getTag().getName()+"</span>\n");
+            stringBuilder.append(" </a>\n");
+            stringBuilder.append("</li>\n");
+            return;
+        }
+        for (Tag tag : ((NewTag)head).getSonTags()) {
+            getTagHTML(tag,stringBuilder);
+        }
+        if (((NewTag)head).getSonTags()!=null&&((NewTag)head).getTag().getfatherId()!=0&&((NewTag)head).getSonTags().size()>0){
+            stringBuilder.append("</ul>\n");
+            stringBuilder.append("</li>\n");
+        }
+
     }
 }

@@ -15,6 +15,7 @@ public interface CartService {
     List<BookInCart> bookInCarts(Integer userId) throws Exception;
     void deleteCart(Integer cartId) throws Exception;
     void updateCart(Cart cart) throws Exception;
+    void insertBookInCart(Cart cart) throws Exception;
 
 
 }

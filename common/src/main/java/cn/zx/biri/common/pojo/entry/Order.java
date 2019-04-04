@@ -7,17 +7,21 @@ public class Order {
 
     private String createtime;
 
-    private String condition;
+    private Integer status;
 
-    private Double summoney;
+    private Double total;
 
     private String addressDetail;
 
-    private String userName;
+    private String username;
 
     private String phone;
 
     private Integer adminId;
+
+    private String remark;
+
+    private Integer couponTypeId;
 
     public Integer getId() {
         return id;
@@ -43,20 +47,20 @@ public class Order {
         this.createtime = createtime == null ? null : createtime.trim();
     }
 
-    public String getCondition() {
-        return condition;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition == null ? null : condition.trim();
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
-    public Double getSummoney() {
-        return summoney;
+    public Double getTotal() {
+        return total;
     }
 
-    public void setSummoney(Double summoney) {
-        this.summoney = summoney;
+    public void setTotal(Double total) {
+        this.total = total;
     }
 
     public String getAddressDetail() {
@@ -67,12 +71,12 @@ public class Order {
         this.addressDetail = addressDetail == null ? null : addressDetail.trim();
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     public String getPhone() {
@@ -89,5 +93,21 @@ public class Order {
 
     public void setAdminId(Integer adminId) {
         this.adminId = adminId;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
+    }
+
+    public Integer getCouponTypeId() {
+        return couponTypeId;
+    }
+
+    public void setCouponTypeId(Integer couponTypeId) {
+        this.couponTypeId = couponTypeId;
     }
 }

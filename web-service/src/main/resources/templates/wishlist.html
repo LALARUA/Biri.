@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/assets/img/icon.png">
 
     <!-- Title -->
-    <title>个人中心</title>
+    <title>Airi - Clean, Minimal eCommerce Bootstrap 4 Template</title>
 
     <!-- ************************* CSS Files ************************* -->
 
@@ -30,7 +30,6 @@
     <!-- Revoulation Slider CSS  -->
     <link rel="stylesheet" href="/assets/css/revoulation.css">
 
-    <link rel="stylesheet" href="/assets/css/myCss.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -57,24 +56,28 @@
     <!-- Main Wrapper Start -->
     <div class="wrapper">
         <!-- Header Area Start -->
+
         <header class="header header-fullwidth header-style-1">
-            <div th:replace="~{commonbar::topbar}"></div>
+            <div th:replace="~{commonbar::topbar(activeUrl='cart')}"></div>
         </header>
+
         <div th:replace="~{commonbar::mobiletopbar}"></div>
         <!-- Header Area End -->
 
+        <!-- Mobile Header area Start -->
 
+        <!-- Mobile Header area End -->
 
         <!-- Breadcrumb area Start -->
 
-        <div  class="breadcrumb-area bg--white-6 breadcrumb-bg-1 pt--60 pb--70 pt-lg--40 pb-lg--50 pt-md--30 pb-md--40">
+        <div class="breadcrumb-area bg--white-6 ptb--70 ptb-lg--40">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="page-title">My Account</h1>
+                        <h1 class="page-title">Wishilist</h1>
                         <ul class="breadcrumb justify-content-center">
                             <li><a href="index.html">Home</a></li>
-                            <li class="current"><span>My Account</span></li>
+                            <li class="current"><span>Wishilist</span></li>
                         </ul>
                     </div>
                 </div>
@@ -85,208 +88,238 @@
 
         <!-- Main Content Wrapper Start -->
         <div id="content" class="main-content-wrapper">
-            <div class="page-content-inner">
+            <div class="page-content-inner enable-page-sidebar pt--45 pb--60 pt-md--35 pb-md--50 pt-sm--25 pb-sm--40">
                 <div class="container">
-                    <div class="row pt--80 pt-md--60 pt-sm--40 pb--80 pb-md--60 pb-sm--40">
-                        <div class="col-12">
-                            <div class="user-dashboard-tab flex-column flex-md-row">
-                                <div class="user-dashboard-tab__head nav flex-md-column" role="tablist" aria-orientation="vertical">
-                                    <a class="nav-link active" data-toggle="pill" role="tab" href="#dashboard" aria-controls="dashboard" aria-selected="true">Dashboard</a>
-                                    <a class="nav-link" data-toggle="pill" role="tab" href="#orders" aria-controls="orders" aria-selected="true">订单</a>
-                                    <a class="nav-link" data-toggle="pill" role="tab" href="#downloads" aria-controls="downloads" aria-selected="true">Downloads</a>
-                                    <a class="nav-link" data-toggle="pill" role="tab" href="#addresses" aria-controls="addresses" aria-selected="true">Addresses</a>
-                                    <a class="nav-link" data-toggle="pill" role="tab" href="#accountdetails" aria-controls="accountdetails" aria-selected="true">Account Details</a>
-                                    <a class="nav-link" href="login-register.html">Logout</a>
+                    <div class="row shop-sidebar">
+                        <div class="col-lg-9 order-lg-2 mb-md--30" id="main-content">
+                            <div class="table-content table-responsive">
+                                <table class="table table-style-2">
+                                    <thead>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                            <th class="text-left">Product</th>
+                                            <th>Stock Status</th>
+                                            <th>Price</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
+                                            <td class="product-thumbnail text-left">
+                                                <img src="/assets/img/products/prod-14-2-70x81.jpg" alt="Product Thumnail">
+                                            </td>
+                                            <td class="product-name text-left wide-column">
+                                                <h3>
+                                                    <a href="product-details.html">Super skinny blazer</a>
+                                                </h3>
+                                            </td>
+                                            <td class="product-stock">
+                                                In Stock
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">$49.00</span>
+                                                </span>
+                                            </td>
+                                            <td class="product-action-btn">
+                                                <a href="cart.html">Add to cart</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
+                                            <td class="product-thumbnail text-left">
+                                                <img src="/assets/img/products/prod-9-1-70x81.jpg" alt="Product Thumnail">
+                                            </td>
+                                            <td class="product-name text-left wide-column">
+                                                <h3>
+                                                    <a href="product-details.html"> Jogging trousers</a>
+                                                </h3>
+                                            </td>
+                                            <td class="product-stock">
+                                                In Stock
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">$49.00</span>
+                                                </span>
+                                            </td>
+                                            <td class="product-action-btn">
+                                                <a href="cart.html">Add to cart</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
+                                            <td class="product-thumbnail text-left">
+                                                <img src="/assets/img/products/prod-10-1-70x81.jpg" alt="Product Thumnail">
+                                            </td>
+                                            <td class="product-name text-left wide-column">
+                                                <h3>
+                                                    <a href="product-details.html"> Grey blue leather backpack</a>
+                                                </h3>
+                                            </td>
+                                            <td class="product-stock">
+                                                In Stock
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">$49.00</span>
+                                                </span>
+                                            </td>
+                                            <td class="product-action-btn">
+                                                <a href="cart.html">Add to cart</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
+                                            <td class="product-thumbnail text-left">
+                                                <img src="/assets/img/products/prod-11-1-70x81.jpg" alt="Product Thumnail">
+                                            </td>
+                                            <td class="product-name text-left wide-column">
+                                                <h3>
+                                                    <a href="product-details.html">Dress with belt</a>
+                                                </h3>
+                                            </td>
+                                            <td class="product-stock">
+                                                In Stock
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">$49.00</span>
+                                                </span>
+                                            </td>
+                                            <td class="product-action-btn">
+                                                <a href="cart.html">Add to cart</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>  
+                        </div>
+                        <div class="col-lg-3 order-lg-1" id="primary-sidebar">
+                            <div class="sidebar-widget">
+                                <!-- Category Widget Start -->
+                                <div class="product-widget categroy-widget">
+                                    <h3 class="widget-title">Categories</h3>
+                                    <ul class="prouduct-categories product-widget__list">
+                                        <li><a href="">Accessories</a><span class="count">(0)</span></li>
+                                        <li><a href="">Brands</a><span class="count">(0)</span></li>
+                                        <li><a href="">Clothing</a><span class="count">(1)</span></li>
+                                        <li><a href="">Fashions</a><span class="count">(21)</span></li>
+                                        <li><a href="">Furniture</a><span class="count">(20)</span></li>
+                                        <li><a href="">Gifts</a><span class="count">(0)</span></li>
+                                        <li><a href="">Kids</a><span class="count">(0)</span></li>
+                                        <li><a href="">Men</a><span class="count">(0)</span></li>
+                                        <li><a href="">New in</a><span class="count">(0)</span></li>
+                                        <li><a href="">Outlet</a><span class="count">(0)</span></li>
+                                        <li><a href="">Shoes</a><span class="count">(0)</span></li>
+                                        <li><a href="">Wallets</a><span class="count">(0)</span></li>
+                                        <li><a href="">Women</a><span class="count">(0)</span></li>
+                                    </ul>
                                 </div>
-                                <div class="user-dashboard-tab__content tab-content">
-                                    <div class="tab-pane fade show active" id="dashboard">
-                                        <p>Hello <strong>John</strong> (not <strong>John</strong>? <a href="login.html">Log out</a>)</p>
-                                        <p>From your account dashboard. you can easily check &amp; view your <a href="">recent orders</a>, manage your <a href="">shipping and billing addresses</a> and <a href="">edit your password and account details</a>.</p>
-                                    </div>
-                                    <div class="tab-pane fade" id="orders">
-                                        <div class="message-box mb--30">
-                                            <p><i class="fa fa-check-circle"></i>挑点好书吧.</p>
-                                            <a href="shop-sidebar.html">Go Shop</a>
-                                        </div>
+                                <!-- Category Widget Start -->
 
-                                        <button  class="btn btn-medium btn-style-1 getOrders" status="0">待发货(<span id="orderStatus0">3</span>)</button>
-                                        <button  class="btn btn-medium btn-style-1 getOrders" status="1">待收货(<span id="orderStatus1">3</span>)</button>
-                                        <button  class="btn btn-medium btn-style-1 getOrders" status="2">待评价(<span id="orderStatus2">3</span>)</button>
-
-                                        <div id="orderLoading" class="loading" style="display: none;margin-top: 100px;margin-bottom: 200px" >
-                                            <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
-                                                <div class="loding-child loding-bounce1"></div>
-                                                <div class="loding-child loding-bounce2"></div>
-                                                <div class="loding-child loding-bounce3"></div>
+                                <!-- Price Filter Widget Start -->
+                                <div class="product-widget product-price-widget">
+                                    <h3 class="widget-title">Price</h3>
+                                    <div class="widget_content">
+                                        <form action="#" method="post">
+                                            <div id="slider-range" class="price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                                <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 16.6667%; width: 79.1667%;">
+                                                    
+                                                </div>
+                                                <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 16.6667%;">
+                                                    
+                                                </span>
+                                                <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 95.8333%;">
+                                                    
+                                                </span>
                                             </div>
-                                        </div>
-                                        <div id="ordersTable" th:fragment="ordersTable" class="table-content table-responsive">
-                                            <table th:if="${orders!=null}"   class="table text-center">
-                                                <thead>
-                                                    <tr>
-                                                        <th>订单编号</th>
-                                                        <th>下单时间</th>
-                                                        <th>订单状态</th>
-                                                        <th>总计</th>
-                                                        <th>操作</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-
-                                                    <div th:each="order,orderStat:${orders}">
-                                                        <tr class="shop-toolbar">
-                                                            <td th:text="${order.id}">1</td>
-                                                            <td class="wide-column" th:text="${order.createtime}">September 19, 2018</td>
-                                                            <td th:text="${order.status}">Processing</td>
-                                                            <td class="wide-column">￥<span th:text="${order.total}"></span> 总计 <span th:text="${order.orderDetails.size()}"></span> 件商品</td>
-                                                            <td><a th:dataTo="'#orderDetail'+${order.id}" class="showOrderDetails shop-toolbar__btn">订单详情</a></td>
-
-                                                        </tr>
-                                                        <tr  th:if="${order.orderDetails}">
-                                                            <td>
-                                                                <div  style="display: none;margin-left: 100px" th:id="'orderDetail'+${order.id}">
-                                                                    <table>
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th>订单编号</th>
-                                                                            <th>下单时间</th>
-                                                                            <th>订单状态</th>
-                                                                            <th>总计</th>
-                                                                            <th>操作</th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                    </table>
-
-                                                                </div>
-                                                            </td>
-
-                                                        </tr>
+                                            <div class="filter-price">
+                                                <div class="filter-price__count">
+                                                    <div class="filter-price__input-group mb--20">
+                                                        <span>Price: </span>
+                                                        <input type="text" id="amount" class="amount-range" readonly="">
                                                     </div>
-
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="downloads">
-                                        <div class="message-box mb--30 d-none">
-                                            <p><i class="fa fa-exclamation-circle"></i>No downloads available yet.</p>
-                                            <a href="/Biri/book/list">Go Shop</a>
-                                        </div>
-                                        <div class="table-content table-responsive">
-                                            <table class="table text-center">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Product</th>
-                                                        <th>Downloads</th>
-                                                        <th>Expires</th>
-                                                        <th>Download</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="wide-column">Airi - Ecommerce Bootstrap Template</td>
-                                                        <td>August 10, 2018 </td>
-                                                        <td class="wide-column">Never</td>
-                                                        <td><a href="#" class="btn btn-medium btn-style-1">Download File</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="wide-column">Airi - Ecommerce Bootstrap Template</td>
-                                                        <td>August 10, 2018 </td>
-                                                        <td class="wide-column">Never</td>
-                                                        <td><a href="#" class="btn btn-medium btn-style-1">Download File</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="addresses">
-                                        <p class="mb--20">The following addresses will be used on the checkout page by default.</p>
-                                        <div class="row">
-                                            <div class="col-md-6 mb-sm--20">
-                                                <div class="text-block">
-                                                    <h4 class="mb--20">Billing address</h4>
-                                                    <a href="">Edit</a>
-                                                    <p>You have not set up this type of address yet.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="text-block">
-                                                    <h4 class="mb--20">Shopping address</h4>
-                                                    <a href="">Edit</a>
-                                                    <p>You have not set up this type of address yet.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="accountdetails">
-                                        <form action="#" class="form form--account">
-                                            <div class="row grid-space-30 mb--20">
-                                                <div class="col-md-6 mb-sm--20">
-                                                    <div class="form__group">
-                                                        <label class="form__label" for="f_name">First name <span class="required">*</span></label>
-                                                        <input type="text" name="f_name" id="f_name" class="form__input">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form__group">
-                                                        <label class="form__label" for="l_name">Last name <span class="required">*</span></label>
-                                                        <input type="text" name="l_name" id="l_name" class="form__input">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb--20">
-                                                <div class="col-12">
-                                                    <div class="form__group">
-                                                        <label class="form__label" for="d_name">Display name <span class="required">*</span></label>
-                                                        <input type="text" name="d_name" id="d_name" class="form__input">
-                                                        <span class="suggestion"><em>This will be how your name will be displayed in the account section and in reviews</em></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb--20">
-                                                <div class="col-12">
-                                                    <div class="form__group">
-                                                        <label class="form__label" for="email">Email Address <span class="required">*</span></label>
-                                                        <input type="email" name="email" id="email" class="form__input">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <fieldset class="form__fieldset mb--20">
-                                                <legend class="form__legend">Password change</legend>
-                                                <div class="row mb--20">
-                                                    <div class="col-12">
-                                                        <div class="form__group">
-                                                            <label class="form__label" for="cur_pass">Current password (leave blank to leave unchanged)</label>
-                                                            <input type="password" name="cur_pass" id="cur_pass" class="form__input">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb--20">
-                                                    <div class="col-12">
-                                                        <div class="form__group">
-                                                            <label class="form__label" for="new_pass">New password (leave blank to leave unchanged)</label>
-                                                            <input type="password" name="new_pass" id="new_pass" class="form__input">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form__group">
-                                                            <label class="form__label" for="conf_new_pass">Confirm new password</label>
-                                                            <input type="password" name="conf_new_pass" id="conf_new_pass" class="form__input">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form__group">
-                                                        <input type="submit" value="Save Changes" class="btn btn-style-1 btn-submit">
-                                                    </div>
+                                                    <button type="submit" class="btn btn-style-1 sidebar-btn">
+                                                        filter
+                                                    </button>
                                                 </div>
                                             </div>
                                         </form>
+                                    </div>
+                                </div>
+                                <!-- Price Filter Widget End -->
+
+                                <!-- Product Size Widget Start -->
+                                <div class="product-widget product-widget--size">
+                                    <h3 class="widget-title">Size</h3>
+                                    <ul class="product-widget__list two-column-list">
+                                        <li><a href="shop-sidebar.html">L</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">S</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">XXl</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">M</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">XL</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">L</a><span class="count">(2)</span></li>
+                                    </ul>
+                                </div>
+                                <!-- Product Size Widget End -->
+
+                                <!-- Product Color Widget Start -->
+                                <div class="product-widget product-widget--Color">
+                                    <h3 class="widget-title">Color</h3>
+                                    <ul class="product-widget__list two-column-list">
+                                        <li><a href="shop-sidebar.html">Blue</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">Pink</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">White</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">Green</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">Red</a><span class="count">(2)</span></li>
+                                    </ul>
+                                </div>
+                                <!-- Product Color Widget End -->
+
+                                <!-- Product Brand Widget Start -->
+                                <div class="product-widget product-widget--brand">
+                                    <h3 class="widget-title">Brands</h3>
+                                    <ul class="product-widget__list">
+                                        <li><a href="shop-sidebar.html">Airi</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">Mango</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">Valention</a><span class="count">(2)</span></li>
+                                        <li><a href="shop-sidebar.html">Zara</a><span class="count">(2)</span></li>
+                                    </ul>
+                                </div>
+                                <!-- Product Brand Widget End -->
+
+                                <!-- Category Widget Start -->
+                                <div class="product-widget tag-widget">
+                                    <h3 class="widget-title">Categories</h3>
+                                    <div class="tagcloud">
+                                        <a href="shop-sidebar.html">chair</a>
+                                        <a href="shop-sidebar.html">deco</a>
+                                        <a href="shop-sidebar.html">dress</a>
+                                        <a href="shop-sidebar.html">fashion</a>
+                                        <a href="shop-sidebar.html">furniture</a>
+                                        <a href="shop-sidebar.html">light</a>
+                                        <a href="shop-sidebar.html">living</a>
+                                        <a href="shop-sidebar.html">sofa</a>
+                                        <a href="shop-sidebar.html">table</a>
+                                        <a href="shop-sidebar.html">women</a>
+                                    </div>
+                                </div>
+                                <!-- Category Widget Start -->
+
+                                <div class="product-widget promo-widget">
+                                    <div class="banner-box banner-type-3 banner-type-3-2 banner-hover-1">
+                                        <div class="banner-inner">
+                                            <div class="banner-image">
+                                                <img src="/assets/img/banner/ad-banner.jpg" alt="Banner">
+                                            </div>
+                                            <div class="banner-info">
+                                                <h2 class="banner-title-11">New <br> <strong>Season</strong></h2>
+                                            </div>
+                                            <a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -520,15 +553,7 @@
                 </button>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="airi-element-carousel product-image-carousel nav-vertical-center nav-style-1"
-                                data-slick-options='{
-                                    "slidesToShow": 1,
-                                    "slidesToScroll": 1,
-                                    "arrows": true,
-                                    "prevArrow": "dl-icon-left",
-                                    "nextArrow": "dl-icon-right"
-                                }'
-                        >
+                        <div class="product-image-carousel nav-vertical-center nav-style-1">
                             <div class="product-image">
                                 <div class="product-image--holder">
                                     <a href="product-details.html">
@@ -569,9 +594,9 @@
                                 </span>
                             </span>
                             <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
-                            <div class="product-action d-flex flex-row align-items-center mb--30 mb-md--20">
+                            <div class="product-action d-flex flex-row align-items-center mb--30">
                                 <div class="quantity">
-                                    <input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">
+                                    <input type="number" class="quantity-input" name="qty" id="qty" value="1" min="1">
                                 </div>
                                 <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
                                     Add To Cart
@@ -579,42 +604,40 @@
                                 <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
                                 <a href="compare.html"><i class="dl-icon-compare2"></i></a>
                             </div>  
-                            <div class="product-extra mb--30 mb-md--20">
+                            <div class="product-extra mb--30">
                                 <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
                                 <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
                             </div>
-                            <div class="product-summary-footer d-flex justify-content-between flex-sm-row flex-column flex-sm-row flex-column">
-                                <div class="product-meta">
-                                    <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
-                                    <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
-                                </div>
-                                <div class="product-share-box">
-                                    <span class="font-size-12">Share With</span>
-                                    <!-- Social Icons Start Here -->
-                                    <ul class="social social-small">
-                                        <li class="social__item">
-                                            <a href="facebook.com" class="social__link">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="twitter.com" class="social__link">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="plus.google.com" class="social__link">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="plus.google.com" class="social__link">
-                                                <i class="fa fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- Social Icons End Here -->
-                                </div>
+                            <div class="product-meta float-left">
+                                <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
+                                <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
+                            </div>
+                            <div class="product-share-box float-right">
+                                <span class="font-size-12">Share With</span>
+                                <!-- Social Icons Start Here -->
+                                <ul class="social social-small">
+                                    <li class="social__item">
+                                        <a href="facebook.com" class="social__link">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="twitter.com" class="social__link">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="plus.google.com" class="social__link">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="plus.google.com" class="social__link">
+                                            <i class="fa fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Social Icons End Here -->
                             </div>
                         </div>
                     </div>
@@ -629,12 +652,12 @@
 
     </div>
     <!-- Main Wrapper End -->
-    <script src="/assets/js/vendor/jquery.min.js"></script>
+
 
     <!-- ************************* JS Files ************************* -->
 
     <!-- jQuery JS -->
-
+    <script src="/assets/js/vendor/jquery.min.js"></script>
 
     <!-- Bootstrap and Popper Bundle JS -->
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
@@ -665,29 +688,7 @@
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
-    <script src="/assets/js/myJS.js"></script>
-
-    <script th:inline="javascript">
-        window.onload = function (ev){
-            $(document).on('click', '.getOrders', function () {
-                var status = $(this).attr("status");
-
-                $("#orderLoading").css("display","")
-                var url = '/Biri/order?status='+status;
-                $("#ordersTable").load(url,function () {
-                    $("#orderLoading").css("display","none")
-                })
-
-
-            })
-            $(document).on('click', '.showOrderDetails', function () {
-
-                var orderDetailsId = $(this).attr("dataTo");
-                $(orderDetailsId).slideToggle('slow')
-            })
-
-        }
-    </script>
+    
 </body>
 
 </html>

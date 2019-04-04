@@ -420,7 +420,7 @@
 			e.preventDefault();
 			e.stopPropagation();
 			$(this).toggleClass('open');
-			$('.advanced-product-filters').slideToggle('slow');
+			$($(this).attr("dataTo")).slideToggle('slow');
 		});
 	}
 

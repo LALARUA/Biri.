@@ -13,6 +13,15 @@ public class BookEnhanced extends BookWithBLOBs {
     private List<Author> authors;
     private List<Tag> tags;
     private List<BookWithImagePath> imagePaths;
+    private String hotComment;
+
+    public String getHotComment() {
+        return hotComment;
+    }
+
+    public void setHotComment(String hotComment) {
+        this.hotComment = hotComment;
+    }
 
     public List<BookWithImagePath> getImagePaths() {
         return imagePaths;

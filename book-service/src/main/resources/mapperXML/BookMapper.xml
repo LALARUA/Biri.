@@ -25,6 +25,9 @@
     <result column="publisher" jdbcType="VARCHAR" property="publisher" />
     <result column="price" jdbcType="DOUBLE" property="price" />
      <result column="score" jdbcType="DOUBLE" property="score" />
+    <result column="hotComment" jdbcType="VARCHAR" property="hotComment" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="stock" jdbcType="INTEGER" property="stock" />
 
     <collection property="imagePaths" ofType="cn.zx.biri.common.pojo.entry.BookWithImagePath">
       <id column="imagePathId" jdbcType="INTEGER" property="id" />
@@ -66,6 +69,7 @@
       book.title AS title,
       book.publisher AS publisher,
       book.price AS price,
+      book.stock AS stock,
       author.id AS authorId,
       author.`name` AS authorName,
       book.score AS score,
@@ -74,10 +78,64 @@
       tag.fatherId AS tagFatherId,
       bookWithImagePath.id AS imagePathId,
       bookWithImagePath.bookImagePath AS imagePath,
-      bookWithImagePath.status AS imagePathStatus
+      bookWithImagePath.status AS imagePathStatu,
+      book.summary AS summary,
+      tab2.detail AS hotComment
   </sql>
 
+  <sql id="selectBookIdByCondition">
+    SELECT A.bookId FROM
+    (
+    SELECT book.id AS bookId 
+    from book 
+    <where>
+      <if test="currentBookIds != null and currentBookIds.size>0">
+        AND id IN
+        <foreach close=")" collection="currentBookIds" item="bookId" open="(" separator=",">
+              #{bookId}
+        </foreach>
+      </if>
+      <if test="keyword != null and currentBookIds == null">
+        AND keyword LIKE "%"#{keyword}"%"
+      </if>
+      <if test="publisher != null">
+        AND publisher = #{publisher}
+      </if>
+    </where>
+    ) AS A
+    <if test="authorId != null">
+      INNER JOIN
+      (select bookId
+      from bookWithAuthor
+      WHERE bookWithAuthor.authorId = #{authorId}) AS B
+      ON A.bookId = B.bookId
+    </if>
+    <if test="tagIds != null and tagIds.size > 0">
+      INNER JOIN
+      (
+      SELECT bookId FROM
+      <trim prefix="(" suffix=")" suffixOverrides="UNION ALL">
+        <foreach  collection="tagIds" item="item" separator="UNION ALL">
+         SELECT bookId FROM bookWithTag WHERE tagId = #{item}
+        </foreach>
+      </trim>
+       AS bookIds
+      GROUP BY bookIds.bookId HAVING COUNT(*) = ${tagIds.size}) AS C
+      ON A.bookId = C.bookId
+    </if>
+    <if test="status != null">
+      INNER JOIN
+      (
+      SELECT bookWithStatus.bookId AS bookId
+      FROM bookWithStatus
+      WHERE bookWithStatus.`status` = #{status}) AS D
+      ON A.bookId = D.bookId
+    </if>
+  </sql>
 
+  <select id="selectBookCount" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultType="java.lang.Integer">
+    <include refid="selectBookIdByCondition"></include>
+  </select>
   <sql id="selectBookDetailSql">
     <include refid="selectBookListDisplayFieldSql"/>
     ,
@@ -158,9 +216,33 @@
   </sql>
 
     <sql id="selectBookListFromSql">
-        from book INNER JOIN bookWithAuthor ON book.id = bookWithAuthor.bookId
-    INNER JOIN author ON bookWithAuthor.authorId = author.id INNER JOIN bookWithTag ON
-    bookWithTag.bookId = book.id INNER JOIN tag ON bookWithTag.tagId = tag.id INNER JOIN bookWithImagePath ON book.id = bookWithImagePath.bookId
+        from book
+        INNER JOIN bookWithAuthor
+        ON book.id = bookWithAuthor.bookId
+    INNER JOIN author
+    ON bookWithAuthor.authorId = author.id
+    INNER JOIN bookWithTag
+    ON bookWithTag.bookId = book.id
+    INNER JOIN tag
+    ON bookWithTag.tagId = tag.id
+    INNER JOIN bookWithImagePath
+    ON book.id = bookWithImagePath.bookId
+    LEFT JOIN (
+          SELECT
+          MAX(count),bookId,detail,commentId
+          FROM
+          (SELECT
+          COUNT(*) AS count,
+          bookId,
+          detail,
+          commentId
+          from `comment`,
+          commentSupport
+           WHERE `comment`.id = commentSupport.commentId
+           GROUP BY commentId) AS tab1
+           GROUP BY bookId) AS tab2
+           ON book.id = tab2.bookId
+
       </sql>
   <sql id="selectBookListWhereSql">
         <where>
@@ -189,23 +271,55 @@
     </sql>
     
   <select id="selectBookList" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultMap="BookListDisplay">
+
+
     <include refid="selectBookListDisplayFieldSql"/>
     <include refid="selectBookListFromSql"/>
-    WHERE book.id IN (SELECT b.id FROM (SELECT book.id AS id
-    <include refid="selectBookListFromSql"/>
-    <include refid="selectBookListWhereSql"/>
-    GROUP BY id limit #{start},12) AS b
+    WHERE book.id IN (SELECT id FROM (
+    SELECT id FROM book where id IN
+    (
+    <include refid="selectBookIdByCondition"/>
+    )
+    <if test="orderBy != null">
+      ORDER  BY #{orderBy} DESC
+    </if>
+    limit #{start},12) AS result
     )
 
   </select>
     <select id="selectBookCountByCondition" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultType="java.lang.Integer">
-        SELECT COUNT(*) FROM ( SELECT book.id
-        <include refid="selectBookListFromSql"/>
-      <include refid="selectBookListWhereSql"/>
-      GROUP BY book.id) AS result;
+        SELECT COUNT(*) FROM (
+        <include refid="selectBookIdByCondition"></include>
+        ) AS result
     </select>
 
 
+  <select id="filterPublisher" parameterType="java.util.List" resultType="java.lang.String">
+    SELECT DISTINCT publisher
+    FROM book
+    WHERE id IN
+    <foreach collection="list" open="(" close=")" item="bookId" separator=",">
+      #{bookId}
+    </foreach>
+  </select>
+
+  <select id="filterAuthor" parameterType="java.util.List" resultType="cn.zx.biri.common.pojo.entry.Author">
+    SELECT DISTINCT author.id AS id,author.name AS name
+    FROM author,bookWithAuthor
+    WHERE author.id = bookWithAuthor.authorId AND
+    bookWithAuthor.bookId IN
+    <foreach collection="list" open="(" close=")" item="bookId" separator=",">
+      #{bookId}
+    </foreach>
+  </select>
+  <select id="filterTag" parameterType="java.util.List" resultType="cn.zx.biri.common.pojo.entry.Tag">
+    SELECT DISTINCT tag.id AS id,tag.name AS name from tag,bookWithTag
+    WHERE tag.id = bookWithTag.tagId AND bookId IN
+    <foreach collection="list" open="(" close=")" item="bookId" separator=",">
+      #{bookId}
+    </foreach>
+    AND tag.id != 148
+  </select>
   <select id="selectBookDetail" parameterType="java.lang.Integer" resultMap="BookDetail">
     <include refid="selectBookDetailSql"/>
     from book,author,tag,bookWithTag,bookWithAuthor,bookWithImagePath WHERE book.id = bookWithAuthor.bookId and
@@ -249,6 +363,14 @@
     from book
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="getBookForUpdate" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from book
+    where id = #{bookId,jdbcType=INTEGER} FOR UPDATE;
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book
     where id = #{id,jdbcType=INTEGER}
@@ -261,12 +383,12 @@
   </delete>
   <insert id="insert" parameterType="cn.zx.biri.common.pojo.entry.BookWithBLOBs">
     insert into book (id, title, imagePath,
-      publisher, price, isbn, 
+      publisher, price, isbn,
       putaway, sales, stock
     , publishDate, score,
       summary, catalog)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{imagePath,jdbcType=VARCHAR},
-      #{publisher,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{isbn,jdbcType=BIGINT}, 
+      #{publisher,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{isbn,jdbcType=BIGINT},
       #{putaway,jdbcType=DATE}, #{sales,jdbcType=INTEGER}, #{stock,jdbcType=INTEGER}, 
        #{publishDate,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE},
       #{summary,jdbcType=LONGVARCHAR}, #{catalog,jdbcType=LONGVARCHAR})
