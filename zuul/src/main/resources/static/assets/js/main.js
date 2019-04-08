@@ -89,6 +89,21 @@
 			$('.main-navigation').removeClass('open-mobile-menu');
 			$('.dl-menu').removeClass('dl-menuopen');
 			$('.menu-btn').removeClass('open');
+
+			if (target=="#miniCart"&&$(this).attr("flag")==0){
+				var url = "/Biri/user/miniCart"
+				$("#miniCartContent").load(url,function () {
+                    $(this).attr("flag")==1
+                    var prices = $(".miniCartBookPrice");
+                    var bookNums = $(".miniCartBookNum")
+                    var total = 0;
+
+                    for (var i = 0;i<prices.length;i++){
+                        total+=parseInt(prices.eq(i).text())*bookNums.eq(i).text();
+                    }
+                    $("#miniCartTotal").text(total)
+                })
+			}
 		});
 	}
 

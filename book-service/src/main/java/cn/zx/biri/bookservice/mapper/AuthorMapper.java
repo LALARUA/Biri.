@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface AuthorMapper {
+    List<Author> getAllAuthors();
+
     long countByExample(AuthorExample example);
 
     int deleteByExample(AuthorExample example);

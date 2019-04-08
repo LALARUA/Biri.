@@ -134,7 +134,7 @@
                                                 <tbody>
 
                                                     <div th:each="order,orderStat:${orders}">
-                                                        <tr class="shop-toolbar">
+                                                        <tr>
                                                             <td th:text="${order.id}">1</td>
                                                             <td class="wide-column" th:text="${order.createtime}">September 19, 2018</td>
                                                             <td th:text="${order.status}">Processing</td>
@@ -143,23 +143,44 @@
 
                                                         </tr>
                                                         <tr  th:if="${order.orderDetails}">
-                                                            <td>
+                                                            <td colspan="5">
                                                                 <div  style="display: none;margin-left: 100px" th:id="'orderDetail'+${order.id}">
-                                                                    <table>
+                                                                    <table class="table table-style-2">
                                                                         <thead>
                                                                         <tr>
-                                                                            <th>订单编号</th>
-                                                                            <th>下单时间</th>
-                                                                            <th>订单状态</th>
-                                                                            <th>总计</th>
-                                                                            <th>操作</th>
+                                                                            <th>&nbsp;</th>
+                                                                            <th class="text-left">商品</th>
+                                                                            <th>数量</th>
+                                                                            <th>Price</th>
+                                                                            <th>&nbsp;</th>
                                                                         </tr>
                                                                         </thead>
-                                                                    </table>
+                                                                        <tbody>
+                                                                        <tr th:each="orderDetail,orderDetailStat:${order.orderDetails}">
+                                                                            <td class="product-thumbnail text-left">
+                                                                                <img th:src="'/bookImg/'+${orderDetail.book.imagePath}" alt="Product Thumnail">
+                                                                            </td>
+                                                                            <td class="product-name text-left wide-column">
+                                                                                <h3>
+                                                                                    <a th:href="'/Biri/book/detail/'+${orderDetail.bookId}" th:text="${orderDetail.book.title}"></a>
+                                                                                </h3>
+                                                                            </td>
+                                                                            <td class="product-stock" th:text="${orderDetail.bookNum}">
 
+                                                                            </td>
+                                                                            <td class="product-price">￥
+                                                <span class="product-price-wrapper">
+                                                    <span class="money" th:text="${orderDetail.summoney}"></span>
+                                                </span>
+                                                                            </td>
+                                                                            <!--<td class="product-action-btn">-->
+                                                                                <!--<a href="cart.html">Add to cart</a>-->
+                                                                            <!--</td>-->
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
                                                                 </div>
                                                             </td>
-
                                                         </tr>
                                                     </div>
 
@@ -673,7 +694,7 @@
                 var status = $(this).attr("status");
 
                 $("#orderLoading").css("display","")
-                var url = '/Biri/order?status='+status;
+                var url = '/Biri/user/order?status='+status;
                 $("#ordersTable").load(url,function () {
                     $("#orderLoading").css("display","none")
                 })

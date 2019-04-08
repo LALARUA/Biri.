@@ -72,6 +72,9 @@
   <sql id="Blob_Column_List">
     introduction
   </sql>
+  <select id="getAllAuthors"  resultMap="BaseResultMap">
+    select id,name from author
+  </select>
   <select id="selectByExampleWithBLOBs" parameterType="cn.zx.biri.common.pojo.example.AuthorExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">

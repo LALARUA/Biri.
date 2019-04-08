@@ -63,11 +63,12 @@ public class CartController {
             cart.setBookId(bookInCart.getId());
             cart.setNumber(bookInCart.getBookNum());
             cart.setUserId(user.getId());
+
             cartService.insertBookInCart(cart);
-            bookInCart.setCartId(cart.getId());
-            Map<Integer, BookInCart> collect = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
-            collect.put(bookInCart.getCartId(),bookInCart);
-            httpSession.setAttribute("cart",collect);
+//            bookInCart.setCartId(cart.getId());
+//            Map<Integer, BookInCart> collect = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
+//            collect.put(bookInCart.getCartId(),bookInCart);
+//            httpSession.setAttribute("cart",collect);
             return String.valueOf(cart.getId());
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,9 +81,9 @@ public class CartController {
     public String deleteBookInCarts(Integer cartId, HttpSession httpSession){
         try {
             cartService.deleteCart(cartId);
-            Map<Integer,BookInCart> cart = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
-            cart.remove(cartId);
-            httpSession.setAttribute("cart",cart);
+//            Map<Integer,BookInCart> cart = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
+//            cart.remove(cartId);
+//            httpSession.setAttribute("cart",cart);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -90,14 +91,14 @@ public class CartController {
     }
 
     @PutMapping("cart")
-    public String updateBookInCarts(Cart cart,HttpSession httpSession){
+    public String updateBookInCarts(Cart cart){
         try {
             cartService.updateCart(cart);
-            Map<Integer,BookInCart> cartInSession = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
-            BookInCart bookInCart = cartInSession.get(cart.getId());
-            bookInCart.setBookNum(cart.getNumber());
-            cartInSession.put(cart.getId(),bookInCart);
-            httpSession.setAttribute("cart",cartInSession);
+//            Map<Integer,BookInCart> cartInSession = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
+//            BookInCart bookInCart = cartInSession.get(cart.getId());
+//            bookInCart.setBookNum(cart.getNumber());
+//            cartInSession.put(cart.getId(),bookInCart);
+//            httpSession.setAttribute("cart",cartInSession);
         } catch (Exception e) {
             e.printStackTrace();
         }

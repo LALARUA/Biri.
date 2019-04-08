@@ -3,15 +3,13 @@ package cn.zx.biri.bookservice.service.serviceImpl;
 import cn.zx.biri.bookservice.config.MyProperties;
 import cn.zx.biri.bookservice.feignService.CommentService;
 import cn.zx.biri.bookservice.mapper.BookMapper;
+import cn.zx.biri.bookservice.service.AuthorService;
 import cn.zx.biri.bookservice.service.BookService;
 import cn.zx.biri.bookservice.service.TagService;
 import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
 import cn.zx.biri.common.pojo.entry.Tag;
-import cn.zx.biri.common.pojo.response.BookDetail;
-import cn.zx.biri.common.pojo.response.BookEnhanced;
-import cn.zx.biri.common.pojo.response.BookInCart;
-import cn.zx.biri.common.pojo.response.FilterBookCondition;
+import cn.zx.biri.common.pojo.response.*;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -37,6 +35,9 @@ public class BookServiceImpl implements BookService{
     CommentService commentService;
     @Autowired
     MyProperties myProperties;
+
+    @Autowired
+    AuthorService authorService;
 
     @Autowired
     TagService tagService;
@@ -98,7 +99,7 @@ public class BookServiceImpl implements BookService{
 
         Map map = commentService.selectBookCommentsFirst(bookId, currentUserId);
         String catalog = bookDetail.getCatalog();
-        String[] catalogs = catalog.split(" ");
+        String[] catalogs = catalog.split(" |\r\n");
         bookDetail.setCatalogs(new ArrayList<String>(Arrays.asList(catalogs)));
         bookDetail.setTagLinks(tagService.tagLink(bookDetail.getTags()));
         bookDetail.setCommentCount((Integer) map.get("commentCount"));
@@ -134,7 +135,19 @@ public class BookServiceImpl implements BookService{
         return 0;
     }
 
+    @Override
+    public Map shelvesBook() {
+        Map map = new HashMap();
 
+        Map head = tagService.getHead();
+        List<Author> allAuthors = authorService.getAllAuthors();
+
+        map.put("tagHead",head.get("tagHead"));
+        map.put("authors",allAuthors);
+        map.put("tagMap",head.get("tagMap"));
+
+        return map;
+    }
 
 
 }

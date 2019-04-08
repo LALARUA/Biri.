@@ -28,7 +28,6 @@ public class BookServiceApplication {
 
 
 	public static void main(String[] args) {
-		LinkedHashMap linkedHashMap = new LinkedHashMap();
 
 
 		SpringApplication.run(BookServiceApplication.class, args);

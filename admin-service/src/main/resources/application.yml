@@ -1,0 +1,38 @@
+server:
+  port: 8007
+spring:
+  application:
+    name: admin-service
+  redis:
+    host: 47.106.215.35
+    port: 6379
+  session:
+    store-type: redis
+  rabbitmq:
+    host: 47.106.215.35
+    username: guest
+    password: guest
+    port: 5672
+
+    #数据库配置
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      url: jdbc:mysql://47.106.215.35:3306/Airi?useUnicode=true&characterEncoding=utf-8
+#  cache:
+#    redis:
+#      time-to-live: 300s
+mybatis:
+    mapper-locations: classpath:/mapperXML/*.xml
+    configuration:
+      cache-enabled: true
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务时使用服务的ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+ribbon:
+  ReadTimeout: 100000
+  ConnectTimeout: 100000

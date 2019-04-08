@@ -25,13 +25,13 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+
     @PostMapping("order")
     public String postOrder(@RequestBody OrderVO order, HttpSession httpSession){
 
-        Map<Integer,BookInCart> cart = (Map<Integer, BookInCart>) httpSession.getAttribute("cart");
+
         User user = (User) httpSession.getAttribute("user");
         order.setUserId(user.getId());
-        order.setOrderDetails(cart);
         try {
             if (orderService.postOrder(order)==-1)
                 return "error";

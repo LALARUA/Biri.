@@ -713,7 +713,6 @@ display: -webkit-box;
     <script th:inline="javascript">
         window.onload = function (ev){
             var tagHTML = [[${tagsHTML}]];
-            initCartTotal();
             var condition = [[${selectBook}]];
 
             $("#replace").replaceWith(tagHTML)
@@ -878,55 +877,7 @@ display: -webkit-box;
                 $("#modalAuthor").text(authorName);
                 $("#modalAuthor").attr("href",'/Biri/book/list?authorName='+authorName+"&authorId="+authorId);
             })
-            $(document).on('click', '.addBookToCart', function () {
-                var bookId = $(this).attr("bookId");
-                var price = $(this).attr("price");
-                var title = $(this).attr("bookName");
-                var imagePath = $(this).attr("imagePath");
-                return
-                var stock = $(this).attr("stock");
-                $.ajax({
-                    url: "/orderCart/cart",
-                    type: 'post', //
-                    async: true,    //或false,是否异步
-                    data: JSON.stringify({
-                        id:bookId,
-                        price:price,
-                        title:title,
-                        imagePath:imagePath,
-                        stock:stock,
-                        bookNum:1,
-                    }),
-                    contentType:"application/json;charset=utf-8",
-                    timeout: 50000,    //超时时间
-                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
-                    success: function (data) {
-                        if (data=='mustLogin'){
-                            window.location.href = '/Biri/login';
-                        }
-                        else if (data='success'){
-                            $("#miniCart .mini-cart__list").eq(0).append(" <li  class=\"mini-cart__product\">\n" +
-                                "                        <a  cartId="+data+" href=\"#\" class=\"miniCartDeleteBook remove-from-cart remove\">\n" +
-                                "                            <i class=\"dl-icon-close\"></i>\n" +
-                                "                        </a>\n" +
-                                "                        <div class=\"mini-cart__product__image\">\n" +
-                                "                            <img src=\"/bookImg/"+imagePath+"\" alt=\"products\">\n" +
-                                "                        </div>\n" +
-                                "                        <div class=\"mini-cart__product__content\">\n" +
-                                "                            <a class=\"mini-cart__product__title\" href=\"'/Biri/book/detail/'"+bookId+"\">"+title+" </a>\n" +
-                                "                            <span class=\"mini-cart__product__quantity\" ><span  class=\"miniCartBookNum\">1</span> x ￥<span class=\"miniCartBookPrice\">"+price+"</span></span>\n" +
-                                "                        </div>\n" +
-                                "                    </li>")
-                            $("#miniCartCount").eq(0).text( parseInt($("#miniCartCount").text())+1);
-                        }
 
-                    },
-                    error: function (data) {
-
-                    }
-                })
-
-            })
             $(document).on('click', '.addBookToWishList', function () {
                 var bookId = $(this).attr("bookId");
                 $.ajax({
@@ -949,7 +900,9 @@ display: -webkit-box;
 
 
             })
-
+            $(document).on('click', '#loadCart', function () {
+                    alert(5)
+            })
 
             $(document).on('click', '.pageBtn', function () {
                 var current = $(this);
@@ -1003,6 +956,7 @@ display: -webkit-box;
 
     <!-- jQuery JS -->
     <script src="/assets/js/vendor/jquery.min.js"></script>
+    <script src="/assets/js/myJS.js"></script>
 
     <!-- Bootstrap and Popper Bundle JS -->
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
@@ -1033,7 +987,7 @@ display: -webkit-box;
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
-    <script src="/assets/js/myJS.js"></script>
+
 </body>
 
 </html>

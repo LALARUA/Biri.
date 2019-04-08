@@ -42,11 +42,11 @@ public class Book implements Serializable{
         this.title = title == null ? null : title.trim();
     }
 
-    public String getimagePath() {
+    public String getImagePath() {
         return imagePath;
     }
 
-    public void setimagePath(String imagePath) {
+    public void setImagePath(String imagePath) {
         this.imagePath = imagePath == null ? null : imagePath.trim();
     }
 

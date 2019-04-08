@@ -79,8 +79,8 @@
       bookWithImagePath.id AS imagePathId,
       bookWithImagePath.bookImagePath AS imagePath,
       bookWithImagePath.status AS imagePathStatu,
-      book.summary AS summary,
-      tab2.detail AS hotComment
+      book.summary AS summary
+
   </sql>
 
   <sql id="selectBookIdByCondition">
@@ -216,6 +216,7 @@
   </sql>
 
     <sql id="selectBookListFromSql">
+    ,tab2.detail AS hotComment
         from book
         INNER JOIN bookWithAuthor
         ON book.id = bookWithAuthor.bookId

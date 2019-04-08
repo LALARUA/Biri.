@@ -1,6 +1,9 @@
 package cn.zx.biri.bookservice.controller;
 
 import cn.zx.biri.bookservice.service.TagService;
+import cn.zx.biri.common.pojo.entry.Tag;
+
+import cn.zx.biri.common.pojo.response.NewTag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,5 +23,6 @@ public class TagController {
     public String allTags(){
         return tagService.getAllTagHTML();
     }
+
 
 }

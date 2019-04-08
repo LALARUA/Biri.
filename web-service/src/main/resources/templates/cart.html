@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/assets/img/icon.png">
 
     <!-- Title -->
-    <title>Airi - Clean, Minimal eCommerce Bootstrap 4 Template</title>
+    <title>Airi - 购物车</title>
 
     <!-- ************************* CSS Files ************************* -->
 
@@ -107,29 +107,29 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr th:each="entry,entryStat:${session.cart}">
-                                                        <td class="product-remove text-left"><a href="#"><i class="dl-icon-close deleteBookInCart" th:cartId="${entry.value.cartId}"></i></a></td>
+                                                    <tr th:each="entry,entryStat:${cart}">
+                                                        <td class="product-remove text-left"><a href="#"><i class="dl-icon-close deleteBookInCart" th:cartId="${entry.cartId}"></i></a></td>
                                                         <td class="product-thumbnail text-left">
-                                                            <img th:src="'/bookImg/'+${entry.value.getimagePath()}" alt="Product Thumnail">
+                                                            <img th:src="'/bookImg/'+${entry.imagePath}" alt="Product Thumnail">
                                                         </td>
                                                         <td class="product-name text-left wide-column">
                                                             <h3>
-                                                                <a href="product-details.html" th:text="${entry.value.title}">Super skinny blazer</a>
+                                                                <a href="product-details.html" th:text="${entry.title}">Super skinny blazer</a>
                                                             </h3>
                                                         </td>
                                                         <td class="product-price">
                                                             <span class="product-price-wrapper">
-                                                                ￥<span class="money bookPrice"  th:text="${entry.value.price}">49.00</span>
+                                                                ￥<span class="money bookPrice"  th:text="${entry.price}">49.00</span>
                                                             </span>
                                                         </td>
                                                         <td class="product-quantity">
-                                                            <div class="quantity" th:cartId="${entry.value.cartId}">
-                                                                <input type="number" class="quantity-input bookNum" name="qty" id="qty-1" th:value="${entry.value.bookNum}" value="1" min="1">
+                                                            <div class="quantity" th:cartId="${entry.cartId}">
+                                                                <input type="number" class="quantity-input bookNum" name="qty" id="qty-1" th:value="${entry.bookNum}" value="1" min="1">
                                                             </div>
                                                         </td>
                                                         <td class="product-total-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money"><strong>￥<span class="total" th:text="${entry.value.price*entry.value.bookNum}"></span></strong></span>
+                                                                <span class="money"><strong>￥<span class="total" th:text="${entry.price*entry.bookNum}"></span></strong></span>
                                                             </span>
                                                         </td>
                                                     </tr>
@@ -281,7 +281,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                <a href="/Biri/checkout" class="btn btn-fullwidth btn-style-1">
+                                <a href="/Biri/user/checkout" class="btn btn-fullwidth btn-style-1">
                                     前去结账
                                 </a>
                             </div>

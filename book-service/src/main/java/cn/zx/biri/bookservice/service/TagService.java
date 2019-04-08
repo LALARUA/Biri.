@@ -1,9 +1,12 @@
 package cn.zx.biri.bookservice.service;
 
 import cn.zx.biri.common.pojo.entry.Tag;
+
+import cn.zx.biri.common.pojo.response.NewTag;
 import cn.zx.biri.common.utils.HandleBookTagUtils;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: xiangXX
@@ -13,4 +16,5 @@ import java.util.List;
 public interface TagService {
      List<List<Tag>> tagLink(List<Tag> tags);
      String getAllTagHTML();
+     Map getHead();
 }

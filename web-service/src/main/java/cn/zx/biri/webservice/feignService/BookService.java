@@ -1,8 +1,12 @@
 package cn.zx.biri.webservice.feignService;
 
+import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.entry.Tag;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
+
+import cn.zx.biri.common.pojo.response.NewTag;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
@@ -20,10 +24,10 @@ import java.util.Map;
  */
 @FeignClient(value = "book-service")
 public interface BookService {
-    @GetMapping(value = "bookList",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "bookList", consumes = MediaType.APPLICATION_JSON_VALUE)
     Map bookList(@RequestBody SelectBook condition);
 
-    @GetMapping(value = "bookListByPage",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "bookListByPage", consumes = MediaType.APPLICATION_JSON_VALUE)
     List<BookEnhanced> bookListByPage(@RequestBody SelectBook condition);
 
     @GetMapping("bookDetail")
@@ -33,3 +37,5 @@ public interface BookService {
     @GetMapping("allTags")
     String tagsHTML();
 }
+
+

@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/assets/img/icon.png">
 
     <!-- Title -->
-    <title>Airi - Clean, Minimal eCommerce Bootstrap 4 Template</title>
+    <title>Airi - 愿望清单</title>
 
     <!-- ************************* CSS Files ************************* -->
 
@@ -58,7 +58,7 @@
         <!-- Header Area Start -->
 
         <header class="header header-fullwidth header-style-1">
-            <div th:replace="~{commonbar::topbar(activeUrl='cart')}"></div>
+            <div th:replace="~{commonbar::topbar}"></div>
         </header>
 
         <div th:replace="~{commonbar::mobiletopbar}"></div>
@@ -98,101 +98,36 @@
                                         <tr>
                                             <th>&nbsp;</th>
                                             <th>&nbsp;</th>
-                                            <th class="text-left">Product</th>
-                                            <th>Stock Status</th>
-                                            <th>Price</th>
+                                            <th class="text-left">图书</th>
+                                            <th>库存情况</th>
+                                            <th>价格</th>
                                             <th>&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
+                                        <tr th:each="wish:${wishList}">
+                                            <td class="product-remove text-left"><a th:wishId="${wish.id}"><i class="deleteWishBtn dl-icon-close"></i></a></td>
                                             <td class="product-thumbnail text-left">
-                                                <img src="/assets/img/products/prod-14-2-70x81.jpg" alt="Product Thumnail">
+                                                <img th:src="'/bookImg/'+${wish.book.imagePath}" alt="Product Thumnail">
                                             </td>
                                             <td class="product-name text-left wide-column">
                                                 <h3>
-                                                    <a href="product-details.html">Super skinny blazer</a>
+                                                    <a th:href="'/Biri/book/detail/'+${wish.book.id}" th:text="${wish.book.title}">Super skinny blazer</a>
                                                 </h3>
                                             </td>
-                                            <td class="product-stock">
+                                            <td class="product-stock" th:text="${wish.book.stock}>0 ? '有货' : '无货'">
                                                 In Stock
                                             </td>
                                             <td class="product-price">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">$49.00</span>
+                                                    ￥<span class="money" th:text="${wish.book.price}">49.00</span>
                                                 </span>
                                             </td>
                                             <td class="product-action-btn">
-                                                <a href="cart.html">Add to cart</a>
+                                                <a  th:price="${wish.book.price}" th:title="${wish.book.title}" th:imagePath="${wish.book.imagePath}" th:stock="${wish.book.stock}" class="addBookToCart" th:bookId="${wish.book.id}">添加进购物车</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
-                                            <td class="product-thumbnail text-left">
-                                                <img src="/assets/img/products/prod-9-1-70x81.jpg" alt="Product Thumnail">
-                                            </td>
-                                            <td class="product-name text-left wide-column">
-                                                <h3>
-                                                    <a href="product-details.html"> Jogging trousers</a>
-                                                </h3>
-                                            </td>
-                                            <td class="product-stock">
-                                                In Stock
-                                            </td>
-                                            <td class="product-price">
-                                                <span class="product-price-wrapper">
-                                                    <span class="money">$49.00</span>
-                                                </span>
-                                            </td>
-                                            <td class="product-action-btn">
-                                                <a href="cart.html">Add to cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
-                                            <td class="product-thumbnail text-left">
-                                                <img src="/assets/img/products/prod-10-1-70x81.jpg" alt="Product Thumnail">
-                                            </td>
-                                            <td class="product-name text-left wide-column">
-                                                <h3>
-                                                    <a href="product-details.html"> Grey blue leather backpack</a>
-                                                </h3>
-                                            </td>
-                                            <td class="product-stock">
-                                                In Stock
-                                            </td>
-                                            <td class="product-price">
-                                                <span class="product-price-wrapper">
-                                                    <span class="money">$49.00</span>
-                                                </span>
-                                            </td>
-                                            <td class="product-action-btn">
-                                                <a href="cart.html">Add to cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-remove text-left"><a href=""><i class="dl-icon-close"></i></a></td>
-                                            <td class="product-thumbnail text-left">
-                                                <img src="/assets/img/products/prod-11-1-70x81.jpg" alt="Product Thumnail">
-                                            </td>
-                                            <td class="product-name text-left wide-column">
-                                                <h3>
-                                                    <a href="product-details.html">Dress with belt</a>
-                                                </h3>
-                                            </td>
-                                            <td class="product-stock">
-                                                In Stock
-                                            </td>
-                                            <td class="product-price">
-                                                <span class="product-price-wrapper">
-                                                    <span class="money">$49.00</span>
-                                                </span>
-                                            </td>
-                                            <td class="product-action-btn">
-                                                <a href="cart.html">Add to cart</a>
-                                            </td>
-                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>  
@@ -661,7 +596,7 @@
 
     <!-- Bootstrap and Popper Bundle JS -->
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
-
+    <script src="/assets/js/myJS.js"></script>
     <!-- All Plugins Js -->
     <script src="/assets/js/plugins.js"></script>
 
@@ -688,6 +623,22 @@
 
     <!-- REVOLUTION ACTIVE JS FILES -->
     <script src="/assets/js/revoulation.js"></script>
+    <script th:inline="javascript">
+        window.onload = function (ev){
+            $(document).on('click', '.deleteWishBtn', function () {
+                var wishId = $(this).attr("wishId");
+                var parent = $(this).parent().parent().parent();
+                parent.remove();
+            })
+            $(document).on('click', '.deleteWishBtn', function () {
+                var wishId = $(this).attr("wishId");
+                var parent = $(this).parent().parent().parent();
+                parent.remove();
+            })
+
+
+        }
+    </script>
     
 </body>
 

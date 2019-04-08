@@ -6,6 +6,15 @@
     <result column="userId" jdbcType="INTEGER" property="userId" />
     <result column="bookId" jdbcType="INTEGER" property="bookId" />
   </resultMap>
+  <resultMap id="UserWishList" extends="BaseResultMap" type="cn.zx.biri.common.pojo.response.UserWishList">
+    <association property="book" javaType="cn.zx.biri.common.pojo.entry.Book">
+      <id column="bookId" jdbcType="INTEGER" property="id" />
+      <result column="title" jdbcType="VARCHAR" property="title" />
+      <result column="imagePath" jdbcType="VARCHAR" property="imagePath" />
+      <result column="price" jdbcType="DOUBLE" property="price" />
+      <result column="stock" jdbcType="INTEGER" property="stock" />
+    </association>
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -67,6 +76,16 @@
   <sql id="Base_Column_List">
     id, userId, bookId
   </sql>
+
+  <select id="getWishList" parameterType="java.lang.Integer" resultMap="UserWishList">
+SELECT wishlist.id AS id,
+				book.id as bookId,
+				book.title AS title,
+				book.imagePath as imagePath,
+				book.stock AS stock,
+				book.price AS price
+ FROM wishlist,book WHERE book.id = wishlist.bookId AND userId = #{userId}
+  </select>
   <select id="selectByExample" parameterType="cn.zx.biri.common.pojo.example.WishListExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

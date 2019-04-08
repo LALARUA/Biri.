@@ -6,6 +6,7 @@ import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.response.BookInCart;
 import cn.zx.biri.common.pojo.vo.SelectBook;
+import cn.zx.biri.common.pojo.vo.ShelvesBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,6 +51,19 @@ public class BookController {
         } catch (Exception e) {
             return -1;
         }
+    }
+
+    @GetMapping("shelvesBook")
+    public Map shelvesBook(){
+       return bookService.shelvesBook();
+
+
+    }
+
+    @PostMapping("shelvesBook")
+    public String postShelvesBook( ShelvesBook book){
+
+        return "ss";
     }
 
 

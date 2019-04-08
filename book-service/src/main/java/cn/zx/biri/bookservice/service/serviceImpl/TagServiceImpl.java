@@ -4,12 +4,17 @@ import cn.zx.biri.bookservice.mapper.TagMapper;
 import cn.zx.biri.bookservice.service.TagService;
 import cn.zx.biri.common.pojo.entry.Tag;
 import cn.zx.biri.common.pojo.example.TagExample;
+
+import cn.zx.biri.common.pojo.response.NewTag;
 import cn.zx.biri.common.utils.HandleBookTagUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @Author: xiangXX
@@ -30,8 +35,16 @@ public class TagServiceImpl implements TagService {
         TagExample tagExample = new TagExample();
         List<Tag> tags = tagMapper.selectByExample(tagExample);
         StringBuilder HTML = new StringBuilder();
-        HandleBookTagUtils.getTagHTML( HandleBookTagUtils.getHead(tags),HTML);
+        HandleBookTagUtils.getTagHTML( (NewTag)HandleBookTagUtils.getHead(tags).get("tagHead"),HTML);
         return HTML.toString();
+    }
+
+    public Map getHead(){
+
+        TagExample tagExample = new TagExample();
+        List<Tag> tags = tagMapper.selectByExample(tagExample);
+        Map map = HandleBookTagUtils.getHead(tags);
+        return map;
     }
 
 }

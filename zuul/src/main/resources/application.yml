@@ -50,6 +50,10 @@ zuul:
       path: /orderCart/**
       serviceId: order-cart
 
+    admin-service:
+      path: /adminService/**
+      serviceId: admin-service
+
 
   ignored-services: "*"
   sensitive-headers:

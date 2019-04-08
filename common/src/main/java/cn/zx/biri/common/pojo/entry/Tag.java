@@ -11,15 +11,6 @@ public class Tag implements Serializable {
 
     private Integer fatherId;
 
-    public Tag(){
-
-    }
-
-    public Tag(Integer id, Integer fatherId) {
-        this.id = id;
-        this.fatherId = fatherId;
-    }
-
     public Integer getId() {
         return id;
     }

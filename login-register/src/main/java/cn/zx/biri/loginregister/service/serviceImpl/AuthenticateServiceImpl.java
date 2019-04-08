@@ -66,9 +66,9 @@ public class AuthenticateServiceImpl implements AuthenticateService {
         HttpSession httpSession = currentHttpServletRequest.getSession();
         User user = userService.selectUserByUsername(username);
         httpSession.setAttribute("user",user);
-        List<BookInCart> bookInCarts = orderAndCartService.bookInCarts(user.getId());
-        Map<Integer, BookInCart> collect = bookInCarts.stream().collect(Collectors.toMap(BookInCart::getCartId, (p) -> p));
-        httpSession.setAttribute("cart",collect);
+//        List<BookInCart> bookInCarts = orderAndCartService.bookInCarts(user.getId());
+//        Map<Integer, BookInCart> collect = bookInCarts.stream().collect(Collectors.toMap(BookInCart::getCartId, (p) -> p));
+//        httpSession.setAttribute("cart",collect);
     }
 
 

@@ -245,12 +245,12 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/Biri/cart">
+                                                    <a href="/Biri/user/cart">
                                                         <span class="mm-text">购物车</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/Biri/wishList">
+                                                    <a href="/Biri/user/wishList">
                                                         <span class="mm-text">收藏</span>
                                                     </a>
                                                 </li>
@@ -433,11 +433,11 @@
                                         <a href="/Biri/user/home">个人中心</a>
                                     </li>
                                     <li>
-                                        <a href="/Biri/cart">购物车</a>
+                                        <a href="/Biri/user/cart">购物车</a>
                                     </li>
                                    
                                     <li>
-                                        <a href="/Biri/wishList">收藏</a>
+                                        <a href="/Biri/user/wishList">收藏</a>
                                     </li>
                                     <li>
                                         <a href="order-tracking.html">Order tracking</a>
@@ -447,8 +447,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li th:if="${activeUrl!='cart'}" class="header-toolbar__item">
-                                <a href="#miniCart" class="mini-cart-btn toolbar-btn">
+                            <li th:if="${activeUrl!='cart'&&session.user!=null}" class="header-toolbar__item">
+                                <a href="#miniCart" flag="0"  class="mini-cart-btn toolbar-btn">
                                     <i class="dl-icon-cart4"></i>
                                     <sup th:if="${session.cart!=null}" id="miniCartCount" class="mini-cart-count" th:text="${session.cart.size()}"></sup>
                                 </a>
@@ -501,7 +501,7 @@
                                     <a href="/Biri/cart">购物车</a>
                                 </li>
                                 <li>
-                                    <a href="/Biri/wishList">收藏</a>
+                                    <a href="/Biri/user/wishList">收藏</a>
                                 </li>
                                 <li>
                                     <a href="order-tracking.html">Order tracking</a>
@@ -511,8 +511,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li  class="header-toolbar__item">
-                            <a  href="#miniCart" class="mini-cart-btn toolbar-btn">
+                        <li th:if="${activeUrl!='cart'&&session.user!=null}" class="header-toolbar__item">
+                            <a href="#miniCart" flag="0"  class="mini-cart-btn toolbar-btn">
                                 <i id="miniCartBtn" class="dl-icon-cart4"></i>
                                 <sup th:if="${session.cart!=null}" id="cartSize" class="mini-cart-count" th:text="${session.cart.size()}"></sup>
                             </a>
@@ -771,7 +771,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/Biri/wishList">
+                                                <a href="/Biri/user/wishList">
                                                     收藏
                                                 </a>
                                             </li>
@@ -935,18 +935,20 @@
         <a href="" class="btn-close"><i class="dl-icon-close"></i></a>
         <div class="mini-cart-inner">
             <h5 class="mini-cart__heading mb--40 mb-lg--30">购物车</h5>
-            <div  class="mini-cart__content">
-                <ul th:if="${session.cart!=null}" class="mini-cart__list">
-                    <li th:each="entry:${session.cart}" class="mini-cart__product">
-                        <a  th:cartId="${entry.value.cartId}" href="#" class="miniCartDeleteBook remove-from-cart remove">
+            <div th:fragment="miniCartContent" id="miniCartContent" class="mini-cart__content">
+                <input hidden id="isLoadCart" value="0">
+                <ul th:if="${cart!=null}" class="mini-cart__list">
+                    <li th:each="entry:${cart}" class="mini-cart__product">
+                        <input hidden th:value="${entry.id}" class="miniCartBookId">
+                        <a  th:cartId="${entry.cartId}" href="#" class="miniCartDeleteBook remove-from-cart remove">
                             <i class="dl-icon-close"></i>
                         </a>
                         <div class="mini-cart__product__image">
-                            <img th:src="'/bookImg/'+${entry.value.getimagePath()}" alt="products">
+                            <img th:src="'/bookImg/'+${entry.imagePath}" alt="products">
                         </div>
                         <div class="mini-cart__product__content">
-                            <a class="mini-cart__product__title" th:text="${entry.value.title}"  th:href="'/Biri/book/detail/'+${entry.value.id}">Chain print bermuda shorts  </a>
-                            <span class="mini-cart__product__quantity" ><span th:text="${entry.value.bookNum}" class="miniCartBookNum"></span> x ￥<span class="miniCartBookPrice" th:text="${entry.value.price}"></span></span>
+                            <a class="mini-cart__product__title" th:text="${entry.title}"  th:href="'/Biri/book/detail/'+${entry.id}">Chain print bermuda shorts  </a>
+                            <span class="mini-cart__product__quantity" ><span th:text="${entry.bookNum}" class="miniCartBookNum"></span> x ￥<span class="miniCartBookPrice" th:text="${entry.price}"></span></span>
                         </div>
                     </li>
                 </ul>
@@ -955,8 +957,8 @@
                     <span class="ammount" >￥<span id="miniCartTotal"></span></span>
                 </div>
                 <div class="mini-cart__buttons">
-                    <a href="/Biri/cart" class="btn btn-fullwidth btn-style-1">购物车</a>
-                    <a href="/Biri/checkout" class="btn btn-fullwidth btn-style-1">结账</a>
+                    <a href="/Biri/user/cart" class="btn btn-fullwidth btn-style-1">购物车</a>
+                    <a href="/Biri/user/checkout" class="btn btn-fullwidth btn-style-1">结账</a>
                 </div>
             </div>
         </div>

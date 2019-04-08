@@ -21,5 +21,5 @@ public interface BookService {
     List<BookEnhanced> selectBookListByPage(SelectBook condition);
     BookDetail selectBookDetail(Integer bookId,Integer currentUserId);
     int reduceStock(Map<Integer,BookInCart> map);
-
+    Map shelvesBook();
 }

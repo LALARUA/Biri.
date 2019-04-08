@@ -19,7 +19,7 @@
       <id column="orderDetailId" jdbcType="INTEGER" property="id" />
       <result column="bookId" jdbcType="INTEGER" property="bookId" />
       <result column="bookNum" jdbcType="INTEGER" property="bookNum" />
-      <result column="summoney" jdbcType="DOUBLE" property="summoney" />
+      <result column="orderDetailSummoney" jdbcType="DOUBLE" property="summoney" />
       <association property="book" javaType="cn.zx.biri.common.pojo.entry.Book">
         <id column="bookId" jdbcType="INTEGER" property="id" />
         <result column="bookTitle" jdbcType="VARCHAR" property="title" />
