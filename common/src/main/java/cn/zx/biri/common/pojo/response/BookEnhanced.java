@@ -14,6 +14,15 @@ public class BookEnhanced extends BookWithBLOBs {
     private List<Tag> tags;
     private List<BookWithImagePath> imagePaths;
     private String hotComment;
+    private List<BookStatusEnhanced> status;
+
+    public List<BookStatusEnhanced> getStatus() {
+        return status;
+    }
+
+    public void setStatus(List<BookStatusEnhanced> status) {
+        this.status = status;
+    }
 
     public String getHotComment() {
         return hotComment;

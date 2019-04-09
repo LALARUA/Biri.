@@ -25,6 +25,15 @@ public class Book implements Serializable{
     private String publishDate;
 
     private Double score;
+    private String keyword;
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
 
     public Integer getId() {
         return id;

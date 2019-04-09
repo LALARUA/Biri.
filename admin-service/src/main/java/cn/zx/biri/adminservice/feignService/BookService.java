@@ -23,4 +23,7 @@ import java.util.Map;
 public interface BookService {
     @GetMapping("shelvesBook")
     Map shelvesBook();
+
+    @GetMapping("manageTag")
+    Map manageTag();
 }

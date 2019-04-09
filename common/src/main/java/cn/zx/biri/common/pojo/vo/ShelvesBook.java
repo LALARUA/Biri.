@@ -3,7 +3,9 @@ package cn.zx.biri.common.pojo.vo;
 import cn.zx.biri.common.pojo.entry.Book;
 import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author: xiangXX
@@ -11,22 +13,31 @@ import java.util.List;
  * @Date Created in 23:04 2019/4/8 0008
  */
 public class ShelvesBook extends BookWithBLOBs {
-    private List<Integer> tagId;
-    private Integer authorId;
+    private Set<Integer> tagId = new HashSet<>();
+    private String authorIdAndName;
+    private List<String> tagIdAndName;
 
-    public List<Integer> getTagId() {
+    public List<String> getTagIdAndName() {
+        return tagIdAndName;
+    }
+
+    public void setTagIdAndName(List<String> tagIdAndName) {
+        this.tagIdAndName = tagIdAndName;
+    }
+
+    public Set<Integer> getTagId() {
         return tagId;
     }
 
-    public void setTagId(List<Integer> tagId) {
+    public void setTagId(Set<Integer> tagId) {
         this.tagId = tagId;
     }
 
-    public Integer getAuthorId() {
-        return authorId;
+    public String getAuthorIdAndName() {
+        return authorIdAndName;
     }
 
-    public void setAuthorId(Integer authorId) {
-        this.authorId = authorId;
+    public void setAuthorIdAndName(String authorIdAndName) {
+        this.authorIdAndName = authorIdAndName;
     }
 }

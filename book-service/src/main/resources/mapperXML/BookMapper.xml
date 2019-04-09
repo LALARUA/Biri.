@@ -18,16 +18,22 @@
     <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
     <result column="catalog" jdbcType="LONGVARCHAR" property="catalog" />
   </resultMap>
-  <resultMap id="BookListDisplay" type="cn.zx.biri.common.pojo.response.BookEnhanced">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="imagePath" jdbcType="VARCHAR" property="imagePath" />
-    <result column="publisher" jdbcType="VARCHAR" property="publisher" />
-    <result column="price" jdbcType="DOUBLE" property="price" />
-     <result column="score" jdbcType="DOUBLE" property="score" />
-    <result column="hotComment" jdbcType="VARCHAR" property="hotComment" />
-    <result column="summary" jdbcType="VARCHAR" property="summary" />
-    <result column="stock" jdbcType="INTEGER" property="stock" />
+  <resultMap id="BookListDisplay" extends="BaseResultMap" type="cn.zx.biri.common.pojo.response.BookEnhanced">
+    <!--<id column="id" jdbcType="INTEGER" property="id" />-->
+    <!--<result column="title" jdbcType="VARCHAR" property="title" />-->
+    <!--<result column="imagePath" jdbcType="VARCHAR" property="imagePath" />-->
+    <!--<result column="publisher" jdbcType="VARCHAR" property="publisher" />-->
+    <!--<result column="price" jdbcType="DOUBLE" property="price" />-->
+     <!--<result column="score" jdbcType="DOUBLE" property="score" />-->
+    <!--<result column="hotComment" jdbcType="VARCHAR" property="hotComment" />-->
+    <!--<result column="summary" jdbcType="VARCHAR" property="summary" />-->
+    <!--<result column="stock" jdbcType="INTEGER" property="stock" />-->
+
+    <collection property="status" ofType="cn.zx.biri.common.pojo.response.BookStatusEnhanced">
+      <id column="bookWithStatusId" jdbcType="INTEGER" property="id" />
+      <result column="statusDescription" jdbcType="VARCHAR" property="description" />
+      <result column="statusId" jdbcType="DOUBLE" property="status" />
+    </collection>
 
     <collection property="imagePaths" ofType="cn.zx.biri.common.pojo.entry.BookWithImagePath">
       <id column="imagePathId" jdbcType="INTEGER" property="id" />
@@ -45,23 +51,25 @@
     </collection>
   </resultMap>
 
-  <resultMap extends="ResultMapWithBLOBs" id="BookDetail" type="cn.zx.biri.common.pojo.response.BookDetail">
-    <collection property="imagePaths" ofType="cn.zx.biri.common.pojo.entry.BookWithImagePath">
-    <id column="imagePathId" jdbcType="INTEGER" property="id" />
-    <result column="imagePath" jdbcType="VARCHAR" property="bookImagePath" />
-    <result column="imagePathStatus" jdbcType="VARCHAR" property="status" />
-  </collection>
+  <resultMap extends="BookListDisplay" id="BookDetail" type="cn.zx.biri.common.pojo.response.BookDetail">
+    <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
+    <result column="catalog" jdbcType="LONGVARCHAR" property="catalog" />
+    <!--<collection property="imagePaths" ofType="cn.zx.biri.common.pojo.entry.BookWithImagePath">-->
+    <!--<id column="imagePathId" jdbcType="INTEGER" property="id" />-->
+    <!--<result column="imagePath" jdbcType="VARCHAR" property="bookImagePath" />-->
+    <!--<result column="imagePathStatus" jdbcType="VARCHAR" property="status" />-->
+  <!--</collection>-->
 
-    <collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">
-      <id column="authorId" jdbcType="INTEGER" property="id" />
-      <result column="authorName" jdbcType="VARCHAR" property="name" />
-      <result column="authorIntroduction" jdbcType="LONGVARCHAR" property="introduction" />
-    </collection>
-    <collection property="tags" ofType="cn.zx.biri.common.pojo.entry.Tag">
-      <id column="tagId" jdbcType="INTEGER" property="id" />
-      <result column="tagName" jdbcType="VARCHAR" property="name" />
-      <result column="tagfatherId" jdbcType="INTEGER" property="fatherId" />
-    </collection>
+    <!--<collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">-->
+      <!--<id column="authorId" jdbcType="INTEGER" property="id" />-->
+      <!--<result column="authorName" jdbcType="VARCHAR" property="name" />-->
+      <!--<result column="authorIntroduction" jdbcType="LONGVARCHAR" property="introduction" />-->
+    <!--</collection>-->
+    <!--<collection property="tags" ofType="cn.zx.biri.common.pojo.entry.Tag">-->
+      <!--<id column="tagId" jdbcType="INTEGER" property="id" />-->
+      <!--<result column="tagName" jdbcType="VARCHAR" property="name" />-->
+      <!--<result column="tagfatherId" jdbcType="INTEGER" property="fatherId" />-->
+    <!--</collection>-->
   </resultMap>
   <sql id="selectBookListDisplayFieldSql">
       SELECT
@@ -78,8 +86,12 @@
       tag.fatherId AS tagFatherId,
       bookWithImagePath.id AS imagePathId,
       bookWithImagePath.bookImagePath AS imagePath,
-      bookWithImagePath.status AS imagePathStatu,
+      bookWithImagePath.status AS imagePathStatus,
       book.summary AS summary
+      ,tab2.detail AS hotComment
+    ,bookWithStatus.id AS bookWithStatusId
+    ,bookWithStatus.status AS statusId
+    ,bookStatus.description AS statusDescription
 
   </sql>
 
@@ -208,15 +220,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, title, imagePath, publisher, price, isbn, putaway, sales, stock, publishDate,
-    score
+    id, title, imagePath, publisher, price, isbn, putaway, sales, stock, authorId, publishDate,
+    score, keyword
   </sql>
   <sql id="Blob_Column_List">
     summary, catalog
   </sql>
 
     <sql id="selectBookListFromSql">
-    ,tab2.detail AS hotComment
+
         from book
         INNER JOIN bookWithAuthor
         ON book.id = bookWithAuthor.bookId
@@ -243,6 +255,10 @@
            GROUP BY commentId) AS tab1
            GROUP BY bookId) AS tab2
            ON book.id = tab2.bookId
+      LEFT JOIN bookWithStatus
+      ON book.id = bookWithStatus.bookId
+      LEFT JOIN bookStatus
+      ON bookWithStatus.status = bookStatus.id
 
       </sql>
   <sql id="selectBookListWhereSql">
@@ -323,8 +339,11 @@
   </select>
   <select id="selectBookDetail" parameterType="java.lang.Integer" resultMap="BookDetail">
     <include refid="selectBookDetailSql"/>
-    from book,author,tag,bookWithTag,bookWithAuthor,bookWithImagePath WHERE book.id = bookWithAuthor.bookId and
-    bookWithAuthor.authorId =  author.id AND bookWithTag.bookId = book.id AND bookWithImagePath.bookId = book.id AND bookWithTag.tagId = tag.id AND book.id=#{bookId}
+    <include refid="selectBookListFromSql"/>
+--     from book,author,tag,bookWithTag,bookWithAuthor,bookWithImagePath WHERE book.id = bookWithAuthor.bookId and
+--     bookWithAuthor.authorId =  author.id AND bookWithTag.bookId = book.id AND bookWithImagePath.bookId = book.id AND bookWithTag.tagId = tag.id AND
+--
+   WHERE book.id=#{bookId}
   </select>
   <select id="selectByExampleWithBLOBs" parameterType="cn.zx.biri.common.pojo.example.BookExample" resultMap="ResultMapWithBLOBs">
     select
@@ -383,18 +402,20 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.zx.biri.common.pojo.entry.BookWithBLOBs">
-    insert into book (id, title, imagePath,
+      insert into book (id, title, imagePath,
       publisher, price, isbn,
-      putaway, sales, stock
-    , publishDate, score,
-      summary, catalog)
+      putaway, sales, stock,
+      authorId, publishDate, score,
+      keyword, summary, catalog
+      )
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{imagePath,jdbcType=VARCHAR},
       #{publisher,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{isbn,jdbcType=BIGINT},
-      #{putaway,jdbcType=DATE}, #{sales,jdbcType=INTEGER}, #{stock,jdbcType=INTEGER}, 
-       #{publishDate,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE},
-      #{summary,jdbcType=LONGVARCHAR}, #{catalog,jdbcType=LONGVARCHAR})
+      #{putaway,jdbcType=VARCHAR}, #{sales,jdbcType=INTEGER}, #{stock,jdbcType=INTEGER},
+      #{authorId,jdbcType=INTEGER}, #{publishDate,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE},
+      #{keyword,jdbcType=VARCHAR}, #{summary,jdbcType=LONGVARCHAR}, #{catalog,jdbcType=LONGVARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.BookWithBLOBs">
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="cn.zx.biri.common.pojo.entry.BookWithBLOBs">
     insert into book
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -424,12 +445,14 @@
       <if test="stock != null">
         stock,
       </if>
-
       <if test="publishDate != null">
         publishDate,
       </if>
       <if test="score != null">
         score,
+      </if>
+      <if test="keyword != null">
+        keyword,
       </if>
       <if test="summary != null">
         summary,
@@ -458,7 +481,7 @@
         #{isbn,jdbcType=BIGINT},
       </if>
       <if test="putaway != null">
-        #{putaway,jdbcType=DATE},
+        #{putaway,jdbcType=VARCHAR},
       </if>
       <if test="sales != null">
         #{sales,jdbcType=INTEGER},
@@ -472,6 +495,9 @@
       </if>
       <if test="score != null">
         #{score,jdbcType=DOUBLE},
+      </if>
+      <if test="keyword != null">
+        #{keyword,jdbcType=VARCHAR},
       </if>
       <if test="summary != null">
         #{summary,jdbcType=LONGVARCHAR},
@@ -509,7 +535,7 @@
         isbn = #{record.isbn,jdbcType=BIGINT},
       </if>
       <if test="record.putaway != null">
-        putaway = #{record.putaway,jdbcType=DATE},
+        putaway = #{record.putaway,jdbcType=VARCHAR},
       </if>
       <if test="record.sales != null">
         sales = #{record.sales,jdbcType=INTEGER},
@@ -523,6 +549,9 @@
       </if>
       <if test="record.score != null">
         score = #{record.score,jdbcType=DOUBLE},
+      </if>
+      <if test="record.keyword != null">
+        keyword = #{record.keyword,jdbcType=VARCHAR},
       </if>
       <if test="record.summary != null">
         summary = #{record.summary,jdbcType=LONGVARCHAR},
@@ -538,19 +567,20 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update book
     set id = #{record.id,jdbcType=INTEGER},
-      title = #{record.title,jdbcType=VARCHAR},
-      imagePath = #{record.imagePath,jdbcType=VARCHAR},
-      publisher = #{record.publisher,jdbcType=VARCHAR},
-      price = #{record.price,jdbcType=DOUBLE},
-      isbn = #{record.isbn,jdbcType=BIGINT},
-      putaway = #{record.putaway,jdbcType=DATE},
-      sales = #{record.sales,jdbcType=INTEGER},
-      stock = #{record.stock,jdbcType=INTEGER},
+    title = #{record.title,jdbcType=VARCHAR},
+    imagePath = #{record.imagePath,jdbcType=VARCHAR},
+    publisher = #{record.publisher,jdbcType=VARCHAR},
+    price = #{record.price,jdbcType=DOUBLE},
+    isbn = #{record.isbn,jdbcType=BIGINT},
+    putaway = #{record.putaway,jdbcType=VARCHAR},
+    sales = #{record.sales,jdbcType=INTEGER},
+    stock = #{record.stock,jdbcType=INTEGER},
 
-      publishDate = #{record.publishDate,jdbcType=VARCHAR},
-      score = #{record.score,jdbcType=DOUBLE},
-      summary = #{record.summary,jdbcType=LONGVARCHAR},
-      catalog = #{record.catalog,jdbcType=LONGVARCHAR}
+    publishDate = #{record.publishDate,jdbcType=VARCHAR},
+    score = #{record.score,jdbcType=DOUBLE},
+    keyword = #{record.keyword,jdbcType=VARCHAR},
+    summary = #{record.summary,jdbcType=LONGVARCHAR},
+    catalog = #{record.catalog,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -558,17 +588,18 @@
   <update id="updateByExample" parameterType="map">
     update book
     set id = #{record.id,jdbcType=INTEGER},
-      title = #{record.title,jdbcType=VARCHAR},
-      imagePath = #{record.imagePath,jdbcType=VARCHAR},
-      publisher = #{record.publisher,jdbcType=VARCHAR},
-      price = #{record.price,jdbcType=DOUBLE},
-      isbn = #{record.isbn,jdbcType=BIGINT},
-      putaway = #{record.putaway,jdbcType=DATE},
-      sales = #{record.sales,jdbcType=INTEGER},
-      stock = #{record.stock,jdbcType=INTEGER},
+    title = #{record.title,jdbcType=VARCHAR},
+    imagePath = #{record.imagePath,jdbcType=VARCHAR},
+    publisher = #{record.publisher,jdbcType=VARCHAR},
+    price = #{record.price,jdbcType=DOUBLE},
+    isbn = #{record.isbn,jdbcType=BIGINT},
+    putaway = #{record.putaway,jdbcType=VARCHAR},
+    sales = #{record.sales,jdbcType=INTEGER},
+    stock = #{record.stock,jdbcType=INTEGER},
 
-      publishDate = #{record.publishDate,jdbcType=VARCHAR},
-      score = #{record.score,jdbcType=DOUBLE}
+    publishDate = #{record.publishDate,jdbcType=VARCHAR},
+    score = #{record.score,jdbcType=DOUBLE},
+    keyword = #{record.keyword,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -592,7 +623,7 @@
         isbn = #{isbn,jdbcType=BIGINT},
       </if>
       <if test="putaway != null">
-        putaway = #{putaway,jdbcType=DATE},
+        putaway = #{putaway,jdbcType=VARCHAR},
       </if>
       <if test="sales != null">
         sales = #{sales,jdbcType=INTEGER},
@@ -606,6 +637,9 @@
       </if>
       <if test="score != null">
         score = #{score,jdbcType=DOUBLE},
+      </if>
+      <if test="keyword != null">
+        keyword = #{keyword,jdbcType=VARCHAR},
       </if>
       <if test="summary != null">
         summary = #{summary,jdbcType=LONGVARCHAR},
@@ -623,29 +657,31 @@
       publisher = #{publisher,jdbcType=VARCHAR},
       price = #{price,jdbcType=DOUBLE},
       isbn = #{isbn,jdbcType=BIGINT},
-      putaway = #{putaway,jdbcType=DATE},
+      putaway = #{putaway,jdbcType=VARCHAR},
       sales = #{sales,jdbcType=INTEGER},
       stock = #{stock,jdbcType=INTEGER},
 
       publishDate = #{publishDate,jdbcType=VARCHAR},
       score = #{score,jdbcType=DOUBLE},
+      keyword = #{keyword,jdbcType=VARCHAR},
       summary = #{summary,jdbcType=LONGVARCHAR},
       catalog = #{catalog,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.zx.biri.common.pojo.entry.Book">
-    update book
+     update book
     set title = #{title,jdbcType=VARCHAR},
       imagePath = #{imagePath,jdbcType=VARCHAR},
       publisher = #{publisher,jdbcType=VARCHAR},
       price = #{price,jdbcType=DOUBLE},
       isbn = #{isbn,jdbcType=BIGINT},
-      putaway = #{putaway,jdbcType=DATE},
+      putaway = #{putaway,jdbcType=VARCHAR},
       sales = #{sales,jdbcType=INTEGER},
       stock = #{stock,jdbcType=INTEGER},
 
       publishDate = #{publishDate,jdbcType=VARCHAR},
-      score = #{score,jdbcType=DOUBLE}
+      score = #{score,jdbcType=DOUBLE},
+      keyword = #{keyword,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

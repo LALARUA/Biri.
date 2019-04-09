@@ -21,4 +21,9 @@ public class AdminServiceImpl implements AdminService {
         Map map = bookService.shelvesBook();
         return map;
     }
+
+    @Override
+    public Map manageBook() {
+        return bookService.manageTag();
+    }
 }

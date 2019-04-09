@@ -93,12 +93,8 @@
 
 <body>
 
-
-
-
-
     <div class="wrapper">
-		<div th:replace="~{admin/adminCommonbar::sidebar}"></div>
+		<div th:replace="~{admin/adminCommonbar::sidebar(activeUrl='shelvesBook',level=2)}"></div>
         <div class="main-panel">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -202,9 +198,9 @@
 												</label>
 
 												<div class="col-sm-4">
-														<select  id="author" name="authorId" class="nice-select">
+														<select  id="author" name="authorIdAndName" class="nice-select">
 																<option value="" selected>选择作者…</option>
-																<option th:each="author:${authors}" th:value="${author.id}" th:text="${author.name}"></option>
+																<option th:each="author:${authors}" th:value="${author.id}+'-'+${author.name}" th:text="${author.name}"></option>
 
 														</select>
 													</div>
@@ -262,9 +258,9 @@
 													标签
 												</label>
 	                                    		<div style="float: left;margin-left: 10px" level="1" class="tag">
-													<select  name="tagId" class="nice-select">
+													<select  name="tagIdAndName" class="nice-select">
 														<option value="" selected>选择标签…</option>
-														<option th:each="tag:${tagHead.sonTags}" th:value="${tag.id}" th:text="${tag.name}"></option>
+														<option th:each="tag:${tagHead.sonTags}" th:value="${tag.id}+'-'+${tag.name}" th:text="${tag.name}"></option>
 													</select>
 	                                    		</div>
 
@@ -287,21 +283,38 @@
 												<label class="col-sm-2 control-label">
 													出版时间
 												</label>
-												<div class="col-sm-2">
+												<div class="col-sm-3">
 													<input class="form-control"
-														   type="text"
+														   type="date"
 														   name="publishDate"
 
 													/>
 												</div>
 											</div>
 										</fieldset>
-		                                <h4 class="title">Range validation</h4>
+										<fieldset >
+											<div class="form-group">
+												<label class="col-sm-2 control-label">图片</label>
+
+												<div style="float: left;margin-left: 10px">
+													<input name="bookImg" multiple="multiple" class="realImg" style="display: none" type="file">
+													<div style="border:1px solid black;height: 100px;width: 80px">
+														<img style="display: block;width: 100px;height: 100px" class="uploadImg" >
+													</div>
+													<button type="button" class="uploadImg btn btn-primary btn-round">上传</button>
+												</div>
+
+												<button type="button" id="addBookImg" style="margin-left: 5px" class="btn btn-primary">添加图片</button>
+
+
+											</div>
+
+										</fieldset>
 										<fieldset >
 											<div class="form-group">
 												<label class="col-sm-2 control-label">目录</label>
 												<div class="col-sm-8">
-													<textarea name="catalog" class="form-control" placeholder="Here can be your nice text" rows="10"></textarea>
+													<textarea name="catalog" class="form-control" placeholder="图书目录" rows="10"></textarea>
 												</div>
 											</div>
 										</fieldset>
@@ -309,7 +322,7 @@
 											<div class="form-group">
 												<label class="col-sm-2 control-label">简介</label>
 												<div class="col-sm-8">
-													<textarea name="summary" class="form-control" placeholder="Here can be your nice text" rows="10"></textarea>
+													<textarea name="summary" class="form-control" placeholder="图书简介" rows="10"></textarea>
 												</div>
 											</div>
 										</fieldset>
@@ -445,16 +458,42 @@
 	window.onload=function (ev) {
 	var tagMap = [[${tagMap}]];
 	var head = [[${tagHead}]];
+	var bookImgNum = 1;
+	var tagLinkNum = 1;
 
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjcectURL != undefined) {
+                url = window.createOjcectURL(file);
+            } else if (window.URL != undefined) {
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) {
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
 
         $(document).on('click', '#submitForm', function (){
-            var data = $("#allInputsFormValidation").serialize();
+            var inputs = $("input")
+			// for (var i = 0;i<inputs.length;i++){
+             //    if (inputs.eq(i).val()==""||inputs.eq(i).val()==null){
+             //        alert("请填写所有信息")
+			// 		return
+			// 	}
+			// }
+
+
+            var data = new FormData($("#allInputsFormValidation")[0]);
             $.ajax({
                 url: "/bookService/shelvesBook",
                 type: 'post', //
                 async: true,    //或false,是否异步
                 data: data,
                 // contentType:"application/json;charset=utf-8",
+                processData : false,  //必须false才会避开jQuery对 formdata 的默认处理
+                contentType : false,
+                cache: false,
+
                 timeout: 50000,    //超时时间
                 dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
                 success: function (data) {
@@ -467,12 +506,17 @@
 
         })
         $(document).on('click', '#addTagLink', function (){
+            if (tagLinkNum==4){
+                alert("够了够了");
+                return;
+			}
+			tagLinkNum++;
             var sonTags = head.sonTags;
             var optionHTML = "";
             var liHTML = "";
             for (var i = 0;i<sonTags.length;i++){
                 optionHTML+="<option  value="+sonTags[i].id+">"+sonTags[i].name+"</option>"
-                liHTML+="<li data-value="+sonTags[i].id+" class=\"option focus\">"+sonTags[i].name+"</li>"
+                liHTML+="<li data-value="+sonTags[i].id+"-"+ sonTags[i].name+" class=\"option focus\">"+sonTags[i].name+"</li>"
             }
             $(this).parent().after("<div class=\"form-group\">\n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t<label class=\"col-sm-2 control-label\">\n" +
@@ -480,7 +524,7 @@
                 "\t\t\t\t\t\t\t\t\t\t\t\t</label>\n" +
                 "<div style=\"float: left;margin-left: 10px\"" +
                 " level=1 class=\"tag\">\n" +
-                "               <select name=\"tagId\" class=\"nice-select\" style=\"display: none;\">\n" +
+                "               <select name=\"tagIdAndName\" class=\"nice-select\" style=\"display: none;\">\n" +
                 "               <option value=\"\" selected=\"\">选择标签…</option>\n" +
                 optionHTML+
                 "               </select>" +
@@ -498,17 +542,60 @@
         })
 
         $(document).on('click', '.deleteTagLink', function (){
+            tagLinkNum--;
             $(this).parent().remove()
 
         })
-    $(document).on('click', '.option', function (){
+        $(document).on('click', '.uploadImg', function (){
+            $(this).parent().find("input").eq(0).click()
+        })
+        $(document).on('change', '.realImg', function (e){
+
+            var file= $(this)[0].files[0];
+
+            var filePath = getObjectURL(file),         //获取到input的value，里面是文件的路径
+                fileFormat = $(this).val().substring(filePath.lastIndexOf(".")).toLowerCase();
+            // 检查是否是图片
+            if( !fileFormat.match(/.png|.jpg|.jpeg/) ) {
+               alert('上传错误,文件格式必须为：png/jpg/jpeg');
+               // $(this).val("");
+                return;
+            }
+            $(this).parent().find("img").eq(0).attr("src",filePath)
+
+
+        })
+
+        $(document).on('click', '#addBookImg', function (){
+            if (bookImgNum==5){
+                alert("够了够了");
+                return false;
+			}
+            bookImgNum++;
+            $(this).before("<div style=\"float: left;margin-left: 10px\">\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t<input name=\"bookImg\" multiple=\"multiple\" class=\"realImg\" style=\"display: none\" type=\"file\">\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"border:1px solid black;height: 100px;width: 80px\">\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img style=\"display: block;width: 100px;height: 100px\" class=\"uploadImg\" >\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"uploadImg btn btn-primary btn-xs\">上传</button><button type=\"button\" class=\"deleteImg btn btn-danger btn-xs\">删除</button>\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t</div>")
+        })
+
+        $(document).on('click', '.deleteImg', function (){
+            bookImgNum--;
+            $(this).parent().remove()
+        })
+    $(document).on('click', '.tag .option', function (){
         var level = $(this).parent().parent().parent().attr("level");
-        var tags = $(this).parent().parent().parent().find(".tag");
+        var tags = $(this).parent().parent().parent().parent().find(".tag");
         for (var i = 0;i<tags.length;i++){
             if (tags.eq(i).attr("level")>level)
                 tags.eq(i).remove()
         }
-        var tagId = $(this).attr("data-value");
+        var tagId = $(this).attr("data-value").substring(0,$(this).attr("data-value").indexOf("-"));
+        if (tagId==null||tagId=="")
+            return
+
        var tag = tagMap[tagId];
        var sonTags= tag.sonTags;
 
@@ -517,13 +604,13 @@
 		   var optionHTML = "";
 		   var liHTML = "";
            for (var i = 0;i<sonTags.length;i++){
-               optionHTML+="<option  value="+sonTags[i].id+">"+sonTags[i].name+"</option>"
-				liHTML+="<li data-value="+sonTags[i].id+" class=\"option focus\">"+sonTags[i].name+"</li>"
+               optionHTML+="<option  value="+sonTags[i].id+"-"+sonTags[i].name+" >"+sonTags[i].name+"</option>"
+				liHTML+="<li data-value="+sonTags[i].id+"-"+sonTags[i].name+" class=\"option focus\">"+sonTags[i].name+"</li>"
 		   }
 		   level++;
            $(this).parent().parent().parent().after("<div style=\"float: left;margin-left: 5px\"" +
 			   " level="+level+" class=\"tag\">\n" +
-               "               <select name=\"tagId\" class=\"nice-select\" style=\"display: none;\">\n" +
+               "               <select name=\"tagIdAndName\" class=\"nice-select\" style=\"display: none;\">\n" +
                "               <option value=\"\" selected=\"\">选择标签…</option>\n" +
 									optionHTML+
                "               </select>" +

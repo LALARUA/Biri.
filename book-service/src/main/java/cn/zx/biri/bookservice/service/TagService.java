@@ -16,5 +16,6 @@ import java.util.Map;
 public interface TagService {
      List<List<Tag>> tagLink(List<Tag> tags);
      String getAllTagHTML();
-     Map getHead();
+     Map getHead(String key);
+     String postTag(Tag tag);
 }

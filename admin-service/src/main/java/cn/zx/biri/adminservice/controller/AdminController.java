@@ -25,4 +25,9 @@ public class AdminController {
     public Map shelvesBook(){
        return adminService.shelvesBook();
     }
+
+    @GetMapping("manageTag")
+    public Map manageTag(){
+        return adminService.manageBook();
+    }
 }

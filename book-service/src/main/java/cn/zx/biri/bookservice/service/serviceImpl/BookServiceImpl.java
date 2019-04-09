@@ -2,21 +2,23 @@ package cn.zx.biri.bookservice.service.serviceImpl;
 
 import cn.zx.biri.bookservice.config.MyProperties;
 import cn.zx.biri.bookservice.feignService.CommentService;
-import cn.zx.biri.bookservice.mapper.BookMapper;
+import cn.zx.biri.bookservice.mapper.*;
 import cn.zx.biri.bookservice.service.AuthorService;
 import cn.zx.biri.bookservice.service.BookService;
 import cn.zx.biri.bookservice.service.TagService;
-import cn.zx.biri.common.pojo.entry.Author;
-import cn.zx.biri.common.pojo.entry.BookWithBLOBs;
-import cn.zx.biri.common.pojo.entry.Tag;
+import cn.zx.biri.common.pojo.entry.*;
 import cn.zx.biri.common.pojo.response.*;
 import cn.zx.biri.common.pojo.vo.SelectBook;
+import cn.zx.biri.common.pojo.vo.ShelvesBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -35,6 +37,12 @@ public class BookServiceImpl implements BookService{
     CommentService commentService;
     @Autowired
     MyProperties myProperties;
+    @Autowired
+    BookWithAuthorMapper bookWithAuthorMapper;
+    @Autowired
+    BookWithImagePathMapper bookWithImagePathMapper;
+    @Autowired
+    BookwithtagMapper bookwithtagMapper;
 
     @Autowired
     AuthorService authorService;
@@ -50,7 +58,7 @@ public class BookServiceImpl implements BookService{
         if (bookIds.size()==0)
             return null;
 
-        if (condition.getCurrentBookIds()==null){
+        if (condition.getCurrentBookIds()==null&&condition.getFlag()==null){
             FilterBookCondition filter = new FilterBookCondition();
             List<Tag> filterTag = bookMapper.filterTag(bookIds);
             if (condition.getAuthorId() == null){
@@ -139,7 +147,7 @@ public class BookServiceImpl implements BookService{
     public Map shelvesBook() {
         Map map = new HashMap();
 
-        Map head = tagService.getHead();
+        Map head = tagService.getHead("tags");
         List<Author> allAuthors = authorService.getAllAuthors();
 
         map.put("tagHead",head.get("tagHead"));
@@ -147,6 +155,72 @@ public class BookServiceImpl implements BookService{
         map.put("tagMap",head.get("tagMap"));
 
         return map;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void postShelvesBook(List<MultipartFile> bookImg,ShelvesBook book) throws Exception {
+        String bookImgPathPrefix = new String();
+        String system = System.getProperty("os.name").toLowerCase();
+        if (system.contains("win")){
+            bookImgPathPrefix = myProperties.getWindowBookImagePathPrefix();
+        }else if (system.contains("linux")){
+            bookImgPathPrefix = myProperties.getLinuxBookImagePathPrefix();
+        }
+        StringBuilder keyword = new StringBuilder();
+        String authorIdAndName = book.getAuthorIdAndName();
+        String[] authorIdAndNameSplit = authorIdAndName.split("-");
+        Integer authorId = Integer.valueOf(authorIdAndNameSplit[0]);
+        String authorName = authorIdAndNameSplit[1];
+
+        keyword.append(book.getTitle()+",");
+        keyword.append(authorName+",");
+        for (String tagIdAndName : book.getTagIdAndName()) {
+            if (tagIdAndName.equals(""))
+                continue;
+            String[] tagIdAndNameSplit = tagIdAndName.split("-");
+            book.getTagId().add(Integer.valueOf(tagIdAndNameSplit[0]));
+            keyword.append(tagIdAndNameSplit[1]+",");
+        }
+
+        book.setKeyword(keyword.toString());
+        bookMapper.insertSelective(book);
+
+        for (Integer tagId : book.getTagId()) {
+            Bookwithtag bookwithtag = new Bookwithtag();
+            bookwithtag.setBookid(book.getId());
+            bookwithtag.setTagid(tagId);
+            bookwithtagMapper.insertSelective(bookwithtag);
+        }
+        BookWithAuthor bookWithAuthor = new BookWithAuthor();
+        bookWithAuthor.setAuthorId(authorId);
+        bookWithAuthor.setBookId(book.getId());
+        bookWithAuthorMapper.insertSelective(bookWithAuthor);
+
+        File file = new File(bookImgPathPrefix+book.getId());
+        file.mkdir();
+        for (int i = 0; i < bookImg.size(); i++) {
+            MultipartFile img = bookImg.get(i);
+            String originalFilename = img.getOriginalFilename();
+            String newImgName = UUID.randomUUID().toString()+originalFilename.substring(originalFilename.lastIndexOf("."));
+            String imagePath = book.getId()+"/"+newImgName;
+            if (i==0){
+                book.setImagePath(imagePath);
+                bookMapper.updateByPrimaryKeySelective(book);
+            }
+            BookWithImagePath bookWithImagePath = new BookWithImagePath();
+            bookWithImagePath.setBookImagePath(imagePath);
+            bookWithImagePath.setBookId(book.getId());
+            bookWithImagePathMapper.insertSelective(bookWithImagePath);
+            File imgFile = new File(bookImgPathPrefix+"/"+imagePath);
+            img.transferTo(imgFile);
+        }
+    }
+
+    @Override
+    public Map manageTag() {
+        return tagService.getHead("tags");
+
     }
 
 

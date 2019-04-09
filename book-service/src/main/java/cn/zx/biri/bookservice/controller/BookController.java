@@ -9,6 +9,7 @@ import cn.zx.biri.common.pojo.vo.SelectBook;
 import cn.zx.biri.common.pojo.vo.ShelvesBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -33,7 +34,7 @@ public class BookController {
 
 //    @Cacheable(value = "bookList",key = "#condition")
     @GetMapping("bookList")
-    public Map bookList(@RequestBody SelectBook condition, HttpServletRequest httpServletRequest){
+    public Map bookList(@RequestBody SelectBook condition){
         return bookService.selectBookList(condition);
     }
 
@@ -61,9 +62,20 @@ public class BookController {
     }
 
     @PostMapping("shelvesBook")
-    public String postShelvesBook( ShelvesBook book){
+    public String postShelvesBook( List<MultipartFile> bookImg, ShelvesBook book){
+        try {
+            bookService.postShelvesBook(bookImg,book);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return "ss";
+    }
+
+    @GetMapping("manageTag")
+    public Map manageTag(){
+        return bookService.manageTag();
+
     }
 
 

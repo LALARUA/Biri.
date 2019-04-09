@@ -23,11 +23,20 @@ public class SelectBook extends Book {
     private Integer status;
     private String orderBy;
     private String keyword;
+    private String flag;
 
 
     @Override
     public String toString() {
         return ReflectUtils.keyByFields(this);
+    }
+
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
     }
 
     public String getKeyword() {

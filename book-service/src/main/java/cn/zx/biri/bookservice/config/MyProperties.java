@@ -9,13 +9,25 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @ConfigurationProperties(prefix = "book.properties")
 public class MyProperties {
-    private String bookImagePathPrefix;
 
-    public String getBookImagePathPrefix() {
-        return bookImagePathPrefix;
+
+
+    private String windowBookImagePathPrefix;
+    private String linuxBookImagePathPrefix;
+
+    public String getLinuxBookImagePathPrefix() {
+        return linuxBookImagePathPrefix;
     }
 
-    public void setBookImagePathPrefix(String bookImagePathPrefix) {
-        this.bookImagePathPrefix = bookImagePathPrefix;
+    public void setLinuxBookImagePathPrefix(String linuxBookImagePathPrefix) {
+        this.linuxBookImagePathPrefix = linuxBookImagePathPrefix;
+    }
+
+    public String getWindowBookImagePathPrefix() {
+        return windowBookImagePathPrefix;
+    }
+
+    public void setWindowBookImagePathPrefix(String windowBookImagePathPrefix) {
+        this.windowBookImagePathPrefix = windowBookImagePathPrefix;
     }
 }

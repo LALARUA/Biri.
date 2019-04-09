@@ -4,6 +4,7 @@ import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.Tag;
 
 import cn.zx.biri.common.pojo.response.NewTag;
+import cn.zx.biri.common.pojo.vo.SelectBook;
 import cn.zx.biri.webservice.feignService.AdminService;
 import cn.zx.biri.webservice.feignService.BookService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,8 +28,12 @@ import java.util.Map;
 @RequestMapping("admin")
 @Controller
 public class AdminController {
+    private final Integer pageSize = 12;
     @Autowired
     private AdminService adminService;
+
+    @Autowired
+    private BookService bookService;
 
     @GetMapping("index")
     public String adminIndex(){
@@ -52,5 +57,28 @@ public class AdminController {
         model.addAttribute("tagHead",map.get("tagHead"));
         model.addAttribute("tagMap",map.get("tagMap"));
         return "admin/shelvesBook";
+    }
+    @GetMapping("manageTag")
+    public String manageTag(Model model) throws Exception{
+        Map map = adminService.manageTag();
+        model.addAttribute("tagHead",map.get("tagHead"));
+        model.addAttribute("tagMap",map.get("tagMap"));
+        return "admin/manageTag";
+
+    }
+    @GetMapping("bookList")
+    public String bookList(SelectBook condition,Model model) throws Exception{
+
+        condition.setFlag("admin");
+        condition.setPageNow(1);
+        Map bookMap = bookService.bookList(condition);
+        if (bookMap==null)
+            return "bookList";
+        List<Integer> bookIds = (List<Integer>) bookMap.get("bookIds");
+        condition.setCurrentBookIds(bookIds);
+        model.addAttribute("bookList",bookMap.get("bookList"));
+        model.addAttribute("pageNum",(bookIds.size()-1)/pageSize+1);
+        model.addAttribute("count",bookIds.size());
+        return "admin/bookList";
     }
 }

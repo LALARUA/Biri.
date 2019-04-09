@@ -5,132 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fae497a-6b1b-49fd-b5d1-9f3f84a6d2cc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/config/FeignInterceptor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/feignService/BookService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/AdminService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/serviceImpl/AdminServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin-service/src/main/resources/application.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/AuthorController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/AuthorService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/AuthorServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/NewTag.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/UserWishList.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/amaze.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/bootstrap-datetimepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/demo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/font-muli.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/themify-icons.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/themify.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/themify.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/themify.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/fonts/themify.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/faces/avatar.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/favicon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/flags/AU.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/flags/BR.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/flags/DE.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/flags/GB.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/flags/RO.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/flags/US.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/image_placeholder.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/logo_placeholder.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/mask.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/placeholder.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/img/product-image-120x120.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/amaze.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/bootstrap-checkbox-radio-switch-tags.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/charts/chartjs-charts.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/charts/flot-charts.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/demo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/jquery.easypiechart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/bootstrap-datetimepicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/bootstrap-notify.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/chartist.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/charts/chartjs/Chart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/charts/flot/jquery.flot.categories.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/charts/flot/jquery.flot.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/charts/flot/jquery.flot.pie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/charts/flot/jquery.flot.resize.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/charts/flot/jquery.flot.stack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/dropzone/dropzone.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/dropzone/dropzone.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/fullcalendar.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jasny-bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery-3.1.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery-jvectormap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery-ui-1.12.0/jquery-ui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery-ui-1.12.0/jquery-ui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery-ui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery.bootstrap-wizard.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery.datatables.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery.select-bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery.tagsinput.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/jquery.validate.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/material.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/moment.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/nouislider.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/perfect-scrollbar.jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/sweetalert/css/sweetalert2.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/vendors/sweetalert/js/sweetalert2.min.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookStatusMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookWithStatusMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookStatusMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookWithStatusMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookWithStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookStatusExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookWithStatusExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookStatusEnhanced.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/bookList.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/manageTag.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/feignService/BookService.java" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/feignService/BookService.java" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/AdminService.java" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/AdminService.java" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/serviceImpl/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/serviceImpl/AdminServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/config/MyProperties.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/config/MyProperties.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/AuthorService.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/AuthorService.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/BookService.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/BookService.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/TagService.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/TagService.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java" afterPath="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application.yml" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" afterPath="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" afterPath="$PROJECT_DIR$/common/pom.xml" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Tag.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Tag.java" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/HandleBookTagUtils.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/HandleBookTagUtils.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java" />
-      <change beforePath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java" afterPath="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/CartController.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/CartController.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/OrderController.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/OrderController.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/WishListController.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/WishListController.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/mapper/WishListMapper.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/mapper/WishListMapper.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/WishListService.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/WishListService.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/serviceImpl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/serviceImpl/OrderServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/serviceImpl/WishLIstServiceImpl.java" afterPath="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/serviceImpl/WishLIstServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/resources/mapperXML/OrderMapper.xml" afterPath="$PROJECT_DIR$/order-cart/src/main/resources/mapperXML/OrderMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/order-cart/src/main/resources/mapperXML/WishListMapper.xml" afterPath="$PROJECT_DIR$/order-cart/src/main/resources/mapperXML/WishListMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/OrderAndCartController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/UserController.java" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/BookService.java" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/BookService.java" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/OrderAndCartService.java" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/OrderAndCartService.java" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bookList.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bookList.html" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/cart.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/cart.html" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/commonbar.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/commonbar.html" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/userHome.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/userHome.html" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/wishlist.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/wishlist.html" />
-      <change beforePath="$PROJECT_DIR$/zuul/pom.xml" afterPath="$PROJECT_DIR$/zuul/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfig.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfig.java" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/static/assets/css/plugins.css" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/assets/css/plugins.css" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/main.js" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/myJS.js" afterPath="$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/myJS.js" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookEnhanced.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookEnhanced.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/SelectBook.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/SelectBook.java" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java" afterPath="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java" afterPath="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html" />
+      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/SpringMVCConfig.java" afterPath="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/SpringMVCConfig.java" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka-server-1/target/" />
     <ignored path="$PROJECT_DIR$/zuul/target/" />
@@ -167,41 +78,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="shelvesBook.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="286" column="63" lean-forward="false" selection-start-line="286" selection-start-column="63" selection-end-line="286" selection-end-column="63" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#fieldset#5;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#fieldset#5;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#13261#13267#0" expanded="true" />
-                <marker date="1554735654811" expanded="true" signature="19113:19142" ph="..." />
-                <marker date="1554735654811" expanded="true" signature="19279:19293" ph="..." />
-                <marker date="1554735654811" expanded="true" signature="19949:19966" ph="..." />
-                <marker date="1554735654811" expanded="true" signature="21063:21091" ph="..." />
-                <marker date="1554735654811" expanded="true" signature="21225:21239" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="96" column="29" lean-forward="true" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="160">
+              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,37 +93,126 @@
       <file leaf-file-name="BookMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="218" column="4" lean-forward="false" selection-start-line="218" selection-start-column="4" selection-end-line="218" selection-end-column="4" />
+            <state relative-caret-position="395">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding>
-                <marker date="1554736921372" expanded="true" signature="4039:4535" ph="SELECT book.... " />
-                <marker date="1554736921372" expanded="true" signature="5186:5275" ph="select bookI... bookWithAuthor" />
-                <marker date="1554736921372" expanded="true" signature="5403:5733" ph="SELECT bookI... SELECT" />
-                <marker date="1554736921372" expanded="true" signature="5841:5953" ph="SELECT bookW... bookWithStatus" />
-                <marker date="1554736921372" expanded="true" signature="11269:11371" ph="SELECT COUNT... result" />
-                <marker date="1554736921372" expanded="true" signature="12168:12417" ph="SELECT DISTI... tag" />
-                <marker date="1554736921372" expanded="true" signature="13852:13999" ph="select , fro... " />
-                <marker date="1554736921372" expanded="true" signature="14114:14268" ph="select , fro... " />
-                <marker date="1554736921372" expanded="true" signature="14362:14416" ph="delete from book... " />
-                <marker date="1554736921372" expanded="true" signature="14524:14540" ph="delete from book... " />
-                <marker date="1554736921372" expanded="true" signature="14731:15285" ph="insert into book... " />
-                <marker date="1554736921372" expanded="true" signature="17543:17568" ph="select count... book" />
-                <marker date="1554736921372" expanded="true" signature="19314:19985" ph="update book... " />
-                <marker date="1554736921372" expanded="true" signature="20156:20715" ph="update book... " />
-                <marker date="1554736921372" expanded="true" signature="20937:22111" ph="update book... " />
-                <marker date="1554736921372" expanded="true" signature="22231:22814" ph="update book... " />
-                <marker date="1554736921372" expanded="true" signature="22916:23401" ph="update book... " />
+                <marker date="1554819014448" expanded="true" signature="4719:5216" ph="SELECT book.... " />
+                <marker date="1554819014448" expanded="true" signature="4719:5380" ph="SELECT book.... " />
+                <marker date="1554819014448" expanded="true" signature="6031:6120" ph="select bookI... bookWithAuthor" />
+                <marker date="1554819014448" expanded="true" signature="6248:6578" ph="SELECT bookI... SELECT" />
+                <marker date="1554819014448" expanded="true" signature="6686:6798" ph="SELECT bookW... bookWithStatus" />
+                <marker date="1554819014448" expanded="true" signature="12249:12351" ph="SELECT COUNT... result" />
+                <marker date="1554819014448" expanded="true" signature="13148:13397" ph="SELECT DISTI... tag" />
+                <marker date="1554819014448" expanded="true" signature="14895:15042" ph="select , fro... " />
+                <marker date="1554819014448" expanded="true" signature="15157:15311" ph="select , fro... " />
+                <marker date="1554819014448" expanded="true" signature="15405:15459" ph="delete from book... " />
+                <marker date="1554819014448" expanded="true" signature="15567:15583" ph="delete from book... " />
+                <marker date="1554819014448" expanded="true" signature="15774:16424" ph="insert into book... " />
+                <marker date="1554819014448" expanded="true" signature="15776:16424" ph="insert into book... " />
+                <marker date="1554819014448" expanded="true" signature="18871:18896" ph="select count... book" />
+                <marker date="1554819014448" expanded="true" signature="20752:21452" ph="update book... " />
+                <marker date="1554819014448" expanded="true" signature="21623:22215" ph="update book... " />
+                <marker date="1554819014448" expanded="true" signature="22437:23707" ph="update book... " />
+                <marker date="1554819014448" expanded="true" signature="23827:24458" ph="update book... " />
+                <marker date="1554819014448" expanded="true" signature="24560:25094" ph="update book... " />
+                <marker date="1554819014448" expanded="true" signature="24561:25094" ph="update book... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="310">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminCommonbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/adminCommonbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="84" column="99" lean-forward="false" selection-start-line="84" selection-start-column="99" selection-end-line="84" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manageTag.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/manageTag.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="389" column="73" lean-forward="false" selection-start-line="389" selection-start-column="73" selection-end-line="389" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#14685#14691#0" expanded="true" />
+                <marker date="1554822512074" expanded="true" signature="20439:20451" ph="..." />
+                <marker date="1554822512074" expanded="true" signature="20786:20815" ph="..." />
+                <marker date="1554822512074" expanded="true" signature="20983:20997" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="61" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/bookList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-440">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#45693#45699#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="625" column="2" lean-forward="false" selection-start-line="625" selection-start-column="2" selection-end-line="696" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shelvesBook.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="255" column="41" lean-forward="true" selection-start-line="255" selection-start-column="41" selection-end-line="267" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1554819395093" expanded="true" signature="20799:20828" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="20972:20986" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="21642:21659" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="22858:22887" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="23011:23024" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="23103:23151" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="23218:23259" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="24750:24778" ph="..." />
+                <marker date="1554819395093" expanded="true" signature="24919:24933" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,59 +220,12 @@
       <file leaf-file-name="BookController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/BookService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShelvesBook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookServiceApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -321,24 +247,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toolbar-btn</find>
-      <find>#miniCart</find>
-      <find>miniCart</find>
-      <find>bookim</find>
-      <find>imagePath</find>
-      <find>order</find>
-      <find>wishlist</find>
-      <find>Biri</find>
-      <find>minicart</find>
-      <find>cart</find>
-      <find>checkout</find>
-      <find>entry.va</find>
-      <find>for</find>
-      <find>assets</find>
-      <find>ti</find>
-      <find>font</find>
       <find>dl-icon</find>
-      <find>../assets</find>
       <find>billing_province</find>
       <find>nice-select</find>
       <find>wheel</find>
@@ -350,11 +259,26 @@
       <find>publishDate</find>
       <find>tab2</find>
       <find>selectBookListDisplayFieldSql</find>
+      <find>rea</find>
+      <find>real</find>
+      <find>insert</find>
+      <find>TagId</find>
+      <find>autor</find>
+      <find>author</find>
+      <find>insertse</find>
+      <find>authorId</find>
+      <find>input</find>
+      <find>active</find>
+      <find>cn.zx.generator.po.BookWithStatus</find>
+      <find>ResultMapWithBLOBs</find>
+      <find>cn.zx.generator.po.BookStatus</find>
+      <find>bookWithStatusId</find>
       <find>selectBookListFromSql</find>
+      <find>selectBookDetailSql</find>
+      <find>../assets</find>
+      <find>Stacked Form</find>
     </findStrings>
     <replaceStrings>
-      <replace>userId</replace>
-      <replace>cn.zx.biri.common.pojo.example.BookExample</replace>
       <replace>cn.zx.biri.common.pojo.entry.commentSupport</replace>
       <replace>cn.zx.biri.common.pojo.entry.reply</replace>
       <replace>cn.zx.biri.common.pojo.entry.replySupport</replace>
@@ -382,6 +306,8 @@
       <replace>/Biri/wishList</replace>
       <replace>publisher</replace>
       <replace>/admin/assets</replace>
+      <replace>cn.zx.biri.common.pojo.entry.BookStatus</replace>
+      <replace>cn.zx.biri.common.pojo.entry.BookWithStatus</replace>
       <replace>/adminAssets</replace>
     </replaceStrings>
   </component>
@@ -402,28 +328,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/cart.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/wishlist.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/commonbar.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/myJS.js" />
-        <option value="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/order-cart/src/main/java/cn/zx/biri/ordercart/service/serviceImpl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/controller/AuthenticateController.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/web-service/pom.xml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/adminIndex.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/adminIndex.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/adminCommonbar.html" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/NewTag.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Tag.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/NewTag.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/AuthorService.java" />
         <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/AuthorMapper.java" />
         <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/AuthorServiceImpl.java" />
         <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/AuthorMapper.xml" />
@@ -433,26 +339,46 @@
         <option value="$PROJECT_DIR$/admin-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/config/FeignInterceptor.java" />
         <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/AdminServiceApplication.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/BookService.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java" />
         <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/AuthorController.java" />
         <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/BookService.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/bookList.html" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/HandleBookTagUtils.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/AuthorService.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/config/SpringMVCConfig.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/config/MyProperties.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/TagService.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java" />
         <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/AdminService.java" />
         <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/feignService/BookService.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/BookService.java" />
         <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/serviceImpl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/TagService.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/bookList.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/HandleBookTagUtils.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html" />
         <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java" />
-        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/SelectBook.java" />
         <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookStatus.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookStatusExample.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookWithStatusMapper.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookStatusMapper.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookStatusMapper.xml" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookWithStatusMapper.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookEnhanced.java" />
+        <option value="$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookStatusEnhanced.java" />
+        <option value="$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/bookList.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/adminCommonbar.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/admin/manageTag.html" />
       </list>
     </option>
   </component>
@@ -505,9 +431,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="169" />
-    <option name="y" value="53" />
-    <option name="width" value="1116" />
+    <option name="x" value="448" />
+    <option name="y" value="286" />
+    <option name="width" value="934" />
     <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -526,8 +452,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -718,7 +642,31 @@
               <item name="zx" type="462c0819:PsiDirectoryNode" />
               <item name="biri" type="462c0819:PsiDirectoryNode" />
               <item name="bookservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="bookservice" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="bookservice" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
@@ -863,12 +811,7 @@
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="zx" type="462c0819:PsiDirectoryNode" />
-              <item name="biri" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
@@ -1044,6 +987,31 @@
               <item name="web-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1083,12 +1051,71 @@
               <item name="zuul" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="zx" type="462c0819:PsiDirectoryNode" />
+              <item name="biri" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Biri" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1102,7 +1129,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="SearchEverywhereHistoryKey" value="Reent&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReentrantLock&#10;HashMap&#9;PSI&#9;JAVA://java.util.HashMap&#10;Object&#9;PSI&#9;JAVA://java.lang.Object&#10;ApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.ApplicationContext&#10;Bean&#9;FILE&#9;jar://E:/MavenRepository/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/BeanFactory.class&#10;BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;Array&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java&#10;StringBuilder&#9;PSI&#9;JAVA://java.lang.StringBuilder&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;linkedl&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/LinkedList.java&#10;Link&#9;FILE&#9;jar://E:/MavenRepository/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar!/com/github/andrewoma/dexx/collection/LinkedList.class&#10;Linkedlist&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Sim&#9;FILE&#9;jar://E:/MavenRepository/org/springframework/spring-context/5.1.3.RELEASE/spring-context-5.1.3.RELEASE-sources.jar!/org/springframework/cache/interceptor/SimpleKeyGenerator.java&#10;SimpleKeyGenerator &#9;PSI&#9;JAVA://org.springframework.cache.interceptor.SimpleKeyGenerator&#10;List&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/java/util/List.class&#10;Integer&#9;PSI&#9;JAVA://java.lang.Integer&#10;linkedli&#9;PSI&#9;JAVA://java.util.LinkedList&#10;SqlSessionFactoryBuilder &#9;PSI&#9;JAVA://org.apache.ibatis.session.SqlSessionFactoryBuilder&#10;ThreadPoolExecutor&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor&#10;BeanDefinitionReaderUtils&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.BeanDefinitionReaderUtils&#10;DefaultListableBeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.DefaultListableBeanFactory&#10;MapperP&#9;FILE&#9;jar://E:/MavenRepository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class&#10;DefaultCookieSerializer&#9;PSI&#9;JAVA://org.springframework.session.web.http.DefaultCookieSerializer&#10;SessionRepository&#9;null&#9;null&#10;MailSenderAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration&#10;Autoconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.AutoConfigurationSorter.AutoConfigurationClass&#10;datasourceconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration" />
+    <property name="SearchEverywhereHistoryKey" value="Colle&#9;PSI&#9;JAVA://java.util.Collection&#10;Reent&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReentrantLock&#10;HashMap&#9;PSI&#9;JAVA://java.util.HashMap&#10;Object&#9;PSI&#9;JAVA://java.lang.Object&#10;ApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.ApplicationContext&#10;Bean&#9;FILE&#9;jar://E:/MavenRepository/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/BeanFactory.class&#10;BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;Array&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java&#10;StringBuilder&#9;PSI&#9;JAVA://java.lang.StringBuilder&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;linkedl&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/LinkedList.java&#10;Link&#9;FILE&#9;jar://E:/MavenRepository/com/github/andrewoma/dexx/dexx-collections/0.2/dexx-collections-0.2.jar!/com/github/andrewoma/dexx/collection/LinkedList.class&#10;Linkedlist&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Sim&#9;FILE&#9;jar://E:/MavenRepository/org/springframework/spring-context/5.1.3.RELEASE/spring-context-5.1.3.RELEASE-sources.jar!/org/springframework/cache/interceptor/SimpleKeyGenerator.java&#10;SimpleKeyGenerator &#9;PSI&#9;JAVA://org.springframework.cache.interceptor.SimpleKeyGenerator&#10;List&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/java/util/List.class&#10;Integer&#9;PSI&#9;JAVA://java.lang.Integer&#10;linkedli&#9;PSI&#9;JAVA://java.util.LinkedList&#10;SqlSessionFactoryBuilder &#9;PSI&#9;JAVA://org.apache.ibatis.session.SqlSessionFactoryBuilder&#10;ThreadPoolExecutor&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor&#10;BeanDefinitionReaderUtils&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.BeanDefinitionReaderUtils&#10;DefaultListableBeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.DefaultListableBeanFactory&#10;MapperP&#9;FILE&#9;jar://E:/MavenRepository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class&#10;DefaultCookieSerializer&#9;PSI&#9;JAVA://org.springframework.session.web.http.DefaultCookieSerializer&#10;SessionRepository&#9;null&#9;null&#10;MailSenderAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration&#10;Autoconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.AutoConfigurationSorter.AutoConfigurationClass&#10;datasourceconfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration&#10;DataSourceAutoConfiguration&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
@@ -1128,16 +1155,16 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gitRep\Biri\web-service\src\main\resources\templates\admin" />
-      <recent name="E:\gitRep\Biri\zuul\src\main\resources\static" />
-      <recent name="E:\gitRep\Biri\zuul\src\main\resources\static\assets" />
-      <recent name="E:\gitRep\Biri\web-service\src\main\resources\templates" />
-      <recent name="E:\gitRep\Biri\zuul\src\main\resources\static\admin" />
+      <recent name="E:\gitRep\Biri\book-service\src\main\resources\mapperXML" />
+      <recent name="E:\gitRep\Biri\book-service\src\main\java\cn\zx\biri\bookservice\mapper" />
+      <recent name="E:\gitRep\Biri\common\src\main\java\cn\zx\biri\common\pojo\example" />
+      <recent name="E:\gitRep\Biri\common\src\main\java\cn\zx\biri\common\pojo\entry" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.zx.biri.common.pojo.example" />
       <recent name="cn.zx.biri.adminservice.feignService" />
       <recent name="cn.zx.biri.adminservice.config" />
       <recent name="cn.zx.biri.ordercart.mapper" />
-      <recent name="cn.zx.biri.common.pojo.example" />
       <recent name="cn.zx.biri.common.pojo.entry" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -1440,8 +1467,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.UserServiceApplication" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BookServiceApplicationTests.test" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BookServiceApplicationTests.test" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.UserServiceApplication" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.BookServiceApplicationTests.contextLoads" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.OrderCartApplicationTests.contextLoads" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.CommentServiceApplicationTests.contextLoads" />
@@ -1562,7 +1589,9 @@
       <workItem from="1554639933340" duration="5572000" />
       <workItem from="1554646654952" duration="475000" />
       <workItem from="1554685794577" duration="31133000" />
-      <workItem from="1554727180648" duration="7693000" />
+      <workItem from="1554727180648" duration="7837000" />
+      <workItem from="1554772929001" duration="19654000" />
+      <workItem from="1554803983646" duration="15815000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1548298249001</created>
@@ -1662,13 +1691,17 @@
       <option name="project" value="LOCAL" />
       <updated>1554352163029</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="-">
+      <created>1554738004312</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554738004312</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookServiceApplicationTests_test - 2019.03.31 at 15h 12m 39s.xml">
-      <configuration name="BookServiceApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookServiceApplicationTests_test - 2019.03.31 at 15h 14m 45s.xml">
       <configuration name="BookServiceApplicationTests.test" configurationId="JUnit" />
     </history-entry>
@@ -1696,9 +1729,12 @@
     <history-entry file="BookServiceApplicationTests_test - 2019.03.31 at 15h 36m 53s.xml">
       <configuration name="BookServiceApplicationTests.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BookServiceApplicationTests_test - 2019.04.09 at 10h 42m 39s.xml">
+      <configuration name="BookServiceApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="950546000" />
+    <option name="totallyTimeSpent" value="986159000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1718,23 +1754,24 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41998878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14654689" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295901" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3239753" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24985963" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29689175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06323687" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30653805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37299034" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14790997" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38906753" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2261522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5294748" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2925323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295901" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1742,7 +1779,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49129704" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1874,21 +1910,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java</url>
-          <line>70</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="440" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java</url>
-          <line>65</line>
+          <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java</url>
+          <line>107</line>
           <properties />
-          <option name="timeStamp" value="491" />
+          <option name="timeStamp" value="492" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java</url>
-          <line>99</line>
+          <line>162</line>
           <properties />
-          <option name="timeStamp" value="492" />
+          <option name="timeStamp" value="494" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="500" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="501" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="504" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/myJS.js</url>
@@ -1901,7 +1955,7 @@
           <option name="timeStamp" value="445" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="493" />
+      <option name="time" value="505" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -1917,467 +1971,506 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/static/assets/js/plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14075">
-          <caret line="455" column="16665" lean-forward="false" selection-start-line="455" selection-start-column="16660" selection-end-line="455" selection-end-column="16665" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/static/assets/css/plugins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="52" column="140" lean-forward="false" selection-start-line="52" selection-start-column="140" selection-end-line="52" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/js/amaze.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/static/adminAssets/css/amaze.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="8021" column="14" lean-forward="false" selection-start-line="8021" selection-start-column="14" selection-end-line="8021" selection-end-column="14" />
-          <folding>
-            <element signature="e#17938#18236#2" expanded="false" />
-            <element signature="e#18334#18699#2" expanded="false" />
-            <element signature="e#18798#19167#2" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-cart/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/config/FeignInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/AuthorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/feignService/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/cn/zx/biri/zuul/ZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#1174#1175#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/TagService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/AuthenticateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-register/src/main/java/cn/zx/biri/loginregister/service/serviceImpl/AuthenticateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="66" column="63" lean-forward="true" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/NewTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/AuthorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/serviceImpl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/AdminServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/WebServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="37" column="70" lean-forward="false" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/utils/HandleBookTagUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/commonbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/bookDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="307" column="149" lean-forward="false" selection-start-line="307" selection-start-column="138" selection-end-line="307" selection-end-column="149" />
-          <folding>
-            <marker date="1554029276540" expanded="true" signature="77854:77864" ph="..." />
-            <marker date="1554029276540" expanded="true" signature="79573:79603" ph="..." />
-            <marker date="1554029276540" expanded="true" signature="79943:79954" ph="..." />
-            <marker date="1554029276540" expanded="true" signature="80966:81008" ph="..." />
-            <marker date="1554029276540" expanded="true" signature="81248:81259" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/bookList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="882" column="14" lean-forward="true" selection-start-line="882" selection-start-column="14" selection-end-line="898" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="752" column="10" lean-forward="false" selection-start-line="752" selection-start-column="10" selection-end-line="752" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5831">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="1" column="68" lean-forward="false" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookWithBLOBs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="286" column="63" lean-forward="false" selection-start-line="286" selection-start-column="63" selection-end-line="286" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#fieldset#5;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#fieldset#5;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#13261#13267#0" expanded="true" />
-            <marker date="1554735654811" expanded="true" signature="19113:19142" ph="..." />
-            <marker date="1554735654811" expanded="true" signature="19279:19293" ph="..." />
-            <marker date="1554735654811" expanded="true" signature="19949:19966" ph="..." />
-            <marker date="1554735654811" expanded="true" signature="21063:21091" ph="..." />
-            <marker date="1554735654811" expanded="true" signature="21225:21239" ph="..." />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/ShelvesBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="185">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="972" column="19" lean-forward="false" selection-start-line="972" selection-start-column="19" selection-end-line="972" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookWithAuthorMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.1.3.RELEASE/spring-tx-5.1.3.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
+            <marker date="1543930522937" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1543930522937" expanded="false" signature="166:451" ph="..." />
+            <marker date="1543930522937" expanded="true" signature="453:559" ph="@{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/service/serviceImpl/BBookServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="352">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/TagService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/TagServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="49" column="63" lean-forward="true" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/feignService/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/TagController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/BookService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="374">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/service/serviceImpl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#697#698#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/LinkedBlockingDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="336" column="0" lean-forward="true" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/BlockingDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="231" column="39" lean-forward="true" selection-start-line="231" selection-start-column="39" selection-end-line="231" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="151" column="32" lean-forward="true" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="288" column="12" lean-forward="false" selection-start-line="288" selection-start-column="12" selection-end-line="288" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/commonbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="453" column="36" lean-forward="true" selection-start-line="453" selection-start-column="36" selection-end-line="453" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/vo/SelectBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/cn/zx/biri/adminservice/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/feignService/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookWithStatusExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/example/BookStatusExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookwithtagMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookWithStatusMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookWithStatusMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3828">
+          <caret line="174" column="92" lean-forward="false" selection-start-line="174" selection-start-column="92" selection-end-line="174" selection-end-column="92" />
+          <folding>
+            <marker date="1554816775503" expanded="true" signature="3404:3514" ph="select from bookWithStatus" />
+            <marker date="1554816775503" expanded="true" signature="3600:3664" ph="delete from bookWithStatus... " />
+            <marker date="1554816775503" expanded="true" signature="3782:3808" ph="delete from bookWithStatus... " />
+            <marker date="1554816775503" expanded="true" signature="4000:4153" ph="insert into bookWithStatus... " />
+            <marker date="1554816775503" expanded="true" signature="4980:5015" ph="select count... bookWithStatus" />
+            <marker date="1554816775503" expanded="true" signature="5698:5862" ph="update bookWithStatus... " />
+            <marker date="1554816775503" expanded="true" signature="6085:6345" ph="update bookWithStatus... " />
+            <marker date="1554816775503" expanded="true" signature="6457:6603" ph="update bookWithStatus... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/entry/BookWithStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/mapper/BookStatusMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/BookServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="25" column="2" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookEnhanced.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookStatusEnhanced.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookStatusMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="158" column="88" lean-forward="false" selection-start-line="158" selection-start-column="88" selection-end-line="158" selection-end-column="88" />
+          <folding>
+            <marker date="1554816775534" expanded="true" signature="3327:3433" ph="select from bookStatus" />
+            <marker date="1554816775534" expanded="true" signature="3519:3579" ph="delete from bookStatus... " />
+            <marker date="1554816775534" expanded="true" signature="3693:3715" ph="delete from bookStatus... " />
+            <marker date="1554816775534" expanded="true" signature="3903:4012" ph="insert into bookStatus... " />
+            <marker date="1554816775534" expanded="true" signature="4705:4736" ph="select count... bookStatus" />
+            <marker date="1554816775534" expanded="true" signature="5326:5446" ph="update bookStatus... " />
+            <marker date="1554816775534" expanded="true" signature="5665:5846" ph="update bookStatus... " />
+            <marker date="1554816775534" expanded="true" signature="5954:6063" ph="update bookStatus... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/cn/zx/biri/common/pojo/response/BookDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/mapperXML/BookMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="218" column="4" lean-forward="false" selection-start-line="218" selection-start-column="4" selection-end-line="218" selection-end-column="4" />
+        <state relative-caret-position="395">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
-            <marker date="1554736921372" expanded="true" signature="4039:4535" ph="SELECT book.... " />
-            <marker date="1554736921372" expanded="true" signature="5186:5275" ph="select bookI... bookWithAuthor" />
-            <marker date="1554736921372" expanded="true" signature="5403:5733" ph="SELECT bookI... SELECT" />
-            <marker date="1554736921372" expanded="true" signature="5841:5953" ph="SELECT bookW... bookWithStatus" />
-            <marker date="1554736921372" expanded="true" signature="11269:11371" ph="SELECT COUNT... result" />
-            <marker date="1554736921372" expanded="true" signature="12168:12417" ph="SELECT DISTI... tag" />
-            <marker date="1554736921372" expanded="true" signature="13852:13999" ph="select , fro... " />
-            <marker date="1554736921372" expanded="true" signature="14114:14268" ph="select , fro... " />
-            <marker date="1554736921372" expanded="true" signature="14362:14416" ph="delete from book... " />
-            <marker date="1554736921372" expanded="true" signature="14524:14540" ph="delete from book... " />
-            <marker date="1554736921372" expanded="true" signature="14731:15285" ph="insert into book... " />
-            <marker date="1554736921372" expanded="true" signature="17543:17568" ph="select count... book" />
-            <marker date="1554736921372" expanded="true" signature="19314:19985" ph="update book... " />
-            <marker date="1554736921372" expanded="true" signature="20156:20715" ph="update book... " />
-            <marker date="1554736921372" expanded="true" signature="20937:22111" ph="update book... " />
-            <marker date="1554736921372" expanded="true" signature="22231:22814" ph="update book... " />
-            <marker date="1554736921372" expanded="true" signature="22916:23401" ph="update book... " />
+            <marker date="1554819014448" expanded="true" signature="4719:5216" ph="SELECT book.... " />
+            <marker date="1554819014448" expanded="true" signature="4719:5380" ph="SELECT book.... " />
+            <marker date="1554819014448" expanded="true" signature="6031:6120" ph="select bookI... bookWithAuthor" />
+            <marker date="1554819014448" expanded="true" signature="6248:6578" ph="SELECT bookI... SELECT" />
+            <marker date="1554819014448" expanded="true" signature="6686:6798" ph="SELECT bookW... bookWithStatus" />
+            <marker date="1554819014448" expanded="true" signature="12249:12351" ph="SELECT COUNT... result" />
+            <marker date="1554819014448" expanded="true" signature="13148:13397" ph="SELECT DISTI... tag" />
+            <marker date="1554819014448" expanded="true" signature="14895:15042" ph="select , fro... " />
+            <marker date="1554819014448" expanded="true" signature="15157:15311" ph="select , fro... " />
+            <marker date="1554819014448" expanded="true" signature="15405:15459" ph="delete from book... " />
+            <marker date="1554819014448" expanded="true" signature="15567:15583" ph="delete from book... " />
+            <marker date="1554819014448" expanded="true" signature="15774:16424" ph="insert into book... " />
+            <marker date="1554819014448" expanded="true" signature="15776:16424" ph="insert into book... " />
+            <marker date="1554819014448" expanded="true" signature="18871:18896" ph="select count... book" />
+            <marker date="1554819014448" expanded="true" signature="20752:21452" ph="update book... " />
+            <marker date="1554819014448" expanded="true" signature="21623:22215" ph="update book... " />
+            <marker date="1554819014448" expanded="true" signature="22437:23707" ph="update book... " />
+            <marker date="1554819014448" expanded="true" signature="23827:24458" ph="update book... " />
+            <marker date="1554819014448" expanded="true" signature="24560:25094" ph="update book... " />
+            <marker date="1554819014448" expanded="true" signature="24561:25094" ph="update book... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/controller/BookController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service/src/main/java/cn/zx/biri/bookservice/service/serviceImpl/BookServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="96" column="29" lean-forward="true" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+        <state relative-caret-position="160">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/adminCommonbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="84" column="99" lean-forward="false" selection-start-line="84" selection-start-column="99" selection-end-line="84" selection-end-column="99" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/cn/zx/biri/webservice/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="61" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/bookList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#45693#45699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="625" column="2" lean-forward="false" selection-start-line="625" selection-start-column="2" selection-end-line="696" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/shelvesBook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="255" column="41" lean-forward="true" selection-start-line="255" selection-start-column="41" selection-end-line="267" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#fieldset#7;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1554819395093" expanded="true" signature="20799:20828" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="20972:20986" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="21642:21659" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="22858:22887" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="23011:23024" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="23103:23151" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="23218:23259" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="24750:24778" ph="..." />
+            <marker date="1554819395093" expanded="true" signature="24919:24933" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/admin/manageTag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="389" column="73" lean-forward="false" selection-start-line="389" selection-start-column="73" selection-end-line="389" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#14685#14691#0" expanded="true" />
+            <marker date="1554822512074" expanded="true" signature="20439:20451" ph="..." />
+            <marker date="1554822512074" expanded="true" signature="20786:20815" ph="..." />
+            <marker date="1554822512074" expanded="true" signature="20983:20997" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

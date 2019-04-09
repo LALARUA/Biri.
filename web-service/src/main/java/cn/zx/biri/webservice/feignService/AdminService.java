@@ -14,5 +14,7 @@ import java.util.Map;
 public interface AdminService {
 
     @GetMapping("shelvesBook")
-    public Map shelvesBook();
+    Map shelvesBook();
+    @GetMapping("manageTag")
+    Map manageTag();
 }
