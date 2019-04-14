@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,16 +44,15 @@ public class BookServiceApplicationTests {
 	@Autowired
 	BookService bookService;
 
+	@Autowired
+	CacheManager cacheManager;
+
 
 	@Test
 	public void test(){
-		SelectBook selectBook = new SelectBook();
-		selectBook.setKeyword("余华");
-		selectBook.setTagIds(new ArrayList<>(Arrays.asList(151,152)));
-		selectBook.setCurrentBookIds(new ArrayList<>(Arrays.asList(787)));
-		List<Integer> list = bookMapper.selectBookCount(selectBook);
-		Integer integer = bookMapper.selectBookCountByCondition(selectBook);
-
+		List<BookEnhanced> bookEnhanceds = bookMapper.selectAllBookList();
+		Cache importantCache = cacheManager.getCache("importantCache");
+		importantCache.put("allBookList",bookEnhanceds);
 		return;
 	}
 

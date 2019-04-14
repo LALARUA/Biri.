@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class WishList {
+import java.io.Serializable;
+
+public class WishList implements Serializable {
     private Integer id;
 
     private Integer userId;

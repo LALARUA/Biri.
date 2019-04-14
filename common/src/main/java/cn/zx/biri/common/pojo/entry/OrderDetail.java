@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class OrderDetail {
+import java.io.Serializable;
+
+public class OrderDetail implements Serializable {
     private Integer id;
 
     private Integer orderId;

@@ -10,11 +10,11 @@ import java.util.Map;
  * @Description:
  * @Date Created in 16:03 2019/4/8 0008
  */
-@FeignClient(value = "admin-service")
-public interface AdminService {
-
-    @GetMapping("shelvesBook")
-    Map shelvesBook();
-    @GetMapping("manageTag")
-    Map manageTag();
-}
+//@FeignClient(value = "admin-service")
+//public interface AdminService {
+//
+//    @GetMapping("shelvesBook")
+//    Map shelvesBook();
+//    @GetMapping("manageTag")
+//    Map manageTag();
+//}

@@ -1,8 +1,9 @@
 package cn.zx.biri.common.pojo.entry;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Reply {
+public class Reply implements Serializable {
     private Integer id;
 
     private Integer commentId;

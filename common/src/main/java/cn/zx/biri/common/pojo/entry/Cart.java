@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class Cart {
+import java.io.Serializable;
+
+public class Cart implements Serializable {
     private Integer id;
 
     private Integer userId;

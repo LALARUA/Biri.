@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class ReplySupport {
+import java.io.Serializable;
+
+public class ReplySupport implements Serializable {
     private Integer id;
 
     private Integer userId;

@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class CommentSupport {
+import java.io.Serializable;
+
+public class CommentSupport implements Serializable {
     private Integer id;
 
     private Integer userId;

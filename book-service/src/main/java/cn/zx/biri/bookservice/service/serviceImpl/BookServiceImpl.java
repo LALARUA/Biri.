@@ -223,5 +223,17 @@ public class BookServiceImpl implements BookService{
 
     }
 
+    @Override
+    public List<BookEnhanced> allBookList() {
+        return bookMapper.selectAllBookList();
+    }
+
+    @Override
+    public BookDetail editBook(Integer bookId) {
+        BookDetail bookDetail = bookMapper.selectBookDetail(bookId);
+        bookDetail.setTagLinks(tagService.tagLink(bookDetail.getTags()));
+        return bookDetail;
+    }
+
 
 }

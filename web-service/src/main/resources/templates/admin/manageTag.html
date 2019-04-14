@@ -117,19 +117,22 @@
 									</div>
 		                            <div style="height: 300px" class="content">
                                         <fieldset id="addTag">
-                                            <div style="height: 35px" class="form-group">
+                                            <div style="height: 35px" level="1" class="form-group">
                                                 <label class="col-sm-2 control-label">
                                                     1级标签
                                                 </label>
-                                                <div style="float: left;margin-left: 10px"  level="1">
+                                                <div style="float: left;margin-left: 10px"  >
                                                     <select  name="tagIdAndName" class="nice-select">
                                                         <option value="" selected>选择标签…</option>
                                                         <option th:each="tag:${tagHead.sonTags}" th:value="${tag.id}+'-'+${tag.name}" th:text="${tag.name}"></option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <button type="button" id="addTagLink" style="margin-left: 5px" class="btn btn-primary">添加标签链</button>
 
                                         </fieldset>
+
+
 		                            </div>
 							    </form>
 	                        </div> <!-- end card -->
@@ -139,7 +142,7 @@
 								<form class="form-horizontal">
 		                            <div class="header">
 										<h4 class="title">
-											Horizontal Form
+											删除标签
 										</h4>
 									</div>
 		                            <div class="content">
@@ -365,8 +368,8 @@
             var head = [[${tagHead}]];
 
             $(document).on('click', '.option', function (){
-                var level = $(this).parent().parent().parent().attr("level");
-                var tags = $(this).parent().parent().parent().parent().find(".tag");
+                var level = $(this).parent().parent().parent().parent().attr("level");
+                var tags = $(this).parent().parent().parent().parent().parent().find(".tag");
                 for (var i = 0;i<tags.length;i++){
                     if (tags.eq(i).attr("level")>level)
                         tags.eq(i).remove()
@@ -387,11 +390,11 @@
                         liHTML+="<li data-value="+sonTags[i].id+"-"+sonTags[i].name+" class=\"option focus\">"+sonTags[i].name+"</li>"
                     }
                     level++;
-                    $(this).parent().parent().parent().parent().parent().append(" <div style=\"height: 35px\" class=\"form-group\">\n" +
+                    $(this).parent().parent().parent().parent().after(" <div level="+level+ " style=\"height: 35px\" class=\"tag form-group\">\n" +
                         "                                                <label class=\"col-sm-2 control-label\">\n" +level+
                         "                                                    级标签\n" +
                         "                                                </label><div style=\"float: left;margin-left: 10px\"" +
-                        " level="+level+" class=\"tag\">\n" +
+                        " >\n" +
                         "               <select name=\"tagIdAndName\" class=\"nice-select\" style=\"display: none;\">\n" +
                         "               <option value=\"\" selected=\"\">选择标签…</option>\n" +
                         optionHTML+

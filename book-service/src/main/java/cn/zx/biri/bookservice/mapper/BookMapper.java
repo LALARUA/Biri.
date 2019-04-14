@@ -16,6 +16,8 @@ import java.util.List;
 
 public interface BookMapper {
 
+    List<BookEnhanced> selectAllBookList();
+
     @Update("update book set keyword = #{keyword} where id = #{id}")
     void setKeyWord(@Param("keyword")  String keyword,@Param("id")int id);
 

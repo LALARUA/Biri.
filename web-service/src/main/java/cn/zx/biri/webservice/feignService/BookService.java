@@ -36,6 +36,18 @@ public interface BookService {
 
     @GetMapping("allTags")
     String tagsHTML();
+
+    @GetMapping("allBookList")
+    List<BookEnhanced> allBookList();
+
+    @GetMapping("shelvesBook")
+    Map shelvesBook();
+
+    @GetMapping("manageTag")
+    Map manageTag();
+
+    @GetMapping("editBook")
+    BookDetail editBook(@RequestParam("bookId") Integer bookId);
 }
 
 

@@ -26,4 +26,6 @@ public interface BookService {
     Map shelvesBook();
     void postShelvesBook(List<MultipartFile> bookImg,ShelvesBook book) throws Exception;
     Map manageTag();
+    List<BookEnhanced> allBookList();
+    BookDetail editBook(Integer bookId);
 }

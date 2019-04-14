@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class BookStatus {
+import java.io.Serializable;
+
+public class BookStatus implements Serializable {
     private Integer id;
 
     private String description;

@@ -78,6 +78,15 @@ public class BookController {
 
     }
 
+    @GetMapping("allBookList")
+    public List<BookEnhanced> allBookList(){
+        return bookService.allBookList();
+    }
+    @GetMapping("editBook")
+    public BookDetail editBook(Integer bookId){
+        return bookService.editBook(bookId);
+    }
+
 
 
 

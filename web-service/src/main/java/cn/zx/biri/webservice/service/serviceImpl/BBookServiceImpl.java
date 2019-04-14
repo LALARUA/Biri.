@@ -1,10 +1,13 @@
 package cn.zx.biri.webservice.service.serviceImpl;
 
+import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.webservice.feignService.BookService;
 import cn.zx.biri.webservice.service.BBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @Author: xiangXX
@@ -22,5 +25,13 @@ public class BBookServiceImpl implements BBookService {
     public String tagsHTML(String key) {
        return bookService.tagsHTML();
     }
+
+    @Override
+    @Cacheable(cacheNames = "importantCache",key = "#key")
+    public List<BookEnhanced> allBookList(String key) {
+       return bookService.allBookList();
+
+    }
+
 
 }

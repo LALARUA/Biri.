@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class BookWithImagePath {
+import java.io.Serializable;
+
+public class BookWithImagePath implements Serializable {
     private Integer id;
 
     private Integer bookId;

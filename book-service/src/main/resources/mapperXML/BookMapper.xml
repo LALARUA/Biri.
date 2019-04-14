@@ -78,7 +78,9 @@
       book.publisher AS publisher,
       book.price AS price,
       book.stock AS stock,
+      book.isbn AS isbn,
       author.id AS authorId,
+      book.putaway AS putaway,
       author.`name` AS authorName,
       book.score AS score,
       tag.id AS tagId,
@@ -154,11 +156,10 @@
     author.introduction AS authorIntroduction,
     book.summary AS summary,
     book.catalog AS catalog,
-    book.putaway AS putaway,
+
     book.publishDate AS publishDate,
     book.sales AS sales,
-    book.stock AS  stock,
-    book.isbn AS isbn
+    book.stock AS stock
   </sql>
 
   <sql id="Example_Where_Clause">
@@ -300,9 +301,15 @@
     <if test="orderBy != null">
       ORDER  BY #{orderBy} DESC
     </if>
-    limit #{start},12) AS result
+    limit #{start},12
+    ) AS result
     )
 
+  </select>
+  <select id="selectAllBookList" resultMap="BookListDisplay">
+    <include refid="selectBookListDisplayFieldSql"/>
+    <include refid="selectBookListFromSql"/>
+    ORDER  BY book.id
   </select>
     <select id="selectBookCountByCondition" parameterType="cn.zx.biri.common.pojo.vo.SelectBook" resultType="java.lang.Integer">
         SELECT COUNT(*) FROM (

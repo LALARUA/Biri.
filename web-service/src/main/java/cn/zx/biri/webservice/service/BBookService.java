@@ -1,5 +1,9 @@
 package cn.zx.biri.webservice.service;
 
+import cn.zx.biri.common.pojo.response.BookEnhanced;
+
+import java.util.List;
+
 /**
  * @Author: xiangXX
  * @Description:
@@ -8,6 +12,8 @@ package cn.zx.biri.webservice.service;
 public interface BBookService {
 
     String tagsHTML(String key);
+
+    List<BookEnhanced> allBookList(String key);
 
 
 }

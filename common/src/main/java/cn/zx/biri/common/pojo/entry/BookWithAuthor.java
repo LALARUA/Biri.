@@ -1,6 +1,8 @@
 package cn.zx.biri.common.pojo.entry;
 
-public class BookWithAuthor {
+import java.io.Serializable;
+
+public class BookWithAuthor implements Serializable {
     private Integer id;
 
     private Integer bookId;
