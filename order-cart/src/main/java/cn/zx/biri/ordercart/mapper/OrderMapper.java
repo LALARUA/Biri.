@@ -11,6 +11,8 @@ import java.util.Map;
 
 public interface OrderMapper {
 
+    List<UserOrder> getOrdersByStatus(Integer status);
+
     List<UserOrder> getOrders(Map<String,Integer> map);
 
     long countByExample(OrderExample example);

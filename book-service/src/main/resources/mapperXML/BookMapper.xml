@@ -18,17 +18,16 @@
     <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
     <result column="catalog" jdbcType="LONGVARCHAR" property="catalog" />
   </resultMap>
-  <resultMap id="BookListDisplay" extends="BaseResultMap" type="cn.zx.biri.common.pojo.response.BookEnhanced">
+  <resultMap id="BookListDisplay" extends="ResultMapWithBLOBs" type="cn.zx.biri.common.pojo.response.BookEnhanced">
     <!--<id column="id" jdbcType="INTEGER" property="id" />-->
     <!--<result column="title" jdbcType="VARCHAR" property="title" />-->
     <!--<result column="imagePath" jdbcType="VARCHAR" property="imagePath" />-->
     <!--<result column="publisher" jdbcType="VARCHAR" property="publisher" />-->
     <!--<result column="price" jdbcType="DOUBLE" property="price" />-->
      <!--<result column="score" jdbcType="DOUBLE" property="score" />-->
-    <!--<result column="hotComment" jdbcType="VARCHAR" property="hotComment" />-->
+    <result column="hotComment" jdbcType="VARCHAR" property="hotComment" />
     <!--<result column="summary" jdbcType="VARCHAR" property="summary" />-->
     <!--<result column="stock" jdbcType="INTEGER" property="stock" />-->
-
     <collection property="status" ofType="cn.zx.biri.common.pojo.response.BookStatusEnhanced">
       <id column="bookWithStatusId" jdbcType="INTEGER" property="id" />
       <result column="statusDescription" jdbcType="VARCHAR" property="description" />
@@ -43,6 +42,7 @@
     <collection property="authors" ofType="cn.zx.biri.common.pojo.entry.Author">
       <id column="authorId" jdbcType="INTEGER" property="id" />
       <result column="authorName" jdbcType="VARCHAR" property="name" />
+      <result column="authorIntroduction" jdbcType="LONGVARCHAR" property="introduction" />
     </collection>
     <collection property="tags" ofType="cn.zx.biri.common.pojo.entry.Tag">
       <id column="tagId" jdbcType="INTEGER" property="id" />

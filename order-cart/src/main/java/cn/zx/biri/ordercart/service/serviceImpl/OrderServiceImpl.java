@@ -73,8 +73,19 @@ public class OrderServiceImpl implements OrderService {
         return 0;
     }
 
+
+
     @Override
-    public List<UserOrder> getOrders(int status,int userId) throws Exception {
+    public List<UserOrder> getOrdersByStatus(Integer status) throws Exception {
+        List<UserOrder> orders = orderMapper.getOrdersByStatus(status);
+
+        return orders;
+    }
+
+
+
+    @Override
+    public List<UserOrder> getOrders(Integer status,Integer userId) throws Exception {
         Map<String,Integer> map = new HashMap<>();
 
         map.put("userId",userId);

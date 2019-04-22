@@ -11400,7 +11400,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "展示 _START_ to _END_ of _TOTAL_ 图书",
+			"sInfo": "展示 _START_ to _END_ of _TOTAL_ 数据",
 
 
 			/**

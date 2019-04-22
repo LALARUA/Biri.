@@ -4,6 +4,7 @@ import cn.zx.biri.bookservice.mapper.AuthorMapper;
 import cn.zx.biri.bookservice.service.AuthorService;
 import cn.zx.biri.common.pojo.entry.Author;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,10 +17,11 @@ import java.util.List;
 @Service
 public class AuthorServiceImpl implements AuthorService{
     @Autowired
-    public AuthorMapper authorMapper;
+    private AuthorMapper authorMapper;
 
     @Override
     public List<Author> getAllAuthors() {
+
         List<Author> authors = authorMapper.getAllAuthors();
         return authors;
     }

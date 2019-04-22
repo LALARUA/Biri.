@@ -52,4 +52,15 @@ public class OrderController {
             return null;
         }
     }
+
+    @GetMapping("orderToAdmin")
+    public List<UserOrder> getOrdersByStatus(Integer  status){
+        try {
+            return orderService.getOrdersByStatus(status);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

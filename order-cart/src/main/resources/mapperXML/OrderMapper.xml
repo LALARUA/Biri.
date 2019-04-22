@@ -95,6 +95,12 @@
     book.title AS bookTitle,book.imagePath AS bookImagePath,order.phone AS phone,order.userName AS userName FROM `order`,orderdetail,book WHERE `order`.id=orderdetail.orderId AND orderdetail.bookId = book.id
     AND `order`.userId= #{userId} AND `order`.status = #{status} ORDER BY createtime DESC
   </select>
+  <select id="getOrdersByStatus" parameterType="java.lang.Integer" resultMap="UserOrder">
+    select `order`.id as id,`order`.userId as userId,`order`.createtime AS createtime,`order`.`status` AS `status`,`order`.total as total,order.addressDetail AS addressDetail,
+    orderdetail.id AS orderDetailId,orderdetail.bookId as bookId,orderdetail.bookNum as bookNum,orderdetail.summoney AS orderDetailSummoney,
+    book.title AS bookTitle,book.imagePath AS bookImagePath,order.phone AS phone,order.userName AS userName FROM `order`,orderdetail,book WHERE `order`.id=orderdetail.orderId AND orderdetail.bookId = book.id
+   AND `order`.status = #{status} ORDER BY createtime DESC
+  </select>
   <select id="selectByExample" parameterType="cn.zx.biri.common.pojo.example.OrderExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

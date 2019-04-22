@@ -28,7 +28,6 @@ public class BookController {
 
     @GetMapping("bookDetail")
     public BookDetail selectBookDetail(Integer bookId, Integer currentUserId){
-
        return bookService.selectBookDetail(bookId,currentUserId);
     }
 

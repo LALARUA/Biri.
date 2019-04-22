@@ -12,5 +12,6 @@ import java.util.List;
  */
 public interface OrderService {
     int postOrder(Order order) throws Exception;
-    List<UserOrder> getOrders(int status,int userId) throws Exception;
+    List<UserOrder> getOrders(Integer status,Integer userId) throws Exception;
+    List<UserOrder> getOrdersByStatus(Integer status) throws Exception;
 }

@@ -172,7 +172,6 @@ public class BookServiceImpl implements BookService{
         String[] authorIdAndNameSplit = authorIdAndName.split("-");
         Integer authorId = Integer.valueOf(authorIdAndNameSplit[0]);
         String authorName = authorIdAndNameSplit[1];
-
         keyword.append(book.getTitle()+",");
         keyword.append(authorName+",");
         for (String tagIdAndName : book.getTagIdAndName()) {

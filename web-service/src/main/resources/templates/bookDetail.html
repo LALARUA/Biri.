@@ -206,12 +206,12 @@ display: -webkit-box;
                                     <div class="product-meta">
                                         <span class="sku_wrapper font-size-12">ISBN: <span class="sku" th:text="${bookDetail.isbn}">REF. LA-887</span></span>
                                         <span class="posted_in font-size-12">出版社:
-                                            <a th:href="'/Biri/book/list?publishers='+${bookDetail.publishers}" th:text="${bookDetail.publishers}">Fashions</a>
+                                            <a th:href="'/Biri/book/list?publisher='+${bookDetail.publisher}" th:text="${bookDetail.publisher}">Fashions</a>
                                         </span>
                                         <span class="posted_in font-size-12"><span style="float: left">标签:</span>
                                             <div style="float: left">
                                                 <div th:each="tags,tagsStat:${bookDetail.tagLinks}">
-                                                    <a  th:each="tag,tagStat:${tags}" th:href="'/Biri/book/list?tagId='+${tag.getId()}" th:tagId = "${tag.id}" th:text="${tagStat.count==tags.size()}? ${tag.name} : ${tag.name}+'->'" href="shop-sidebar.html">dress,</a>
+                                                    <a  th:each="tag,tagStat:${tags}" th:href="'/Biri/book/list?tagIds='+${tag.getId()}+'&tagName='+${tag.name}" th:tagId = "${tag.id}" th:text="${tagStat.count==tags.size()}? ${tag.name} : ${tag.name}+'->'" href="shop-sidebar.html">dress,</a>
 
                                                 </div>
                                             </div>
