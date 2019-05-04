@@ -27,4 +27,7 @@ public interface OrderAndCartService {
 
     @GetMapping("wishList")
     List<UserWishList> getWishList(@RequestParam("userId") Integer userId);
+
+    @GetMapping("orderToAdmin")
+    List<UserOrder> getOrdersByStatus(@RequestParam("status") Integer  status);
 }

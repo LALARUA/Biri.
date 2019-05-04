@@ -9,6 +9,7 @@ import cn.zx.biri.common.pojo.response.UserOrder;
 import cn.zx.biri.common.pojo.vo.OrderVO;
 import cn.zx.biri.common.utils.DateUtils;
 import cn.zx.biri.ordercart.feignService.BookService;
+import cn.zx.biri.ordercart.mapper.CartMapper;
 import cn.zx.biri.ordercart.mapper.OrderDetailMapper;
 import cn.zx.biri.ordercart.mapper.OrderMapper;
 import cn.zx.biri.ordercart.service.CartService;
@@ -43,6 +44,9 @@ public class OrderServiceImpl implements OrderService {
     private BookService bookService;
 
     @Autowired
+    private CartMapper cartMapper;
+
+    @Autowired
     CartService cartService;
 
 
@@ -51,25 +55,20 @@ public class OrderServiceImpl implements OrderService {
     public int postOrder(Order order) throws Exception {
         if (bookService.reduceStock() == -1)
             return -1;
-
-
         order.setCreatetime(DateUtils.dateToString(new Date()));
         orderMapper.insertSelective(order);
-
         List<BookInCart> bookInCarts = cartService.bookInCarts(order.getUserId());
         Map<Integer, BookInCart> cart = bookInCarts.stream().collect(Collectors.toMap(BookInCart::getCartId, (p) -> p));
-        ((OrderVO)order).setOrderDetails(cart);
         int orderId = order.getId();
-        Map<Integer, BookInCart> orderDetails = ((OrderVO) order).getOrderDetails();
-        for (Map.Entry<Integer,BookInCart> entry : orderDetails.entrySet()) {
+        for (Map.Entry<Integer,BookInCart> entry : cart.entrySet()) {
             OrderDetail orderDetail = new OrderDetail();
             orderDetail.setBookId(entry.getValue().getId());
             orderDetail.setBookNum(entry.getValue().getBookNum());
             orderDetail.setOrderId(orderId);
             orderDetail.setSummoney(entry.getValue().getPrice()*entry.getValue().getBookNum());
+            cartMapper.deleteByPrimaryKey(entry.getKey());
             orderDetailMapper.insertSelective(orderDetail);
         }
-
         return 0;
     }
 
@@ -78,20 +77,21 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<UserOrder> getOrdersByStatus(Integer status) throws Exception {
         List<UserOrder> orders = orderMapper.getOrdersByStatus(status);
-
         return orders;
     }
 
+    @Override
+    public void updateOrder(Order order) {
+        orderMapper.updateByPrimaryKeySelective(order);
+    }
 
 
     @Override
     public List<UserOrder> getOrders(Integer status,Integer userId) throws Exception {
         Map<String,Integer> map = new HashMap<>();
-
         map.put("userId",userId);
         map.put("status",status);
         List<UserOrder> orders = orderMapper.getOrders(map);
-
         return orders;
     }
 }

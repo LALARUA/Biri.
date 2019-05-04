@@ -1,15 +1,13 @@
 package cn.zx.biri.ordercart.controller;
 
+import cn.zx.biri.common.pojo.entry.Order;
 import cn.zx.biri.common.pojo.entry.User;
 import cn.zx.biri.common.pojo.response.BookInCart;
 import cn.zx.biri.common.pojo.response.UserOrder;
 import cn.zx.biri.common.pojo.vo.OrderVO;
 import cn.zx.biri.ordercart.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -51,6 +49,18 @@ public class OrderController {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @PutMapping("order")
+    public String updateOrder(Order order){
+
+        try {
+            orderService.updateOrder(order);
+        } catch (Exception e) {
+            return "error";
+        }
+        return "success";
+
     }
 
     @GetMapping("orderToAdmin")

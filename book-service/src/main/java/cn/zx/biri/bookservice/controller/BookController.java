@@ -1,6 +1,7 @@
 package cn.zx.biri.bookservice.controller;
 
 import cn.zx.biri.bookservice.service.BookService;
+import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.Book;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
@@ -56,12 +57,10 @@ public class BookController {
     @GetMapping("shelvesBook")
     public Map shelvesBook(){
        return bookService.shelvesBook();
-
-
     }
 
     @PostMapping("shelvesBook")
-    public String postShelvesBook( List<MultipartFile> bookImg, ShelvesBook book){
+    public String postShelvesBook(List<MultipartFile> bookImg, ShelvesBook book){
         try {
             bookService.postShelvesBook(bookImg,book);
         } catch (Exception e) {
@@ -85,7 +84,6 @@ public class BookController {
     public BookDetail editBook(Integer bookId){
         return bookService.editBook(bookId);
     }
-
 
 
 

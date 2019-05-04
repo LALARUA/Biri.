@@ -60,17 +60,21 @@ public class AccessFilter extends ZuulFilter{
             return null;
         }
         HttpSession session = request.getSession();
-//        Cookie[] cookies = request.getCookies();
         String sessionId = session.getId();
         String base64EncodeSessionId = base64Encode(sessionId);
         String cookie = request.getHeader("Cookie");
         if (Objects.isNull(cookie))
             cookie = "SESSION="+base64EncodeSessionId;
+        else if (!cookie.contains("SESSION=")){
+            cookie = cookie+";SESSION="+base64EncodeSessionId;
+        }
         else {
             String newCookie = "SESSION="+base64EncodeSessionId;
             cookie = cookie.replaceAll("\\bSESSION=.{48}",newCookie);
         }
         currentContext.addZuulRequestHeader("Cookie", cookie);
+        return null;
+    }
 //        currentContext.addZuulRequestHeader("Cookie","SESSION=" + base64Encode(session.getId()));
 
 //        currentContext.setSendZuulResponse(true);
@@ -82,8 +86,7 @@ public class AccessFilter extends ZuulFilter{
 //        ctx.addZuulRequestHeader("Cookie", "SESSION=" + sessionId);
 //        ctx.setSendZuulResponse(true);// 对该请求进行路由
 //        ctx.setResponseStatusCode(200); // 返回200正确响应
-        return null;
-    }
+
     @Override
     public String filterType() {
         return FilterConstants.PRE_TYPE;

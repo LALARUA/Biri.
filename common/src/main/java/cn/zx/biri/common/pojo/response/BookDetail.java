@@ -16,10 +16,11 @@ public class BookDetail extends BookEnhanced {
 
     private Integer commentCount;
 
-
     private List<List<Tag>> tagLinks;
 
     private List<String> catalogs;
+
+    private List<BookComment> comments;
 
     public Integer getCommentCount() {
         return commentCount;
@@ -45,7 +46,7 @@ public class BookDetail extends BookEnhanced {
         this.catalogs = catalogs;
     }
 
-    private List<BookComment> comments;
+
 
     public Integer getCommentPageNum() {
         return commentPageNum;

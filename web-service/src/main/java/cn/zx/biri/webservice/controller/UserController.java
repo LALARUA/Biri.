@@ -53,8 +53,10 @@ public class UserController {
     }
 
     @GetMapping("checkout")
-    public String checkout(){
-
+    public String checkout(HttpSession httpSession,Model model){
+        User user = (User) httpSession.getAttribute("user");
+        List<BookInCart> bookInCarts = orderAndCartService.bookInCarts(user.getId());
+        model.addAttribute("cart",bookInCarts);
         return "checkout";
     }
 

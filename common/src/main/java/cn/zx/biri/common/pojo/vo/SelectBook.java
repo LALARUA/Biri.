@@ -4,6 +4,7 @@ import cn.zx.biri.common.pojo.entry.Book;
 import cn.zx.biri.common.utils.ReflectUtils;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,11 +21,15 @@ public class SelectBook extends Book {
     private Integer pageNow;
     private Integer start;
     private List<Integer> currentBookIds;
-    private Integer status;
+    private List<Integer> status;
     private String orderBy;
     private String keyword;
     private String flag;
 
+    public SelectBook(){
+        this.pageNow = 1;
+        this.status = new ArrayList<>();
+    }
 
     @Override
     public String toString() {
@@ -55,11 +60,11 @@ public class SelectBook extends Book {
         this.orderBy = orderBy;
     }
 
-    public Integer getStatus() {
+    public List<Integer> getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(List<Integer> status) {
         this.status = status;
     }
 

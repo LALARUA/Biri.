@@ -33,13 +33,12 @@ public class BookController {
 
     @GetMapping("home")
     public String home(){
+        SelectBook condition = new SelectBook();
+        condition.getStatus().add(1);
+        condition.setFlag("home");
+        Map bookMap = bookService.bookList(condition);
+        bookMap.get("bookList");
         return "home";
-    }
-
-    @GetMapping("test")
-    public void test(SelectBookCondition condition){
-
-        return;
     }
 
     @GetMapping("book/list")
@@ -48,7 +47,7 @@ public class BookController {
             condition.setIsbn(Long.valueOf(condition.getKeyword()));
             condition.setKeyword(null);
         }
-        condition.setPageNow(1);
+
         model.addAttribute("condition",condition);
         model.addAttribute("tagsHTML",bBookService.tagsHTML("allTags"));
         Map bookMap = bookService.bookList(condition);

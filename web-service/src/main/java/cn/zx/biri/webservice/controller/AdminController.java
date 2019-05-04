@@ -7,9 +7,11 @@ import cn.zx.biri.common.pojo.entry.Tag;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.response.NewTag;
+import cn.zx.biri.common.pojo.response.UserOrder;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 
 import cn.zx.biri.webservice.feignService.BookService;
+import cn.zx.biri.webservice.feignService.OrderAndCartService;
 import cn.zx.biri.webservice.service.BBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,10 +34,13 @@ public class AdminController {
     private final Integer pageSize = 12;
 
     @Autowired
-    BookService bookService;
+    private BookService bookService;
 
     @Autowired
-    BBookService bBookService;
+    private BBookService bBookService;
+
+    @Autowired
+    private OrderAndCartService orderAndCartService;
 
 
 
@@ -56,7 +61,6 @@ public class AdminController {
         Map map = bookService.shelvesBook();
 //        ObjectMapper objectMapper = new ObjectMapper();
 //        String tagMap = objectMapper.writeValueAsString((Map) map.get("tagMap"));
-
         model.addAttribute("authors",map.get("authors"));
         model.addAttribute("tagHead",map.get("tagHead"));
         model.addAttribute("tagMap",map.get("tagMap"));
@@ -88,15 +92,29 @@ public class AdminController {
     }
     @GetMapping("manageAuthor")
     public String manageAuthor(Model model) throws Exception{
-
-
+        List<Author> authors = bookService.allAuthors();
+        model.addAttribute("authors",authors);
         return "admin/manageAuthor";
     }
-    @GetMapping("manageOrder")
-    public String manageOrder(Model model) throws Exception{
+    @GetMapping("editAuthor/{authorId}")
+    public String editAuthor(Model model,@PathVariable("authorId") Integer authorId) throws Exception{
+        Author author = bookService.authorDetail(authorId);
+        model.addAttribute("flag",2);
+        model.addAttribute("author",author);
+        return "admin/editAuthor";
 
+    }
 
+    @GetMapping("insertAuthor")
+    public String shelvesAuthor(Model model){
 
+        model.addAttribute("flag",1);
+        return "admin/editAuthor";
+    }
+    @GetMapping("manageOrder/{orderStatus}")
+    public String manageOrder(Model model,@PathVariable("orderStatus") Integer orderStatus) throws Exception{
+        List<UserOrder> orders = orderAndCartService.getOrdersByStatus(orderStatus);
+        model.addAttribute("orders",orders);
         return "admin/manageOrder";
     }
 

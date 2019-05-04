@@ -56,23 +56,15 @@ public class ListenerService {
             String username = split[0];
             String CAPTCHA = split[1];
             String emailRegex = RegEx.EMAIL.toString();
-            String phoneRegex = RegEx.PHONE.toString();
             if (username.matches(emailRegex)) {
                 String text = myProperties.getGetCAPTCHAMessage()+CAPTCHA;
                 sendMail(username,text);
                 return;
             }
-
-
-            //手机
-            else if (username.matches(phoneRegex)){
-
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
     public void sendMail(String to,String text) throws Exception{
             SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
             simpleMailMessage.setSubject("");

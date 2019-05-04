@@ -33,9 +33,6 @@ public class loginAndRegisterController {
         if (httpSession.getAttribute("user")!=null){
             return "redirect:http://localhost:8769/Biri/home";
         }
-
-
-
         Cookie userInCookie = CookieUtils.getCookieByName(httpServletRequest,"user");
         if (!Objects.isNull(userInCookie)){
             String userInfo = userInCookie.getValue();

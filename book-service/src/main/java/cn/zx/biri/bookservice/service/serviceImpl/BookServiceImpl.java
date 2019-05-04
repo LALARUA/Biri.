@@ -57,7 +57,6 @@ public class BookServiceImpl implements BookService{
         List<Integer> bookIds = bookMapper.selectBookCount(condition);
         if (bookIds.size()==0)
             return null;
-
         if (condition.getCurrentBookIds()==null&&condition.getFlag()==null){
             FilterBookCondition filter = new FilterBookCondition();
             List<Tag> filterTag = bookMapper.filterTag(bookIds);
@@ -73,18 +72,8 @@ public class BookServiceImpl implements BookService{
             condition.setCurrentBookIds(bookIds);
             map.put("filter",filter);
         }
-//        String tagHTML = tagService.getAllTagHTML();
-
-//        BookDetail bookDetail = bookMapper.selectBookDetail(787);
-//        List<Tag> tags = bookDetail.getTags();
-//        StringBuilder stringBuilder = new StringBuilder();
-//        Tag head = HandleBookTagUtils.getHead(tags);
-//        HandleBookTagUtils.getTagHTML(head,stringBuilder);
-//        String tagHTML= stringBuilder.toString();
         map.put("bookIds",bookIds);
         map.put("bookList",selectBookListByPage(condition));
-
-
         return map;
     }
 
@@ -93,7 +82,6 @@ public class BookServiceImpl implements BookService{
         Integer pageNow = condition.getPageNow();
         condition.setStart((pageNow-1)*pageSize);
         List<BookEnhanced> bookList = bookMapper.selectBookList(condition);
-
         condition.setStart(null);
         return bookList;
     }
@@ -104,7 +92,6 @@ public class BookServiceImpl implements BookService{
         BookDetail bookDetail = bookMapper.selectBookDetail(bookId);
         if (bookDetail==null)
             return null;
-
         Map map = commentService.selectBookCommentsFirst(bookId, currentUserId);
         String catalog = bookDetail.getCatalog();
         String[] catalogs = catalog.split(" |\r\n");
@@ -113,11 +100,6 @@ public class BookServiceImpl implements BookService{
         bookDetail.setCommentCount((Integer) map.get("commentCount"));
         bookDetail.setCommentPageNum((Integer) map.get("pageNum"));
         List bookCommentsMap = (List) map.get("bookComments");
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        List<BookComment> bookComments = new ArrayList<>(bookCommentsMap.size());
-//        for (Map bookComment : bookCommentsMap) {
-//            bookComments.add(objectMapper.convertValue(bookComment, BookComment.class));
-//        }
         bookDetail.setComments(bookCommentsMap);
         return bookDetail;
     }
@@ -139,7 +121,6 @@ public class BookServiceImpl implements BookService{
                 bookMapper.updateByPrimaryKeySelective(book);
             }
         }
-
         return 0;
     }
 
@@ -181,10 +162,8 @@ public class BookServiceImpl implements BookService{
             book.getTagId().add(Integer.valueOf(tagIdAndNameSplit[0]));
             keyword.append(tagIdAndNameSplit[1]+",");
         }
-
         book.setKeyword(keyword.toString());
         bookMapper.insertSelective(book);
-
         for (Integer tagId : book.getTagId()) {
             Bookwithtag bookwithtag = new Bookwithtag();
             bookwithtag.setBookid(book.getId());
@@ -195,7 +174,6 @@ public class BookServiceImpl implements BookService{
         bookWithAuthor.setAuthorId(authorId);
         bookWithAuthor.setBookId(book.getId());
         bookWithAuthorMapper.insertSelective(bookWithAuthor);
-
         File file = new File(bookImgPathPrefix+book.getId());
         file.mkdir();
         for (int i = 0; i < bookImg.size(); i++) {

@@ -50,25 +50,19 @@ public class AuthenticateServiceImpl implements AuthenticateService {
     @Override
     public void authenticate(LoginVO loginVO) throws Exception {
         Subject current = SecurityUtils.getSubject();
-        System.out.println(current.isAuthenticated());
         String username = loginVO.getUsername();
         String password = loginVO.getPassword();
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         current.login(token);
-
         //记住密码
         String value = username+"#"+password;
         HttpServletResponse currentHttpServletResponse = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
         HttpServletRequest currentHttpServletRequest = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         CookieUtils.addCookie(currentHttpServletResponse,"user",value);
-
         //将认证后的用户放入session
         HttpSession httpSession = currentHttpServletRequest.getSession();
         User user = userService.selectUserByUsername(username);
         httpSession.setAttribute("user",user);
-//        List<BookInCart> bookInCarts = orderAndCartService.bookInCarts(user.getId());
-//        Map<Integer, BookInCart> collect = bookInCarts.stream().collect(Collectors.toMap(BookInCart::getCartId, (p) -> p));
-//        httpSession.setAttribute("cart",collect);
     }
 
 

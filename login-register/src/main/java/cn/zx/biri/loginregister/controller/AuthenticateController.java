@@ -139,7 +139,6 @@ public class AuthenticateController {
         }
         try {
             User user = userService.selectUserByUsername(username);
-//            User user = null;
             if (user!=null&&flag==0){
                 map.put("errorMessage","此用户已被注册");
                 return map;

@@ -43,6 +43,12 @@ public interface BookService {
     @GetMapping("shelvesBook")
     Map shelvesBook();
 
+    @GetMapping("allAuthors")
+    List<Author> allAuthors();
+
+    @GetMapping("authorDetail")
+    Author authorDetail(@RequestParam("authorId") Integer authorId);
+
     @GetMapping("manageTag")
     Map manageTag();
 

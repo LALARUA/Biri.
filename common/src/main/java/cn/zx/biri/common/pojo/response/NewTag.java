@@ -11,20 +11,17 @@ import java.util.List;
  * @Date Created in 9:17 2019/4/8 0008
  */
 public class NewTag extends Tag {
-
-
     private Integer level;
 
+    private List<NewTag> sonTags = new ArrayList<>();
 
-   private List<NewTag> sonTags = new ArrayList<>();
-
-
-   public void build(Tag tag){
+    public void build(Tag tag){
        setfatherId(tag.getfatherId());
        setId(tag.getId());
        setName(tag.getName());
        setStatus(tag.getStatus());
-   }
+    }
+
     public Integer getLevel() {
         return level;
     }

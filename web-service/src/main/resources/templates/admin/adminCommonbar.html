@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li th:class="${activeUrl=='manageOrder'}?'active'">
-                <a href="/Biri/admin/manageOrder">
+                <a href="/Biri/admin/manageOrder/0">
                     <i class="ti-widget"></i>
                     <p>订单处理</p>
                 </a>
@@ -43,14 +43,13 @@
             <li th:class="${level==2}?'active'">
                 <a data-toggle="collapse" href="#forms" class="collapsed" aria-expanded="false">
                     <i class="ti-clipboard"></i>
-                    <p>商品管理
+                    <p>图书管理
                         <b class="caret"></b>
                     </p>
                 </a>
                 <div class="collapse" id="forms" role="navigation" aria-expanded="false" style="height: 0px;">
                     <ul class="nav">
                         <li th:class="${activeUrl=='manegeTag'}?'active'"><a href="/Biri/admin/manageTag">管理标签</a></li>
-                        <li th:class="${activeUrl=='manageAuthor'}?'active'"><a href="/Biri/admin/manageAuthor">管理作者</a></li>
                         <li th:class="${activeUrl=='shelvesBook'}?'active'"><a href="/Biri/admin/shelvesBook">上架新图书</a></li>
                         <li th:class="${activeUrl=='bookList'}?'active'"><a href="/Biri/admin/bookList">图书列表</a></li>
                     </ul>

@@ -35,7 +35,7 @@ public class HandleBookTagUtils {
                 head = tagMap.get(tag.getId());
         }
         for (Tag t : tags) {
-            NewTag father = (NewTag) tagMap.get(t.getfatherId());
+            NewTag father =  tagMap.get(t.getfatherId());
             if (father==null)
                 continue;
             father.getSonTags().add(tagMap.get(t.getId()));
@@ -61,7 +61,6 @@ public class HandleBookTagUtils {
     }
 
     public void createLink(Tag head,List list){
-
         list.add(head);
         NewTag newTag = (NewTag) head;
         if (newTag.getSonTags().size()==0){
@@ -84,9 +83,8 @@ public class HandleBookTagUtils {
        out:if (((NewTag)head).getSonTags()!=null&&((NewTag)head).getSonTags().size()>0){
            if (head.getfatherId()==0)
                break out;
-
             stringBuilder.append(" <li class=\"mainmenu__item menu-item-has-children has-children\">\n");
-           stringBuilder.append("<a href=\"/Biri/book/list?tagIds="+head.getId()+"&tagName="+head.getName()+"\" class=\"mainmenu__link\">\n");
+            stringBuilder.append("<a href=\"/Biri/book/list?tagIds="+head.getId()+"&tagName="+head.getName()+"\" class=\"mainmenu__link\">\n");
             stringBuilder.append("  <span class=\"mm-text\">"+ head.getName()+"</span>\n");
             stringBuilder.append(" </a>\n");
             stringBuilder.append(" <ul class=\"sub-menu\">\n");
@@ -106,6 +104,5 @@ public class HandleBookTagUtils {
             stringBuilder.append("</ul>\n");
             stringBuilder.append("</li>\n");
         }
-
     }
 }

@@ -137,12 +137,16 @@
       GROUP BY bookIds.bookId HAVING COUNT(*) = ${tagIds.size}) AS C
       ON A.bookId = C.bookId
     </if>
-    <if test="status != null">
+    <if test="status != null and status.size > 0">
       INNER JOIN
       (
       SELECT bookWithStatus.bookId AS bookId
       FROM bookWithStatus
-      WHERE bookWithStatus.`status` = #{status}) AS D
+      WHERE bookWithStatus.`status` IN
+      <foreach open="(" close=")" collection="status" item="item" separator=",">
+        #{item}
+      </foreach>
+      ) AS D
       ON A.bookId = D.bookId
     </if>
   </sql>
@@ -229,19 +233,18 @@
   </sql>
 
     <sql id="selectBookListFromSql">
-
         from book
         INNER JOIN bookWithAuthor
         ON book.id = bookWithAuthor.bookId
-    INNER JOIN author
-    ON bookWithAuthor.authorId = author.id
-    INNER JOIN bookWithTag
-    ON bookWithTag.bookId = book.id
-    INNER JOIN tag
-    ON bookWithTag.tagId = tag.id
-    INNER JOIN bookWithImagePath
-    ON book.id = bookWithImagePath.bookId
-    LEFT JOIN (
+        INNER JOIN author
+        ON bookWithAuthor.authorId = author.id
+        INNER JOIN bookWithTag
+        ON bookWithTag.bookId = book.id
+        INNER JOIN tag
+        ON bookWithTag.tagId = tag.id
+        INNER JOIN bookWithImagePath
+        ON book.id = bookWithImagePath.bookId
+        LEFT JOIN (
           SELECT
           MAX(count),bookId,detail,commentId
           FROM
@@ -256,11 +259,10 @@
            GROUP BY commentId) AS tab1
            GROUP BY bookId) AS tab2
            ON book.id = tab2.bookId
-      LEFT JOIN bookWithStatus
-      ON book.id = bookWithStatus.bookId
-      LEFT JOIN bookStatus
-      ON bookWithStatus.status = bookStatus.id
-
+        LEFT JOIN bookWithStatus
+        ON book.id = bookWithStatus.bookId
+        LEFT JOIN bookStatus
+        ON bookWithStatus.status = bookStatus.id
       </sql>
   <sql id="selectBookListWhereSql">
         <where>

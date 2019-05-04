@@ -21,8 +21,25 @@ public class AuthorServiceImpl implements AuthorService{
 
     @Override
     public List<Author> getAllAuthors() {
-
         List<Author> authors = authorMapper.getAllAuthors();
         return authors;
     }
+
+    @Override
+    public Author authorDetail(Integer authorId) {
+        Author author = authorMapper.selectByPrimaryKey(authorId);
+        return author;
+    }
+
+    @Override
+    public void updateAuthor(Author author) {
+        authorMapper.updateByPrimaryKeySelective(author);
+    }
+
+    @Override
+    public void insertAuthor(Author author) {
+        authorMapper.insertSelective(author);
+    }
+
+
 }

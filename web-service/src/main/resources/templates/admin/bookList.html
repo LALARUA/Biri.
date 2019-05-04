@@ -122,22 +122,25 @@
                                                     <th>作者</th>
                                                     <th>标签</th>
                                                     <th>ISBN</th>
-                                                    <th>价格</th>
+                                                    <th>状态</th>
                                                     <th>上架日期</th>
-                                                    <th class="disabled-sorting text-right">操作</th>
+                                                    <th>操作</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr th:each="book:${bookList}">
+                                                <tr th:each="book,bookStat:${bookList}">
                                                     <td th:title="${book.title}" style="max-width: 15em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" th:text="${book.title}">Tiger Nixon</td>
-                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="author:${book.authors}" th:text="${author.name}+' '"></span></td>
-                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="tag:${book.tags}" th:if="${tag.id!=148}" th:text="${tag.name}+'/'"></span></td>
+                                                    <td th:title="${book.authors.get(0)}" style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="author:${book.authors}" th:text="${author.name}+' '"></span></td>
+                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="tag,tagStat:${book.tags}" th:if="${tag.id!=148}" th:text="${tagStat.count!=book.tags.size()}?${tag.name}+'/':${tag.name}"></span></td>
                                                     <td th:text="${book.isbn}">Edinburgh</td>
-                                                    <td th:text="${book.price}">61</td>
+                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:if="${book.status.size()==0}">无</span><span th:each="status,statusStat:${book.status}"  th:text="(${statusStat.count==book.status.size()}?${status.getDescription()}:${status.getDescription()}+'/')"></span></td>
+
                                                     <td th:text="${book.putaway}">2011/04/25</td>
-                                                    <td class="text-right">
+                                                    <td>
 														<a th:href="'/Biri/admin/editBook/'+${book.id}" title="编辑图书" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
-														<a  class="btn btn-simple btn-danger btn-icon remove"><i class="ti-close"></i></a>
+                                                        <a th:href="'/Biri/admin/editBook/'+${book.id}" title="更改状态" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
+
+                                                        <!--<a  class="btn btn-simple btn-danger btn-icon remove"><i class="ti-close"></i></a>-->
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -147,7 +150,7 @@
                                                     <th>作者</th>
                                                     <th>标签</th>
                                                     <th>ISBN</th>
-                                                    <th>价格</th>
+                                                    <th>状态</th>
                                                     <th>上架日期</th>
                                                     <th class="disabled-sorting text-right">操作</th>
                                                 </tr>
