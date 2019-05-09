@@ -10,10 +10,6 @@ $(document).on('click', '.addBookToCart', function () {
     var imagePath = $(this).attr("imagePath");
     var stock = $(this).attr("stock");
     var cartBookIds = $(".miniCartBookId");
-
-
-
-
     for (var i = 0;i < cartBookIds.length;i++){
         if (bookId == cartBookIds.eq(i).val()){
             alert("已加入购物车");
@@ -62,6 +58,33 @@ $(document).on('click', '.addBookToCart', function () {
 
         }
     })
+
+})
+$(document).on('click', '.addBookToWishList', function () {
+    var bookId = $(this).attr("bookId");
+    $.ajax({
+        url: "/orderCart/cart",
+        type: 'post', //
+        async: true,    //或false,是否异步
+        data: JSON.stringify({
+            bookId:bookId,
+        }),
+        contentType:"application/json;charset=utf-8",
+        timeout: 50000,    //超时时间
+        dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+        success: function (data) {
+            if (data=='mustLogin'){
+                window.location.href = '/Biri/login';
+            }
+            else if (data='success'){
+                alert("已加入愿望清单")
+            }
+        },
+        error: function (data) {
+
+        }
+    })
+
 
 })
 $(document).on('click', '.miniCartDeleteBook', function () {

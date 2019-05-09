@@ -11561,7 +11561,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "展示 _MENU_ 图书",
+			"sLengthMenu": "展示 _MENU_ 数据",
 
 
 			/**

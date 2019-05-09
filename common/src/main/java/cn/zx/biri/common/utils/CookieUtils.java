@@ -35,9 +35,16 @@ public class CookieUtils {
     public static Cookie addCookie(HttpServletResponse httpServletResponse,String cookieName,String cookieValue){
         Cookie cookie = new Cookie(cookieName,cookieValue);
         cookie.setPath("/");
-        cookie.setMaxAge(60*1);
+        cookie.setMaxAge(60*60*24*7);
         httpServletResponse.addCookie(cookie);
         return cookie;
-
     }
+    public static Cookie delCookie(HttpServletResponse httpServletResponse,String cookieName){
+        Cookie cookie = new Cookie(cookieName,null);
+        cookie.setPath("/");
+        cookie.setMaxAge(0);
+        httpServletResponse.addCookie(cookie);
+        return cookie;
+    }
+
 }

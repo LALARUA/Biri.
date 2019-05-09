@@ -411,15 +411,13 @@
                                 <figure class="mb--30 mb-md--20 max-w-60">
                                     <img src="/assets/img/logo/m01-logo.png" alt="logo">
                                 </figure>
-                                
-                                <p class="font-2 heading-color font-size-16 mb--30 mb-md--20">Integer ut ligula quis lectus fringilla elementum porttitor sed est. Fringilla efficitur ligula sed lobortis. Sed tempus faucibus mi, quis fringilla mauris lacinia sed. Integer vehicula egestas nunc ac facilisis. Nam bibendum non faucibus libero eu. Curabitur posuere to ullamcorper</p>
-                                <a href="shop-sidebar.html" class="heading-button mb-sm--30">Shop Now</a>
+                                <!--<p class="font-2 heading-color font-size-16 mb&#45;&#45;30 mb-md&#45;&#45;20">airi.是一个</p>-->
+                                <a href="/Biri/book/list?status=1" class="heading-button mb-sm--30">开始购书</a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <figure class="image-box image-box-w-video-btn">
-                                <a href="https://www.youtube.com/watch?v=Rp19QD2XIGM" class="video-popup">
-                                    <img src="/assets/img/banner/m01-img1.jpg" alt="banner">
+                                    <img src="/assets/img/annie-spratt-446158-unsplash.jpg" alt="banner">
                                     <span class="video-btn"></span>
                                 </a>
                             </figure>
@@ -434,556 +432,65 @@
                 <div class="container-fluid">
                     <div class="row mb--40 mb-md--30">
                         <div class="col-12">
-                            <h2 class="heading-secondary text-center">Trending</h2>
+                            <h2 class="heading-secondary text-center">推荐</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
+                    <div class="row grid-space-20 xxl-block-grid-4">
+                        <div th:each="book,bookStat : ${bookList}" class="col-lg-4 col-sm-6 mb--40 mb-md--30">
+                            <input type="hidden" class="hotComment" th:value="${book.hotComment}">
+                            <input type="hidden" class="summary" th:value="${book.summary}">
+                            <input type="hidden" class="stock" th:value="${book.stock}">
+                            <input type="hidden" class="publisher" th:value="${book.publisher}">
+                            <input type="hidden" class="authorId" th:value="${book.authors[0].id}">
+                            <input type="hidden" class="authorName" th:value="${book.authors[0].name}">
+                            <input type="hidden" class="bookImage" th:value="${book.imagePaths[0].bookImagePath}">
                             <div class="airi-product">
                                 <div class="product-inner">
                                     <figure class="product-image">
                                         <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-20-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-20-2.jpg" alt="Product Image" class="secondary-image">
+                                            <a th:href="'/Biri/book/detail/'+${book.id}">
+                                                <img  th:src="'/bookImg/'+ ${book.imagePaths[0].bookImagePath} " alt="Product Image" class="primary-image">
+                                                <img th:src="${book.imagePaths.size() > 2} ? '/bookImg/'+ ${book.imagePaths[1].bookImagePath} : '/bookImg/'+ ${book.imagePaths[0].bookImagePath}" alt="Product Image" class="secondary-image">
                                             </a>
                                         </div>
                                         <div class="airi-product-action">
                                             <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
+                                                <a th:bookId = "${book.id}" th:index="${bookStat.index}" class="quickview-btn action-btn " data-toggle="tooltip" data-placement="top" title="快速浏览">
+                                                                <span data-toggle="modal" data-target="#productModal">
+                                                                    <i class="dl-icon-view"></i>
+                                                                </span>
                                                 </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                <a class="add_to_cart_btn action-btn addBookToCart" th:imagePath="${book.imagePaths[0].bookImagePath}"  data-toggle="tooltip" th:stock="${book.stock}" th:bookName="${book.title}" th:bookId="${book.id}" th:price="${book.price}" th:bookImagePath="'/bookImg/'+ ${book.imagePaths[0].bookImagePath}" data-placement="top" title="添加进购物车">
                                                     <i class="dl-icon-cart29"></i>
                                                 </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                                <a class="add_wishlist action-btn add addBookToWishList" data-toggle="tooltip" th:bookId="${book.id}" data-placement="top" title="添加进愿望清单">
                                                     <i class="dl-icon-heart4"></i>
                                                 </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
+                                                <a class="add_compare action-btn findSwitchBook" th:bookId="${book.id}"   data-toggle="tooltip" data-placement="top" title="交换区寻找">
+                                                    <i class="dl-icon-compare2"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </figure>
-                                    <div class="product-info">
+                                    <div class="product-info text-center">
                                         <h3 class="product-title">
-                                            <a href="product-details.html">Limited edition v-neck t-shirt</a>
+                                            <a style="max-width: 15em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" class="title" th:title="${book.title}" th:href="'/Biri/book/detail/'+${book.id}" th:text="${book.title}">Limited edition v-neck t-shirt</a>
                                         </h3>
                                         <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-19-4.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-19-1.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
+                                                        <span class="money price" th:text="${book.price}">$49.00</span>
+                                            <!--<span class="product-price-old">-->
+                                            <!--<span class="money">$60.00</span>-->
+                                            <!--</span>-->
                                                     </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <span class="product-badge new">New</span>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Hig-Rise Skinny Jean</a>
-                                        </h3>
-                                        <div class="product-rating">
-                                            <span>
-                                                <i class="dl-icon-star rated"></i>
-                                                <i class="dl-icon-star rated"></i>
-                                                <i class="dl-icon-star rated"></i>
-                                                <i class="dl-icon-star"></i>
-                                                <i class="dl-icon-star"></i>
-                                            </span>
-                                        </div>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-18-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-18-4.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <span class="product-badge sale">Sale</span>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Waxed-effect pleated skirt</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-17-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-17-4.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <span class="product-badge hot">hot</span>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Chain print bermuda shorts</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-16-4.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-16-1.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Check blazer</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-15-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-15-3.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Linen-Blend Pinstriped Culottes</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                        <div class="product-color-swatch">
-                                            <a class="product-color-swatch-btn blue">
-                                                <span class="product-color-swatch-label"></span>
-                                            </a>
-                                            <a class="product-color-swatch-btn green">
-                                                <span class="product-color-swatch-label"></span>
-                                            </a>
-                                            <a class="product-color-swatch-btn pink">
-                                                <span class="product-color-swatch-label"></span>
-                                            </a>
-                                            <a class="product-color-swatch-btn red">
-                                                <span class="product-color-swatch-label"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-14-2.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-14-1.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Super skinny blazer</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-13-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-13-2.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Super skinny trousers</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-12-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-12-4.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Open sweatshirt</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-11-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-11-2.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Dress with belt</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-10-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-10-3.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Grey blue leather backpack</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb--40 mb-md--30">
-                            <div class="airi-product">
-                                <div class="product-inner">
-                                    <figure class="product-image">
-                                        <div class="product-image--holder">
-                                            <a href="product-details.html">
-                                                <img src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
-                                                <img src="/assets/img/products/prod-9-2.jpg" alt="Product Image" class="secondary-image">
-                                            </a>
-                                        </div>
-                                        <div class="airi-product-action">
-                                            <div class="product-action">
-                                                <a class="quickview-btn action-btn" data-toggle="tooltip" data-placement="top" title="Quick Shop">
-                                                    <span data-toggle="modal" data-target="#productModal">
-                                                        <i class="dl-icon-view"></i>
-                                                    </span>
-                                                </a>
-                                                <a class="add_to_cart_btn action-btn" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="dl-icon-cart29"></i>
-                                                </a>
-                                                <a class="add_wishlist action-btn" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                                    <i class="dl-icon-heart4"></i>
-                                                </a>
-                                                <a class="add_compare action-btn" href="compare.html" data-toggle="tooltip" data-placement="top" title="Add to Compare">
-                                                    <i class="dl-icon-compare"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <div class="product-info">
-                                        <h3 class="product-title">
-                                            <a href="product-details.html">Jogging trousers</a>
-                                        </h3>
-                                        <span class="product-price-wrapper">
-                                            <span class="money">$49.00</span>
-                                            <span class="product-price-old">
-                                                <span class="money">$60.00</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a href="shop-sidebar.html" class="heading-button">Shop Now</a>
+                            <a href="/Biri/book/list?status=1" class="heading-button">开始购书</a>
                         </div>
                     </div>
                 </div>
@@ -991,300 +498,300 @@
             <!-- Trending Products area End Here -->
 
             <!-- partners area Start Here -->
-            <div class="partners-area ptb--40 ptb-md--30 bg--gray">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="airi-element-carousel partner-carousel"
-                                data-slick-options='{
-                                    "slidesToShow": 6,
-                                    "slidesToScroll": 1
-                                }'
-                                data-slick-responsive='[
-                                    {"breakpoint":1200, "settings": {"slidesToShow": 5} },
-                                    {"breakpoint":991, "settings": {"slidesToShow": 4} },
-                                    {"breakpoint":767, "settings": {"slidesToShow": 3} },
-                                    {"breakpoint":575, "settings": {"slidesToShow": 2} },
-                                    {"breakpoint":380, "settings": {"slidesToShow": 1} }
-                                ]'
-                            >
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner1.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner2.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner3.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner4.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner5.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner6.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner1.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner2.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner3.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner4.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner5.png" alt="Partner">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-partner">
-                                        <img src="/assets/img/partner/logo-partner6.png" alt="Partner">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="partners-area ptb&#45;&#45;40 ptb-md&#45;&#45;30 bg&#45;&#45;gray">-->
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-12">-->
+                            <!--<div class="airi-element-carousel partner-carousel"-->
+                                <!--data-slick-options='{-->
+                                    <!--"slidesToShow": 6,-->
+                                    <!--"slidesToScroll": 1-->
+                                <!--}'-->
+                                <!--data-slick-responsive='[-->
+                                    <!--{"breakpoint":1200, "settings": {"slidesToShow": 5} },-->
+                                    <!--{"breakpoint":991, "settings": {"slidesToShow": 4} },-->
+                                    <!--{"breakpoint":767, "settings": {"slidesToShow": 3} },-->
+                                    <!--{"breakpoint":575, "settings": {"slidesToShow": 2} },-->
+                                    <!--{"breakpoint":380, "settings": {"slidesToShow": 1} }-->
+                                <!--]'-->
+                            <!--&gt;-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner1.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner2.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner3.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner4.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner5.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner6.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner1.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner2.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner3.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner4.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner5.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<div class="single-partner">-->
+                                        <!--<img src="/assets/img/partner/logo-partner6.png" alt="Partner">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
             <!-- partners area End Here -->
 
             <!-- Top Collections area Start Here -->
-            <section class="top-collection-area ptb--80 pt-md--55 pb-md--60">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="text-block">
-                                <h2 class="heading-secondary mb--40 mb-md--20">Top Collections</h2>
-                                <p class="font-2 heading-color font-size-16 mb--40 mb-md--25">Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis. Sed tempus faucibus mi, quis fringilla mauris lacinia sed.</p>
-                                <a href="shop-sidebar.html" class="heading-button mb-sm--30">View All</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="banner-box banner-type-1 banner-hover-1 mb--20 mb-md--10 mb-sm--30">
-                                        <div class="banner-inner">
-                                            <div class="banner-image">
-                                                <img src="/assets/img/banner/m01-collection1.jpg" alt="Banner">
-                                            </div>
-                                            <div class="banner-info">
-                                                <a class="banner-btn" href="shop-sidebar.html">Shop Now</a>
-                                            </div>
-                                            <a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>
-                                        </div>
-                                    </div>
-                                    <div class="banner-box banner-type-1 banner-hover-1 mb-sm--30">
-                                        <div class="banner-inner">
-                                            <div class="banner-image">
-                                                <img src="/assets/img/banner/m01-collection2.jpg" alt="Banner">
-                                            </div>
-                                            <div class="banner-info">
-                                                <a class="banner-btn" href="shop-sidebar.html">Shop Now</a>
-                                            </div>
-                                            <a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="banner-box banner-type-1 banner-hover-1">
-                                        <div class="banner-inner">
-                                            <div class="banner-image">
-                                                <img src="/assets/img/banner/m01-collection3.jpg" alt="Banner">
-                                            </div>
-                                            <div class="banner-info">
-                                                <a class="banner-btn" href="shop-sidebar.html">Shop Now</a>
-                                            </div>
-                                            <a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!--<section class="top-collection-area ptb&#45;&#45;80 pt-md&#45;&#45;55 pb-md&#45;&#45;60">-->
+                <!--<div class="container">-->
+                    <!--<div class="row align-items-center">-->
+                        <!--<div class="col-md-6">-->
+                            <!--<div class="text-block">-->
+                                <!--<h2 class="heading-secondary mb&#45;&#45;40 mb-md&#45;&#45;20">Top Collections</h2>-->
+                                <!--<p class="font-2 heading-color font-size-16 mb&#45;&#45;40 mb-md&#45;&#45;25">Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis. Sed tempus faucibus mi, quis fringilla mauris lacinia sed.</p>-->
+                                <!--<a href="shop-sidebar.html" class="heading-button mb-sm&#45;&#45;30">View All</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-6">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-md-6">-->
+                                    <!--<div class="banner-box banner-type-1 banner-hover-1 mb&#45;&#45;20 mb-md&#45;&#45;10 mb-sm&#45;&#45;30">-->
+                                        <!--<div class="banner-inner">-->
+                                            <!--<div class="banner-image">-->
+                                                <!--<img src="/assets/img/banner/m01-collection1.jpg" alt="Banner">-->
+                                            <!--</div>-->
+                                            <!--<div class="banner-info">-->
+                                                <!--<a class="banner-btn" href="shop-sidebar.html">Shop Now</a>-->
+                                            <!--</div>-->
+                                            <!--<a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="banner-box banner-type-1 banner-hover-1 mb-sm&#45;&#45;30">-->
+                                        <!--<div class="banner-inner">-->
+                                            <!--<div class="banner-image">-->
+                                                <!--<img src="/assets/img/banner/m01-collection2.jpg" alt="Banner">-->
+                                            <!--</div>-->
+                                            <!--<div class="banner-info">-->
+                                                <!--<a class="banner-btn" href="shop-sidebar.html">Shop Now</a>-->
+                                            <!--</div>-->
+                                            <!--<a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-6">-->
+                                    <!--<div class="banner-box banner-type-1 banner-hover-1">-->
+                                        <!--<div class="banner-inner">-->
+                                            <!--<div class="banner-image">-->
+                                                <!--<img src="/assets/img/banner/m01-collection3.jpg" alt="Banner">-->
+                                            <!--</div>-->
+                                            <!--<div class="banner-info">-->
+                                                <!--<a class="banner-btn" href="shop-sidebar.html">Shop Now</a>-->
+                                            <!--</div>-->
+                                            <!--<a class="banner-link banner-overlay" href="shop-sidebar.html">Shop Now</a>-->
+                                        <!--</div>-->
+                                    <!--</div> -->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
             <!-- Top Collections area End Here -->
 
             <!-- Newsletter area Start Here -->
-            <section class="newsletter-area bg--gray pt--30 pt-md--25 pb--40 pb-md--30">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-md-10">
-                            <div class="newsletter-box text-center">
-                                <h2 class="heading-secondary mb--20">Join Our Newsletter</h2>
-                                <p class="heading-color font-size-16 font-bold lts-2 mb--30">GET 15% OFF YOUR FIRST ORDER</p>
-                                <form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="newsletter-form mc-form" method="post" target="_blank">
-                                    <input type="email" name="newsletter_email" id="newsletter_email" placeholder="Enter your email address.." required="required" class="newsletter-form__input">
-                                    <button type="submit" class="newsletter-form__submit">Subscribe</button>
-                                </form>
-                                <!-- mailchimp-alerts Start -->
-                                <div class="mailchimp-alerts">
-                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                    <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                                    <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                                </div>
-                                <!-- mailchimp-alerts end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!--<section class="newsletter-area bg&#45;&#45;gray pt&#45;&#45;30 pt-md&#45;&#45;25 pb&#45;&#45;40 pb-md&#45;&#45;30">-->
+                <!--<div class="container">-->
+                    <!--<div class="row justify-content-center">-->
+                        <!--<div class="col-lg-8 col-md-10">-->
+                            <!--<div class="newsletter-box text-center">-->
+                                <!--<h2 class="heading-secondary mb&#45;&#45;20">Join Our Newsletter</h2>-->
+                                <!--<p class="heading-color font-size-16 font-bold lts-2 mb&#45;&#45;30">GET 15% OFF YOUR FIRST ORDER</p>-->
+                                <!--<form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="newsletter-form mc-form" method="post" target="_blank">-->
+                                    <!--<input type="email" name="newsletter_email" id="newsletter_email" placeholder="Enter your email address.." required="required" class="newsletter-form__input">-->
+                                    <!--<button type="submit" class="newsletter-form__submit">Subscribe</button>-->
+                                <!--</form>-->
+                                <!--&lt;!&ndash; mailchimp-alerts Start &ndash;&gt;-->
+                                <!--<div class="mailchimp-alerts">-->
+                                    <!--<div class="mailchimp-submitting"></div>&lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
+                                    <!--<div class="mailchimp-success"></div>&lt;!&ndash; mailchimp-success end &ndash;&gt;-->
+                                    <!--<div class="mailchimp-error"></div>&lt;!&ndash; mailchimp-error end &ndash;&gt;-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
             <!-- Newsletter area End Here -->
 
             <!-- Blog area Start Here -->
-            <div class="blog-area ptb--80 ptb-sm--60">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="airi-element-carousel blog-carousel dot-style-1"
-                                data-slick-options='{
-                                    "spaceBetween": 30,
-                                    "slidesToShow": 3,
-                                    "slidesToScroll": 1,
-                                    "dots": true,
-                                    "infinite": true
-                                }'
-                                data-slick-responsive='[
-                                    {"breakpoint":991, "settings": {"slidesToShow": 2} },
-                                    {"breakpoint":767, "settings": {"slidesToShow": 1} }
-                                ]'
-                            >
-                                <div class="item">
-                                    <article class="blog">
-                                        <div class="blog-media">
-                                            <div class="image">
-                                                <a href="single-post.html">
-                                                    <img src="/assets/img/blog/image-545x363.jpg" alt="Blog Thumb">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-info">
-                                            <div class="blog-entry-meta">
-                                                <span class="blog-category">
-                                                    <a href="blog.html">Trends</a>
-                                                </span>
-                                            </div>
-                                            <h3 class="blog-title">
-                                                <a href="single-post.html">Monday to Sunday</a>
-                                            </h3>
-                                            <div class="blog-footer-meta">
-                                                <a href="blog.html" class="posted-on">September 16, 2018</a>
-                                                <span class="meta-separator">-</span>
-                                                <a href="blog.html" class="posted-by">By John Snow</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="item">
-                                    <article class="blog">
-                                        <div class="blog-media">
-                                            <div class="image">
-                                                <a href="single-post.html">
-                                                    <img src="/assets/img/blog/blog-12-545x363.jpg" alt="Blog Thumb">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-info">
-                                            <div class="blog-entry-meta">
-                                                <span class="blog-category">
-                                                    <a href="blog.html">Trends</a>
-                                                </span>
-                                            </div>
-                                            <h3 class="blog-title">
-                                                <a href="single-post.html">Dress Time</a>
-                                            </h3>
-                                            <div class="blog-footer-meta">
-                                                <a href="blog.html" class="posted-on">September 16, 2018</a>
-                                                <span class="meta-separator">-</span>
-                                                <a href="blog.html" class="posted-by">By Arya Stark</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="item">
-                                    <article class="blog">
-                                        <div class="blog-media">
-                                            <div class="image">
-                                                <a href="single-post.html">
-                                                    <img src="/assets/img/blog/blog-13-545x363.jpg" alt="Blog Thumb">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-info">
-                                            <div class="blog-entry-meta">
-                                                <span class="blog-category">
-                                                    <a href="blog.html">Trends</a>
-                                                </span>
-                                            </div>
-                                            <h3 class="blog-title">
-                                                <a href="single-post.html">Fashion Vintage</a>
-                                            </h3>
-                                            <div class="blog-footer-meta">
-                                                <a href="blog.html" class="posted-on">September 16, 2018</a>
-                                                <span class="meta-separator">-</span>
-                                                <a href="blog.html" class="posted-by">By Robb Stark</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="item">
-                                    <article class="blog">
-                                        <div class="blog-media">
-                                            <div class="image">
-                                                <a href="single-post.html">
-                                                    <img src="/assets/img/blog/blog-11-545x363.jpg" alt="Blog Thumb">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-info">
-                                            <div class="blog-entry-meta">
-                                                <span class="blog-category">
-                                                    <a href="blog.html">Trends</a>
-                                                </span>
-                                            </div>
-                                            <h3 class="blog-title">
-                                                <a href="single-post.html">Fashion Vintage</a>
-                                            </h3>
-                                            <div class="blog-footer-meta">
-                                                <a href="blog.html" class="posted-on">September 16, 2018</a>
-                                                <span class="meta-separator">-</span>
-                                                <a href="blog.html" class="posted-by">By Brandon Stark</a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="blog-area ptb&#45;&#45;80 ptb-sm&#45;&#45;60">-->
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-12">-->
+                            <!--<div class="airi-element-carousel blog-carousel dot-style-1"-->
+                                <!--data-slick-options='{-->
+                                    <!--"spaceBetween": 30,-->
+                                    <!--"slidesToShow": 3,-->
+                                    <!--"slidesToScroll": 1,-->
+                                    <!--"dots": true,-->
+                                    <!--"infinite": true-->
+                                <!--}'-->
+                                <!--data-slick-responsive='[-->
+                                    <!--{"breakpoint":991, "settings": {"slidesToShow": 2} },-->
+                                    <!--{"breakpoint":767, "settings": {"slidesToShow": 1} }-->
+                                <!--]'-->
+                            <!--&gt;-->
+                                <!--<div class="item">-->
+                                    <!--<article class="blog">-->
+                                        <!--<div class="blog-media">-->
+                                            <!--<div class="image">-->
+                                                <!--<a href="single-post.html">-->
+                                                    <!--<img src="/assets/img/blog/image-545x363.jpg" alt="Blog Thumb">-->
+                                                <!--</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="blog-info">-->
+                                            <!--<div class="blog-entry-meta">-->
+                                                <!--<span class="blog-category">-->
+                                                    <!--<a href="blog.html">Trends</a>-->
+                                                <!--</span>-->
+                                            <!--</div>-->
+                                            <!--<h3 class="blog-title">-->
+                                                <!--<a href="single-post.html">Monday to Sunday</a>-->
+                                            <!--</h3>-->
+                                            <!--<div class="blog-footer-meta">-->
+                                                <!--<a href="blog.html" class="posted-on">September 16, 2018</a>-->
+                                                <!--<span class="meta-separator">-</span>-->
+                                                <!--<a href="blog.html" class="posted-by">By John Snow</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</article>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<article class="blog">-->
+                                        <!--<div class="blog-media">-->
+                                            <!--<div class="image">-->
+                                                <!--<a href="single-post.html">-->
+                                                    <!--<img src="/assets/img/blog/blog-12-545x363.jpg" alt="Blog Thumb">-->
+                                                <!--</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="blog-info">-->
+                                            <!--<div class="blog-entry-meta">-->
+                                                <!--<span class="blog-category">-->
+                                                    <!--<a href="blog.html">Trends</a>-->
+                                                <!--</span>-->
+                                            <!--</div>-->
+                                            <!--<h3 class="blog-title">-->
+                                                <!--<a href="single-post.html">Dress Time</a>-->
+                                            <!--</h3>-->
+                                            <!--<div class="blog-footer-meta">-->
+                                                <!--<a href="blog.html" class="posted-on">September 16, 2018</a>-->
+                                                <!--<span class="meta-separator">-</span>-->
+                                                <!--<a href="blog.html" class="posted-by">By Arya Stark</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</article>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<article class="blog">-->
+                                        <!--<div class="blog-media">-->
+                                            <!--<div class="image">-->
+                                                <!--<a href="single-post.html">-->
+                                                    <!--<img src="/assets/img/blog/blog-13-545x363.jpg" alt="Blog Thumb">-->
+                                                <!--</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="blog-info">-->
+                                            <!--<div class="blog-entry-meta">-->
+                                                <!--<span class="blog-category">-->
+                                                    <!--<a href="blog.html">Trends</a>-->
+                                                <!--</span>-->
+                                            <!--</div>-->
+                                            <!--<h3 class="blog-title">-->
+                                                <!--<a href="single-post.html">Fashion Vintage</a>-->
+                                            <!--</h3>-->
+                                            <!--<div class="blog-footer-meta">-->
+                                                <!--<a href="blog.html" class="posted-on">September 16, 2018</a>-->
+                                                <!--<span class="meta-separator">-</span>-->
+                                                <!--<a href="blog.html" class="posted-by">By Robb Stark</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</article>-->
+                                <!--</div>-->
+                                <!--<div class="item">-->
+                                    <!--<article class="blog">-->
+                                        <!--<div class="blog-media">-->
+                                            <!--<div class="image">-->
+                                                <!--<a href="single-post.html">-->
+                                                    <!--<img src="/assets/img/blog/blog-11-545x363.jpg" alt="Blog Thumb">-->
+                                                <!--</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="blog-info">-->
+                                            <!--<div class="blog-entry-meta">-->
+                                                <!--<span class="blog-category">-->
+                                                    <!--<a href="blog.html">Trends</a>-->
+                                                <!--</span>-->
+                                            <!--</div>-->
+                                            <!--<h3 class="blog-title">-->
+                                                <!--<a href="single-post.html">Fashion Vintage</a>-->
+                                            <!--</h3>-->
+                                            <!--<div class="blog-footer-meta">-->
+                                                <!--<a href="blog.html" class="posted-on">September 16, 2018</a>-->
+                                                <!--<span class="meta-separator">-</span>-->
+                                                <!--<a href="blog.html" class="posted-by">By Brandon Stark</a>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</article>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
             <!-- Blog area End Here -->
 
         </div>
@@ -1292,144 +799,144 @@
 
 
         <!-- Footer Start -->
-        <footer class="footer footer-1 bg--black ptb--40">
-            <div class="footer-top pb--40 pb-md--30">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-8 mb-md--30">
-                            <div class="footer-widget">
-                                <div class="textwidget">
-                                    <img src="/assets/img/logo/logo-white.png" alt="Logo" class="mb--10">
-                                    <p class="font-size-16 font-2 mb--20">Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.</p>
-                                    <!-- Social Icons Start Here -->
-                                    <ul class="social">
-                                        <li class="social__item">
-                                            <a href="twitter.com" class="social__link color--white">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="plus.google.com" class="social__link color--white">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="facebook.com" class="social__link color--white">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="youtube.com" class="social__link color--white">
-                                                <i class="fa fa-youtube"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="instagram.com" class="social__link color--white">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- Social Icons End Here -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 mb-md--30">
-                            <div class="footer-widget">
-                                <h3 class="widget-title">Company</h3>
-                                <ul class="widget-menu">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="">Our Services</a></li>
-                                    <li><a href="">Affiliate Program</a></li>
-                                    <li><a href="">Work for Airi</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 mb-sm--30">
-                            <div class="footer-widget">
-                                <h3 class="widget-title">USEFUL LINKS</h3>
-                                <ul class="widget-menu">
-                                    <li><a href="shop-collections.html">The Collections</a></li>
-                                    <li><a href="">Size Guide</a></li>
-                                    <li><a href="">Return Policiy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 mb-sm--30">
-                            <div class="footer-widget">
-                                <h3 class="widget-title">SHOPPING</h3>
-                                <ul class="widget-menu">
-                                    <li><a href="shop-instagram.html">Look Book</a></li>
-                                    <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                                    <li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
-                                    <li><a href="shop-no-gutter.html">Man & Woman</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4">
-                            <div class="footer-widget">
-                                <h4 class="widget-title">CONTACT INFO</h4>
-                                <ul class="contact-info">
-                                    <li class="contact-info__item">
-                                        <i class="fa fa-phone"></i>
-                                        <span><a href="" class="contact-info__link">(+612) 2531 5600</a></span>
-                                    </li>
-                                    <li class="contact-info__item">
-                                        <i class="fa fa-envelope"></i>
-                                        <span><a href="" class="contact-info__link">info@la-studioweb.com</a></span>
-                                    </li>
-                                    <li class="contact-info__item">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span>PO Box 1622 Colins Street West Victoria 8077 Australia</span>
-                                    </li>
-                                </ul>
-                                <div class="textwidget">
-                                    <img src="/assets/img/others/payments.png" alt="Payment">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-middle pb--40 pb-md--30">
-                <div class="container">
-                    <div class="row method-box-wrapper">
-                        <div class="col-lg-3 col-md-6 mb-md--10">
-                            <div class="method-box">
-                                <h4>FREESHIPPING WORLD WIDE</h4>
-                                <p>Freeship over oder $100</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-md--10">
-                            <div class="method-box">
-                                <h4>30 DAYS MONEY BACK</h4>
-                                <p>You can back money any times</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-sm--10">
-                            <div class="method-box">
-                                <h4>PROFESSIONAL SUPPORT 24/7</h4>
-                                <p>info@la-studioweb.com</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="method-box">
-                                <h4>100% SECURE CHECKOUT</h4>
-                                <p>Protect buyer & clients</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <p class="copyright-text">&copy;2018 AIRI All rights <a href="http://www.bootstrapmb.com/" title="bootstrapmb">Reserved</a>. Designed by HasTech</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <!--<footer class="footer footer-1 bg&#45;&#45;black ptb&#45;&#45;40">-->
+            <!--<div class="footer-top pb&#45;&#45;40 pb-md&#45;&#45;30">-->
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-lg-3 col-md-8 mb-md&#45;&#45;30">-->
+                            <!--<div class="footer-widget">-->
+                                <!--<div class="textwidget">-->
+                                    <!--<img src="/assets/img/logo/logo-white.png" alt="Logo" class="mb&#45;&#45;10">-->
+                                    <!--<p class="font-size-16 font-2 mb&#45;&#45;20">Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.</p>-->
+                                    <!--&lt;!&ndash; Social Icons Start Here &ndash;&gt;-->
+                                    <!--<ul class="social">-->
+                                        <!--<li class="social__item">-->
+                                            <!--<a href="twitter.com" class="social__link color&#45;&#45;white">-->
+                                                <!--<i class="fa fa-twitter"></i>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="social__item">-->
+                                            <!--<a href="plus.google.com" class="social__link color&#45;&#45;white">-->
+                                                <!--<i class="fa fa-google-plus"></i>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="social__item">-->
+                                            <!--<a href="facebook.com" class="social__link color&#45;&#45;white">-->
+                                                <!--<i class="fa fa-facebook"></i>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="social__item">-->
+                                            <!--<a href="youtube.com" class="social__link color&#45;&#45;white">-->
+                                                <!--<i class="fa fa-youtube"></i>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="social__item">-->
+                                            <!--<a href="instagram.com" class="social__link color&#45;&#45;white">-->
+                                                <!--<i class="fa fa-instagram"></i>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                    <!--&lt;!&ndash; Social Icons End Here &ndash;&gt;-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-2 col-md-4 mb-md&#45;&#45;30">-->
+                            <!--<div class="footer-widget">-->
+                                <!--<h3 class="widget-title">Company</h3>-->
+                                <!--<ul class="widget-menu">-->
+                                    <!--<li><a href="about-us.html">About Us</a></li>-->
+                                    <!--<li><a href="">Our Services</a></li>-->
+                                    <!--<li><a href="">Affiliate Program</a></li>-->
+                                    <!--<li><a href="">Work for Airi</a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-2 col-md-4 mb-sm&#45;&#45;30">-->
+                            <!--<div class="footer-widget">-->
+                                <!--<h3 class="widget-title">USEFUL LINKS</h3>-->
+                                <!--<ul class="widget-menu">-->
+                                    <!--<li><a href="shop-collections.html">The Collections</a></li>-->
+                                    <!--<li><a href="">Size Guide</a></li>-->
+                                    <!--<li><a href="">Return Policiy</a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-2 col-md-4 mb-sm&#45;&#45;30">-->
+                            <!--<div class="footer-widget">-->
+                                <!--<h3 class="widget-title">SHOPPING</h3>-->
+                                <!--<ul class="widget-menu">-->
+                                    <!--<li><a href="shop-instagram.html">Look Book</a></li>-->
+                                    <!--<li><a href="shop-sidebar.html">Shop Sidebar</a></li>-->
+                                    <!--<li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>-->
+                                    <!--<li><a href="shop-no-gutter.html">Man & Woman</a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-3 col-md-4">-->
+                            <!--<div class="footer-widget">-->
+                                <!--<h4 class="widget-title">CONTACT INFO</h4>-->
+                                <!--<ul class="contact-info">-->
+                                    <!--<li class="contact-info__item">-->
+                                        <!--<i class="fa fa-phone"></i>-->
+                                        <!--<span><a href="" class="contact-info__link">(+612) 2531 5600</a></span>-->
+                                    <!--</li>-->
+                                    <!--<li class="contact-info__item">-->
+                                        <!--<i class="fa fa-envelope"></i>-->
+                                        <!--<span><a href="" class="contact-info__link">info@la-studioweb.com</a></span>-->
+                                    <!--</li>-->
+                                    <!--<li class="contact-info__item">-->
+                                        <!--<i class="fa fa-map-marker"></i>-->
+                                        <!--<span>PO Box 1622 Colins Street West Victoria 8077 Australia</span>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--<div class="textwidget">-->
+                                    <!--<img src="/assets/img/others/payments.png" alt="Payment">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="footer-middle pb&#45;&#45;40 pb-md&#45;&#45;30">-->
+                <!--<div class="container">-->
+                    <!--<div class="row method-box-wrapper">-->
+                        <!--<div class="col-lg-3 col-md-6 mb-md&#45;&#45;10">-->
+                            <!--<div class="method-box">-->
+                                <!--<h4>FREESHIPPING WORLD WIDE</h4>-->
+                                <!--<p>Freeship over oder $100</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-3 col-md-6 mb-md&#45;&#45;10">-->
+                            <!--<div class="method-box">-->
+                                <!--<h4>30 DAYS MONEY BACK</h4>-->
+                                <!--<p>You can back money any times</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-3 col-md-6 mb-sm&#45;&#45;10">-->
+                            <!--<div class="method-box">-->
+                                <!--<h4>PROFESSIONAL SUPPORT 24/7</h4>-->
+                                <!--<p>info@la-studioweb.com</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-3 col-md-6">-->
+                            <!--<div class="method-box">-->
+                                <!--<h4>100% SECURE CHECKOUT</h4>-->
+                                <!--<p>Protect buyer & clients</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="footer-bottom">-->
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-12 text-center">-->
+                            <!--<p class="copyright-text">&copy;2018 AIRI All rights <a href="http://www.bootstrapmb.com/" title="bootstrapmb">Reserved</a>. Designed by HasTech</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</footer>-->
         <!-- Footer End -->
 
         <!-- Search from Start -->
@@ -1533,107 +1040,72 @@
                 <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true"><i class="dl-icon-close"></i></span>
                 </button>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="airi-element-carousel product-image-carousel nav-vertical-center nav-style-1"
-                                data-slick-options='{
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="airi-element-carousel product-image-carousel nav-vertical-center nav-style-1"
+                               data-slick-options='{
                                     "slidesToShow": 1,
                                     "slidesToScroll": 1,
                                     "arrows": true,
                                     "prevArrow": "dl-icon-left",
                                     "nextArrow": "dl-icon-right"
                                 }'
-                        >
-                            <div class="product-image">
-                                <div class="product-image--holder">
-                                    <a href="product-details.html">
-                                        <img src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
-                                    </a>
-                                </div>
-                                <span class="product-badge sale">sale</span>
-                            </div>
-                            <div class="product-image">
-                                <div class="product-image--holder">
-                                    <a href="product-details.html">
-                                        <img src="/assets/img/products/prod-10-1.jpg" alt="Product Image" class="primary-image">
-                                    </a>
-                                </div>
-                                <span class="product-badge new">new</span>
-                            </div>
-                            <div class="product-image">
-                                <div class="product-image--holder">
-                                    <a href="product-details.html">
-                                        <img src="/assets/img/products/prod-11-1.jpg" alt="Product Image" class="primary-image">
-                                    </a>
-                                </div>
-                                <span class="product-badge hot">hot</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="modal-box product-summary">
-                            <div class="product-navigation mb--10">
-                                <a href="#" class="prev"><i class="dl-icon-left"></i></a>
-                                <a href="#" class="next"><i class="dl-icon-right"></i></a>
-                            </div>
-                            <h3 class="product-title mb--15">Waxed-effect pleated skirt</h3>
-                            <span class="product-price-wrapper mb--20">
-                                <span class="money">$49.00</span>
-                                <span class="product-price-old">
-                                    <span class="money">$60.00</span>
-                                </span>
+                          >
+                              <div class="product-image">
+                                  <div class="product-image--holder">
+                                      <a href="product-details.html">
+                                          <img id="modalImage" src="/assets/img/products/prod-9-1.jpg" alt="Product Image" class="primary-image">
+                                      </a>
+                                  </div>
+                                  <span class="product-badge sale">sale</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="modal-box product-summary">
+                              <!--<div class="product-navigation mb&#45;&#45;10">-->
+                              <!--<a href="#" class="prev"><i class="dl-icon-left"></i></a>-->
+                              <!--<a href="#" class="next"><i class="dl-icon-right"></i></a>-->
+                              <!--</div>-->
+                              <h3 class="product-title mb--15" id="modalTitle">Waxed-effect pleated skirt</h3>
+                              <span class="product-price-wrapper mb--20">
+                                ￥<span id="modalPrice" class="money">49.00</span>
+                                  <!--<span class="product-price-old">-->
+                                  <!--<span class="money">$60.00</span>-->
+                                  <!--</span>-->
                             </span>
-                            <p class="product-short-description mb--25 mb-md--20">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
-                            <div class="product-action d-flex flex-row align-items-center mb--30 mb-md--20">
-                                <div class="quantity">
-                                    <input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">
-                                </div>
-                                <button type="button" class="btn btn-style-1 btn-semi-large add-to-cart" onclick="window.location.href='cart.html'">
-                                    Add To Cart
-                                </button>
-                                <a href="wishlist.html"><i class="dl-icon-heart2"></i></a>
-                                <a href="compare.html"><i class="dl-icon-compare2"></i></a>
-                            </div>  
-                            <div class="product-extra mb--30 mb-md--20">
-                                <a href="#" class="font-size-12"><i class="fa fa-map-marker"></i>Find store near you</a>
-                                <a href="#" class="font-size-12"><i class="fa fa-exchange"></i>Delivery and return</a>
-                            </div>
-                            <div class="product-summary-footer d-flex justify-content-between flex-sm-row flex-column flex-sm-row flex-column">
-                                <div class="product-meta">
-                                    <span class="sku_wrapper font-size-12">SKU: <span class="sku">REF. LA-887</span></span>
-                                    <span class="posted_in font-size-12">Categories: <a href="shop-sidebar.html" rel="tag">Fashions</a></span>
-                                </div>
-                                <div class="product-share-box">
-                                    <span class="font-size-12">Share With</span>
-                                    <!-- Social Icons Start Here -->
-                                    <ul class="social social-small">
-                                        <li class="social__item">
-                                            <a href="facebook.com" class="social__link">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="twitter.com" class="social__link">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="plus.google.com" class="social__link">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social__item">
-                                            <a href="plus.google.com" class="social__link">
-                                                <i class="fa fa-pinterest-p"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- Social Icons End Here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                              <p class="product-short-description mb--25 mb-md--20" style="
+                                overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 7;
+-webkit-box-orient: vertical;
+" id="modalSummary">Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at, hendrerit arcu.</p>
+                              <div class="product-action d-flex flex-row align-items-center mb--30 mb-md--20">
+                                  <!--<div class="quantity">-->
+                                  <!--<input type="number" class="quantity-input" name="qty" id="quick-qty" value="1" min="1">-->
+                                  <!--</div>-->
+                                  <button id="modalAddToCart" type="button" class="addBookToCart btn btn-style-1 btn-semi-large add-to-cart">
+                                      添加进购物车
+                                  </button>
+                                  <a id="modalAddToWishList" class="addBookToWishList" ><i class="dl-icon-heart2"></i></a>
+                                  <a id="modalSwitchBook" class="findSwitchBook" ><i class="dl-icon-compare2"></i></a>
+                              </div>
+                              <div class="product-summary-footer d-flex justify-content-between flex-sm-row flex-column flex-sm-row flex-column">
+                                  <div class="product-meta">
+                                      <span class="sku_wrapper font-size-12">出版社: <span class="sku" id="modalPublisher">REF. LA-887</span></span>
+                                      <span class="posted_in font-size-12">作者: <a id="modalAuthor" href="#" rel="tag">Fashions</a></span>
+                                  </div>
+                                  <div class="product-share-box">
+                                  </div>
+                              </div>
+                              <br>
+                              <div id="ifModalHotComment">
+                                  <h5>热门评论：<br><span style="margin-left: 3em" id="modalHotComment">ssafaf</span></h5>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -1641,34 +1113,34 @@
         <!-- Modal End -->
 
         <!-- Newsletter Popup Start -->
-        <div class="ai-newsletter-popup" id="subscribe-popup">
-            <div class="ai-newsletter-popup-modal">
-                <a class="custom-close popup-close">
-                    <i class="dl-icon-close"></i>
-                </a>
-                <div class="ai-newsletter-popup-content">
-                    <div class="ai-newsletter-popup-body">
-                        <h5>Man Autumn Winter 2019</h5>
-                        <h3 class="heading-tertiary mb--10">Join our newsletter and get 20% per sale</h3>
-                        <form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="popup-newsletter-form mc-form mb--30" target="_blank">
-                            <input type="email" name="popup-newsletter_email" id="popup-newsletter_email" class="popup-newsletter-form__input" placeholder="Enter Your Email Address ....">
-                            <button type="submit" class="btn btn-small btn-style-1 subscribe-btn">Submit</button>
-                        </form>
-                        <!-- mailchimp-alerts Start -->
-                        <div class="mailchimp-alerts">
-                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                        </div>
-                        <!-- mailchimp-alerts end -->
-                        <label for="popup-hide" class="dont-show-popup">
-                            <input type="checkbox" name="popup-hide" id="popup-hide">
-                            Do not show popup anymore
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div> 
+        <!--<div class="ai-newsletter-popup" id="subscribe-popup">-->
+            <!--<div class="ai-newsletter-popup-modal">-->
+                <!--<a class="custom-close popup-close">-->
+                    <!--<i class="dl-icon-close"></i>-->
+                <!--</a>-->
+                <!--<div class="ai-newsletter-popup-content">-->
+                    <!--<div class="ai-newsletter-popup-body">-->
+                        <!--<h5>Man Autumn Winter 2019</h5>-->
+                        <!--<h3 class="heading-tertiary mb&#45;&#45;10">Join our newsletter and get 20% per sale</h3>-->
+                        <!--<form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="popup-newsletter-form mc-form mb&#45;&#45;30" target="_blank">-->
+                            <!--<input type="email" name="popup-newsletter_email" id="popup-newsletter_email" class="popup-newsletter-form__input" placeholder="Enter Your Email Address ....">-->
+                            <!--<button type="submit" class="btn btn-small btn-style-1 subscribe-btn">Submit</button>-->
+                        <!--</form>-->
+                        <!--&lt;!&ndash; mailchimp-alerts Start &ndash;&gt;-->
+                        <!--<div class="mailchimp-alerts">-->
+                            <!--<div class="mailchimp-submitting"></div>&lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
+                            <!--<div class="mailchimp-success"></div>&lt;!&ndash; mailchimp-success end &ndash;&gt;-->
+                            <!--<div class="mailchimp-error"></div>&lt;!&ndash; mailchimp-error end &ndash;&gt;-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
+                        <!--<label for="popup-hide" class="dont-show-popup">-->
+                            <!--<input type="checkbox" name="popup-hide" id="popup-hide">-->
+                            <!--Do not show popup anymore-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div> -->
         <!-- Newsletter Popup End -->
 
     </div>
@@ -1678,7 +1150,7 @@
     <!-- ************************* JS Files ************************* -->
     <script th:inline="javascript">
         window.onload = function (ev){
-            initCartTotal();
+
         }
     </script>
 
@@ -1716,6 +1188,49 @@
     <script src="/assets/js/revoulation.js"></script>
 
     <script src="/assets/js/myJS.js"></script>
+    <script th:inline="javascript">
+        window.onload = function (ev){
+            $(document).on('click', '.quickview-btn', function () {
+                var index = $(this).attr("index");
+                var bookId = $(this).attr("bookId");
+                var summary = $(".summary").eq(index).val();
+                var hotComment = $(".hotComment").eq(index).val();
+                var bookImage = $(".bookImage").eq(index).val();
+                var title = $(".title").eq(index).text();
+                var authorId = $(".authorId").eq(index).val();
+                var authorName = $(".authorName").eq(index).val();
+                var price = $(".price").eq(index).text();
+                var stock = $(".stock").eq(index).val();
+                var publisher = $(".publisher").eq(index).val();
+
+
+
+                if (hotComment==null||hotComment=="")
+                    $("#ifModalHotComment").css("display","none")
+                else {
+                    $("#ifModalHotComment").css("display","");
+                    $("#modalHotComment").text(hotComment)
+                }
+                $("#modalTitle").text(title);
+                $("#modalPrice").text(price);
+                $("#modalSummary").text(summary);
+                $("#modalImage").attr("src",'/bookImg/'+bookImage);
+
+                $("#modalAddToCart").attr("bookId",bookId);
+                $("#modalAddToCart").attr("stock",stock);
+                $("#modalAddToCart").attr("imagePath",bookImage);
+                $("#modalAddToCart").attr("bookName",title);
+                $("#modalAddToCart").attr("price",price);
+
+                $("#modalAddToWishList").attr("bookId",bookId);
+                $("#modalSwitchBook").attr("bookId",bookId);
+
+                $("#modalPublisher").text(publisher);
+                $("#modalAuthor").text(authorName);
+                $("#modalAuthor").attr("href",'/Biri/book/list?authorName='+authorName+"&authorId="+authorId);
+            })
+            }
+    </script>
 </body>
 
 </html>

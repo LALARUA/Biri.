@@ -1,5 +1,6 @@
 server:
   port: 8004
+  max-http-header-size: 102400
 spring:
   application:
     name: book-service

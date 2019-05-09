@@ -50,7 +50,9 @@ public class ShiroConfig {
             Object primaryPrincipal = principalCollection.getPrimaryPrincipal();
             String email = String.valueOf(primaryPrincipal);
             Set<String> roles = new HashSet<String>();
-            roles.add("user");
+
+            User user = userService.selectUserByUsername(email);
+            roles.add(user.getRole());
             SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo(roles);
             return simpleAuthorizationInfo;
         }

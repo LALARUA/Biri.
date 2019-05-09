@@ -32,12 +32,12 @@ public class BookController {
     private BBookService bBookService;
 
     @GetMapping("home")
-    public String home(){
+    public String home(Model model){
         SelectBook condition = new SelectBook();
         condition.getStatus().add(1);
         condition.setFlag("home");
         Map bookMap = bookService.bookList(condition);
-        bookMap.get("bookList");
+        model.addAttribute("bookList",bookMap.get("bookList"));
         return "home";
     }
 

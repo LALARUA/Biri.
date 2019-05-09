@@ -6,9 +6,14 @@ spring:
     port: 6379
   session:
     store-type: redis
-
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      url: jdbc:mysql://47.106.215.35:3306/Airi?useUnicode=true&characterEncoding=utf-8
 server:
   port: 8769
+  max-http-header-size: 102400
 eureka:
   client:
     service-url:
@@ -63,8 +68,14 @@ zuul:
 feign:
   httpclient:
     connection-timeout: 100000
+    enabled: true
   hystrix:
     enabled: true
+mybatis:
+    mapper-locations: classpath:/mapperXML/*.xml
+    configuration:
+      cache-enabled: true
+
 ribbon:
   ReadTimeout: 100000
   ConnectTimeout: 100000

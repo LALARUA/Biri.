@@ -47,7 +47,7 @@ public class CartController {
     public String insertBookInCart(@RequestBody BookInCart bookInCart, HttpSession httpSession, HttpServletRequest httpServletRequest){
         User user =(User) httpSession.getAttribute("user");
         if (user==null){
-           String referer = httpServletRequest.getHeader("referer");
+            String referer = httpServletRequest.getHeader("referer");
             try {
                 referer = URLDecoder.decode(referer,"utf-8");
                 referer= referer.substring(referer.indexOf("/Biri"));
@@ -57,7 +57,7 @@ public class CartController {
                 return "error";
             }
             return "mustLogin";
-       }
+        }
         try {
             Cart cart = new Cart();
             cart.setBookId(bookInCart.getId());

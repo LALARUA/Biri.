@@ -101,7 +101,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="page-title">Shop Sidebar</h1>
+                        <h1 class="page-title">图书列表</h1>
                         <ul class="breadcrumb justify-content-center">
                             <li><a href="index.html">Home</a></li>
                             <li class="current"><span>Shop Pages</span></li>
@@ -180,58 +180,58 @@
                                 <div id="filter" th:if="${filter!=null}" class="advanced-product-filters">
                                     <div class="product-filter">
                                         <div class="row">
-                                            <div class="col-md-3">
-                                                <div  class="product-widget product-widget--price filter">
-                                                    <h3 class="widget-title">价格</h3>
-                                                    <ul class="product-widget__list">
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span class="ammount">$20.00</span>
-                                                                <span> - </span>
-                                                                <span class="ammount">$40.00</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span class="ammount">$40.00</span>
-                                                                <span> - </span>
-                                                                <span class="ammount">$50.00</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span class="ammount">$50.00</span>
-                                                                <span> - </span>
-                                                                <span class="ammount">$60.00</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span class="ammount">$60.00</span>
-                                                                <span> - </span>
-                                                                <span class="ammount">$80.00</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span class="ammount">$80.00</span>
-                                                                <span> - </span>
-                                                                <span class="ammount">$100.00</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop-sidebar.html">
-                                                                <span class="ammount">$100.00</span>
-                                                                <span> + </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                            <!--<div class="col-md-3">-->
+                                                <!--<div  class="product-widget product-widget&#45;&#45;price filter">-->
+                                                    <!--<h3 class="widget-title">价格</h3>-->
+                                                    <!--<ul class="product-widget__list">-->
+                                                        <!--<li>-->
+                                                            <!--<a href="shop-sidebar.html">-->
+                                                                <!--<span class="ammount">$20.00</span>-->
+                                                                <!--<span> - </span>-->
+                                                                <!--<span class="ammount">$40.00</span>-->
+                                                            <!--</a>-->
+                                                        <!--</li>-->
+                                                        <!--<li>-->
+                                                            <!--<a href="shop-sidebar.html">-->
+                                                                <!--<span class="ammount">$40.00</span>-->
+                                                                <!--<span> - </span>-->
+                                                                <!--<span class="ammount">$50.00</span>-->
+                                                            <!--</a>-->
+                                                        <!--</li>-->
+                                                        <!--<li>-->
+                                                            <!--<a href="shop-sidebar.html">-->
+                                                                <!--<span class="ammount">$50.00</span>-->
+                                                                <!--<span> - </span>-->
+                                                                <!--<span class="ammount">$60.00</span>-->
+                                                            <!--</a>-->
+                                                        <!--</li>-->
+                                                        <!--<li>-->
+                                                            <!--<a href="shop-sidebar.html">-->
+                                                                <!--<span class="ammount">$60.00</span>-->
+                                                                <!--<span> - </span>-->
+                                                                <!--<span class="ammount">$80.00</span>-->
+                                                            <!--</a>-->
+                                                        <!--</li>-->
+                                                        <!--<li>-->
+                                                            <!--<a href="shop-sidebar.html">-->
+                                                                <!--<span class="ammount">$80.00</span>-->
+                                                                <!--<span> - </span>-->
+                                                                <!--<span class="ammount">$100.00</span>-->
+                                                            <!--</a>-->
+                                                        <!--</li>-->
+                                                        <!--<li>-->
+                                                            <!--<a href="shop-sidebar.html">-->
+                                                                <!--<span class="ammount">$100.00</span>-->
+                                                                <!--<span> + </span>-->
+                                                            <!--</a>-->
+                                                        <!--</li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -->
                                             <div th:if="${filter!=null&&filter.authors!=null}" class="col-md-3">
-                                                <div class="product-widget product-widget--brand filter">
+                                                <div class="product-widget product-widget--brand">
                                                     <h3 class="widget-title">作者</h3>
-                                                    <ul class="product-widget__list">
+                                                    <ul class="product-widget__list filter">
                                                         <li th:each="author:${filter.authors}">
                                                             <a >
                                                                 <span th:authorId="${author.id}" class="filterAuthor" th:text="${author.name}">Airi</span>
@@ -241,9 +241,9 @@
                                                 </div>
                                             </div>
                                             <div th:if="${filter.publishers!=null}" class="col-md-3">
-                                                <div class="product-widget product-widget--brand filter">
+                                                <div class="product-widget product-widget--brand">
                                                     <h3 class="widget-title">出版社</h3>
-                                                    <ul class="product-widget__list">
+                                                    <ul class="product-widget__list filter">
                                                         <li th:each="publisher:${filter.publishers}">
                                                             <a  >
                                                                 <span class="filterPublisher" th:text="${publisher}">Airi</span>
@@ -253,10 +253,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
-                                                <div class="product-widget product-widget--size filter">
+                                                <div class="product-widget product-widget--size">
                                                     <h3 class="widget-title">标签</h3>
-                                                    <ul class="product-widget__list">
-                                                        <li th:if="${condition.tagName==null||(condition.tagName!=null&&condition.tagName!=tag.name)}" class="filterTagLi" th:each="tag,tagStat:${filter.tags}">
+                                                    <ul class="product-widget__list filter">
+                                                        <li th:style="${condition.tagName==null||(condition.tagName!=null&&condition.tagName!=tag.name)}?'':'display:none'" class="filterTagLi" th:each="tag,tagStat:${filter.tags}">
                                                             <a>
                                                                 <span th:index="${tagStat.index}" th:text="${tag.name}" th:tagId="${tag.id}" class="filterTag">L</span>
                                                             </a>
@@ -668,31 +668,6 @@ display: -webkit-box;
                                             <span class="posted_in font-size-12">作者: <a id="modalAuthor" href="#" rel="tag">Fashions</a></span>
                                         </div>
                                         <div class="product-share-box">
-                                            <!--<span class="font-size-12">Share With</span>-->
-                                            <!-- Social Icons Start Here -->
-                                            <!--<ul class="social social-small">-->
-                                                <!--<li class="social__item">-->
-                                                    <!--<a href="facebook.com" class="social__link">-->
-                                                        <!--<i class="fa fa-facebook"></i>-->
-                                                    <!--</a>-->
-                                                <!--</li>-->
-                                                <!--<li class="social__item">-->
-                                                    <!--<a href="twitter.com" class="social__link">-->
-                                                        <!--<i class="fa fa-twitter"></i>-->
-                                                    <!--</a>-->
-                                                <!--</li>-->
-                                                <!--<li class="social__item">-->
-                                                    <!--<a href="plus.google.com" class="social__link">-->
-                                                        <!--<i class="fa fa-google-plus"></i>-->
-                                                    <!--</a>-->
-                                                <!--</li>-->
-                                                <!--<li class="social__item">-->
-                                                    <!--<a href="plus.google.com" class="social__link">-->
-                                                        <!--<i class="fa fa-pinterest-p"></i>-->
-                                                    <!--</a>-->
-                                                <!--</li>-->
-                                            <!--</ul>-->
-                                            <!-- Social Icons End Here -->
                                         </div>
                                     </div>
                                     <br>
@@ -746,7 +721,8 @@ display: -webkit-box;
                 condition.authorId = null;
             })
             $(document).on('click', '.filterTag', function () {
-                $(this).attr("disabled",true)
+
+
                 var tagName = $(this).text();
                 var index = $(this).attr("index");
                 var tagId = $(this).attr("tagId")
@@ -880,29 +856,6 @@ display: -webkit-box;
                 $("#modalPublisher").text(publisher);
                 $("#modalAuthor").text(authorName);
                 $("#modalAuthor").attr("href",'/Biri/book/list?authorName='+authorName+"&authorId="+authorId);
-            })
-
-            $(document).on('click', '.addBookToWishList', function () {
-                var bookId = $(this).attr("bookId");
-                $.ajax({
-                    url: "/orderCart/cart",
-                    type: 'post', //
-                    async: true,    //或false,是否异步
-                    data: JSON.stringify({
-                        bookId:bookId,
-                    }),
-                    contentType:"application/json;charset=utf-8",
-                    timeout: 50000,    //超时时间
-                    dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
-                    success: function (data) {
-
-                    },
-                    error: function (data) {
-
-                    }
-                })
-
-
             })
             $(document).on('click', '#loadCart', function () {
                     alert(5)

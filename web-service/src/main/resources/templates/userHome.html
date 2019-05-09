@@ -109,10 +109,11 @@
                                             <a href="shop-sidebar.html">Go Shop</a>
                                         </div>
 
-                                        <button  class="btn btn-medium btn-style-1 getOrders" status="0">待发货(<span id="orderStatus0">3</span>)</button>
-                                        <button  class="btn btn-medium btn-style-1 getOrders" status="1">待收货(<span id="orderStatus1">3</span>)</button>
-                                        <button  class="btn btn-medium btn-style-1 getOrders" status="2">待评价(<span id="orderStatus2">3</span>)</button>
-
+                                        <button  class="btn btn-medium btn-style-1 getOrders" status="0">待发货</button>
+                                        <button  class="btn btn-medium btn-style-1 getOrders" status="1">待收货</button>
+                                        <button  class="btn btn-medium btn-style-1 getOrders" status="2">退款申请</button>
+                                        <button  class="btn btn-medium btn-style-1 getOrders" status="3">退货申请</button>
+                                        <button  class="btn btn-medium btn-style-1 getOrders" status="6">完结订单</button>
                                         <div id="orderLoading" class="loading" style="display: none;margin-top: 100px;margin-bottom: 200px" >
                                             <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
                                                 <div class="loding-child loding-bounce1"></div>
@@ -139,7 +140,9 @@
                                                             <td class="wide-column" th:text="${order.createtime}">September 19, 2018</td>
                                                             <td th:text="${order.status}">Processing</td>
                                                             <td class="wide-column">￥<span th:text="${order.total}"></span> 总计 <span th:text="${order.orderDetails.size()}"></span> 件商品</td>
-                                                            <td><a th:dataTo="'#orderDetail'+${order.id}" class="showOrderDetails shop-toolbar__btn">订单详情</a></td>
+                                                            <td>
+                                                                <a th:dataTo="'#orderDetail'+${order.id}" class="showOrderDetails shop-toolbar__btn">订单详情</a>
+                                                            </td>
 
                                                         </tr>
                                                         <tr  th:if="${order.orderDetails}">
@@ -702,7 +705,6 @@
 
             })
             $(document).on('click', '.showOrderDetails', function () {
-
                 var orderDetailsId = $(this).attr("dataTo");
                 $(orderDetailsId).slideToggle('slow')
             })

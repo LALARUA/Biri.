@@ -138,7 +138,7 @@
                                                     <td th:text="${book.putaway}">2011/04/25</td>
                                                     <td>
 														<a th:href="'/Biri/admin/editBook/'+${book.id}" title="编辑图书" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
-                                                        <a th:href="'/Biri/admin/editBook/'+${book.id}" title="更改状态" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
+                                                        <a th:href="'/Biri/admin/status/'+${book.id}" th:bookId="${book.id}" th:statusId="${book.status.get(0).id}" title="更改状态" class="btn btn-simple btn-warning btn-icon editStatus"><i class="ti-pencil-alt"></i></a>
 
                                                         <!--<a  class="btn btn-simple btn-danger btn-icon remove"><i class="ti-close"></i></a>-->
                                                     </td>
@@ -284,6 +284,33 @@
 
         $('.card .material-datatables label').addClass('form-group');
     });
+
+    window.onload=function (ev) {
+        $(document).on('click', '.editStatus', function (){
+            var type = $(this).attr("statusId");
+            var bookId = $(this).attr("bookId");
+            $.ajax({
+                url: '/bookService/status',
+                type: 'put', //
+                async: true,    //或false,是否异步
+                data: {
+                    bookId:bookId,
+                    type:type,
+
+                },
+                // contentType:"application/json;charset=utf-8",
+                cache: false,
+                timeout: 50000,    //超时时间
+                dataType: 'text',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data) {
+
+                },
+                error: function (data) {
+
+                }
+            })
+        })
+    }
 </script>
 </body>
 </html>

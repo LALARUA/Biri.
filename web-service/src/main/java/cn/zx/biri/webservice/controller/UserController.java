@@ -4,6 +4,8 @@ import cn.zx.biri.common.pojo.entry.User;
 import cn.zx.biri.common.pojo.response.BookInCart;
 import cn.zx.biri.common.pojo.response.UserOrder;
 import cn.zx.biri.common.pojo.response.UserWishList;
+import cn.zx.biri.common.utils.CookieUtils;
+import cn.zx.biri.webservice.feignService.LoginAndRegisterService;
 import cn.zx.biri.webservice.feignService.OrderAndCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.jws.soap.SOAPBinding;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -26,6 +29,8 @@ public class UserController {
     @Autowired
     private OrderAndCartService orderAndCartService;
 
+    @Autowired
+    private LoginAndRegisterService loginAndRegisterService;
     @GetMapping("cart")
     public String cart(HttpSession httpSession,Model model){
         User user = (User) httpSession.getAttribute("user");
@@ -33,6 +38,13 @@ public class UserController {
         model.addAttribute("cart",bookInCarts);
 
         return "cart";
+    }
+    @GetMapping("logout")
+    public String logout(HttpServletResponse httpServletResponse){
+
+        loginAndRegisterService.logout();
+        CookieUtils.delCookie(httpServletResponse,"user");
+        return "redirect:http://localhost:8769/Biri/login";
     }
     @GetMapping("miniCart")
     public String miniCart(Model model, HttpSession httpSession){

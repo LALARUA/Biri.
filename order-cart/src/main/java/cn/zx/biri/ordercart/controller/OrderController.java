@@ -53,9 +53,8 @@ public class OrderController {
 
     @PutMapping("order")
     public String updateOrder(Order order){
-
         try {
-            orderService.updateOrder(order);
+//            orderService.updateOrder(order);
         } catch (Exception e) {
             return "error";
         }

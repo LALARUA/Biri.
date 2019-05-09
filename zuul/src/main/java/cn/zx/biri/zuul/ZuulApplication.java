@@ -1,6 +1,7 @@
 package cn.zx.biri.zuul;
 
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration;
@@ -18,7 +19,8 @@ import java.util.Objects;
 @EnableFeignClients
 @EnableRedisHttpSession(redisFlushMode= RedisFlushMode.IMMEDIATE)
 @EnableZuulProxy
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, RabbitAutoConfiguration.class})
+@MapperScan("cn.zx.biri.zuul.mapper")
+@SpringBootApplication(exclude = {RabbitAutoConfiguration.class})
 public class ZuulApplication {
 
 	public static void main(String[] args) {

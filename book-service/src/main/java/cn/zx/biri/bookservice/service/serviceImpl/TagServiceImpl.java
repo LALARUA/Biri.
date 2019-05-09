@@ -54,6 +54,7 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public String postTag(Tag tag) {
+        tagMapper.insertSelective(tag);
         Cache cache = cacheManager.getCache("importantCache");
         cache.evict("allTags");
         cache.evict("tags");

@@ -54,6 +54,12 @@ public class BookController {
         }
     }
 
+    @PutMapping("status")
+    public String editStatus(Integer bookId,Integer type){
+
+        return "";
+    }
+
     @GetMapping("shelvesBook")
     public Map shelvesBook(){
        return bookService.shelvesBook();

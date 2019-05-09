@@ -9,12 +9,15 @@ import cn.zx.biri.loginregister.feignService.RabbitmqService;
 import cn.zx.biri.loginregister.feignService.UserService;
 import cn.zx.biri.loginregister.service.AuthenticateService;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
 import org.springframework.validation.BindingResult;
@@ -46,6 +49,9 @@ public class AuthenticateController {
 //
     @Autowired
     UserService userService;
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
     @Autowired
     SessionRepository sessionRepository;
@@ -87,8 +93,15 @@ public class AuthenticateController {
         }
         return map;
     }
+    @GetMapping("logout")
+    public void logout(HttpSession httpSession){
+//        Subject subject = SecurityUtils.getSubject();
+//        subject.logout();
+        String sessionId = httpSession.getId();
+        sessionRepository.deleteById(sessionId);
+        redisTemplate.delete("spring:session:sessions:"+sessionId);
 
-
+    }
     @PostMapping("register")
     public Map register(@Valid RegisterAndChangePasswordVO registerVO, BindingResult bindingResult,HttpServletRequest httpServletRequest){
         Map map = new HashMap();
