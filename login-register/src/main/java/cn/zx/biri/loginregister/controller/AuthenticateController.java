@@ -137,7 +137,7 @@ public class AuthenticateController {
             return map;
         }
         try {
-            userService.updateUser(changePasswordVO);
+            userService.updateUserPassword(changePasswordVO);
         } catch (Exception e) {
             map.put("errorMessage","修改密码失败");
         }

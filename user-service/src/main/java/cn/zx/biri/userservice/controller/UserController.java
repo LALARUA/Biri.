@@ -17,8 +17,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("updateUser")
+    @PutMapping("updateUserPassword")
     public void updateUser(@RequestBody RegisterAndChangePasswordVO registerAndChangePasswordVO){
+        User user = new User();
+        user.setPassword(registerAndChangePasswordVO.getPassword());
+        userService.updateUser(user);
         return;
     }
 
@@ -32,5 +35,12 @@ public class UserController {
         userService.insertUser(registerAndChangePasswordVO);
     }
 
+    @PutMapping("applyAdmin")
+    public void applyAdmin(Integer userId){
+        User user = new User();
+        user.setId(userId);
+        userService.updateUser(user);
+
+    }
 
 }

@@ -5,10 +5,7 @@ import cn.zx.biri.common.pojo.vo.LoginVO;
 import cn.zx.biri.common.pojo.vo.RegisterAndChangePasswordVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: xiangXX
@@ -26,8 +23,8 @@ public interface UserService {
     @GetMapping(value = "authenticateUser",consumes = MediaType.APPLICATION_JSON_VALUE)
     User authenticateUser(@RequestBody LoginVO loginVO);
 
-    @PostMapping("updateUser")
-    void updateUser(@RequestBody RegisterAndChangePasswordVO registerAndChangePasswordVO);
+    @PutMapping("updateUserPassword")
+    void updateUserPassword(@RequestBody RegisterAndChangePasswordVO registerAndChangePasswordVO);
 
 
 }

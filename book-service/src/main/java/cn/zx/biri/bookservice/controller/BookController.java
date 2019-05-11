@@ -3,9 +3,11 @@ package cn.zx.biri.bookservice.controller;
 import cn.zx.biri.bookservice.service.BookService;
 import cn.zx.biri.common.pojo.entry.Author;
 import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.entry.BookWithStatus;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.response.BookInCart;
+import cn.zx.biri.common.pojo.response.BookStatusEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 import cn.zx.biri.common.pojo.vo.ShelvesBook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,9 +57,14 @@ public class BookController {
     }
 
     @PutMapping("status")
-    public String editStatus(Integer bookId,Integer type){
+    public String editStatus(BookStatusEnhanced bookWithStatus){
+        try {
+            bookService.editStatus(bookWithStatus);
+            return "success";
+        } catch (Exception e) {
+            return "error";
+        }
 
-        return "";
     }
 
     @GetMapping("shelvesBook")
@@ -69,11 +76,13 @@ public class BookController {
     public String postShelvesBook(List<MultipartFile> bookImg, ShelvesBook book){
         try {
             bookService.postShelvesBook(bookImg,book);
+            return "success";
         } catch (Exception e) {
             e.printStackTrace();
+            return "error";
         }
 
-        return "ss";
+
     }
 
     @GetMapping("manageTag")
@@ -92,6 +101,11 @@ public class BookController {
     }
 
 
+    @PutMapping("book")
+    public String updateBook(Book book,Integer authorId){
+        bookService.updateBook(book);
+        return "success";
+    }
 
 
 }

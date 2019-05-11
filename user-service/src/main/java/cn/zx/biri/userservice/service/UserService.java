@@ -23,5 +23,5 @@ public interface UserService {
     User authenticateUser(LoginVO loginVO);
 
 
-    void updateUser(RegisterAndChangePasswordVO registerAndChangePasswordVO);
+    void updateUser(User user);
 }

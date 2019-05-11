@@ -1,6 +1,7 @@
 package cn.zx.biri.commentservice.service;
 
 import cn.zx.biri.common.pojo.entry.Reply;
+import cn.zx.biri.common.pojo.entry.ReplySupport;
 import cn.zx.biri.common.pojo.response.ReplyEnhanced;
 import cn.zx.biri.common.pojo.response.ReplyEnhancedList;
 
@@ -15,4 +16,5 @@ public interface ReplyService {
     List<ReplyEnhancedList> getRepliesByCommentId(List<Integer> commentIds, Integer currentUserId);
     List<ReplyEnhanced> getReplyByCommentIdByPageNow(Integer commentId, Integer currentUserId, int pageNow);
     void submitReply(Reply reply) throws Exception;
+    void replySupport(ReplySupport replySupport);
 }

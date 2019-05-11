@@ -1,9 +1,11 @@
 package cn.zx.biri.bookservice.service;
 
 import cn.zx.biri.common.pojo.entry.Book;
+import cn.zx.biri.common.pojo.entry.BookWithStatus;
 import cn.zx.biri.common.pojo.response.BookDetail;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 import cn.zx.biri.common.pojo.response.BookInCart;
+import cn.zx.biri.common.pojo.response.BookStatusEnhanced;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 import cn.zx.biri.common.pojo.vo.ShelvesBook;
 import org.springframework.web.multipart.MultipartFile;
@@ -28,4 +30,7 @@ public interface BookService {
     Map manageTag();
     List<BookEnhanced> allBookList();
     BookDetail editBook(Integer bookId);
+    void editStatus(BookStatusEnhanced BookStatusEnhanced);
+    void updateBook(Book book);
+
 }

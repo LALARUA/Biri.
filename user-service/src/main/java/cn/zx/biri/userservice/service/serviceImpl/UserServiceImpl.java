@@ -61,7 +61,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(RegisterAndChangePasswordVO registerAndChangePasswordVO) {
-
+    public void updateUser(User user) {
+        if (user.getId()==null){
+            UserExample userExample = new UserExample();
+            userExample.createCriteria().andEmailEqualTo(user.getEmail());
+            userMapper.updateByExampleSelective(user,userExample);
+        }
+        else userMapper.updateByPrimaryKeySelective(user);
     }
 }

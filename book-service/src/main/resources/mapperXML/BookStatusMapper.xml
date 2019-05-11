@@ -100,7 +100,7 @@
     insert into bookStatus (id, description)
     values (#{id,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.zx.biri.common.pojo.entry.BookStatus">
+  <insert id="insertSelective" keyProperty="id" useGeneratedKeys="true" parameterType="cn.zx.biri.common.pojo.entry.BookStatus">
     insert into bookStatus
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

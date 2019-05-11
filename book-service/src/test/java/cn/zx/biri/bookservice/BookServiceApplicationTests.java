@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -51,8 +52,9 @@ public class BookServiceApplicationTests {
 	@Test
 	public void test(){
 		List<BookEnhanced> bookEnhanceds = bookMapper.selectAllBookList();
+		Map<Integer, BookEnhanced> collect = bookEnhanceds.stream().collect(Collectors.toMap(BookEnhanced::getId, (p) -> p));
 		Cache importantCache = cacheManager.getCache("importantCache");
-		importantCache.put("allBookList",bookEnhanceds);
+		importantCache.put("allBookList",collect);
 		return;
 	}
 

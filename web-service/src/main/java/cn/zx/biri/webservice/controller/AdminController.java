@@ -10,6 +10,7 @@ import cn.zx.biri.common.pojo.response.NewTag;
 import cn.zx.biri.common.pojo.response.UserOrder;
 import cn.zx.biri.common.pojo.vo.SelectBook;
 
+import cn.zx.biri.common.utils.DateUtils;
 import cn.zx.biri.webservice.feignService.BookService;
 import cn.zx.biri.webservice.feignService.OrderAndCartService;
 import cn.zx.biri.webservice.service.BBookService;
@@ -76,13 +77,16 @@ public class AdminController {
     }
     @GetMapping("bookList")
     public String bookList(Model model) throws Exception{
-        List<BookEnhanced> bookList = bBookService.allBookList("allBookList");
-        model.addAttribute("bookList",bookList);
+        Map<Integer, BookEnhanced> booksMap = bBookService.allBookList("allBookList");
+        model.addAttribute("booksMap",booksMap);
         return "admin/bookList";
     }
     @GetMapping("editBook/{bookId}")
     public String editBook(Model model, @PathVariable("bookId") Integer bookId) throws Exception{
         BookDetail bookDetail = bookService.editBook(bookId);
+        String publishDate = bookDetail.getPublishDate().replaceAll("年|月", "-");
+        publishDate = publishDate+"01";
+        bookDetail.setPublishDate(publishDate);
         Map map = bookService.shelvesBook();
         model.addAttribute("authors",map.get("authors"));
         model.addAttribute("tagHead",map.get("tagHead"));

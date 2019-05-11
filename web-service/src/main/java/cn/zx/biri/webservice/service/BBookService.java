@@ -3,6 +3,7 @@ package cn.zx.biri.webservice.service;
 import cn.zx.biri.common.pojo.response.BookEnhanced;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: xiangXX
@@ -13,7 +14,7 @@ public interface BBookService {
 
     String tagsHTML(String key);
 
-    List<BookEnhanced> allBookList(String key);
+    Map<Integer,BookEnhanced> allBookList(String key);
 
 
 }

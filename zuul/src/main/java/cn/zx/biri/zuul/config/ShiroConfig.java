@@ -133,13 +133,15 @@ public class ShiroConfig {
         //.authc必须认证(即登陆)
         // /**拦截所有资源
 
-//        filterChainDefinitionManager.put("/loginAndRegister/**","anon");
+        filterChainDefinitionManager.put("/loginAndRegister/**","anon");
 //        filterChainDefinitionManager.put("/Biri/login","anon");
 //        filterChainDefinitionManager.put("/Biri/home","anon");
 //        filterChainDefinitionManager.put("/assets/**","anon");
 //        filterChainDefinitionManager.put("/static/assets/**","anon");
         filterChainDefinitionManager.put("/Biri/user/**","authc");
-        filterChainDefinitionManager.put("/Biri/book/detail","authc");
+        filterChainDefinitionManager.put("/orderCart/**","authc");
+        filterChainDefinitionManager.put("/commentService/**","authc");
+        filterChainDefinitionManager.put("/Biri/","authc");
         filterChainDefinitionManager.put("/Biri/admin/**","roles[admin]");
         filterChainDefinitionManager.put("/**","anon");
 

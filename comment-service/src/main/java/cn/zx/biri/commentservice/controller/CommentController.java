@@ -2,6 +2,7 @@ package cn.zx.biri.commentservice.controller;
 
 import cn.zx.biri.commentservice.service.CommentService;
 import cn.zx.biri.common.pojo.entry.Comment;
+import cn.zx.biri.common.pojo.entry.CommentSupport;
 import cn.zx.biri.common.pojo.response.BookComment;
 import cn.zx.biri.common.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,12 +43,22 @@ public class CommentController {
 
             String date = DateUtils.dateToString(new Date());
             comment.setDate(date);
-//            commentService.submitComment(comment);
+            commentService.submitComment(comment);
         } catch (Exception e) {
 
             return "提交错误";
         }
         return "评论成功";
 
+    }
+
+    @PostMapping("commentSupport")
+    public String commentSupport(CommentSupport commentSupport){
+        try {
+            commentService.commentSupport(commentSupport);
+            return "suucess";
+        } catch (Exception e) {
+            return "error";
+        }
     }
 }

@@ -12,6 +12,7 @@ import cn.zx.biri.common.pojo.vo.SelectBook;
 import cn.zx.biri.common.pojo.vo.ShelvesBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -32,23 +33,28 @@ public class BookServiceImpl implements BookService{
     private final int pageSize = 12;
 
     @Autowired
-    BookMapper bookMapper;
+    private BookMapper bookMapper;
     @Autowired
-    CommentService commentService;
+    private CommentService commentService;
     @Autowired
-    MyProperties myProperties;
+    private MyProperties myProperties;
     @Autowired
-    BookWithAuthorMapper bookWithAuthorMapper;
+    private BookWithAuthorMapper bookWithAuthorMapper;
     @Autowired
-    BookWithImagePathMapper bookWithImagePathMapper;
+    private BookWithImagePathMapper bookWithImagePathMapper;
     @Autowired
-    BookwithtagMapper bookwithtagMapper;
+    private BookwithtagMapper bookwithtagMapper;
+    @Autowired
+    private BookWithStatusMapper bookWithStatusMapper;
 
     @Autowired
-    AuthorService authorService;
+    private AuthorService authorService;
 
     @Autowired
-    TagService tagService;
+    private TagService tagService;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
 
     @Override
@@ -210,6 +216,32 @@ public class BookServiceImpl implements BookService{
         BookDetail bookDetail = bookMapper.selectBookDetail(bookId);
         bookDetail.setTagLinks(tagService.tagLink(bookDetail.getTags()));
         return bookDetail;
+    }
+
+    @Override
+    public void editStatus(BookStatusEnhanced bookStatusEnhanced) {
+        Map<Integer,BookEnhanced> bookEnhancedMap = (Map<Integer, BookEnhanced>) redisTemplate.opsForValue().get("importantCache::allBookList");
+
+        if (bookStatusEnhanced.getId()==null){
+            bookWithStatusMapper.insertSelective(bookStatusEnhanced);
+            BookEnhanced bookEnhanced = bookEnhancedMap.get(bookStatusEnhanced.getId());
+            bookEnhanced.getStatus().add(bookStatusEnhanced);
+        }
+
+        else {
+            bookWithStatusMapper.deleteByPrimaryKey(bookStatusEnhanced.getId());
+            BookEnhanced bookEnhanced = bookEnhancedMap.get(bookStatusEnhanced.getId());
+            bookEnhanced.getStatus().remove(0);
+        }
+
+        redisTemplate.opsForValue().set("importantCache::allBookList",bookEnhancedMap);
+
+
+    }
+
+    @Override
+    public void updateBook(Book book) {
+        bookMapper.updateByPrimaryKey(book);
     }
 
 

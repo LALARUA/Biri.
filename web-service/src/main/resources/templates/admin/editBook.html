@@ -175,7 +175,7 @@
                             <div class="card">
 		                        <form id="allInputsFormValidation" class="form-horizontal" action="" method="post" novalidate="">
 		                            <div class="content">
-		                                <h4 class="title">图书上架</h4>
+		                                <h4 class="title">图书编辑</h4>
 
 										<fieldset>
 											<div class="form-group">
@@ -199,8 +199,8 @@
 
 												<div class="col-sm-4">
 														<select   id="author" name="authorIdAndName" class="nice-select">
-																<option value="" selected>选择作者…</option>
-																<option th:each="author:${authors}" th:value="${author.id}+'-'+${author.name}" th:text="${author.name}"></option>
+																<option value="">选择作者…</option>
+																<option th:selected="${author.id==bookDetail.authors.get(0).id}?'true'" th:each="author:${authors}" th:value="${author.id}+'-'+${author.name}" th:text="${author.name}"></option>
 
 														</select>
 													</div>
@@ -252,21 +252,21 @@
 											</div>
 										</fieldset>
 
-		                                <fieldset>
-		                                    <div id="tagGroup" class="form-group column-sizing">
-		                                    	<label class="col-sm-2 control-label">
-													标签
-												</label>
-	                                    		<div style="float: left;margin-left: 10px" level="1" class="tag">
-													<select  name="tagIdAndName" class="nice-select">
-														<option value="" selected>选择标签…</option>
-														<option th:each="tag:${tagHead.sonTags}" th:value="${tag.id}+'-'+${tag.name}" th:text="${tag.name}"></option>
-													</select>
-	                                    		</div>
+		                                <!--<fieldset>-->
+		                                    <!--<div id="tagGroup" class="form-group column-sizing">-->
+		                                    	<!--<label class="col-sm-2 control-label">-->
+													<!--标签-->
+												<!--</label>-->
+	                                    		<!--<div style="float: left;margin-left: 10px" level="1" class="tag">-->
+													<!--<select  name="tagIdAndName" class="nice-select">-->
+														<!--<option value="" selected>选择标签…</option>-->
+														<!--<option th:each="tag:${tagHead.sonTags}" th:value="${tag.id}+'-'+${tag.name}" th:text="${tag.name}"></option>-->
+													<!--</select>-->
+	                                    		<!--</div>-->
 
-												<button type="button" id="addTagLink" style="margin-left: 5px" class="btn btn-primary">添加标签链</button>
-		                                	</div>
-		                                </fieldset>
+												<!--<button type="button" id="addTagLink" style="margin-left: 5px" class="btn btn-primary">添加标签链</button>-->
+		                                	<!--</div>-->
+		                                <!--</fieldset>-->
 										<fieldset>
 											<div class="form-group">
 												<label class="col-sm-2 control-label">
@@ -292,24 +292,24 @@
 												</div>
 											</div>
 										</fieldset>
-										<fieldset >
-											<div class="form-group">
-												<label class="col-sm-2 control-label">图片</label>
+										<!--<fieldset >-->
+											<!--<div class="form-group">-->
+												<!--<label class="col-sm-2 control-label">图片</label>-->
 
-												<div style="float: left;margin-left: 10px">
-													<input name="bookImg" multiple="multiple" class="realImg" style="display: none" type="file">
-													<div style="border:1px solid black;height: 100px;width: 80px">
-														<img style="display: block;width: 100px;height: 100px" class="uploadImg" >
-													</div>
-													<button type="button" class="uploadImg btn btn-primary btn-round">上传</button>
-												</div>
+												<!--<div style="float: left;margin-left: 10px">-->
+													<!--<input name="bookImg" multiple="multiple" class="realImg" style="display: none" type="file">-->
+													<!--<div style="border:1px solid black;height: 100px;width: 80px">-->
+														<!--<img style="display: block;width: 100px;height: 100px" class="uploadImg" >-->
+													<!--</div>-->
+													<!--<button type="button" class="uploadImg btn btn-primary btn-round">上传</button>-->
+												<!--</div>-->
 
-												<button type="button" id="addBookImg" style="margin-left: 5px" class="btn btn-primary">添加图片</button>
+												<!--<button type="button" id="addBookImg" style="margin-left: 5px" class="btn btn-primary">添加图片</button>-->
 
 
-											</div>
+											<!--</div>-->
 
-										</fieldset>
+										<!--</fieldset>-->
 										<fieldset >
 											<div class="form-group">
 												<label class="col-sm-2 control-label">目录</label>
@@ -485,8 +485,8 @@
 
             var data = new FormData($("#allInputsFormValidation")[0]);
             $.ajax({
-                url: "/bookService/shelvesBook",
-                type: 'post', //
+                url: "/bookService/book",
+                type: 'put', //
                 async: true,    //或false,是否异步
                 data: data,
                 // contentType:"application/json;charset=utf-8",

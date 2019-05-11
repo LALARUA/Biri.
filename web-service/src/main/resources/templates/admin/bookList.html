@@ -128,17 +128,17 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr th:each="book,bookStat:${bookList}">
-                                                    <td th:title="${book.title}" style="max-width: 15em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" th:text="${book.title}">Tiger Nixon</td>
-                                                    <td th:title="${book.authors.get(0)}" style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="author:${book.authors}" th:text="${author.name}+' '"></span></td>
-                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="tag,tagStat:${book.tags}" th:if="${tag.id!=148}" th:text="${tagStat.count!=book.tags.size()}?${tag.name}+'/':${tag.name}"></span></td>
-                                                    <td th:text="${book.isbn}">Edinburgh</td>
-                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:if="${book.status.size()==0}">无</span><span th:each="status,statusStat:${book.status}"  th:text="(${statusStat.count==book.status.size()}?${status.getDescription()}:${status.getDescription()}+'/')"></span></td>
+                                                <tr th:each="entry:${booksMap}">
+                                                    <td th:title="${entry.value.title}" style="max-width: 15em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" th:text="${entry.value.title}">Tiger Nixon</td>
+                                                    <td th:title="${entry.value.authors.get(0)}" style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="author:${entry.value.authors}" th:text="${author.name}+' '"></span></td>
+                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:each="tag,tagStat:${entry.value.tags}" th:if="${tag.id!=148}" th:text="${tagStat.count!=entry.value.tags.size()}?${tag.name}+'/':${tag.name}"></span></td>
+                                                    <td th:text="${entry.value.isbn}">Edinburgh</td>
+                                                    <td style="max-width: 12em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><span th:if="${entry.value.status.size()==0}">无</span><span th:each="status,statusStat:${entry.value.status}"  th:text="(${statusStat.count==entry.value.status.size()}?${status.getDescription()}:${status.getDescription()}+'/')"></span></td>
 
-                                                    <td th:text="${book.putaway}">2011/04/25</td>
+                                                    <td th:text="${entry.value.putaway}">2011/04/25</td>
                                                     <td>
-														<a th:href="'/Biri/admin/editBook/'+${book.id}" title="编辑图书" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
-                                                        <a th:href="'/Biri/admin/status/'+${book.id}" th:bookId="${book.id}" th:statusId="${book.status.get(0).id}" title="更改状态" class="btn btn-simple btn-warning btn-icon editStatus"><i class="ti-pencil-alt"></i></a>
+														<a th:href="'/Biri/admin/editBook/'+${entry.value.id}" title="编辑图书" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
+                                                        <button th:href="'/Biri/admin/status/'+${entry.value.id}" th:bookId="${entry.value.id}" th:description="${entry.value.status.size()!=0}?${entry.value.status.get(0).description}" th:status="${entry.value.status.size()!=0}?${entry.value.status.get(0).status}" th:statusId="${entry.value.status.size()!=0}?${entry.value.status.get(0).id}" title="更改状态" class="btn btn-simple btn-warning btn-icon editStatus"><i class="ti-pencil-alt"></i></button>
 
                                                         <!--<a  class="btn btn-simple btn-danger btn-icon remove"><i class="ti-close"></i></a>-->
                                                     </td>
@@ -287,15 +287,19 @@
 
     window.onload=function (ev) {
         $(document).on('click', '.editStatus', function (){
-            var type = $(this).attr("statusId");
+            var statusId = $(this).attr("statusId");
             var bookId = $(this).attr("bookId");
+            var status = $(this).attr("status");
+            var description = $(this).attr("description");
             $.ajax({
                 url: '/bookService/status',
                 type: 'put', //
                 async: true,    //或false,是否异步
                 data: {
                     bookId:bookId,
-                    type:type,
+                    id:statusId,
+                    status:status,
+                    description:description,
 
                 },
                 // contentType:"application/json;charset=utf-8",

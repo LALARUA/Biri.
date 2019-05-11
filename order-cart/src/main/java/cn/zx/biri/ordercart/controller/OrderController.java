@@ -54,7 +54,7 @@ public class OrderController {
     @PutMapping("order")
     public String updateOrder(Order order){
         try {
-//            orderService.updateOrder(order);
+            orderService.updateOrder(order);
         } catch (Exception e) {
             return "error";
         }
@@ -63,7 +63,7 @@ public class OrderController {
     }
 
     @GetMapping("orderToAdmin")
-    public List<UserOrder> getOrdersByStatus(Integer  status){
+    public List<UserOrder> getOrdersByStatus(Integer status){
         try {
             return orderService.getOrdersByStatus(status);
         } catch (Exception e) {

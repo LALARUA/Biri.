@@ -1,8 +1,10 @@
 package cn.zx.biri.commentservice.service.serviceImpl;
 
 import cn.zx.biri.commentservice.mapper.ReplyMapper;
+import cn.zx.biri.commentservice.mapper.ReplySupportMapper;
 import cn.zx.biri.commentservice.service.ReplyService;
 import cn.zx.biri.common.pojo.entry.Reply;
+import cn.zx.biri.common.pojo.entry.ReplySupport;
 import cn.zx.biri.common.pojo.example.ReplyExample;
 import cn.zx.biri.common.pojo.response.ReplyEnhanced;
 import cn.zx.biri.common.pojo.response.ReplyEnhancedList;
@@ -23,8 +25,10 @@ public class ReplyServiceImpl implements ReplyService {
     private final int pageSize = 3;
 
     @Autowired
-    ReplyMapper replyMapper;
+    private ReplyMapper replyMapper;
 
+    @Autowired
+    private ReplySupportMapper replySupportMapper;
 
 
     @Override
@@ -57,6 +61,11 @@ public class ReplyServiceImpl implements ReplyService {
     @Override
     public void submitReply(Reply reply) throws Exception{
         replyMapper.insertSelective(reply);
+    }
+
+    @Override
+    public void replySupport(ReplySupport replySupport) {
+        replySupportMapper.insertSelective(replySupport);
     }
 
 

@@ -1,7 +1,9 @@
 package cn.zx.biri.commentservice.controller;
 
 import cn.zx.biri.commentservice.service.ReplyService;
+import cn.zx.biri.common.pojo.entry.CommentSupport;
 import cn.zx.biri.common.pojo.entry.Reply;
+import cn.zx.biri.common.pojo.entry.ReplySupport;
 import cn.zx.biri.common.pojo.response.ReplyEnhanced;
 import cn.zx.biri.common.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,22 +25,31 @@ import java.util.List;
 @RestController
 public class ReplyController {
     @Autowired
-    ReplyService replyService;
+    private ReplyService replyService;
 
     @GetMapping("reply")
-    List<ReplyEnhanced> getReplyByCommentIdAndPageNow(Integer commentId, Integer currentUserId, int pageNow){
+    public List<ReplyEnhanced> getReplyByCommentIdAndPageNow(Integer commentId, Integer currentUserId, int pageNow){
        return replyService.getReplyByCommentIdByPageNow(commentId,currentUserId,pageNow);
     }
 
     @PostMapping("reply")
-    String submitReply(@RequestBody Reply reply){
+    public String submitReply(@RequestBody Reply reply){
         try {
             reply.setDatetime(DateUtils.dateToString(new Date()));
-//            replyService.submitReply(reply);
+            replyService.submitReply(reply);
             return "提交成功";
         } catch (Exception e) {
             return "提交错误";
         }
     }
 
+    @PostMapping("replySupport")
+    public String commentSupport(ReplySupport replySupport){
+        try {
+            replyService.replySupport(replySupport);
+            return "suucess";
+        } catch (Exception e) {
+            return "error";
+        }
+    }
 }

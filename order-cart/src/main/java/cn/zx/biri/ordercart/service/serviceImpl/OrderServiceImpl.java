@@ -52,7 +52,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Transactional
     @Override
-    public int postOrder(Order order) throws Exception {
+    public int  postOrder(Order order) throws Exception {
         if (bookService.reduceStock() == -1)
             return -1;
         order.setCreatetime(DateUtils.dateToString(new Date()));

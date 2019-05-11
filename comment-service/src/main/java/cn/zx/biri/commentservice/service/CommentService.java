@@ -1,6 +1,7 @@
 package cn.zx.biri.commentservice.service;
 
 import cn.zx.biri.common.pojo.entry.Comment;
+import cn.zx.biri.common.pojo.entry.CommentSupport;
 import cn.zx.biri.common.pojo.response.BookComment;
 
 import java.util.List;
@@ -15,4 +16,5 @@ public interface CommentService {
     Map selectBookCommentsFirst(Integer bookId, Integer currentUserId);
     List<BookComment> selectBookCommentsByPage(Integer bookId,Integer currentUserId,Integer pageNow);
     void submitComment(Comment comment) throws Exception;
+    void commentSupport(CommentSupport commentSupport);
 }

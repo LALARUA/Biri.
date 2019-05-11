@@ -106,7 +106,7 @@
                                     <div class="tab-pane fade" id="orders">
                                         <div class="message-box mb--30">
                                             <p><i class="fa fa-check-circle"></i>挑点好书吧.</p>
-                                            <a href="shop-sidebar.html">Go Shop</a>
+                                            <a href="/Biri/book/list?status=1">Go Shop</a>
                                         </div>
 
                                         <button  class="btn btn-medium btn-style-1 getOrders" status="0">待发货</button>
@@ -142,6 +142,10 @@
                                                             <td class="wide-column">￥<span th:text="${order.total}"></span> 总计 <span th:text="${order.orderDetails.size()}"></span> 件商品</td>
                                                             <td>
                                                                 <a th:dataTo="'#orderDetail'+${order.id}" class="showOrderDetails shop-toolbar__btn">订单详情</a>
+                                                                <button  statusId="2" th:orderId="${order.id}" class="handleOrder btn btn-primary btn-sm" th:if="${order.status==0}">退款</button>
+                                                                <button statusId="6" th:orderId="${order.id}"  class="handleOrder btn btn-primary btn-sm" th:if="${order.status==1}">确认订单</button>
+                                                                <button statusId="3" th:orderId="${order.id}"  class="handleOrder btn btn-primary btn-sm"  th:if="${order.status==1}">退货</button>
+
                                                             </td>
 
                                                         </tr>

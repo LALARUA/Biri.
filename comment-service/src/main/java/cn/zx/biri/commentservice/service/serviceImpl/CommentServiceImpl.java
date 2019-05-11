@@ -1,8 +1,12 @@
 package cn.zx.biri.commentservice.service.serviceImpl;
 
 import cn.zx.biri.commentservice.mapper.CommentMapper;
+import cn.zx.biri.commentservice.mapper.CommentSupportMapper;
+import cn.zx.biri.commentservice.mapper.ReplySupportMapper;
 import cn.zx.biri.commentservice.service.CommentService;
 import cn.zx.biri.common.pojo.entry.Comment;
+import cn.zx.biri.common.pojo.entry.CommentSupport;
+import cn.zx.biri.common.pojo.entry.ReplySupport;
 import cn.zx.biri.common.pojo.example.CommentExample;
 import cn.zx.biri.common.pojo.response.BookComment;
 import cn.zx.biri.common.pojo.response.ReplyEnhancedList;
@@ -23,11 +27,13 @@ import java.util.Map;
 public class CommentServiceImpl implements CommentService {
     private final int pageSize = 1;
     @Autowired
-    CommentMapper commentMapper;
+    private CommentMapper commentMapper;
 
     @Autowired
-    ReplyServiceImpl replyService;
+    private ReplyServiceImpl replyService;
 
+    @Autowired
+    private CommentSupportMapper commentSupportMapper;
     /**
      * @description  图书的评论（首页）
      * @author xiangXX
@@ -84,4 +90,11 @@ public class CommentServiceImpl implements CommentService {
     public void submitComment(Comment comment) throws Exception {
         commentMapper.insertSelective(comment);
     }
+
+    @Override
+    public void commentSupport(CommentSupport commentSupport) {
+        commentSupportMapper.insertSelective(commentSupport);
+    }
+
+
 }

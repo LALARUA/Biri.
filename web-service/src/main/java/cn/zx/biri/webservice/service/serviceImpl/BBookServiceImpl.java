@@ -8,6 +8,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @Author: xiangXX
@@ -28,8 +30,11 @@ public class BBookServiceImpl implements BBookService {
 
     @Override
     @Cacheable(cacheNames = "importantCache",key = "#key")
-    public List<BookEnhanced> allBookList(String key) {
-       return bookService.allBookList();
+    public Map<Integer,BookEnhanced> allBookList(String key) {
+        List<BookEnhanced> bookEnhanceds = bookService.allBookList();
+        Map<Integer, BookEnhanced> booksMap = bookEnhanceds.stream().collect(Collectors.toMap(BookEnhanced::getId, (p) -> p));
+
+        return booksMap;
 
     }
 
