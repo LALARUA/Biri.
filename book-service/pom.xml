@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>cn.zx.Biri</groupId>
-		<artifactId>common</artifactId>
+		<artifactId>Biri</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/>  <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.zx.Biri</groupId>
 	<artifactId>book-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>book-service</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -19,11 +19,23 @@
 	</properties>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>cn.zx.Biri</groupId>
+			<artifactId>common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
-
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>

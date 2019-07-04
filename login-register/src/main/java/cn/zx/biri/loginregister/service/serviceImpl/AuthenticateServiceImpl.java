@@ -47,6 +47,7 @@ public class AuthenticateServiceImpl implements AuthenticateService {
         rabbitmqService.sendMessageToQueueDirect("registerNewUser",registerVO.getUsername());
         authenticate(registerVO);
     }
+
     @Override
     public void authenticate(LoginVO loginVO) throws Exception {
         Subject current = SecurityUtils.getSubject();

@@ -16,13 +16,14 @@
         <module name="rabbitmq-service" />
         <module name="redis-service" />
         <module name="user-service" />
-        <module name="user-service (1)" />
         <module name="web-service" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="-service" target="1.8" />
       <module name="admin-service" target="1.8" />
+      <module name="Biri" target="1.8" />
       <module name="book-service" target="1.8" />
       <module name="comment-service" target="1.8" />
       <module name="common" target="1.8" />
@@ -32,7 +33,6 @@
       <module name="rabbitmq-service" target="1.8" />
       <module name="redis-service" target="1.8" />
       <module name="user-service" target="1.8" />
-      <module name="user-service (1)" target="1.8" />
       <module name="web-service" target="1.8" />
       <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>

@@ -198,6 +198,12 @@ public class BookServiceImpl implements BookService{
             File imgFile = new File(bookImgPathPrefix+"/"+imagePath);
             img.transferTo(imgFile);
         }
+
+        Map<Integer,BookEnhanced> bookEnhancedMap = (Map<Integer, BookEnhanced>) redisTemplate.opsForValue().get("importantCache::allBookList");
+        BookEnhanced bookEnhanced = selectBookDetail(book.getId(),4);
+        bookEnhancedMap.put(bookEnhanced.getId(),bookEnhanced);
+        redisTemplate.opsForValue().set("importantCache::allBookList",bookEnhancedMap);
+
     }
 
     @Override

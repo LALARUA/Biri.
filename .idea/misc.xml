@@ -3,22 +3,11 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/eureka-server-1/pom.xml" />
-        <option value="$PROJECT_DIR$/zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/redis-service/pom.xml" />
-        <option value="$PROJECT_DIR$/rabbitmq-service/pom.xml" />
-        <option value="$PROJECT_DIR$/login-register/pom.xml" />
-        <option value="$PROJECT_DIR$/user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/web-service/pom.xml" />
-        <option value="$PROJECT_DIR$/comment-service/pom.xml" />
-        <option value="$PROJECT_DIR$/book-service/pom.xml" />
-        <option value="$PROJECT_DIR$/order-cart/pom.xml" />
-        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

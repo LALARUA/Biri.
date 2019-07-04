@@ -4,26 +4,37 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>cn.zx.Biri</groupId>
-		<artifactId>common</artifactId>
+		<artifactId>Biri</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/>  <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.zx.Biri</groupId>
 	<artifactId>admin-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>admin-service</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+
 
 	<dependencies>
-
+		<dependency>
+			<groupId>cn.zx.Biri</groupId>
+			<artifactId>common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
-
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
+
 
 </project>
